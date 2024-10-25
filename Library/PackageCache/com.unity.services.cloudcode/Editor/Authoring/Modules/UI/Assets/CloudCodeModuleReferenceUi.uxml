@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.cloudcode/Editor/Authoring/Modules/UI/Assets/CloudCodeModuleReferenceUi.uss" />
+    <ui:GroupBox class="group-path">
+        <uie:PropertyField name="property-path" binding-path="m_ModulePath" label="Path" focusable="true" />
+        <ui:Button text="Browse..." display-tooltip-when-elided="true" name="button-browse-file" class="button" />
+    </ui:GroupBox>
+    <ui:VisualElement name="Apply Footer" class="apply-footer__container">
+        <ui:Button name="Revert" text="Revert" class="revert-button" />
+        <ui:Button name="Apply" text="Apply" class="apply-button" />
+    </ui:VisualElement>
+    <ui:VisualElement name="GenerateButtonsContainer" class="generation-btn-container-row">
+        <ui:VisualElement name="GenerateSolutionContainer" class="apply-footer__container">
+            <ui:Button name="GenerateSolution" text="Generate Solution" class="generate-button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="GenerateBindingsContainer" class="apply-footer__container">
+            <ui:Button name="GenerateModuleBindings" text="Generate Bindings" class="generate-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,69 @@
+.project-settings-title-container,
+.project-settings-section-container {
+    padding:4px 4px 4px 8px;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+
+.separator {
+    margin-top:5px;
+    margin-bottom:5px;
+    height:2px;
+}
+
+.label-container {
+    white-space:normal;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.cloudbuild #LearnMore {
+    margin-right:8px;
+    align-self:flex-end;
+}
+
+.cloudbuild .service-icon {
+    background-image:resource("Builtin Skins/Shared/Images/ServicesWindow-ServiceIcon-Build.png");
+}
+
+.cloud-progress {
+    -unity-text-align:middle-center;
+    font-size:18px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.target-container-title {
+    margin:10px 0px 10px 8px;
+    font-size:16px;
+}
+
+.target-entry {
+    flex-direction:row;
+    padding:5px 8px 5px 8px;
+}
+
+.target-entry .title {
+    flex-grow:1;
+    -unity-text-align:middle-left;
+}
+
+.target-entry .build-button {
+    align-self:flex-end;
+}
+
+.target-footer {
+    padding-top:5px;
+    padding-right:8px;
+    flex-direction:row;
+    justify-content:flex-end;
+}
+
+#StartUsingCloudBuild {
+    margin-left:8px;
+    white-space:nowrap;
+}
+
+#PollFooter {
+    display:none;
+}

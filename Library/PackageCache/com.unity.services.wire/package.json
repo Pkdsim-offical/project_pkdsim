@@ -1,0 +1,39 @@
+{
+  "name": "com.unity.services.wire",
+  "displayName": "Wire",
+  "version": "1.2.7",
+  "unity": "2020.3",
+  "description": "Wire provides notifications in real-time for Unity Gaming Services subscribing to a particular service and listening for messages from that subscription through a websocket connection.",
+  "dependencies": {
+    "com.unity.services.core": "1.12.5",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.services.authentication": "2.7.4"
+  },
+  "_upm": {
+    "supportedPlatforms": [
+      "Android",
+      "iOS",
+      "Linux",
+      "Mac",
+      "PC",
+      "PS4",
+      "PS5",
+      "Switch",
+      "WebGL"
+    ],
+    "changelog": "### Fixed\n\n- Token retrieval failures can no longer break Wire reconnection attempts\n- Websocket channel will report error when failing to retrieve token"
+  },
+  "relatedPackages": {
+    "com.unity.services.wire.tests": "1.2.7"
+  },
+  "upmCi": {
+    "footprint": "c701598d6c4531fa9dfb7808a9b8cd7cb80a4394"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.services.wire@1.2/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git",
+    "type": "git",
+    "revision": "9cffdfabe0f434b75347351a78d6824effaf2774"
+  },
+  "_fingerprint": "098672f918fac52d5936f43131548a06ea83b216"
+}
