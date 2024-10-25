@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: U_Pkpedia
+  m_EditorClassIdentifier: 
+  m_GroupName: U_Pkpedia
+  m_GUID: 440cdf600a149ad43a7e4d13d141cb42
+  m_SerializeEntries:
+  - m_GUID: 0a7a2266cb358604cba7d839193f69b5
+    m_Address: PkpediaFull
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 628516a5ae1178847915e013d6a9640a, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 96ccf07eb82f02e4ab726707f4fe8ddb, type: 2}
+    - {fileID: 11400000, guid: 9ce1046d9a0991344a6893ea1bf7e01e, type: 2}
