@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "dotnet.defaultSolution": "project_pkdsim.sln",
+    "cSpell.words": ["Addressables"]
+  }
+}

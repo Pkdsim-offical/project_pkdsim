@@ -1,0 +1,1614 @@
+﻿<Project ToolsVersion="Current">
+  <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>Temp\obj\$(Configuration)\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Include="Unity" />
+  </ItemGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>9.0</LangVersion>
+    <Configurations>Debug;Release</Configurations>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <RootNamespace></RootNamespace>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>UNITY_6000_0_23;UNITY_6000_0;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_3_OR_NEWER;UNITY_6000_0_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_MARSHALLING_TESTS;ENABLE_VIDEO;ENABLE_NAVIGATION_OFFMESHLINK_TO_NAVMESHLINK;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;TEXTCORE_1_0_OR_NEWER;EDITOR_ONLY_NAVMESH_BUILDER_DEPRECATED;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_AMD;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_USES_EXPLICIT_MEMORY_MANAGER_INITIALIZER;PLATFORM_SUPPORTS_WAIT_FOR_PRESENTATION;PLATFORM_SUPPORTS_SPLIT_GRAPHICS_JOBS;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoStandardLibraries>true</NoStandardLibraries>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>6000.0.23f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Users\gumbr\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.0.4\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
+    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
+    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\noivern\No_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\cinderace\Ci_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vespiquen\AniData_Idle\AniData_IdleSitting\Ve_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\absol\Ab_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vespiquen\AniData_Transitions\AniData_Standing2Sitting\Ve_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\lopunny\lopunny_LL.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\PLAYER\I\Player_Family.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\pheromosa\pheromosa.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\zoroark\zoroark_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\meowscrarada\Me_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\beedrill\AniData_Transitions\AniData_Sitting2Standing\Be_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\garchomp\garchomp.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\noivern\AniData_Transitions\AniData_Standing2Sitting\No_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\gardevoir\AniData_Transitions\AniData_Standing2Sitting\Gard_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\tsareena\AniData_Transitions\AniData_Standing2Sitting\Ts_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\noivern\AniData_Idle\AniData_IdleSitting\No_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\dragapult\Dr_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lunala\AniData_Idle\AniData_IdleSitting\Luna_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\frostlass\Fr_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\frostlass\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\tsareena\tsareena.cs" />
+    <Compile Include="Assets\USys\ITEMSSys\INVENTORY\InventorySystem.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\glaceon\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\salazzle\AniData_Transitions\AniData_Standing2Sitting\Sa_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\leafeon\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\ITEMSSys\ITEMSSys.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\salazzle\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\hatterene\AniData_Transitions\AniData_Standing2Sitting\Ha_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\cinderace\AniData_Transitions\AniData_Sitting2Standing\Ci_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\zoroark\Zo_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\salazzle\Sa_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\umbreon\AniData_Transitions\AniData_Sitting2Standing\Um_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\frostlass\AniData_Idle\AniData_IdleSitting\Fr_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\UPSSys\UPSSys.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\garchomp\AniData_Transitions\AniData_Standing2Sitting\Garc_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\tsareena\AniData_Idle\Ts_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\espeon\espeon_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\blaziken\AniData_Idle\AniData_IdleStanding\Bl_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\hatterene\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\SCMSys\I\SCMSys_I.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\glaceon\AniData_Idle\AniData_IdleSitting\Gl_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\beedrill\AniData_Idle\AniData_IdleStanding\Be_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\braixen\Br_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\primarina\AniData_Idle\AniData_IdleSitting\Pr_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\salazzle\Sa_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\jolteon\AniData_Transitions\AniData_Standing2Sitting\Jo_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\Pkpedia_database.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\dragapult\AniData_Transitions\AniData_Standing2Sitting\Dr_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\jolteon\AniData_Idle\AniData_IdleSitting\Jo_AniData_IdleSI.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\sylveon\sylveon.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\flareon\flareon.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\blaziken\AniData_Transitions\AniData_Standing2Sitting\Bl_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\hatterene\AniData_Transitions\AniData_Sitting2Standing\Ha_AniData_Sitting2Standing (2).cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\noivern\AniData_Idle\No_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\Flareon\AniData_Transitions\AniData_Sitting2Standing\FL_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\delphox\AniData_Idle\AniData_IdleStanding\Dl_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\jolteon\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\gardevoir\AniData_Idle\Gard_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\vespiquen\Ve_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\I\AIRSys_I.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\braixen\braixen_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\delphox\AniData_Idle\Dl_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\pheromosa\pheromosa_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\braixen\AniData_Transitions\AniData_Standing2Sitting\Ab_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\FlareonAVaporeonAJolteon\FlVpJo_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\glaceon\AniData_Idle\Gl_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\gardevoir\Gard_AniData.cs" />
+    <Compile Include="Assets\USys\TABSys\TABSys_pkpediaL\I\TABSys_OTBS\TABSys_OTBS.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\espeon\AniData_Transitions\AniData_Standing2Sitting\Es_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\TABSys\TABSys_UIS\TABSys_UIS.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\cinderace\cinderace.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\vaporeon\Vp_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\espeon\AniData_Transitions\AniData_Sitting2Standing\Es_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\vespiquen\Ve_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\cinderace\AniData_Idle\Ci_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\hatterene\hatterene_LL.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\SCMSys_Houses.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vaporeon\AniData_Idle\Vp_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\LOVESys\PLAYER\Player_LOVESys.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\flareon\Fl_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\Base_derivative\AIRSys_AnimatorC_Base.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\absol\AniData_Idle\Ab_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\salazzle\salazzle_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\cinderace\AniData_Transitions\AniData_Standing2Sitting\Ci_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\beedrill\Be_AniData.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\braixen\braixen.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\espeon\AniData_Idle\AniData_IdleStanding\Es_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\gardevoir\AniData_Idle\AniData_IdleStanding\Gard_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\noivern\No_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vaporeon\AniData_Idle\AniData_IdleSitting\Vp_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\salazzle\AniData_Idle\AniData_IdleStanding\Sa_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\braixen\AniData_Transitions\AniData_Sitting2Standing\Ab_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\primarina\AniData_Transitions\AniData_Standing2Sitting\Pr_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\braixen\AniData_Idle\AniData_IdleStanding\Br_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\leafeon\AniData_Transitions\AniData_Standing2Sitting\Le_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\delphox\AniData_Idle\AniData_IdleSitting\Dl_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\garchomp\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\primarina\Pr_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\umbreon\AniData_Idle\AniData_IdleSitting\Um_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\salazzle\AniData_Transitions\AniData_Sitting2Standing\Sa_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lopunny\Lo_AniData.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\delphox\Dl_family.cs" />
+    <Compile Include="Assets\USys\ITEMSSys\ITEMS\PkPhone\PkPhone_Item.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\lopunny\Lo_Animator.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\mouse\mouse_leftclick\mouse_LC.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\garchomp\garchomp_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lucario\AniData_Idle\AniData_IdleSitting\Luca_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lopunny\AniData_Idle\Lo_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\PlayerAnimator\Player_Animator.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\gardevoir\gardevoir_LL.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\SCMSys_NPC_Houses.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\hatterene\AniData_Idle\Ha_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vaporeon\AniData_Transitions\AniData_Sitting2Standing\Vp_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\espeon\espeon.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lopunny\AniData_Transitions\AniData_Sitting2Standing\Lo_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\primarina\AniData_Transitions\AniData_Sitting2Standing\Pr_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\primarina\primarina_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\braixen\AniData_Idle\Br_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\frostlass\AniData_Idle\Fr_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\espeon\Es_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lunala\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\sylveon\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\glaceon\AniData_Idle\AniData_IdleStanding\Gl_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\pheromosa\Ph_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\umbreon\AniData_Transitions\AniData_Standing2Sitting\Um_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\meowscrarada\AniData_Transitions\AniData_Sitting2Standing\Me_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\frostlass\frostlass_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\dragapult\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\LOVESys\AITEMS\Reactions\Positive_Reaction\AITEMSSsys_PR.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\vespiquen\vespiquen.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\delphox\delphox_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\espeon\Es_Animator.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\noivern\noivern.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\Flareon\AniData_Idle\AniData_IdleStanding\FL_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\delphox\Dl_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\noivern\AniData_Transitions\AniData_Sitting2Standing\No_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\absol\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\espeon\AniData_Idle\AniData_IdleSitting\Es_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\umbreon\AniData_Idle\AniData_IdleStanding\Um_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\vaporeon\vaporeon_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\hatterene\AniData_Transitions\AniData_Sitting2Standing\Ha_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\meowscrarada\AniData_Transitions\AniData_Standing2Sitting\Me_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\braixen\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\sylveon\AniData_Transitions\AniData_Sitting2Standing\Sl_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\zoroark\Z_family.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\sylveon\sylveon_LL.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\vaporeon\vaporeon.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\glaceon\Gl_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\tsareena\Ts_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\frostlass\AniData_Transitions\AniData_Sitting2Standing\Fr_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Player\AIRSys_PlayerAniData\AIRSys_PlayerAniData_I\AIRSys_PlayerAniData_I.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\gardevoir\AniData_Idle\AniData_IdleSitting\Gard_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\pheromosa\Ph_Animator.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\umbreon\umbreon_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vespiquen\AniData_Transitions\AniData_Sitting2Standing\Ve_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\pheromosa\AniData_Transitions\AniData_Sitting2Standing\Ph_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\cinderace\AniData_Idle\AniData_IdleSitting\Ci_AniData_IdleSI.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\glaceon\glaceon.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vespiquen\Ve_AniData.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\jolteon\jolteon.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\lopunny\lopunny.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\mouse\mouse_middleclick\mouse_MC.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\umbreon\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\hatterene\hatterene.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys.cs" />
+    <Compile Include="Assets\USys\TCMSys\splitter\LoadSGame\LoadSGame.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\meowscrarada\AniData_Idle\Me_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\blaziken\AniData_Idle\AniData_IdleSitting\Bl_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\beedrill\AniData_Idle\AniData_IdleSitting\Be_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\lunala\lunala_LL.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\cinderace\cinderace_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\jolteon\AniData_Idle\AniData_IdleStanding\Jo_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\TCMSys\splitter\LoadNGame\LoadNGame.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\blaziken\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\hatterene\Ha_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\cinderace\Ci_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\zoroark\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\sylveon\AniData_Idle\AniData_IdleSitting\Sl_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\I\SCMSys_Npc_HousesI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\I\AIRSys_NPCAnimation_DataI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\absol\AniData_Transitions\AniData_Sitting2Standing\Ab_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\sylveon\Sl_Animator.cs" />
+    <Compile Include="Assets\USys\TCMSys\splitter\I\TCMSysI.cs" />
+    <Compile Include="Assets\USys\ITEMSSys\ITEMS\ITEMS.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\I\AIRSys_NPCAnimation_DataI.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\NPC_LoveSys.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\tsareena\T_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lunala\AniData_Idle\AniData_IdleStanding\Luna_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\glaceon\AniData_Transitions\AniData_Sitting2Standing\Gl_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\Flareon\AniData_Idle\AniData_IdleSitting\FL_AniData_IdleSI.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\dragapult\dragapult.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\primarina\Pr_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\delphox\Dl_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\hatterene\Ha_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\pheromosa\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\primarina\primarina.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAnimation_Data.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\salazzle\AniData_Idle\Sa_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\garchomp\Garc_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\tsareena\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\zoroark\AniData_Transitions\AniData_Sitting2Standing\Zo_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\AA_CLSA\AA_CLSA.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\dragapult\Dr_family.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\frostlass\Fr_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\tsareena\AniData_Transitions\AniData_Sitting2Standing\Ts_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\umbreon\Um_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lucario\AniData_Idle\AniData_IdleStanding\Luca_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lucario\Luca_AniData.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\LeafeonAGlaceon\LeGl_family.cs" />
+    <Compile Include="Assets\USys\LOVESys\BASE\LOVE_Asys_Base.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\absol\absol_LL.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\hatterene\H_family.cs" />
+    <Compile Include="Assets\USys\LOVESys\AITEMS\Reactions\Neutral_Reaction\AITEMSSsys_NtR.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\zoroark\Zo_AniData.cs" />
+    <Compile Include="Assets\USys\TABSys\I\TABSysI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lucario\AniData_Idle\Luca_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\flareon\flareon_LL.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\leafeon\leafeon_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\jolteon\AniData_Idle\Jo_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lopunny\AniData_Idle\AniData_IdleSitting\Lo_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\primarina\AniData_Idle\Pr_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\dragapult\AniData_Transitions\AniData_Sitting2Standing\Dr_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\jolteon\AniData_Transitions\AniData_Sitting2Standing\Jo_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\TABSys\TABSys_pkpediaL\TABSys_pkpediaL.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\meowscrarada\meowscarada.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lopunny\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\gardevoir\Gard_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\espeon\AniData_Idle\Es_AniData_Idle.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\zoroark\zoroark.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\pheromosa\AniData_Idle\AniData_IdleSitting\Ph_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\salazzle\Sa_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\primarina\Pr_AniData.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\tsareena\AniData_Idle\AniData_IdleSitting\Ts_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\sylveon\AniData_Idle\AniData_IdleStanding\Sl_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\sylveon\Sy_family.cs" />
+    <Compile Include="Assets\USys\TABSys\TABSys_SettingsLink\I\TABSys_SettingsLINK.cs" />
+    <Compile Include="Assets\USys\TCMSys\TCMSys.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Player\AIRSys_PlayerAniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\leafeon\Le_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\Flareon\Fl_AniData.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\lucario\Luc_family.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\salazzle\salazzle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\tsareena\Ts_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\espeon\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\sylveon\AniData_Transitions\AniData_Standing2Sitting\Sl_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\frostlass\frostlass.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\blaziken\Bl_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\meowscrarada\AniData_Idle\AniData_IdleSitting\Me_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\cinderace\AniData_Idle\AniData_IdleStanding\Ci_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lucario\AniData_Transitions\AniData_Standing2Sitting\Luca_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lunala\AniData_Idle\Luna_AniData_Idle.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\lunala\lunala.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\noivern\noivern_LL.cs" />
+    <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\pheromosa\Ph_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\zoroark\AniData_Transitions\AniData_Standing2Sitting\Zo_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\zoroark\AniData_Idle\Zo_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\lunala\Lun_family.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\tsareena\tsareena_LL.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\lucario\lucario.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\leafeon\AniData_Idle\Le_AniData_Idle.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\delphox\delphox.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\leafeon\Le_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lunala\AniData_Transitions\AniData_Standing2Sitting\Luna_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\frostlass\AniData_Idle\AniData_IdleStanding\Fr_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\garchomp\AniData_Transitions\AniData_Sitting2Standing\Garc_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\beedrill\beedrill_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lunala\Luna_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\primarina\AniData_Idle\AniData_IdleStanding\Pr_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\primarina\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\frostlass\AniData_Transitions\AniData_Standing2Sitting\Fr_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\Flareon\AniData_Transitions\AniData_Standing2Sitting\FL_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\braixen\Br_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\delphox\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\leafeon\leafeon.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\dragapult\AniData_Idle\Dr_AniData_Idle.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\mouse\mouse_rightclick\mouse_RC.cs" />
+    <Compile Include="Assets\USys\SCMSys\SCMSys.cs" />
+    <Compile Include="Assets\USys\LOVESys\AITEMS\Reactions\Negative_Reaction\AITEMSSsys_NeR.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\noivern\AniData_Idle\AniData_IdleStanding\No_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\salazzle\AniData_Idle\AniData_IdleSitting\Sa_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\garchomp\AniData_Idle\AniData_IdleStanding\Garc_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\delphox\AniData_Transitions\AniData_Sitting2Standing\Dl_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\UPSSys\Save_Checker\SaveChecker.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lucario\AniData_Transitions\AniData_Sitting2Standing\Luca_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\meowscrarada\Me_family.cs" />
+    <Compile Include="Assets\FantasyEnvironments\Environments\Town\Scripts\Door.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\beedrill\beedrill.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\leafeon\AniData_Transitions\AniData_Sitting2Standing\Le_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lopunny\AniData_Idle\AniData_IdleStanding\Lo_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\lunala\Luna_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\noivern\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\absol\Ab_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\pheromosa\AniData_Idle\AniData_IdleStanding\Ph_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\dragapult\AniData_Idle\AniData_IdleSitting\Dr_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\beedrill\AniData_Transitions\AniData_Standing2Sitting\Be_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\glaceon\AniData_Transitions\AniData_Standing2Sitting\Gl_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\TABSys\TABSys_SettingsLink\TABSys_SettingsLink.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\dragapult\dragapult_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\zoroark\AniData_Idle\AniData_IdleStanding\Zo_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\glaceon\glaceon_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\dragapult\AniData_Idle\AniData_IdleStanding\Dr_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\meowscrarada\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\sylveon\AniData_Idle\Sl_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\leafeon\AniData_Idle\AniData_IdleStanding\Le_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\sylveon\Sl_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\zoroark\AniData_Idle\AniData_IdleSitting\Zo_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\blaziken\blaziken_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\pheromosa\AniData_Transitions\AniData_Standing2Sitting\Ph_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\gardevoir\gardevoir.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\glaceon\Gl_Animator.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\vespiquen\vespiquen_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\blaziken\AniData_Transitions\AniData_Sitting2Standing\Bl_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vespiquen\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\lucario\lucario_LL.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\blaziken\blaziken.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\hatterene\AniData_Idle\AniData_IdleStanding\Ha_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\LOVESys\LOVESys_I.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\hatterene\AniData_Idle\AniData_IdleSitting\Ha_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\gardevoir\Gard_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\beedrill\Be_Animator.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\braixen\Br_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lucario\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vespiquen\AniData_Idle\Ve_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\absol\AniData_Transitions\AniData_Standing2Sitting\Ab_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\meowscrarada\AniData_Idle\AniData_IdleStanding\Me_AniData_IdleST.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\TABSys_I\Pkpedia_database_TABSysI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\absol\AniData_Idle\AniData_IdleStanding\Ab_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vaporeon\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\jolteon\Jo_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\noivern\No_Animator.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\jolteon\jolteon_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\gardevoir\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\delphox\AniData_Transitions\AniData_Standing2Sitting\Dl_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\meowscrarada\Me_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vaporeon\AniData_Idle\AniData_IdleStanding\Vp_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vaporeon\Vp_AniData.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\blaziken\Bl_family.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\beedrill\Be_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lunala\AniData_Transitions\AniData_Sitting2Standing\Luna_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\UmbreonAEspeon_family\UE_family.cs" />
+    <Compile Include="Assets\USys\LOVESys\AITEMS\Base\AITEMSSys_Base.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\umbreon\Um_Animator.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\cinderace\C_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\garchomp\AniData_Idle\AniData_IdleSitting\Garc_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vaporeon\AniData_Transitions\AniData_Standing2Sitting\Vp_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\USys\TABSys\TABSys_pkpediaL\I\TABSys_DPk\TABSys_DPk.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\garchomp\Garc_AniData.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\Flareon\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\gardevoir\AniData_Transitions\AniData_Sitting2Standing\Gard_AniData_Sitting2Standing.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\dragapult\Dr_AniData.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\lopunny\Lo_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\pheromosa\AniData_Idle\Ph_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\lopunny\AniData_Transitions\AniData_Standing2Sitting\Lo_AniData_Standing2Sitting.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\absol\absol.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\frostlass\Fr_AniData.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\absol\Ab_family.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\meowscrarada\meowscarada_LL.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\braixen\AniData_Idle\AniData_IdleSitting\Br_AniData_IdleSI.cs" />
+    <Compile Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\C#&apos;\npc\pkpedia_database\I_data\umbreon\umbreon.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\beedrill\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\leafeon\AniData_Idle\AniData_IdleSitting\Le_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\blaziken\AniData_Idle\Bl_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\vespiquen\AniData_Idle\AniData_IdleStanding\Ve_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\NPC\garchomp\Garc_family.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\tsareena\AniData_Idle\AniData_IdleStanding\Ts_AniData_IdleST.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\lucario\Luca_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\jolteon\Jo_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\Flareon\AniData_Idle\FL_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\absol\AniData_Idle\AniData_IdleSitting\Ab_AniData_IdleSI.cs" />
+    <Compile Include="Assets\USys\TABSys\TABSys_SettingsLink\I\Menu_I\TabSys_SettingsMenu.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\umbreon\AniData_Idle\Um_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\beedrill\AniData_Idle\Be_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_Animatorbase\NPCAnimator\blaziken\Bl_Animator.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\garchomp\AniData_Idle\Garc_AniData_Idle.cs" />
+    <Compile Include="Assets\USys\SCMSys\HOUSES\PLAYER\SCMSys_Player_House.cs" />
+    <Compile Include="Assets\USys\AIRoutesSys\AIRSys_NPC\AIRSys_NPCAniData\AIRSys_NPCAniData_I\cinderace\AniData_Transitions\AniData_Transitions.cs" />
+    <Compile Include="Assets\USys\LOVESys\NPC\I_data\Importer\NPC_LOVESys_importer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\garchomp\garchomp.uxml" />
+    <None Include="Assets\Samples\Splines\2.6.1\Spline Examples (requires Shader Graph package)\UXML\PaintUI.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\absol\absol.uss" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\noivern\noivern.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\dragapult\dragapult.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\lopunny\lopunny.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\blaziken\blaziken.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\frostlass\frostlass.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\cinderace\cinderace.uxml" />
+    <None Include="Assets\Samples\Splines\2.6.1\Spline Examples (requires Shader Graph package)\Shader\InterpolateSpline.compute" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\meowscrarada\meowscarada.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\vaporeon\vaporeon.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\jolteon\jolteon.uxml" />
+    <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\pheromosa\pheromosa.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\sylveon\sylveon.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\flareon\flareon.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\delphox\delphox.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\umbreon\umbreon.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\absol\absol.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\lopunny\lopunny.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\flareon\flareon.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\lunala\lunala.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\salazzle\salazzle.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\gardevoir\gardevoir.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\tsareena\tsareena.uxml" />
+    <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\lucario\lucario.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\glaceon\glaceon.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\frostlass\frostlass.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\pheromosa\pheromosa.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\gardevoir\gardevoir.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\noivern\noivern.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\background\background.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\dragapult\dragapult.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\zoroark\zoroark.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\garchomp\garchomp.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\zoroark\zoroark.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\pkpedia.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\background\background.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\jolteon\jolteon.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\hatterene\hatterene.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\primarina\primarina.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\primarina\primarina.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\salazzle\salazzle.uss" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\vaporeon\vaporeon.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\braixen\braixen.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\espeon\espeon.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\lucario\lucario.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\hatterene\hatterene.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\braixen\braixen.uss" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\espeon\espeon.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\cinderace\cinderace.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\lunala\lunala.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\vespiquen\vespequen.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\leafeon\leafeon.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\tsareena\tsareena.uss" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\blaziken\blaziken.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\glaceon\glaceon.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\sylveon\sylveon.uss" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\leafeon\leafeon.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\umbreon\umbreon.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uss\npc\beedrill\beedrill.uss" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\meowscrarada\meowscarada.uxml" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\beedrill\beedrilll.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\vespiquen\vespiquen.uxml" />
+    <None Include="Assets\t-posed models\SCRIPTS\pkpedia\npc\file types\uxml\delphox\delphox.uxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AMDModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.AMDModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ContentLoadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.GIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GraphicsStateCollectionSerializerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HierarchyCoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.HierarchyCoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputForUIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputForUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.MarshallingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.MarshallingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.MultiplayerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.MultiplayerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.PropertiesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ShaderVariantAnalyticsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityCurlModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.AccessibilityModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.AdaptivePerformanceModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.AdaptivePerformanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.BuildProfileModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.BuildProfileModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.CoreBusinessMetricsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreBusinessMetricsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DeviceSimulatorModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.DeviceSimulatorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DiagnosticsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.DiagnosticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.EditorToolbarModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.EditorToolbarModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.EmbreeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.EmbreeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.GIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.GraphViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GraphicsStateCollectionSerializerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.GraphicsStateCollectionSerializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GridAndSnapModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.GridAndSnapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GridModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.MultiplayerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.MultiplayerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Physics2DModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PresetsUIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.PresetsUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PropertiesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.PropertiesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.QuickSearchModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.QuickSearchModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SafeModeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.SafeModeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneViewModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.ShaderFoundryModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.ShaderFoundryModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SketchUpModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.SketchUpModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SpriteMaskModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SpriteShapeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SubstanceModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TerrainModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreFontEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreTextEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextRenderingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TilemapModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TreeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.TreeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIAutomationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIBuilderModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIBuilderModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UmbraModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.VFXModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.VideoModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.XRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\Managed\UnityEngine\UnityEditor.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Library\PackageCache\com.unity.services.wire\Plugins\websocket-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\PackageCache\com.unity.ext.nunit\net40\unity-custom\nunit.framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.AppContext.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.Concurrent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.NonGeneric.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.Specialized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Console.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Data.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Debug.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Process.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.TraceSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Drawing.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Dynamic.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.Calendars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Compression.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.Watcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.IsolatedStorage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.MemoryMappedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Pipes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Queryable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.NameResolution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.NetworkInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Ping.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Requests.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebHeaderCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebSockets.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebSockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.DispatchProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.Reader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.Writer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Handles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.InteropServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Claims.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Csp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Principal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.SecureString.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.Encoding.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.RegularExpressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Overlapped.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Thread.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.ThreadPool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Timer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XmlDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XmlSerializer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XPath.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Drawing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.IO.Compression.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Runtime.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ServiceModel.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Transactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Windows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.0.23f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj" />
+    <ProjectReference Include="Unity.InputSystem.ForUI.csproj" />
+    <ProjectReference Include="Unity.Addressables.Editor.csproj" />
+    <ProjectReference Include="UnityEditor.UI.csproj" />
+    <ProjectReference Include="Unity.AI.Navigation.csproj" />
+    <ProjectReference Include="Unity.TerrainTools.Editor.csproj" />
+    <ProjectReference Include="Unity.Searcher.Editor.csproj" />
+    <ProjectReference Include="Unity.AdaptivePerformance.csproj" />
+    <ProjectReference Include="Unity.Animation.Rigging.Editor.csproj" />
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj" />
+    <ProjectReference Include="Unity.ResourceManager.csproj" />
+    <ProjectReference Include="Unity.Cinemachine.Editor.csproj" />
+    <ProjectReference Include="Unity.Services.CloudDiagnostics.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Shared.csproj" />
+    <ProjectReference Include="Unity.TerrainTools.csproj" />
+    <ProjectReference Include="Unity.Timeline.Editor.csproj" />
+    <ProjectReference Include="Unity.Timeline.csproj" />
+    <ProjectReference Include="LoM.Super.Connect.Editor.csproj" />
+    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.Shared.csproj" />
+    <ProjectReference Include="UnityEngine.UI.csproj" />
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj" />
+    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
+    <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj" />
+    <ProjectReference Include="Unity.Splines.csproj" />
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj" />
+    <ProjectReference Include="Unity.AdaptivePerformance.Simulator.Extension.csproj" />
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj" />
+    <ProjectReference Include="Unity.Cinemachine.csproj" />
+    <ProjectReference Include="Unity.AdaptivePerformance.Profiler.Editor.csproj" />
+    <ProjectReference Include="Unity.AdaptivePerformance.Editor.csproj" />
+    <ProjectReference Include="Unity.Services.Authentication.PlayerAccounts.csproj" />
+    <ProjectReference Include="Unity.ScriptableBuildPipeline.csproj" />
+    <ProjectReference Include="Autodesk.Fbx.csproj" />
+    <ProjectReference Include="Unity.Collections.csproj" />
+    <ProjectReference Include="PPv2URPConverters.csproj" />
+    <ProjectReference Include="Unity.Addressables.csproj" />
+    <ProjectReference Include="Unity.Rendering.LightTransport.Editor.csproj" />
+    <ProjectReference Include="Unity.Services.Authentication.Editor.Shared.csproj" />
+    <ProjectReference Include="Unity.Services.CloudSave.Editor.csproj" />
+    <ProjectReference Include="Unity.Services.CloudDiagnostics.Editor.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.csproj" />
+    <ProjectReference Include="Unity.Splines.Editor.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj" />
+    <ProjectReference Include="Unity.Collections.Editor.csproj" />
+    <ProjectReference Include="Unity.Profiling.Core.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj" />
+    <ProjectReference Include="Unity.Multiplayer.Center.Common.csproj" />
+    <ProjectReference Include="Unity.AI.Navigation.Updater.csproj" />
+    <ProjectReference Include="Unity.Animation.Rigging.csproj" />
+    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj" />
+    <ProjectReference Include="Autodesk.Fbx.Editor.csproj" />
+    <ProjectReference Include="Unity.TextMeshPro.csproj" />
+    <ProjectReference Include="Unity.AdaptivePerformance.Simulator.Editor.csproj" />
+    <ProjectReference Include="Unity.Services.Core.Analytics.csproj" />
+    <ProjectReference Include="LoM.Super.Editor.csproj" />
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
+    <ProjectReference Include="Unity.Services.Authentication.csproj" />
+    <ProjectReference Include="Unity.AI.Navigation.Editor.csproj" />
+    <ProjectReference Include="Unity.Mathematics.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj" />
+    <ProjectReference Include="Unity.AdaptivePerformance.UI.Editor.csproj" />
+    <ProjectReference Include="LoM.Super.csproj" />
+    <ProjectReference Include="Unity.Services.CloudSave.csproj" />
+    <ProjectReference Include="Unity.Services.Core.Environments.csproj" />
+    <ProjectReference Include="Unity.Formats.Fbx.Runtime.csproj" />
+    <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj" />
+    <ProjectReference Include="Unity.Splines.Examples.csproj" />
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj" />
+    <ProjectReference Include="Unity.Burst.Editor.csproj" />
+    <ProjectReference Include="LoM.Super.Connect.csproj" />
+    <ProjectReference Include="Unity.Burst.csproj" />
+    <ProjectReference Include="Unity.Services.CloudCode.csproj" />
+    <ProjectReference Include="Unity.Formats.Fbx.Editor.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj" />
+    <ProjectReference Include="Unity.Services.Core.csproj" />
+    <ProjectReference Include="Unity.Rendering.LightTransport.Runtime.csproj" />
+    <ProjectReference Include="Unity.InputSystem.csproj" />
+    <ProjectReference Include="Unity.RenderPipelines.Universal.2D.Runtime.csproj" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Remove="LaunchProfiles" />
+    <ProjectCapability Remove="SharedProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
+    <ProjectCapability Remove="ProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerProjects" />
+    <ProjectCapability Remove="COMReferences" />
+    <ProjectCapability Remove="ReferenceManagerCOM" />
+    <ProjectCapability Remove="AssemblyReferences" />
+    <ProjectCapability Remove="ReferenceManagerAssemblies" />
+  </ItemGroup>
+</Project>
