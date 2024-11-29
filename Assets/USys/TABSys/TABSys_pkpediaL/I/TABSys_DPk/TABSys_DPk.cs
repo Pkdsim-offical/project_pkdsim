@@ -3,6 +3,7 @@ using TMPro;
 using System;
 using System.Text;
 using System.IO;
+using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
 namespace project_pkdsim.Assets.USys.TABSys.TSys_DPk
 {
     public class TABSys_DPk : MonoBehaviour

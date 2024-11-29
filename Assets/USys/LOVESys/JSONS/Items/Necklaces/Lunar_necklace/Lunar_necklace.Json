@@ -1,0 +1,110 @@
+{
+    "name": "Lunar_necklace",
+    "description": "Lunar_necklace: a necklace that is beloved by Dark types especially by Zoroark",
+    "type": "Item",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties": 
+    [
+        {
+            "name": "Lunar_necklace",
+            "description": "Lunar_necklace",
+            "value": "0",
+            "SYS_properties":
+            {
+                "Love_Effect_base":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_Foe":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_enemy":
+                {
+                    "positive": "+2",
+                    "negative": "-2",
+                    "neutral": "0"
+                },
+                "Love_Effect_stranger":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_acquaintance":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_Fiend":
+                {
+                    "positive": "+2",
+                    "negative": "-2",
+                    "neutral": "0"
+                },
+                "Love_Effect_BestFriend":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_Lover":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_Partner":
+                {
+                    "positive": "+5",
+                    "negative": "-5",
+                    "neutral": "0"
+                },
+                "Love_Elemental_Effect":
+                {
+                    "SuperEffective":
+                    {
+                        "Ghost":"+3", 
+                        "Psychic": "+3"
+                    },
+                    "Effective":
+                    {
+                        "Fire": "0",  
+                        "Grass":"0",
+                        "Ground":"0", 
+                        "Rock": "0", 
+                        "Water": "0",
+                        "Bug": "0",
+                        "Electric": "0", 
+                        "Fairy": "0",
+                        "Fighting": "0",
+                        "Flying": "0",
+                        "Ghost": "0", 
+                        "Ice": "0", 
+                        "Normal": "0",
+                        "Poison": "0",
+                        "Psychic": "0", 
+                        "Steel": "0",
+                        "Dragon": "0"
+                    },
+                    "Not_Very_Effective":
+                    {
+                        "Dark":"-3", 
+                        "Fairy":"-3", 
+                        "Fighting":"-3"
+                    },
+                    "Love_Special_Effect":
+                    {
+                        "Zoroark": "+5"
+                    }
+                }
+            }
+        }
+    ]
+}

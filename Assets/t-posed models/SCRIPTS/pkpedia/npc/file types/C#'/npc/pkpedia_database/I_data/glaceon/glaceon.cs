@@ -1,3 +1,5 @@
+using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
+
 public class glaceon : Pkpedia_database
 {
 

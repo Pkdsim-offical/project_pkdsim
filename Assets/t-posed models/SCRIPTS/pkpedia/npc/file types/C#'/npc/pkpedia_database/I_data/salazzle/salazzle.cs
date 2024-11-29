@@ -1,3 +1,5 @@
+using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
+
 public class salazzle : Pkpedia_database
 {
     // Update is called once per frame

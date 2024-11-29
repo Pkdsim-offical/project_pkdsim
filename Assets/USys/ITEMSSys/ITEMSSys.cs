@@ -1,13 +1,14 @@
-using UnityEngine;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts;
 
 namespace project_pkdsim.Assets.USys.ITEMSSys
 {
-	public class ITEMSSys : MonoBehaviour
+	public class ITEMSSys : ITEMS_Main
 	{
-		protected PkPhone_Item pkphone;
-		protected void Get_Items()
+		protected void Get_Items(string value)
 		{
-			pkphone.Get_Game_object();
+			ITEM_Inventory();
+			ITEM_Holiday();
+			ITEM_GIFTS(value);
 		}
 	}
 }

@@ -1,0 +1,59 @@
+{
+    "name": "Blaziken_Sys",
+    "description": "Blaziken_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Blaziken_Love":
+        {
+            "base":
+            {
+                "base": "Blaziken_Love_base",
+                "description": "Blaziken_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Blaziken_Love_Foe",
+                "description": "Blaziken_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Blaziken_Love_Enemy",
+                "description": "Blaziken_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Blaziken_Love_Stranger",
+                "description": "Blaziken_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Blaziken_Love_Aqaintance",
+                "description": "Blaziken_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Blaziken_Love_Friend",
+                "description": "Blaziken_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Blaziken_Love_BestFriend",
+                "description": "Blaziken_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Blaziken_Love_Lover",
+                "description": "Blaziken_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Blaziken_Love_Partner",
+                "description": "Blaziken_Love_Partner"
+            }
+        }
+    }
+}

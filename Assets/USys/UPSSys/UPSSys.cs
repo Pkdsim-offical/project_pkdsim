@@ -15,11 +15,11 @@ namespace project_pkdsim.Assets.USys.UPSSys
 			public int Build_Version;
 			public UnityEngine.Object pkphone;
 
-			public PlayerData()
+			public PlayerData(string value)
 			{
 				Build_Version = 1;
 				NPC_LoveSys.NPC_LoveSys();         // Call the method        // Initialize inventory
-				inventory.Get_Inventory();         // Call the method
+				inventory.Get_Inventory(value);         // Call the method
 			}
 		}
 	}

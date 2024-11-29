@@ -12,5 +12,10 @@ namespace project_pkdsim.Assets.USys.TABSys.I
         {
             TABSys_PkPhoneUI_SettingsAPP.TABSys_settingsLink();
         }
+        public void TABSys_PkPhoneApps()
+        {
+            TABSys_PkPhoneUI_PkpediaAPP = new project_pkdsim.Assets.USys.TABSys.TABSys_PkpediaLink.TABSys_PkpediaLink();
+            TABSys_PkPhoneUI_SettingsAPP = new project_pkdsim.Assets.USys.TABSys.TABSys_SettingsLink.TABSys_SettingsLink();
+        }
     }
 }

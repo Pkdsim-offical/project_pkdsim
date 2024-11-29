@@ -1,0 +1,59 @@
+{
+    "name": "Absol_Sys",
+    "description": "Absol_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Absol_Love":
+        {
+            "base":
+            {
+                "base": "Absol_Love_base",
+                "description": "Absol_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Absol_Love_Foe",
+                "description": "Absol_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Absol_Love_Enemy",
+                "description": "Absol_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Absol_Love_Stranger",
+                "description": "Absol_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Absol_Love_Aqaintance",
+                "description": "Absol_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Absol_Love_Friend",
+                "description": "Absol_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Absol_Love_BestFriend",
+                "description": "Absol_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Absol_Love_Lover",
+                "description": "Absol_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Absol_Love_Partner",
+                "description": "Absol_Love_Partner"
+            }
+        }
+    }
+}
