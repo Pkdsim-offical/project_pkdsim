@@ -1,0 +1,58 @@
+{
+    "name": "Dragapult_Sys",
+    "description": "Dragapult_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Dragapult_Love":
+        {
+            "base":
+            {
+                "base": "Dragapult_Love_base",
+                "description": "Dragapult_Love_base"
+            },
+            "Foe":
+            {
+                "name": "Dragapult_Love_Foe",
+                "description": "Dragapult_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Dragapult_Love_Enemy",
+                "description": "Dragapult_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Dragapult_Love_Stranger",
+                "description": "Dragapult_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Dragapult_Love_Aqaintance",
+                "description": "Dragapult_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Dragapult_Love_Friend",
+                "description": "Dragapult_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Dragapult_Love_BestFriend",
+                "description": "Dragapult_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Dragapult_Love_Lover",
+                "description": "Dragapult_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Dragapult_Love_Partner",
+                "description": "Dragapult_Love_Partner"
+            }
+        }
+    }
+}

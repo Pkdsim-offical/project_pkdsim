@@ -1,0 +1,59 @@
+{
+    "name": "Sylveon_Sys",
+    "description": "Sylveon_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Sylveon_Love":
+        {
+            "base":
+            {
+                "base": "Sylveon_Love_base",
+                "description": "Sylveon_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Sylveon_Love_Foe",
+                "description": "Sylveon_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Sylveon_Love_Enemy",
+                "description": "Sylveon_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Sylveon_Love_Stranger",
+                "description": "Sylveon_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Sylveon_Love_Aqaintance",
+                "description": "Sylveon_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Sylveon_Love_Friend",
+                "description": "Sylveon_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Sylveon_Love_BestFriend",
+                "description": "Sylveon_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Sylveon_Love_Lover",
+                "description": "Sylveon_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Sylveon_Love_Partner",
+                "description": "Sylveon_Love_Partner"
+            }
+        }
+    }
+}

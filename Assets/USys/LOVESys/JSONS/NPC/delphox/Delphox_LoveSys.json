@@ -1,0 +1,59 @@
+{
+    "name": "Delphox_Sys",
+    "description": "Delphox_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Delphox_Love":
+        {
+            "base":
+            {
+                "base": "Delphox_Love_base",
+                "description": "Delphox_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Delphox_Love_Foe",
+                "description": "Delphox_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Delphox_Love_Enemy",
+                "description": "Delphox_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Delphox_Love_Stranger",
+                "description": "Delphox_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Delphox_Love_Aqaintance",
+                "description": "Delphox_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Delphox_Love_Friend",
+                "description": "Delphox_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Delphox_Love_BestFriend",
+                "description": "Delphox_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Delphox_Love_Lover",
+                "description": "Delphox_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Delphox_Love_Partner",
+                "description": "Delphox_Love_Partner"
+            }
+        }
+    }
+}

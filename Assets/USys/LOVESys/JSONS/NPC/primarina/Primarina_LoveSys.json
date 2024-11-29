@@ -1,0 +1,59 @@
+{
+    "name": "Primarina_Sys",
+    "description": "Primarina_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Primarina_Love":
+        {
+            "base":
+            {
+                "base": "Primarina_Love_base",
+                "description": "Primarina_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Primarina_Love_Foe",
+                "description": "Primarina_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Primarina_Love_Enemy",
+                "description": "Primarina_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Primarina_Love_Stranger",
+                "description": "Primarina_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Primarina_Love_Aqaintance",
+                "description": "Primarina_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Primarina_Love_Friend",
+                "description": "Primarina_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Primarina_Love_BestFriend",
+                "description": "Primarina_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Primarina_Love_Lover",
+                "description": "Primarina_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Primarina_Love_Partner",
+                "description": "Primarina_Love_Partner"
+            }
+        }
+    }
+}

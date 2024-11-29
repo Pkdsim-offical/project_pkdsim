@@ -1,0 +1,59 @@
+{
+    "name": "Jolteon_Sys",
+    "description": "Jolteon_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Jolteon_Love":
+        {
+            "base":
+            {
+                "base": "Jolteon_Love_base",
+                "description": "Jolteon_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Jolteon_Love_Foe",
+                "description": "Jolteon_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Jolteon_Love_Enemy",
+                "description": "Jolteon_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Jolteon_Love_Stranger",
+                "description": "Jolteon_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Jolteon_Love_Aqaintance",
+                "description": "Jolteon_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Jolteon_Love_Friend",
+                "description": "Jolteon_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Jolteon_Love_BestFriend",
+                "description": "Jolteon_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Jolteon_Love_Lover",
+                "description": "Jolteon_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Jolteon_Love_Partner",
+                "description": "Jolteon_Love_Partner"
+            }
+        }
+    }
+}

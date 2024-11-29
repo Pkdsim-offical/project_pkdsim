@@ -1,0 +1,59 @@
+{
+    "name": "Noivern_Sys",
+    "description": "Noivern_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Noivern_Love":
+        {
+            "base":
+            {
+                "base": "Noivern_Love_base",
+                "description": "Noivern_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Noivern_Love_Foe",
+                "description": "Noivern_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Noivern_Love_Enemy",
+                "description": "Noivern_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Noivern_Love_Stranger",
+                "description": "Noivern_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Noivern_Love_Aqaintance",
+                "description": "Noivern_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Noivern_Love_Friend",
+                "description": "Noivern_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Noivern_Love_BestFriend",
+                "description": "Noivern_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Noivern_Love_Lover",
+                "description": "Noivern_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Noivern_Love_Partner",
+                "description": "Noivern_Love_Partner"
+            }
+        }
+    }
+}

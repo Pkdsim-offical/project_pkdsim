@@ -1,0 +1,58 @@
+{
+    "name": "Zoroark_Sys",
+    "description": "Zoroark_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Zoroark_Love":
+        {
+            "base":
+            {
+                "base": "Zoroark_Love_base",
+                "description": "Zoroark_Love_base"
+            },
+            "Foe":
+            {
+                "name": "Zoroark_Love_Foe",
+                "description": "Zoroark_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Zoroark_Love_Enemy",
+                "description": "Zoroark_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Zoroark_Love_Stranger",
+                "description": "Zoroark_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Zoroark_Love_Aqaintance",
+                "description": "Zoroark_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Zoroark_Love_Friend",
+                "description": "Zoroark_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Zoroark_Love_BestFriend",
+                "description": "Zoroark_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Zoroark_Love_Lover",
+                "description": "Zoroark_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Zoroark_Love_Partner",
+                "description": "Zoroark_Love_Partner"
+            }
+        }
+    }
+}

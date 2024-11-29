@@ -1,0 +1,59 @@
+{
+    "name": "Garchomp_Sys",
+    "description": "Garchomp_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Garchomp_Love":
+        {
+            "base":
+            {
+                "base": "Garchomp_Love_base",
+                "description": "Garchomp_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Garchomp_Love_Foe",
+                "description": "Garchomp_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Garchomp_Love_Enemy",
+                "description": "Garchomp_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Garchomp_Love_Stranger",
+                "description": "Garchomp_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Garchomp_Love_Aqaintance",
+                "description": "Garchomp_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Garchomp_Love_Friend",
+                "description": "Garchomp_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Garchomp_Love_BestFriend",
+                "description": "Garchomp_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Garchomp_Love_Lover",
+                "description": "Garchomp_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Garchomp_Love_Partner",
+                "description": "Garchomp_Love_Partner"
+            }
+        }
+    }
+}

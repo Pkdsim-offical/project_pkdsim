@@ -1,0 +1,59 @@
+{
+    "name": "Pheromosa_Sys",
+    "description": "Pheromosa_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Pheromosa_Love":
+        {
+            "base":
+            {
+                "base": "Pheromosa_Love_base",
+                "description": "Pheromosa_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Pheromosa_Love_Foe",
+                "description": "Pheromosa_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Pheromosa_Love_Enemy",
+                "description": "Pheromosa_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Pheromosa_Love_Stranger",
+                "description": "Pheromosa_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Pheromosa_Love_Aqaintance",
+                "description": "Pheromosa_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Pheromosa_Love_Friend",
+                "description": "Pheromosa_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Pheromosa_Love_BestFriend",
+                "description": "Pheromosa_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Pheromosa_Love_Lover",
+                "description": "Pheromosa_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Pheromosa_Love_Partner",
+                "description": "Pheromosa_Love_Partner"
+            }
+        }
+    }
+}

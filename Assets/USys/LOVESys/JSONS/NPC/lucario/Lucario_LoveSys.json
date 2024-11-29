@@ -1,0 +1,59 @@
+{
+    "name": "Lucario_Sys",
+    "description": "Lucario_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Lucario_Love":
+        {
+            "base":
+            {
+                "base": "Lucario_Love_base",
+                "description": "Lucario_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Lucario_Love_Foe",
+                "description": "Lucario_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Lucario_Love_Enemy",
+                "description": "Lucario_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Lucario_Love_Stranger",
+                "description": "Lucario_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Lucario_Love_Aqaintance",
+                "description": "Lucario_Love_Aqaintance"
+            },
+            "BestFriend":
+            {
+                "name": "Lucario_Love_BestFriend",
+                "description": "Lucario_Love_BestFriend"
+            },
+            "Friend":
+            {
+                "name": "Lucario_Love_Friend",
+                "description": "Lucario_Love_Friend"
+            },
+            "Lover":
+            {
+                "name": "Lucario_Love_Lover",
+                "description": "Lucario_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Lucario_Love_Partner",
+                "description": "Lucario_Love_Partner"
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "name": "Meowscarada_Sys",
+    "description": "Meowscarada_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Meowscarada_Love":
+        {
+            "base":
+            {
+                "base": "Meowscarada_Love_base",
+                "description": "Meowscarada_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Meowscarada_Love_Foe",
+                "description": "Meowscarada_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Meowscarada_Love_Enemy",
+                "description": "Meowscarada_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Meowscarada_Love_Stranger",
+                "description": "Meowscarada_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Meowscarada_Love_Aqaintance",
+                "description": "Meowscarada_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Meowscarada_Love_Friend",
+                "description": "Meowscarada_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Meowscarada_Love_BestFriend",
+                "description": "Meowscarada_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Meowscarada_Love_Lover",
+                "description": "Meowscarada_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Meowscarada_Love_Partner",
+                "description": "Meowscarada_Love_Partner"
+            }
+        }
+    }
+}

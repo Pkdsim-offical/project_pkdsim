@@ -1,0 +1,59 @@
+{
+    "name": "Braixen_Sys",
+    "description": "Braixen_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Braixen_Love":
+        {
+            "base":
+            {
+                "base": "Braixen_Love_base",
+                "description": "Braixen_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Braixen_Love_Foe",
+                "description": "Braixen_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Braixen_Love_Enemy",
+                "description": "Braixen_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Braixen_Love_Stranger",
+                "description": "Braixen_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Braixen_Love_Aqaintance",
+                "description": "Braixen_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Braixen_Love_Friend",
+                "description": "Braixen_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Braixen_Love_BestFriend",
+                "description": "Braixen_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Braixen_Love_Lover",
+                "description": "Braixen_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Braixen_Love_Partner",
+                "description": "Braixen_Love_Partner"
+            }
+        }
+    }
+}

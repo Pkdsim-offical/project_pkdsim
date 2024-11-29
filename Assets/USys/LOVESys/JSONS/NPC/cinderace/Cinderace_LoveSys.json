@@ -1,0 +1,59 @@
+{
+    "name": "Cinderace_Sys",
+    "description": "Cinderace_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Cinderace_Love":
+        {
+            "base":
+            {
+                "base": "Cinderace_Love_base",
+                "description": "Cinderace_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Cinderace_Love_Foe",
+                "description": "Cinderace_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Cinderace_Love_Enemy",
+                "description": "Cinderace_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Cinderace_Love_Stranger",
+                "description": "Cinderace_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Cinderace_Love_Aqaintance",
+                "description": "Cinderace_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Cinderace_Love_Friend",
+                "description": "Cinderace_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Cinderace_Love_BestFriend",
+                "description": "Cinderace_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Cinderace_Love_Lover",
+                "description": "Cinderace_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Cinderace_Love_Partner",
+                "description": "Cinderace_Love_Partner"
+            }
+        }
+    }
+}

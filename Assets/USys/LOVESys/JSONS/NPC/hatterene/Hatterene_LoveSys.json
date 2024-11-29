@@ -1,0 +1,54 @@
+{
+    "name": "Hatterene_Sys",
+    "description": "Hatterene_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Hatterene_Love":
+        {
+            "base":
+            {
+                "base": "Hatterene_Love_base",
+                "description": "Hatterene_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Hatterene_Love_Foe",
+                "description": "Hatterene_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Hatterene_Love_Enemy",
+                "description": "Hatterene_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Hatterene_Love_Stranger",
+                "description": "Hatterene_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Hatterene_Love_Aqaintance",
+                "description": "Hatterene_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Hatterene_Love_Friend",
+                "description": "Hatterene_Love_Friend"
+            },
+            "Lover":
+            {
+                "name": "Hatterene_Love_Lover",
+                "description": "Hatterene_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Hatterene_Love_Partner",
+                "description": "Hatterene_Love_Partner"
+            }
+        }
+    }
+}

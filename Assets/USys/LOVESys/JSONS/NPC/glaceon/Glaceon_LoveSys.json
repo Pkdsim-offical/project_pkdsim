@@ -1,0 +1,59 @@
+{
+    "name": "Glaceon_LoveSys",
+    "description": "Glaceon_LoveSys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Glaceon_Love":
+        {
+            "base":
+            {
+                "base": "Glaceon_Love_base",
+                "description": "Glaceon_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Glaceon_Love_Foe",
+                "description": "Glaceon_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Glaceon_Love_Enemy",
+                "description": "Glaceon_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Glaceon_Love_Stranger",
+                "description": "Glaceon_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Glaceon_Love_Aqaintance",
+                "description": "Glaceon_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Glaceon_Love_Friend",
+                "description": "Glaceon_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Glaceon_Love_BestFriend",
+                "description": "Glaceon_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Glaceon_Love_Lover",
+                "description": "Glaceon_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Glaceon_Love_Partner",
+                "description": "Glaceon_Love_Partner"
+            }
+        }
+    }
+}

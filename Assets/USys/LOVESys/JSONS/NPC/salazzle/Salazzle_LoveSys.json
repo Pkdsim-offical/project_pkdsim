@@ -1,0 +1,59 @@
+{
+    "name": "Salazzle_Sys",
+    "description": "Salazzle_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Salazzle_Love":
+        {
+            "base":
+            {
+                "base": "Salazzle_Love_base",
+                "description": "Salazzle_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Salazzle_Love_Foe",
+                "description": "Salazzle_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Salazzle_Love_Enemy",
+                "description": "Salazzle_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Salazzle_Love_Stranger",
+                "description": "Salazzle_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Salazzle_Love_Aqaintance",
+                "description": "Salazzle_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Salazzle_Love_Friend",
+                "description": "Salazzle_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Salazzle_Love_BestFriend",
+                "description": "Salazzle_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Salazzle_Love_Lover",
+                "description": "Salazzle_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Salazzle_Love_Partner",
+                "description": "Salazzle_Love_Partner"
+            }
+        }
+    }
+}
