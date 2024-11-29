@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-mode="False">
+    <engine:VisualElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" template="zoroark" name="zoroark" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uss/npc/zoroark/zoroark.uss?fileID=7433441132597879392&amp;guid=37ff696a832d89e4a9635082bc5de1fe&amp;type=3#zoroark" />
+</ui:UXML>
