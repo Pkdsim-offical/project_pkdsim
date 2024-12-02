@@ -4,6 +4,11 @@ namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.Flareon.idlebaseanimation.Id
 {
 	public class FL_IdleStanding : MonoBehaviour 
 	{
-
+		public Animator Flareon_Animator;
+		public void FL_IdleStandingController()
+		{
+			Flareon_Animator.SetFloat("Speed", 0f); // Initialize speed to 0
+			Flareon_Animator.Play("Idle_Standing");         // Start in the Idle animation state
+		}
 	}
 }

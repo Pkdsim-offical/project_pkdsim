@@ -10,5 +10,11 @@ namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.Espeon.idlebaseanimation
 		
 		private ES_IdleSitting ES_idlesitting;
 		
+
+		private void ES_BaseIdleAnimatorController()
+		{
+			ES_idlestanding.ES_IdleStandingController();
+			ES_idlesitting.ES_IdleSittingController();	
+		}
 	}
 }

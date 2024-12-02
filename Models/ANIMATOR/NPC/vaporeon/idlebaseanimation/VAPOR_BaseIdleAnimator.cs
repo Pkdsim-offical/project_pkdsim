@@ -9,5 +9,10 @@ namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.Vaporeon.idlebaseanimation
 		private VAPOR_IdleStanding VAPOR_idlestanding;
 		
 		private VAPOR_IdleSitting VAPOR_idlesitting;
+		private void VAPOR_BaseIdleAnimatorController()
+		{
+			VAPOR_idlestanding.VAPOR_IdleStandingController();
+			VAPOR_idlesitting.VAPOR_IdleSittingController();	
+		}
 	}
 }
