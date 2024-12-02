@@ -18,17 +18,19 @@ namespace LoM.Super.Serialization
     public class SuperSerializedObject : SerializedObject
     {
         // Member Variables
-        private SuperSerializedProperty[] m_All;
-        private SuperSerializedProperty[] m_Fields;
-        private SuperSerializedProperty[] m_Properties;
-        private Type m_Type;
-        private List<PropertyInfo> m_PropertiesInfo;
-        private List<FieldInfo> m_FieldsInfo;
+        private Type m_type;
+        private string m_typeName;
+        private Dictionary<UnityEngine.Object, SerializedObject> m_innerObjects = new();
+        private Dictionary<UnityEngine.Object, SuperSerializedProperty[]> m_all = new();
+        private Dictionary<UnityEngine.Object, SuperSerializedProperty[]> m_fields = new();
+        private Dictionary<UnityEngine.Object, SuperSerializedProperty[]> m_properties = new();
         
         // Getters
-        public SuperSerializedProperty[] All => m_All;
-        public SuperSerializedProperty[] Fields => m_Fields;
-        public SuperSerializedProperty[] Properties => m_Properties;
+        public Type Type => m_type;
+        public string TypeName => m_typeName;
+        public SuperSerializedProperty[] All => m_all.FirstOrDefault().Value;
+        public SuperSerializedProperty[] Fields => m_fields.FirstOrDefault().Value;
+        public SuperSerializedProperty[] Properties => m_properties.FirstOrDefault().Value;
         
         // Constructors
         /// <summary>
@@ -44,14 +46,17 @@ namespace LoM.Super.Serialization
         /// </summary>
         public SuperSerializedObject(UnityEngine.Object obj, UnityEngine.Object context) : base(obj, context)
         {
-            InitProperties(obj);
+            InitProperties(obj, context);
         }
         /// <summary>
         /// Create SerializedObject for inspected object.
         /// </summary>
         public SuperSerializedObject(UnityEngine.Object[] objs) : base(objs)
         {
-            if (objs.Length > 0) InitProperties(objs[0]);
+            foreach (UnityEngine.Object obj in objs)
+            {
+                InitProperties(obj);
+            }
         }
         /// <summary>
         /// Create SerializedObject for inspected object by specifying a context to be used
@@ -59,50 +64,42 @@ namespace LoM.Super.Serialization
         /// </summary>
         public SuperSerializedObject(UnityEngine.Object[] objs, UnityEngine.Object context) : base(objs, context)
         {
-            if (objs.Length > 0) InitProperties(objs[0]);
+            foreach (UnityEngine.Object obj in objs)
+            {
+                InitProperties(obj, context);
+            }
         }
     
-        // Methods
-        private void InitProperties(UnityEngine.Object obj)
+        /// <summary>
+        /// Initialize properties.
+        /// </summary>
+        private void InitProperties(UnityEngine.Object obj, UnityEngine.Object context = null)
         {
-            m_Type = obj.GetType();
-            List<SuperSerializedProperty> properties = new List<SuperSerializedProperty>();
-                
-            // Create all fields
-            m_FieldsInfo = new List<FieldInfo>(); 
-            List<SerializedProperty> fields = new List<SerializedProperty>();
-            var property = base.GetIterator();
-            if (property.NextVisible(true))
+            m_innerObjects[obj] = context == null ? new SerializedObject(obj) : new SerializedObject(obj, context);
+            m_type = obj.GetType();
+            m_typeName = m_type.Name;
+            SuperSerializationUtility.UnityObjectInfo objInfo = SuperSerializationUtility.GetUnityObjectInfo(m_type, this);
+            int fieldsLength = objInfo.Fields.Length;
+            int propertiesLength = objInfo.Properties.Length;
+            SuperSerializedProperty[] all = new SuperSerializedProperty[fieldsLength + propertiesLength];
+            SuperSerializedProperty[] fields = new SuperSerializedProperty[fieldsLength];
+            SuperSerializedProperty[] properties = new SuperSerializedProperty[propertiesLength];
+            for (int i = 0; i < fieldsLength; i++)
             {
-                do
-                {
-                    if (property.name == "m_Script") continue;
-                    fields.Add(base.FindProperty(property.name));
-                }
-                while (property.NextVisible(false));
+                FieldInfo fieldInfo = objInfo.Fields[i];
+                SuperSerializedProperty property = new(this, base.FindProperty(fieldInfo.Name), m_innerObjects[obj].FindProperty(fieldInfo.Name), fieldInfo, obj);
+                fields[i] = property;
+                all[i] = property;
             }
-            foreach (SerializedProperty field in fields)
+            for (int i = 0; i < propertiesLength; i++)
             {
-                FieldInfo fieldInfo = m_Type.GetField(field.name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-                if (fieldInfo == null) continue;
-                m_FieldsInfo.Add(fieldInfo);
-                properties.Add(new SuperSerializedProperty(this, field, fieldInfo, obj));
+                SuperSerializedProperty property = new(this, objInfo.Properties[i], obj);
+                properties[i] = property;
+                all[i + fieldsLength] = property;
             }
-            
-            // Create all properties
-            m_PropertiesInfo = m_Type
-                .GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
-                .Where(p => p.GetCustomAttributes(typeof(SerializePropertyAttribute), true).Length > 0)
-                .ToList();
-            foreach (PropertyInfo propertyInfo in m_PropertiesInfo)
-            {
-                properties.Add(new SuperSerializedProperty(this, propertyInfo, obj));
-            }
-            
-            // To Array
-            m_All = properties.ToArray();
-            m_Fields = m_All.Where(p => p.IsField).ToArray();
-            m_Properties = m_All.Where(p => !p.IsField).ToArray();
+            m_all[obj] = all;
+            m_fields[obj] = fields;
+            m_properties[obj] = properties;
         }
         
         /// <summary>
@@ -111,22 +108,35 @@ namespace LoM.Super.Serialization
         public new void Update() 
         {
             base.Update();
-            
-            // Reevaluate all properties
-            foreach (SuperSerializedProperty property in m_All)
+            foreach (UnityEngine.Object obj in m_innerObjects.Keys)
             {
-                property.Reevaluate();
+                m_innerObjects[obj].Update();
+            }
+            
+            foreach (UnityEngine.Object obj in m_all.Keys)
+            {
+                foreach (SuperSerializedProperty property in m_all[obj])
+                {
+                    property.Reevaluate();
+                }
             }
         }
     
         // Dispose 
         public new void Dispose() 
         {
-            foreach (SuperSerializedProperty property in m_Properties)
+            foreach (UnityEngine.Object obj in m_properties.Keys)
             {
-                property.Dispose();
+                foreach (SuperSerializedProperty property in m_properties[obj])
+                {
+                    property.Dispose();
+                }
             }
             base.Dispose();
+            foreach (UnityEngine.Object obj in m_innerObjects.Keys)
+            {
+                m_innerObjects[obj].Dispose();
+            }
         }
     
         [Obsolete("Use FindPropertyByPath instead.", false)]
@@ -136,14 +146,34 @@ namespace LoM.Super.Serialization
         /// </summary>
         public SuperSerializedProperty FindPropertyByPath(string propertyPath) 
         {
-            foreach (SuperSerializedProperty property in m_All)
+            foreach (UnityEngine.Object obj in m_all.Keys)
             {
-                if (property.propertyPath == propertyPath) return property;
+                foreach (SuperSerializedProperty property in m_all[obj])
+                {
+                    if (property.propertyPath == propertyPath) return property;
+                }
             }
             return null;
         }
+        public SuperSerializedProperty[] FindAllPropertiesByPath(string propertyPath) 
+        {
+            List<SuperSerializedProperty> properties = new();
+            foreach (UnityEngine.Object obj in m_all.Keys)
+            {
+                foreach (SuperSerializedProperty property in m_all[obj])
+                {
+                    if (property.propertyPath == propertyPath) properties.Add(property);
+                }
+            }
+            return properties.ToArray();
+        }
     
     
+        //* ////////////////////////////////////////////////////////////////////
+        //* Explicit base calls (for internal use only)
+        //* ////////////////////////////////////////////////////////////////////
+        internal SerializedProperty GetIteratorInternal() => base.GetIterator();
+        internal SerializedProperty FindPropertyInternal(string propertyPath) => base.FindProperty(propertyPath);
     
     
     
@@ -206,7 +236,7 @@ namespace LoM.Super.Serialization
         /// <summary>
         /// This has been made obsolete. See SerializedObject.UpdateIfRequiredOrScript instead.
         /// </summary>
-        [System.Obsolete("UpdateIfDirtyOrScript has been deprecated. Use UpdateIfRequiredOrScript instead.", false)]
+        [Obsolete("UpdateIfDirtyOrScript has been deprecated. Use UpdateIfRequiredOrScript instead.", false)]
         public new void UpdateIfDirtyOrScript() => base.UpdateIfDirtyOrScript();
         /// <summary>
         /// Update serialized object's representation, only if the object has been modified

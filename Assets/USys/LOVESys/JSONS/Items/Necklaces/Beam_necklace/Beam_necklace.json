@@ -70,8 +70,7 @@
                 {
                     "SuperEffective":
                     {
-                        "Bug":"+3",
-                        "Grass":"+3", 
+                        "Rock":"+3", 
                         "Ice":"+3",
                         "Steel": "+3"
                     },
@@ -90,9 +89,13 @@
                     },
                     "Not_Very_Effective":
                     {
-                        "Dragon":"-3", 
-                        "Rock":"-3", 
+                        "Fire": "-3", 
+                        "Electric":"-3", 
                         "Water": "-3"
+                    },
+                    "Love_Immunity_Effect":
+                    {
+                        "None":"0"
                     },
                     "Love_Special_Effect":
                     {

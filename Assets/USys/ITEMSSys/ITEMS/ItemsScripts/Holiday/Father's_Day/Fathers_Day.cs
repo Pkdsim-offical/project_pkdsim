@@ -6,8 +6,9 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsS
 	public class Fathers_Day_ITAssets : MonoBehaviour
 	{
 		private HDA_ULoader holidayLoader;
-		public static void LoadFathers_DayITHAssets()
+		public void LoadFathers_DayITHAssets()
 		{
+			//Load Fathers Day Item Assets
 			HDA_ULoader.InitializeHolidayAsset("FathersDayAssetKey"); // Load the holiday asset.
 		}
 	}

@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class No_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Noivern
 {
-    public void Load_No_FamilyScene()
+    public class No_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("No_Family");
+        public void Load_No_FamilyScene()
+        {
+            SceneManager.LoadScene("No_Family");
+        }
     }
 }

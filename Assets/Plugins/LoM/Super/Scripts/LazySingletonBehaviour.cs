@@ -25,7 +25,11 @@ namespace LoM.Super
                 {
                     if (s_instance == null)
                     {
+#if UNITY_6000_0_OR_NEWER
+                        s_instance = FindAnyObjectByType<T>();
+#else
                         s_instance = FindObjectOfType<T>();
+#endif
                         if (s_instance == null)
                         {
                             GameObject singleton = new GameObject();

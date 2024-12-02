@@ -4,7 +4,7 @@
     "type": "Item",
     "version": "1.0.0",
     "author": "pkdsim_official",
-    "SYS_properties": 
+    "SYS_properties":
     [
         {
             "name": "PunchingBag_necklace",
@@ -70,29 +70,39 @@
                 {
                     "SuperEffective":
                     {
-                        "Bug":"+3",
-                        "Grass":"+3", 
+                        "Fighting":"+3",
+                        "Grass":"+3",
                         "Ice":"+3",
-                        "Steel": "+3"
+                        "Steel": "+3",
+                        "Normal":"+3",
+                        "Rock":"+3"
                     },
                     "Effective":
                     {
-                        "Dark": "0", 
+                        "Dark": "0",
                         "Electric": "0",
-                        "Fairy": "0", 
-                        "Fighting": "0", 
-                        "Flying": "0", 
-                        "Ghost": "0", 
-                        "Ground": "0", 
-                        "Normal": "0", 
+                        "Fighting": "0",
+                        "Ghost": "0",
+                        "Ground": "0",
+                        "Normal": "0",
                         "Poison": "0",
                         "Psychic":  "0"
                     },
                     "Not_Very_Effective":
                     {
-                        "Dragon":"-3", 
-                        "Rock":"-3", 
-                        "Water": "-3"
+                        "Poison":"-3",
+                        "Flying":"-3",
+                        "Psychic":"-3",
+                        "Bug":"-3",
+                        "Fairy":"-3"
+                    },
+                    "Love_Immunity_Effect":
+                    {
+                        "Ghost":"-5"
+                    },
+                    "Love_Special_Effect":
+                    {
+                        "Lucario": "+5"
                     }
                 }
             }

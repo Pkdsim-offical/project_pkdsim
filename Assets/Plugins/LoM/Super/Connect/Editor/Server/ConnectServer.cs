@@ -1,8 +1,10 @@
+
+using System;
 using System.Net;
+using System.Text;
 using System.Threading;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace LoM.Super.Connect.Editor
 {
@@ -13,112 +15,186 @@ namespace LoM.Super.Connect.Editor
     [InitializeOnLoad]
     internal class ConnectServer
     {
-        // Constants
-        private static string SERVER_URL = "http://localhost:{0}/";
+        // Static Variables
+        private static object s_lock = new object();
+        private static ConnectServer s_instance;
+        private static int s_port;
+        private static bool s_enabled;
         
         // Member Variables
-        private static HttpListener listener;
-        private static Thread listenerThread;
+        private HttpListener m_listener;
+        private Thread m_serverThread;
+        private bool m_isRunning;
+        
+        // Getters
+        private string ServerUrl => $"http://localhost:{s_port}/"; 
 
-        // Static Constructor
-        static ConnectServer()
+        // Constructor
+        private ConnectServer()
         {
-            StartServer();
+            if (s_instance != null) return;
+            s_port = EditorPrefs.GetInt("SuperBehaviour.ConnectServer.Port", 20635);
+            s_enabled = EditorPrefs.GetBool("SuperBehaviour.ConnectServer.Enabled", true);
+            s_instance = this;
+            Restart();
         }
 
         // Start the server
-        private static void StartServer()
+        private void Start()
         {
-            listener = new HttpListener(); 
-            listener.Prefixes.Add(string.Format(SERVER_URL, EditorPrefs.GetString("SuperBehaviour.ConnectServer.Port", "20635")));
-            listener.Start();
+            if (m_isRunning) return;
+            if (!s_enabled) return;
+    
+            if (m_listener == null) 
+            {
+                m_listener = new HttpListener();
+                m_listener.Prefixes.Add(ServerUrl);
+            }
 
-            listenerThread = new Thread(StartListener);
-            listenerThread.Start();
+            m_isRunning = true;
+            m_serverThread = new Thread(RunServer) { IsBackground = true };
+            m_serverThread.Start();
         }
 
-        // Start the listener
-        private static void StartListener() 
+        // Stop the server
+        private void Stop(bool force = false)
         {
-            try 
-            {
-                while (listener.IsListening)
-                {
-                    HttpListenerContext context = listener.GetContext();
-                    HttpListenerRequest request = context.Request;
-                    HttpListenerResponse response = context.Response;
+            if (!m_isRunning && !force) return;
 
-                    // Check for terminate command
-                    if (request.Url.AbsolutePath == "/terminate") 
-                    {
-                        ShutDownServer();
-                        return;
-                    }
-                    
-                    // Return Alive message
-                    if (request.Url.AbsolutePath == "/")
-                    {
-                        string responseString = "{\"status\": \"alive\"}";
-                        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
-                        response.ContentLength64 = buffer.Length;
-                        System.IO.Stream output = response.OutputStream;
-                        output.Write(buffer, 0, buffer.Length);
-                        output.Close();
-                        continue;
-                    }
-                    
-                    // Check if Route exists
-                    string route = request.Url.AbsolutePath;
-                    if (ConnectRouter.Exists(route))
-                    {
-                        ThreadedEditorUtility.ExecuteInMainThread(() => {
-                            ConnectResponse connectResponse = ConnectRouter.Route(route, request);
-                            byte[] buffer = System.Text.Encoding.UTF8.GetBytes(connectResponse.ReturnJSON);
-                            response.StatusCode = connectResponse.StatusCode;
-                            response.ContentLength64 = buffer.Length;
-                            System.IO.Stream output = response.OutputStream;
-                            output.Write(buffer, 0, buffer.Length);
-                            output.Close();
-                        });
-                    }
-                    else {
-                        string responseString = "{\"status\": \"not found\"}";
-                        byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
-                        response.StatusCode = (int)HttpStatusCode.NotFound;
-                        response.ContentLength64 = buffer.Length;
-                        System.IO.Stream output = response.OutputStream;
-                        output.Write(buffer, 0, buffer.Length);
-                        output.Close();
-                    }
+            m_isRunning = false;
+            if (m_listener == null && m_listener.IsListening) m_listener.Stop();
+            m_serverThread.Join();
+        }
+        
+        // Restart the server
+        private void Restart()
+        {
+            if (m_isRunning)
+            {
+                Stop();
+            }
+            Start();
+        }
+
+        // Run the server
+        private void RunServer()
+        {
+            // Start Listener
+            try
+            {
+                m_listener.Start();
+            }
+            catch 
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(ServerUrl + "terminate");
+                request.Method = "GET";
+                request.Timeout = 5000;
+                try
+                {
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    response.Close();
+                }
+                catch {}
+                Thread.Sleep(5000);
+                Restart();
+            }
+            
+            // Listen for requests
+            try
+            {
+                m_listener.Start();
+                while (m_isRunning && m_listener.IsListening)
+                {
+                    var context = m_listener.GetContext(); // Blocking call
+                    HandleRequest(context);
                 }
             }
-            catch (System.Net.HttpListenerException)
+            catch {}
+            finally
             {
-                // Ignore this exception, it happens when the server is shut down
-            }
-            catch (System.Threading.ThreadAbortException) 
-            {
-                // Ignore this exception, it happens when the server is shut down
-            }
-            catch (System.Exception e)
-            {
-                Debug.LogException(e);
+                m_listener.Close();
+                m_listener = null;
             }
         }
 
-        // Shut down the server
-        private static void ShutDownServer()
+        // Handle the request
+        private void HandleRequest(HttpListenerContext context)
         {
-            if (listener != null)
-            {
-                listener.Stop();
-                listener.Close();
-            }
+            HttpListenerResponse response = context.Response;
 
-            if (listenerThread != null)
+            // Check for terminate command
+            if (context.Request.Url.AbsolutePath == "/terminate")
             {
-                listenerThread.Join();
-                listenerThread = null;
+                string responseMessage = "{\"status\": \"terminated\"}";
+                byte[] buffer = Encoding.UTF8.GetBytes(responseMessage);
+                response.ContentLength64 = buffer.Length;
+                response.OutputStream.Write(buffer, 0, buffer.Length);
+                response.OutputStream.Close();
+                Stop(force: true);
+                return;
+            }
+            
+            // Check for restart command
+            if (context.Request.Url.AbsolutePath == "/restart")
+            {
+                string responseMessage = "{\"status\": \"restarted\"}";
+                byte[] buffer = Encoding.UTF8.GetBytes(responseMessage);
+                response.ContentLength64 = buffer.Length;
+                response.OutputStream.Write(buffer, 0, buffer.Length);
+                response.OutputStream.Close();
+                ThreadedEditorUtility.ExecuteInMainThread(() => Restart());
+                return;
+            }
+            
+            // Return Alive message
+            if (context.Request.Url.AbsolutePath == "/")
+            {
+                string responseString = "{\"status\": \"alive\"}";
+                byte[] buffer = Encoding.UTF8.GetBytes(responseString);
+                response.ContentLength64 = buffer.Length;
+                response.OutputStream.Write(buffer, 0, buffer.Length);
+                response.OutputStream.Close();
+                return;
+            }
+            
+            // Check if Route exists
+            string route = context.Request.Url.AbsolutePath;
+            if (ConnectRouter.Exists(route))
+            {
+                ThreadedEditorUtility.ExecuteInMainThread(() => {
+                    ConnectResponse connectResponse = ConnectRouter.Route(route, context.Request);
+                    byte[] buffer = Encoding.UTF8.GetBytes(connectResponse.ReturnJSON);
+                    response.StatusCode = connectResponse.StatusCode;
+                    response.ContentLength64 = buffer.Length;
+                    response.OutputStream.Write(buffer, 0, buffer.Length);
+                    response.OutputStream.Close();
+                });
+            }
+            else {
+                string responseString = "{\"status\": \"not found\"}";
+                byte[] buffer = Encoding.UTF8.GetBytes(responseString);
+                response.StatusCode = (int)HttpStatusCode.NotFound;
+                response.ContentLength64 = buffer.Length;
+                response.OutputStream.Write(buffer, 0, buffer.Length);
+                response.OutputStream.Close();
+            }
+        }
+        
+        // Reload on domain reload
+        [InitializeOnLoadMethod]
+        private static void ReloadAfterDomainReload()
+        {
+            s_enabled = EditorPrefs.GetBool("SuperBehaviour.ConnectServer.Enabled", true);
+            lock (s_lock)
+            {
+                if (s_instance == null) 
+                {
+                    s_instance = new ConnectServer();
+                }
+                else
+                {
+                    s_instance.Restart();
+                }
             }
         }
     }

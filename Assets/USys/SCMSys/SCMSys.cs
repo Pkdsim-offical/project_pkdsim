@@ -3,11 +3,15 @@ using UnityEngine.SceneManagement;
 
 namespace project_pkdsim.Assets.USys.SCMSys
 {
-    public class SCMSys : SCMSys_I
+    public class SceneManagerSys : SCMSys_I
     {
         public void LoadScene(string project_pkdsim)
         {
             SceneManager.LoadScene(project_pkdsim);
+        }
+        public void SCMSysI()
+        {
+            LoadScene("project_pkdsim");
         }
     }
 }

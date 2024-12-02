@@ -6,7 +6,7 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsS
 	public class MartinLutherKing_Day_ITAssets : MonoBehaviour
 	{
 		private HDA_ULoader holidayLoader;
-		public static void LoadMartinLutherKing_DayITHAssets()
+		public void LoadMartinLutherKing_DayITHAssets()
 		{
 			//Load Martin Luther King Day Item Assets
 			HDA_ULoader.InitializeHolidayAsset("MartinLutherKingDayAssetKey"); // Load the holiday asset.

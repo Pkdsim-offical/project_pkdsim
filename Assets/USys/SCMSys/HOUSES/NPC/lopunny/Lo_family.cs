@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Lo_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Lopunny
 {
-    public void Load_Lo_FamilyScene()
+    public class Lo_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Lo_Family");
+        public void Load_Lo_FamilyScene()
+        {
+            SceneManager.LoadScene("Lo_Family");
+        }
     }
 }

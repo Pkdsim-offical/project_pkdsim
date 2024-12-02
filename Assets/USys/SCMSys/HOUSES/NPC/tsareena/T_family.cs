@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class T_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Tsareena
 {
-    public void Load_T_FamilyScene()
+    public class T_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("T_Family");
+        public void Load_T_FamilyScene()
+        {
+            SceneManager.LoadScene("T_Family");
+        }
     }
 }

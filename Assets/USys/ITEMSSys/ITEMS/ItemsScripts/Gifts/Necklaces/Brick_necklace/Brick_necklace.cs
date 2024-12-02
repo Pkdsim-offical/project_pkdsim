@@ -5,7 +5,7 @@ using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.B
 
 namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.Brick_necklace
 {
-    public class Brick_necklaceItem : MonoBehaviour
+    public class Brick_NecklaceItem : MonoBehaviour
     {
         public List<Sys_Properties> SYS_properties { get; set; }
 
@@ -13,9 +13,9 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
         {
             public LoveEffectPropertiesBase SYS_properties { get; set; }
         }
-        public class Br_necklace_Item
+        private class Br_necklace_Item
         {
-
+            public List<Sys_Properties> SYS_properties { get; set; }
         }
     }
 }

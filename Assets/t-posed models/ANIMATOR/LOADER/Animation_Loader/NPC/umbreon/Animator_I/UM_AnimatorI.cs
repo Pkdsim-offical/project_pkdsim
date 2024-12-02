@@ -17,7 +17,6 @@ namespace project_pkdsim.Assets.Models.ANIMATOR.Loader.NPC.Umbreon.Animator_I
 
 		public void Umbreon_AnimatorController()
 		{
-			Umbreon_Animator = gameObject.GetComponent<Animator>();
 			Umbreon_Animator.runtimeAnimatorController = someController;
 		}
 		private void ConvertToAnimatorController()

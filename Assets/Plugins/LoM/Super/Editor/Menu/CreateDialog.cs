@@ -1,6 +1,7 @@
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using LoM.Super.Editor;
 
 namespace LoM.Super.Internal
 {
@@ -37,9 +38,7 @@ namespace LoM.Super.Internal
             if (string.IsNullOrEmpty(_name))
             {
                 rect.x += 2;
-                GUIStyle labelStyle = new GUIStyle(EditorStyles.centeredGreyMiniLabel);
-                labelStyle.alignment = TextAnchor.MiddleLeft;
-                EditorGUI.LabelField(rect, "Enter the filename", labelStyle);
+                EditorGUI.LabelField(rect, "Enter the filename", EditorStyles.centeredGreyMiniLabel.Variant("CreateDialog_Label", style => style.alignment = TextAnchor.MiddleLeft));
             }
             
             // Draw Buttons

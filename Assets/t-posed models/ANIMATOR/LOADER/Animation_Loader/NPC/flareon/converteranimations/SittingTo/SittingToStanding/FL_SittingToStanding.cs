@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Linq;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.Models.ANIMATOR.Loader.Animation_Loader.NPC.Flareon.converteranimations.SittingTo.SittingToStanding

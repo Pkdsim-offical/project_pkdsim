@@ -1,9 +1,10 @@
 using UnityEngine;
-using project_pkdsim.Assets.USys.TCMSys.splitter;
+using project_pkdsim.Assets.USys.TCMSys.I;
 
 namespace project_pkdsim.Assets.USys.TCMSys
 {
-    public class TCMSys : MonoBehaviour {
+    public class TabChangeManagerSys : MonoBehaviour 
+    {
 
         private TCMSysI TCMSys_I;
         public void LoadNewGame()
@@ -20,6 +21,10 @@ namespace project_pkdsim.Assets.USys.TCMSys
         public void QuitGame()
         {
             Application.Quit();
+        }
+        public void TCMSysI()
+        {
+            
         }
     }
 }

@@ -12,8 +12,8 @@ namespace LoM.Super.Editor
     internal class SuperPropertyDrawerUtility
     {
         // Singleton
-        private static SuperPropertyDrawerUtility m_Instance;
-        internal static SuperPropertyDrawerUtility Instance => m_Instance ?? (m_Instance = new SuperPropertyDrawerUtility());
+        private static SuperPropertyDrawerUtility s_instance;
+        internal static SuperPropertyDrawerUtility Instance => s_instance ?? (s_instance = new SuperPropertyDrawerUtility());
         
         // Member Variables
         private Dictionary<Type, Type> m_PropertyDrawers; // Type of the property, Type of the property drawer
@@ -80,6 +80,6 @@ namespace LoM.Super.Editor
         
         // Clear instance on domain reload
         [InitializeOnLoadMethod]
-        private static void ClearInstance() => m_Instance = null;
+        private static void ClearInstance() => s_instance = null;
     }
 }

@@ -1,40 +1,68 @@
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Absol;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Beedrill;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Blaziken;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Braixen;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Cinderace;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Delphox;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Dragapult;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Espeon;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Flareon;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Frostlass;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Garchomp;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Gardevoir;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Glaceon;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Hatterene;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Jolteon;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Leafeon;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Lopunny;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Lucario;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Lunala;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Meowscarada;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Noivern;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Pheromosa;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Primarina;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Salazzle;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Tsareena;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Umbreon;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Vaporeon;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Vespiquen;
+using project_pkdsim.Assets.USys.LOVESys.LoveScripts.NPC.I_data.Zoroark;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.LOVESys.NPC.I_data.Importer
 {
-
 	public class NPC_LOVESys_Importer : MonoBehaviour
 	{
-		protected Absol_LL Absol_LL;
-		protected Beedrill_LL Beedrill_LL;
-		protected Blaziken_LL Blaziken_LL;
-		protected Braixen_LL Braixen_LL;
-		protected Cinderace_LL Cinderace_LL;
-		protected Delphox_LL Delphox_LL;
-		protected Dragapult_LL Dragapult_LL;
-		protected Espeon_LL Espeon_LL;
-		protected Flareon_LL Flareon_LL;
-		protected Frostlass_LL Frostlass_LL;
-		protected Garchomp_LL Garchomp_LL;
-		protected Gardevoir_LL Gardevoir_LL;
-		protected Glaceon_LL Glaceon_LL;
-		protected Hatterene_LL Hatterene_LL;
-		protected Jolteon_LL Jolteon_LL;
-		protected Leafeon_LL Leafeon_LL;
-		protected Lucario_LL Lucario_LL;
-		protected Lopunny_LL Lopunny_LL;
-		protected Lunala_LL Lunala_LL;
-		protected Meowscarada_LL Meowscarada_LL;
-		protected Noivern_LL Noivern_LL;
-		protected Pheromosa_LL Pheromosa_LL;
-		protected Primarina_LL Primarina_LL;
-		protected Salazzle_LL Salazzle_LL;
-		protected Sylveon_LL Sylveon_LL;
-		protected Tsareena_LL Tsareena_LL;
-		protected Umbreon_LL Umbreon_LL;
-		protected Vaporeon_LL Vaporeon_LL;
-		protected Vespiquen_LL Vespiquen_LL;
-		protected Zoroark_LL Zoroark_LL;
+		private Absol_LL Absol_LL;
+		private Beedrill_LL Beedrill_LL;
+		private Blaziken_LL Blaziken_LL;
+		private Braixen_LL Braixen_LL;
+		private Cinderace_LL Cinderace_LL;
+		private Delphox_LL Delphox_LL;
+		private Dragapult_LL Dragapult_LL;
+		private Espeon_LL Espeon_LL;
+		private Flareon_LL Flareon_LL;
+		private Frostlass_LL Frostlass_LL;
+		private Garchomp_LL Garchomp_LL;
+		private Gardevoir_LL Gardevoir_LL;
+		private Glaceon_LL Glaceon_LL;
+		private Hatterene_LL Hatterene_LL;
+		private Jolteon_LL Jolteon_LL;
+		private Leafeon_LL Leafeon_LL;
+		private Lucario_LL Lucario_LL;
+		private Lopunny_LL Lopunny_LL;
+		private Lunala_LL Lunala_LL;
+		private Meowscarada_LL Meowscarada_LL;
+		private Noivern_LL Noivern_LL;
+		private Pheromosa_LL Pheromosa_LL;
+		private Primarina_LL Primarina_LL;
+		private Salazzle_LL Salazzle_LL;
+		private Sylveon_LL Sylveon_LL;
+		private Tsareena_LL Tsareena_LL;
+		private Umbreon_LL Umbreon_LL;
+		private Vaporeon_LL Vaporeon_LL;
+		private Vespiquen_LL Vespiquen_LL;
+		private Zoroark_LL Zoroark_LL;
 
 		protected void Get_NPC_LLSys()
 		{

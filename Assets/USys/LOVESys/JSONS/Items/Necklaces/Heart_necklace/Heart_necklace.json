@@ -94,6 +94,10 @@
                         "Rock":"-3", 
                         "Water": "-3"
                     },
+                    "Love_Immunity_Effect":
+                    {
+                        "None":"0"
+                    },
                     "Love_Special_Effect":
                     {
                         "Sylveon": "+5"

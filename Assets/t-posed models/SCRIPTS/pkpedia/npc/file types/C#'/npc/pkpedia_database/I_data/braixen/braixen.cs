@@ -1,14 +1,17 @@
-using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
+using project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database;
 
-public class braixen : Pkpedia_database
+namespace project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database.I_Data.Braixen
 {
-    // Update is called once per frame
-    private void Update()
+    public class braixen : Pkpedia_database
     {
-        Pkpedia_link();
-    }
-    protected void Pkpedia_link()
-    {
-        Braixen();
+        // Update is called once per frame
+        private void Update()
+        {
+            Pkpedia_link();
+        }
+        protected void Pkpedia_link()
+        {
+            Braixen();
+        }
     }
 }

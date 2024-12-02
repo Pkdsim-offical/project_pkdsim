@@ -1,5 +1,6 @@
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.HolidayITEM;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.PkPhone;
 using UnityEngine;
 namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts
 {

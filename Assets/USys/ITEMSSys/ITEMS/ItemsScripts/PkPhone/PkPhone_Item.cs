@@ -1,11 +1,13 @@
 using UnityEngine;
 
-public class PkPhone_Item : MonoBehaviour
+namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.PkPhone
 {
-	private UnityEngine.GameObject pkphone;
-	public void Get_Game_object()
+	public class PkPhone_Item : MonoBehaviour
 	{
-		pkphone = GameObject.Find("PkPhone");
+		private GameObject pkphone;
+		public void Get_Game_object()
+		{
+			pkphone = GameObject.Find("PkPhone");
+		}
 	}
-
 }

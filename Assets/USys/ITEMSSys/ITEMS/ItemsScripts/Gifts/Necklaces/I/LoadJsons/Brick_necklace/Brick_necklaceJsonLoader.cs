@@ -8,14 +8,14 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
 {
     public class Brick_necklaceJsonLoader : MonoBehaviour
     {
-        private Brick_necklaceItem necklaceData;
+        private Brick_NecklaceItem necklaceData;
         public void LoadJson()
         {
             string filePath = Path.Combine(Application.dataPath, "Resources", "Brick_necklace.json");
             if (File.Exists(filePath))
             {
                 string jsonContent = File.ReadAllText(filePath);
-                necklaceData = JsonConvert.DeserializeObject<Brick_necklaceItem>(jsonContent);
+                necklaceData = JsonConvert.DeserializeObject<Brick_NecklaceItem>(jsonContent);
                 Debug.Log("Loaded Brick_necklace data successfully.");
             }
             else

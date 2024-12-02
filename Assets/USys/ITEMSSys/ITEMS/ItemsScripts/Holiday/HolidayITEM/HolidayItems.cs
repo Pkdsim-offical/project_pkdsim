@@ -1,17 +1,15 @@
-using project_pkdsim.Assets.Models.SCRIPTS.USys.HDSys.ULoader.Holidays.AssetsSorter.Labor_Day;
-using project_pkdsim.Assets.Models.SCRIPTS.USys.HDSys.ULoader.Holidays.AssetsSorter.Memorial_Day;
-using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.Holiday.Assets.AssetsSorter.Halloween;
-using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.Holiday.Assets.AssetsSorter.Independence_Day;
-using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.Assets.AssetsSorter.BlackFriday;
-using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.Assets.AssetsSorter.CincoDeMayo;
-using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.Assets.AssetsSorter.Columbus_Day;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Labor_Day;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Memorial_Day;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Halloween;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Independence_Day;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.BlackFriday;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.CincoDeMayo;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Columbus_Day;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Christmas;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.CyberMonday;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Easter;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Fathers_Day;
-using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Labor_Day;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.MartinLutherKing_Day;
-using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Memorial_Day;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Mothers_Day;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.NewYear;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsSorter.Valentines_Day;
@@ -50,15 +48,15 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.Holiday
 
 		private NewYears_ITAssets NewYears_ITAssets;
 
-		private Valentines_Day_ITAssets Valentine_Day_ITAssets;
+		private Valentines_Day_ITAssets ValentinesDay_ITAssets;
 
 		private Veterans_Day_ITAssets VeteransDay_ITAssets;
 
 		public void LoadItems()
 		{
-			Get_Items();
+			Get_Holiday_Items();
 		}
-		private void Get_Items()
+		private void Get_Holiday_Items()
 		{
 			Get_BlackFriday_ITAssets();
 			Get_Christmas_ITAssets();
@@ -149,12 +147,12 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.Holiday
 
 		private void Get_Valentines_Day_ITAssets()
 		{
-			Valentines_Day_ITAssets.LoadValentines_DayITHAssets();
+			ValentinesDay_ITAssets.LoadValentines_DayITHAssets();
 		}
 
 		private void Get_Veterans_Day_ITAssets()
 		{
-			Veterans_Day_ITAssets.LoadVeterans_DayITHAssets();	
+			VeteransDay_ITAssets.LoadVeterans_DayITHAssets();	
 		}
 	}
 }

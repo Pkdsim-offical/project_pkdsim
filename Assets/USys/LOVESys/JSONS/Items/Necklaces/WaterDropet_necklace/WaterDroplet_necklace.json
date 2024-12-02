@@ -1,6 +1,6 @@
 {
     "name": "WaterDrop_necklace",
-    "description": "WaterDrop_necklace: a necklace that is beloved by Water types especially by Primarina",
+    "description": "WaterDrop_necklace: a necklace that is beloved by Water types especially by Vaporeon",
     "type": "Item",
     "version": "1.0.0",
     "author": "pkdsim_official",
@@ -70,9 +70,10 @@
                 {
                     "SuperEffective":
                     {
-                        "fire": "+3",
-                        "ground":"+3",
-                        "rock": "+3" 
+                        "Water": "+3",
+                        "Fire": "+3",
+                        "Ground":"+3",
+                        "Rock": "+3" 
                     },
                     "Effective":
                     {
@@ -87,10 +88,8 @@
                         "Normal": "0",
                         "Poison": "0",
                         "Psychic": "0", 
-                        "Steel": "0",
-                        "Dragon": "0"
+                        "Steel": "0"
                     },
-
                     "Not_Very_Effective":
                     {
                         "Grass": "-3",
@@ -98,7 +97,12 @@
                     },
                     "Love_Special_Effect":
                     {
+                        "Vaporeon": "+5",
                         "Primarina": "+5"
+                    },
+                    "Love_Immunity_Effect":
+                    {
+                        "None": "0"
                     }
                 }
             }

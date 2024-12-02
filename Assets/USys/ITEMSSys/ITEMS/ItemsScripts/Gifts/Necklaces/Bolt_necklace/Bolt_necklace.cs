@@ -6,15 +6,15 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
 {
     public class Bolt_NecklaceItem : MonoBehaviour
     {
-                public List<Sys_Properties> SYS_properties { get; set; }
+        public List<Sys_Properties> SYS_properties { get; set; }
 
         public class Sys_Properties
         {
             public LoveEffectPropertiesBase SYS_properties { get; set; }
         }
-        public class Bo_Necklace_Item
+        private class Bo_Necklace_Item
         {
-
+            public List<Sys_Properties> SYS_properties { get; set; }
         }
     }
 }

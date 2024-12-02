@@ -80,7 +80,7 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
         }
 
 
-        public void WaterDropletLoveSys_Stager()
+        public void WaterDropletNecklace_LoveSys_Stager()
         {
             LoadJson();
 

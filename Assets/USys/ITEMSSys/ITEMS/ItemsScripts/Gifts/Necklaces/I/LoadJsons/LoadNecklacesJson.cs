@@ -3,6 +3,7 @@ using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.L
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.LoadJson.PunchingBag_necklace;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.Properties.LoadJson.Beam_necklace;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.Properties.LoadJson.Brick_necklace;
+using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.Properties.LoadJson.Butterfly_necklace;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.Properties.LoadJson.Cat_necklace;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.Properties.LoadJson.Heart_necklace;
 using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces.I.Properties.LoadJson.Leaf_necklace;
@@ -37,6 +38,8 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
 		private Sun_necklaceJsonLoader Sun_necklace;
 
 		private WaterDroplet_necklaceJsonLoader WaterDroplet_necklace;
+		private Butterfly_necklaceJsonLoader Butterfly_necklace;
+		private Wings_necklaceJsonLoader Wings_necklace;
 
 		public void LoadNecklacesJsons()
 		{
@@ -50,7 +53,9 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
 			Lunar_necklace.LunarNecklace_LoveSys_Stager();
 			PunchingBag_necklace.PunchingBagNecklace_LoveSys_Stager();
 			Sun_necklace.SunNecklace_LoveSys_Stager();
-			WaterDroplet_necklace.WaterDropletLoveSys_Stager();
+			WaterDroplet_necklace.WaterDropletNecklace_LoveSys_Stager();
+			Butterfly_necklace.ButterflyNecklace_LoveSys_Stager();
+			Wings_necklace.WingsNecklace_LoveSys_Stager();
 		}
 	}
 }

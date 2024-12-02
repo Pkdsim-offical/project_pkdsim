@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Be_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Beedrill
 {
-    public void Load_Be_familyScene()
+    public class Be_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Be_Family");
+        public void Load_Be_familyScene()
+        {
+            SceneManager.LoadScene("Be_Family");
+        }
     }
 }

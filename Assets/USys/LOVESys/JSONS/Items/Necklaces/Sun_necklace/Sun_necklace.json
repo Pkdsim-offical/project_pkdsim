@@ -90,9 +90,13 @@
                     },
                     "Not_Very_Effective":
                     {
-                        "Dragon":"-3", 
-                        "Rock":"-3", 
+                        "Dragon": "-3", 
+                        "Rock": "-3", 
                         "Water": "-3"
+                    },
+                    "Love_Immunity_Effect":
+                    {
+                        "None": "0"
                     },
                     "Love_Special_Effect":
                     {

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Umaterials
+  m_Name: UMaterials
   m_EditorClassIdentifier: 
-  m_GroupName: Umaterials
+  m_GroupName: UMaterials
   m_GUID: a17725d13b1af8a47adb3b9b5ea1ab82
   m_SerializeEntries:
   - m_GUID: 5f66df632f3098a4b9a83268371568d8

@@ -6,7 +6,7 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsS
 	public class CyberMonday_ITAssets : MonoBehaviour
 	{
 		private HDA_ULoader holidayLoader;
-		public static void LoadCyberMonday_ITHAssets()
+		public void LoadCyberMonday_ITHAssets()
 		{
 			//Load Cyber Monday Item Assets
 			HDA_ULoader.InitializeHolidayAsset("CyberMondayAssetKey"); // Load the holiday asset.

@@ -1,8 +1,6 @@
-using Unity.Services.CloudSave.Models;
-
 namespace project_pkdsim.Assets.USys.ITEMSSys.INVENTORY 
 {
-	public class InventorySystem : ITEMSSys
+	public class InventorySystem : ITEMSDatabaseSys
 	{
 		public void Get_Inventory(string value) 
 		{

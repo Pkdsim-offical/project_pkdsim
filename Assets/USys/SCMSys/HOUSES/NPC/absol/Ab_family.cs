@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Ab_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Absol
 {
-    public void Load_Ab_familyScene()
+    public class Ab_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Ab_Family");
+        public void Load_Ab_familyScene()
+        {
+            SceneManager.LoadScene("Ab_Family");
+        }
     }
 }

@@ -1,6 +1,7 @@
-using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
+using project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database;
 using UnityEngine;
-namespace project_pkdsim.Assets.Models.pkpedia.npc.Pkpedia_Database_TabSysI
+
+namespace project_pkdsim.Assets.Models.pkpedia.Npc.Pkpedia_Database_TabSysI
 {
     public class Pkpedia_database_TABSysI : Pkpedia_database
     {

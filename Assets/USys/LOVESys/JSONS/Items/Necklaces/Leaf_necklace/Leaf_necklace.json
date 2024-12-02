@@ -4,7 +4,7 @@
     "type": "Item",
     "version": "1.0.0",
     "author": "pkdsim_official",
-    "SYS_properties": 
+    "SYS_properties":
     [
         {
             "name": "Beam_necklace",
@@ -70,29 +70,32 @@
                 {
                     "SuperEffective":
                     {
-                        "Bug":"+3",
-                        "Grass":"+3", 
-                        "Ice":"+3",
-                        "Steel": "+3"
+                        "Water":"+3",
+                        "Ground":"+3",
+                        "Rock":"+3"
                     },
                     "Effective":
                     {
-                        "Dark": "0", 
+                        "Dark": "0",
                         "Electric": "0",
-                        "Fairy": "0", 
-                        "Fighting": "0", 
-                        "Flying": "0", 
-                        "Ghost": "0", 
-                        "Ground": "0", 
-                        "Normal": "0", 
-                        "Poison": "0",
-                        "Psychic":  "0"
+                        "Fairy": "0",
+                        "Fighting": "0",
+                        "Ghost": "0",
+                        "Normal": "0",
+                        "Psychic":  "0",
+                        "Ice": "0"
                     },
                     "Not_Very_Effective":
                     {
-                        "Dragon":"-3", 
-                        "Rock":"-3", 
-                        "Water": "-3"
+                        "Fire": "-3",
+                        "Poison": "-3",
+                        "Bug": "-3",
+                        "Flying": "-3",
+                        "Dragon":"-3"
+                    },
+                    "Love_Immunity_Effect":
+                    {
+                        "None": "0"
                     }
                 }
             }

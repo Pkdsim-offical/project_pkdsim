@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ namespace LoM.Super.Editor.Drawer
     {
         public override void OnGUI(Rect position, SuperSerializedProperty property, GUIContent label)
         {
+            EditorGUI.showMixedValue = MixModeEnabled(property);
+            
             if (property.Attributes.IsTag)
             {
                 string value = EditorGUI.TagField(position, label, property.stringValue);
@@ -38,6 +41,18 @@ namespace LoM.Super.Editor.Drawer
                 string value = EditorGUI.TextField(position, label, property.stringValue);
                 if (value != property.stringValue) property.stringValue = value;
             }
+            
+            EditorGUI.showMixedValue = false;
+        }
+        
+        private bool MixModeEnabled(SuperSerializedProperty property)
+        {
+            if (property.superSerializedObject.isEditingMultipleObjects)
+            {
+                string[] values = property.superSerializedObject.FindAllPropertiesByPath(property.propertyPath).Select(p => p.stringValueSingle).ToArray();
+                return values.Any(v => v != values[0]);
+            }
+            return false;
         }
     }
 }

@@ -6,7 +6,6 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
 {
     public class PunchingBag_NecklaceItem : MonoBehaviour
     {
-        // Make `SYS_properties` a public property so it can be accessed from other classes
         public List<Sys_Properties> SYS_properties { get; set; }
 
         public class Sys_Properties
@@ -14,7 +13,7 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
             public LoveEffectPropertiesBase SYS_properties { get; set; }
         }
 
-        public class PBag_Necklace_Item
+        private class PBag_Necklace_Item
         {
             public List<Sys_Properties> SYS_properties { get; set; }
         }

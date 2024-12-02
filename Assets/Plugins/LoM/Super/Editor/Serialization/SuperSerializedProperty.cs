@@ -24,10 +24,11 @@ namespace LoM.Super.Serialization
         //* Member Variables
         //* ////////////////////////////////////////////////////////////////////
         private SuperSerializedObject m_serializedObject;
-        private object m_targetObject;
+        private UnityEngine.Object m_targetObject;
         private PropertyInfo m_propertyInfo;
         private FieldInfo m_fieldInfo;
         private SerializedProperty m_serializedProperty;
+        private SerializedProperty m_serializedPropertySingle;
         private SerializedAttributes m_attributes;
         private uint m_contentHash;
         private string m_propertyPath;
@@ -45,6 +46,10 @@ namespace LoM.Super.Serialization
         public SerializedProperty Field => m_serializedProperty;
         public SerializedAttributes Attributes => m_attributes;
         public MemberInfo Info => IsField ? (MemberInfo)m_fieldInfo : (MemberInfo)m_propertyInfo;
+        /// <summary>
+        /// Target object of this property (Read Only).
+        /// </summary>
+        public UnityEngine.Object TargetObject => m_targetObject;
         /// <summary>
         /// SerializedObject this property belongs to (Read Only).
         /// </summary>
@@ -252,7 +257,7 @@ namespace LoM.Super.Serialization
                 else PrefabUtility.SetPropertyModifications((UnityEngine.Object)m_targetObject, new PropertyModification[] { });
             }
         }
-        /// </summary>
+        /// <summary>
         /// Is this property animated? (Read Only)
         /// </summary>
         public bool isAnimated 
@@ -536,7 +541,6 @@ namespace LoM.Super.Serialization
                 else m_propertyInfo.SetValue(m_targetObject, value);
             }
         }
-        
         /// <summary>
         /// Display-friendly names of enumeration of an enum property.
         /// </summary>
@@ -896,21 +900,448 @@ namespace LoM.Super.Serialization
                 return m_propertyInfo.PropertyType.AssemblyQualifiedName;
             }
         }
+        
+        //* ////////////////////////////////////////////////////////////////////
+        //* Single Value Properties
+        //* ////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Value of a gradient property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Gradient gradientValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.gradientValue;
+                return (Gradient)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of an object reference property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public UnityEngine.Object objectReferenceValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.objectReferenceValue;
+                if (m_propertyInfo.PropertyType.IsSubclassOf(typeof(UnityEngine.Object)) || m_propertyInfo.PropertyType == typeof(UnityEngine.Object))
+                    return (UnityEngine.Object)m_propertyInfo.GetValue(m_targetObject);
+                return null;
+            }
+        }
+        /// <summary>
+        /// Value of a animation curve property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public AnimationCurve animationCurveValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.animationCurveValue;
+                return (AnimationCurve)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a color property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Color colorValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.colorValue;
+                return (Color)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a string property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public string stringValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.stringValue;
+                return (string)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a float property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public float floatValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.floatValue;
+                return (float)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a boolean property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// <summary>
+        public bool boolValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.boolValue;
+                return (bool)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of an integer property as an unsigned int (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public uint uintValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.uintValue;
+                return (uint)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of an integer property as an unsigned long (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public ulong ulongValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.ulongValue;
+                return (ulong)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of an integer property as a long (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public long longValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.longValue;
+                return (long)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of an integer property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public int intValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.intValue;
+                if (m_propertyInfo.PropertyType == typeof(LayerMask)) return (LayerMask)m_propertyInfo.GetValue(m_targetObject);
+                return (int)Convert.ChangeType(m_propertyInfo.GetValue(m_targetObject), typeof(int));
+            }
+        }
+        /// <summary>
+        /// Value of a float property as a double (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public double doubleValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.doubleValue;
+                return (double)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Enum index of an enum property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public int enumValueIndexSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.enumValueIndex;
+                Enum e = (Enum)m_propertyInfo.GetValue(m_targetObject);
+                return Convert.ToInt32(e);
+            }
+        }
+        /// <summary>
+        /// Int32 representation of an enum property with Mixed Values (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public int enumValueFlagSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.enumValueFlag;
+                Enum e = (Enum)m_propertyInfo.GetValue(m_targetObject);
+                return Convert.ToInt32(e);
+            }
+        }
+        /// <summary>
+        /// Display-friendly names of enumeration of an enum property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public string[] enumDisplayNamesSingle 
+        { 
+            get 
+            {
+                if (IsField) return m_serializedPropertySingle.enumDisplayNames;
+                return m_propertyInfo.PropertyType.GetEnumNames().Select(x => ObjectNames.NicifyVariableName(x)).ToArray();
+            }
+        }
+        /// <summary>
+        /// Names of enumeration of an enum property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public string[] enumNamesSingle 
+        { 
+            get 
+            {
+                if (IsField) return m_serializedPropertySingle.enumNames;
+                return m_propertyInfo.PropertyType.GetEnumNames();
+            }
+        }
+        /// <summary>
+        /// The value of a Hash128 property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Hash128 hash128ValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.hash128Value;
+                return (Hash128)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of bounds with integer values property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public BoundsInt boundsIntValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.boundsIntValue;
+                return (BoundsInt)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of bounds property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Bounds boundsValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.boundsValue;
+                return (Bounds)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a rectangle with integer values property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public RectInt rectIntValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.rectIntValue;
+                return (RectInt)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a rectangle property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Rect rectValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.rectValue;
+                return (Rect)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a quaternion property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Quaternion quaternionValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.quaternionValue;
+                return (Quaternion)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a 3D integer vector property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Vector3Int vector3IntValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.vector3IntValue;
+                return (Vector3Int)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a 2D integer vector property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Vector2Int vector2IntValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.vector2IntValue;
+                return (Vector2Int)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a 4D vector property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Vector4 vector4ValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.vector4Value;
+                return (Vector4)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a 3D vector property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Vector3 vector3ValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.vector3Value;
+                return (Vector3)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of a 2D vector property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public Vector2 vector2ValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.vector2Value;
+                return (Vector2)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Value of the SerializedProperty, boxed as a System.Object (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public object boxedValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.boxedValue;
+                return m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// A reference to another Object in the Scene. This reference is resolved in the
+        /// context of the SerializedObject containing the SerializedProperty (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public UnityEngine.Object exposedReferenceValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.exposedReferenceValue;
+                return (UnityEngine.Object)m_propertyInfo.GetValue(m_targetObject);
+            }
+        }
+        /// <summary>
+        /// Object ID of an object reference property (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public int objectReferenceInstanceIDValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.objectReferenceInstanceIDValue;
+                UnityEngine.Object o = (UnityEngine.Object)m_propertyInfo.GetValue(m_targetObject);
+                return o.GetInstanceID();
+            }
+        }
+        /// <summary>
+        /// String corresponding to the value of the managed reference object (dynamic) full
+        /// type string (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public string managedReferenceFullTypenameSingle { 
+            get 
+            {
+                if (IsField) return m_serializedPropertySingle.managedReferenceFullTypename;
+                return m_propertyInfo.PropertyType.FullName;
+            }
+        }
+        /// <summary>
+        /// Id associated with a managed reference (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public long managedReferenceIdSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.managedReferenceId;
+                ISerializable s = (ISerializable)m_propertyInfo.GetValue(m_targetObject);
+                SerializationInfo info = new SerializationInfo(m_propertyInfo.PropertyType, new FormatterConverter());
+                StreamingContext context = new StreamingContext();
+                s.GetObjectData(info, context);
+                return info.GetInt64("$id");
+            }
+        }
+        /// <summary>
+        /// The object assigned to a field with SerializeReference attribute (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public object managedReferenceValueSingle 
+        {
+            get
+            {
+                if (IsField) return m_serializedPropertySingle.managedReferenceValue;
+                ISerializable s = (ISerializable)m_propertyInfo.GetValue(m_targetObject);
+                SerializationInfo info = new SerializationInfo(m_propertyInfo.PropertyType, new FormatterConverter());
+                StreamingContext context = new StreamingContext();
+                s.GetObjectData(info, context);
+                return info.GetValue("$data", m_propertyInfo.PropertyType);
+            }
+        }
+        /// <summary>
+        /// String corresponding to the value of the managed reference field full type string (Single)<br/>
+        /// Returns the item's single value (not the multi-editing value).
+        /// </summary>
+        public string managedReferenceFieldTypenameSingle { 
+            get 
+            {
+                if (IsField) return m_serializedPropertySingle.managedReferenceFieldTypename;
+                return m_propertyInfo.PropertyType.AssemblyQualifiedName;
+            }
+        }
     
         //* ////////////////////////////////////////////////////////////////////
         //* Constructors
         //* ////////////////////////////////////////////////////////////////////
         private SuperSerializedProperty() {}
-        internal SuperSerializedProperty(SuperSerializedObject serializedObject, SerializedProperty serializedProperty, FieldInfo fieldInfo, object obj)
+        internal SuperSerializedProperty(SuperSerializedObject serializedObject, SerializedProperty serializedProperty, SerializedProperty serializedPropertySingle, FieldInfo fieldInfo, UnityEngine.Object obj)
         {
             m_serializedObject = serializedObject;
             m_fieldInfo = fieldInfo;
             m_targetObject = obj;
             m_serializedProperty = serializedProperty;
+            m_serializedPropertySingle = serializedPropertySingle;
             m_attributes = new SerializedAttributes(fieldInfo, obj);
             m_propertyPath = fieldInfo.Name;
         }
-        internal SuperSerializedProperty(SuperSerializedObject serializedObject, PropertyInfo propertyInfo, object obj)
+        internal SuperSerializedProperty(SuperSerializedObject serializedObject, PropertyInfo propertyInfo, UnityEngine.Object obj)
         {
             m_serializedObject = serializedObject;
             m_propertyInfo = propertyInfo;
@@ -934,7 +1365,7 @@ namespace LoM.Super.Serialization
         /// </summary>
         public SuperSerializedProperty CopyPropery()
         {
-            if (IsField) return new SuperSerializedProperty(m_serializedObject, m_serializedProperty.Copy(), m_fieldInfo, m_targetObject);
+            if (IsField) return new SuperSerializedProperty(m_serializedObject, m_serializedProperty.Copy(), m_serializedProperty.Copy(), m_fieldInfo, m_targetObject);
             return new SuperSerializedProperty(m_serializedObject, m_propertyInfo, m_targetObject);
         }
         

@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Br_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Braixen
 {
-    public void Load_Br_familyScene()
+    public class Br_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Br_Family");
+        public void Load_Br_familyScene()
+        {
+            SceneManager.LoadScene("Br_Family");
+        }
     }
 }

@@ -1,12 +1,14 @@
+using UnityEngine;
 using project_pkdsim.Assets.USys.TABSys.I;
 
 namespace project_pkdsim.Assets.USys.TABSys
 {
-    public class TABSys : TABSysI
+    public class TABLoaderSys : MonoBehaviour
     {
-        protected void TABSys_I()
+        private TABSysI TabSys;
+        public void TABSysI()
         {
-            TABSys_PkPhoneApps();
+            TabSys.TABSys_PkPhoneAppsI();
         }
     }
 }

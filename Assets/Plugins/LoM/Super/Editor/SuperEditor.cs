@@ -14,13 +14,22 @@ namespace LoM.Super.Editor
     /// </summary>
     public abstract class SuperEditor<T> : UnityEditor.Editor where T : SuperBehaviour
     {        
+        // Static Variables
+        private static Color s_controlBackgroundColor = new Color(48f / 255f, 48f / 255f, 48f / 255f);
+        
         // Member Variables
-        private SuperSerializedObject m_SerializedObject;
+        private SuperSerializedObject m_serializedObject;
+        private SuperBehaviourIcon m_lastIconAssigned = SuperBehaviourIcon.None;
         
         /// <summary>
         /// The target object of this editor
         /// </summary>
         public new T target => base.target as T;
+        
+        /// <summary>
+        /// The target objects of this editor
+        /// </summary>
+        public new T[] targets => base.targets.Cast<T>().ToArray();
         
         /// <summary>
         /// Returns if script should be displayed in inspector
@@ -40,7 +49,14 @@ namespace LoM.Super.Editor
         // On Enable
         private void OnEnable()
         {
-            m_SerializedObject = new SuperSerializedObject(target);
+            if (targets.Length == 1)
+            { 
+                m_serializedObject = new SuperSerializedObject(target);
+            }
+            else
+            {
+                m_serializedObject = new SuperSerializedObject(targets);
+            }
             UpdateIcon();
             AfterOnEnable();
         }
@@ -53,7 +69,7 @@ namespace LoM.Super.Editor
         // On Disable
         private void OnDisable()
         {
-            m_SerializedObject?.Dispose();
+            m_serializedObject?.Dispose();
             AfterOnDisable();
         }
         
@@ -84,8 +100,8 @@ namespace LoM.Super.Editor
             }
             
             // Draw all fields
-            m_SerializedObject.Update();
-            foreach (SuperSerializedProperty field in m_SerializedObject.Fields)
+            m_serializedObject.Update();
+            foreach (SuperSerializedProperty field in m_serializedObject.Fields)
             {
                 if (!field.Attributes.IsActive) continue;
                 
@@ -112,7 +128,10 @@ namespace LoM.Super.Editor
             }
             
             // Apply changes
-            m_SerializedObject.ApplyModifiedProperties();
+            if (GUI.changed)
+            {
+                m_serializedObject.ApplyModifiedProperties();
+            }
         }
         
         /// <summary>
@@ -120,7 +139,7 @@ namespace LoM.Super.Editor
         /// </summary>
         public virtual void OnInspectorPropertiesGUI()
         {
-            if (m_SerializedObject.Properties.Length == 0) return;
+            if (m_serializedObject.Properties.Length == 0) return;
             
             // Draw separator
             Rect rect = EditorGUILayout.GetControlRect(false, 16);
@@ -128,27 +147,27 @@ namespace LoM.Super.Editor
             rect.width += 15;
             rect.height += 4;
             rect.y += EditorGUIUtility.standardVerticalSpacing * 3;
-            EditorGUI.DrawRect(rect, new Color(48f / 255f, 48f / 255f, 48f / 255f));
+            EditorGUI.DrawRect(rect, s_controlBackgroundColor);
             
             // Draw Collapasable Label
-            GUIStyle foldoutStyle = new GUIStyle(EditorStyles.foldout);
-            foldoutStyle.normal.background = null;
-            foldoutStyle.normal.textColor = Color.gray;
-            foldoutStyle.onNormal.textColor = Color.gray;
             rect.x += 18;
-            target.ShowProperties = EditorGUI.Foldout(rect, target.ShowProperties, "Properties", true, foldoutStyle);
+            target.ShowProperties = EditorGUI.Foldout(rect, target.ShowProperties, "Properties", true, EditorStyles.foldout.Variant("SuperEditor_Foldout", style => {
+                style.normal.background = null;
+                style.normal.textColor = Color.gray;
+                style.onNormal.textColor = Color.gray;
+            }));
             if (!target.ShowProperties) return;
             
             // Fix height
             rect = EditorGUILayout.GetControlRect(false, 13);
             
             // Draw all properties
-            m_SerializedObject.Update();
-            foreach (SuperSerializedProperty property in m_SerializedObject.Properties)
+            m_serializedObject.Update();
+            foreach (SuperSerializedProperty property in m_serializedObject.Properties)
             {                
                 if (!property.Attributes.IsActive) continue;
                 bool enabledBefore = GUI.enabled;
-                if (property.Attributes.IsReadOnly || !Application.isPlaying) GUI.enabled = false;
+                if (property.Attributes.IsReadOnly || !Application.isPlaying || m_serializedObject.isEditingMultipleObjects) GUI.enabled = false;
                 
                 // Draw header
                 if (property.Attributes.IsHeader)
@@ -175,6 +194,7 @@ namespace LoM.Super.Editor
             // Layer
             if (field.Attributes.IsLayer)
             {
+                EditorGUI.showMixedValue = MixModeEnabledLayer(field);
                 int layer = field.intValue;
                 int newLayer = EditorGUILayout.LayerField(label, layer);
                 if (!field.Attributes.IsReadOnly && layer != newLayer) 
@@ -187,6 +207,7 @@ namespace LoM.Super.Editor
             // Tag
             else if (field.Attributes.IsTag)
             {
+                EditorGUI.showMixedValue = MixModeEnabledTag(field);
                 string tag = field.stringValue;
                 string newTag = EditorGUILayout.TagField(label, tag);
                 if (!field.Attributes.IsReadOnly && tag != newTag) 
@@ -199,6 +220,7 @@ namespace LoM.Super.Editor
             // HDR Color
             else if (field.Attributes.IsHDRColor)
             {
+                EditorGUI.showMixedValue = MixModeEnabledHDRColor(field);
                 Color color = field.colorValue;
                 Color newColor = EditorGUILayout.ColorField(label, color);
                 if (!field.Attributes.IsReadOnly && color != newColor) 
@@ -207,15 +229,50 @@ namespace LoM.Super.Editor
                     EditorUtility.SetDirty(target);
                 }
             }
+            
+            EditorGUI.showMixedValue = false;
+        }
+        
+        // Helper: Get if mix mode is enabled for Layer
+        private bool MixModeEnabledLayer(SuperSerializedProperty property)
+        {
+            if (property.superSerializedObject.isEditingMultipleObjects)
+            {
+                int[] values = property.superSerializedObject.FindAllPropertiesByPath(property.propertyPath).Select(p => p.intValueSingle).ToArray();
+                return values.Any(v => v != values[0]);
+            }
+            return false;
+        }
+        
+        // Helper: Get if mix mode is enabled for Tag
+        private bool MixModeEnabledTag(SuperSerializedProperty property)
+        {
+            if (property.superSerializedObject.isEditingMultipleObjects)
+            {
+                string[] values = property.superSerializedObject.FindAllPropertiesByPath(property.propertyPath).Select(p => p.stringValueSingle).ToArray();
+                return values.Any(v => v != values[0]);
+            }
+            return false;
+        }
+        
+        // Helper: Get if mix mode is enabled for HDR Color
+        private bool MixModeEnabledHDRColor(SuperSerializedProperty property)
+        {
+            if (property.superSerializedObject.isEditingMultipleObjects)
+            {
+                Color[] values = property.superSerializedObject.FindAllPropertiesByPath(property.propertyPath).Select(p => p.colorValueSingle).ToArray();
+                return values.Any(v => v != values[0]);
+            }
+            return false;
         }
         
         // Updates the icon of the class
         private void UpdateIcon()
         {
-            // Load by path
-            SuperBehaviourIcon iconName = IconUtility.GetIconByClass(target);
-            Texture2D icon = AssetDatabase.LoadAssetAtPath<Texture2D>($"Assets/Plugins/LoM/Super/Icons/{iconName.ToString()}.png");
-            EditorGUIUtility.SetIconForObject(target, icon);
+            SuperBehaviourIcon icon = IconUtility.GetIconByClassName(m_serializedObject?.TypeName);
+            if (m_lastIconAssigned == icon) return;
+            EditorGUIUtility.SetIconForObject(target, IconUtility.GetIconTexture(icon));
+            m_lastIconAssigned = icon;
         }
     }
 }

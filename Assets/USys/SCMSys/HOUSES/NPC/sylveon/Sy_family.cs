@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Sl_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Sylveon
 {
-    public void Load_Sl_FamilyScene()
+    public class Sl_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Sy_Family");
+        public void Load_Sl_FamilyScene()
+        {
+            SceneManager.LoadScene("Sy_Family");
+        }
     }
 }

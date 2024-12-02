@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace project_pkdsim.Assets.Models.ANIMATOR.Loader.Animation_Loader.NPC.Vaporeon
+namespace project_pkdsim.Assets.Models.ANIMATOR.Loader.NPC.Vaporeon
 {
 	public class VAPOR_Animator : MonoBehaviour 
 	{

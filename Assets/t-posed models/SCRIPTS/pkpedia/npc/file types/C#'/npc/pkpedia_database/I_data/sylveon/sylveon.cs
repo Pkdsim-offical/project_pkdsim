@@ -1,14 +1,17 @@
-using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
+using project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database;
 
-public class sylveon : Pkpedia_database
+namespace project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database.I_Data.Sylveon
 {
-    // Update is called once per frame
-    private void Update()
+    public class sylveon : Pkpedia_database
     {
-        Pkpedia_link();
-    }
-    protected void Pkpedia_link()
-    {
-        Sylveon();
+        // Update is called once per frame
+        private void Update()
+        {
+            Pkpedia_link();
+        }
+        protected void Pkpedia_link()
+        {
+            Sylveon();
+        }
     }
 }

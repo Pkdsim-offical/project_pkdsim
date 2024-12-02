@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Pr_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Primarina
 {
-    public void Load_Pr_FamilyScene()
+    public class Pr_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Pr_Family");
+        public void Load_Pr_FamilyScene()
+        {
+            SceneManager.LoadScene("Pr_Family");
+        }
     }
 }

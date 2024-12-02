@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Bl_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Blaziken
 {
-    public void Load_Bl_familyScene()
+    public class Bl_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Bl_Family");
+        public void Load_Bl_familyScene()
+        {
+            SceneManager.LoadScene("Bl_Family");
+        }
     }
 }

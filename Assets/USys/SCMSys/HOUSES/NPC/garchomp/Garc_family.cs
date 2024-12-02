@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Garc_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Garchomp
 {
-    public void Load_Garc_familyScene()
+    public class Garc_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Garc_Family");
+        public void Load_Garc_familyScene()
+        {
+            SceneManager.LoadScene("Garc_Family");
+        }
     }
 }

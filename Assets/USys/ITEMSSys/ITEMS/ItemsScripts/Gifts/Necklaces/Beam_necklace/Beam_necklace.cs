@@ -12,7 +12,7 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Gifts.Necklaces
         {
             public LoveEffectPropertiesBase SYS_properties { get; set; }
         }
-        public class Be_Necklace_Item
+        private class Be_Necklace_Item
         {
             public List<Sys_Properties> SYS_properties { get; set; }
         }

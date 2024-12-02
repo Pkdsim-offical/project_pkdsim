@@ -18,7 +18,7 @@ namespace project_pkdsim.Assets.USys.UPSSys.Save_Checker
 
 		private string saveFilePath;
 
-		void Start()
+		private void Start()
 		{
 			saveFilePath = Application.persistentDataPath + "/savegame.json"; // File path
 			LoadPlayerData();
