@@ -31,7 +31,7 @@ using project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_NPCAniData.Zo_AniData;
 
 namespace project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_AIRSys_NPCAniData_I
 {
-    public class AIRSys_NPCAnimation_DataI
+    public class AIRSys_NPCAnimation_DataImporter
     {
         private Ab_AniData Ab_AnimationData;
         private Be_AniData Be_AnimationData;
@@ -63,6 +63,7 @@ namespace project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_AIRSys_NPCAniData_I
         private Ve_AniData Ve_AnimationData;
         private Vp_AniData Vp_AnimationData;
         private Zo_AniData Zo_AnimationData;
+        
         public void AIRSys_Ab_AniData()
         {
             Ab_AnimationData.Load_Ab_AnimationData();

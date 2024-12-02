@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 namespace project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_NPCAnimator.T_Animator
 {
-        public class Ts_Animator : AIRSys_AnimatorC_Base
+        public class Ts_NAV_Animator : AIRSys_AnimatorC_Base
         {
                 private float speed;
                 private NavMeshAgent Agent;

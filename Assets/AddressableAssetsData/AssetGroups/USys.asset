@@ -45,6 +45,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8186c1cfa977914aa78d621e0710636
+    m_Address: Assets/USys/AFSSys
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e22c89f87b13ebd498621b97afb2d0a2
     m_Address: TCMSys
     m_ReadOnly: 0

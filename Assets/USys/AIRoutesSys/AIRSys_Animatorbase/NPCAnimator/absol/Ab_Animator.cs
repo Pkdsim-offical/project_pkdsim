@@ -1,11 +1,10 @@
-
 using project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_Animatorbase.Base_derivative;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_NPCAnimator.AB_Animator
+namespace project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_NPCAnimator.Ab_Animator
 {
-        public class Ab_Animator: AIRSys_AnimatorC_Base
+        public class Ab_NAV_Animator: AIRSys_AnimatorC_Base
         {
                 private float speed;
                 private NavMeshAgent Agent;

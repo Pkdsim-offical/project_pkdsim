@@ -4,7 +4,7 @@ namespace project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_NPCAniData
 {
     public class AIRSys_NPCAnimation_Data
     {
-        private AIRSys_NPCAnimation_DataI AIRSys_NPCAniData_Checker;
+        private AIRSys_NPCAnimation_DataImporter AIRSys_NPCAniData_Checker;
         public void AIRSys_NPCAniData(string AniData)
         {
             if (AIRSys_NPCAniData_Checker != null)
