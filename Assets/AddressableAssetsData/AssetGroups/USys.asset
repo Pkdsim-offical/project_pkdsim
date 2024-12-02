@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19ed3fdd7040f8b41933c8ed64fb8d5a
+    m_Address: StockSys
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 20a5aa9aa8bc7b84c9d337545b2c26ed
     m_Address: PriceSys
     m_ReadOnly: 0
@@ -45,8 +50,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2cd621a265e7424c96d29f475f9a468
+    m_Address: AASys
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c8186c1cfa977914aa78d621e0710636
-    m_Address: Assets/USys/AFSSys
+    m_Address: AFSSys
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -41,7 +41,7 @@ namespace LoM.Super.Connect.Editor
             }
         }
         
-        // <summary>
+        /// <summary>
         /// Log in the main thread (using Debug.Log)
         /// </summary>
         /// <param name="message">Message to log</param>
@@ -51,7 +51,7 @@ namespace LoM.Super.Connect.Editor
             ExecuteInMainThread(() => Debug.Log(message, context));
         }
         
-        // <summary>
+        /// <summary>
         /// Log in the main thread (using Debug.LogWarning)
         /// </summary>
         /// <param name="message">Message to log</param>
@@ -61,7 +61,7 @@ namespace LoM.Super.Connect.Editor
             ExecuteInMainThread(() => Debug.LogWarning(message, context));
         }
         
-        // <summary>
+        /// <summary>
         /// Log in the main thread (using Debug.LogError)
         /// </summary>
         /// <param name="message">Message to log</param>

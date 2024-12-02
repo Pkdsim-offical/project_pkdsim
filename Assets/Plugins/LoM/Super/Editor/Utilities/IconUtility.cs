@@ -1,13 +1,30 @@
 using System;
+using System.Collections.Concurrent;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace LoM.Super.Internal
 {
+    /// <summary>
+    /// Utility class for getting icons based on class name (internal use only)
+    /// </summary>
     internal static class IconUtility
     {   
+        // Static Methods
+        private static ConcurrentDictionary<SuperBehaviourIcon, Texture2D> s_textureCache = new();
+        
+        /// <summary>
+        /// Get icon based on class name
+        /// </summary>
         public static SuperBehaviourIcon GetIconByClass(UnityEngine.Object obj)
         {
             return GetIconByClassName(obj.GetType().Name);
         }
+        
+        /// <summary>
+        /// Get icon based on class name
+        /// </summary>
         public static SuperBehaviourIcon GetIconByClassName(string className)
         {            
             if (className.Contains("Test"))
@@ -122,5 +139,40 @@ namespace LoM.Super.Internal
             
             return SuperBehaviourIcon.Default;
         }
+    
+        /// <summary>
+        /// Get icon texture based on class name
+        /// </summary>
+        public static Texture2D GetIconTextureByClass(UnityEngine.Object obj)
+        {
+            return GetIconTextureByClassName(obj.GetType().Name);
+        }
+        
+        /// <summary>
+        /// Get icon texture based on class name
+        /// </summary>
+        public static Texture2D GetIconTextureByClassName(string className)
+        {
+            return GetIconTexture(GetIconByClassName(className));
+        }
+        
+        /// <summary>
+        /// Get icon texture from icon
+        /// </summary>
+        public static Texture2D GetIconTexture(SuperBehaviourIcon icon)
+        {
+            if (s_textureCache.TryGetValue(icon, out Texture2D texture))
+            {
+                return texture;
+            }
+            
+            texture = AssetDatabase.LoadAssetAtPath<Texture2D>($"Assets/Plugins/LoM/Super/Icons/{icon}.png");
+            s_textureCache.TryAdd(icon, texture);
+            return texture;
+        }
+        
+        // Clear on domain reload
+        [InitializeOnLoadMethod]
+        private static void ClearCache() => s_textureCache.Clear();
     }
 }

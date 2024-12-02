@@ -53,13 +53,20 @@ namespace LoM.Super
             {
                 if (s_instance == null)
                 {
+#if UNITY_6000_0_OR_NEWER
+                    T[] instances = FindObjectsByType<T>(FindObjectsSortMode.None);
+#else
                     T[] instances = FindObjectsOfType<T>();
+#endif
                     if (instances.Length == 1)
                     {
                         s_instance = instances[0];
                     }
-                }                
-                Debug.Assert(s_instance != null, $"Trying to access {typeof(T)} singleton before it is initialized.");
+                }
+                if (s_instance == null)
+                {
+                    Debug.LogError($"Trying to access {typeof(T)} singleton before it is initialized.");
+                }
                 return s_instance;
             }
         }

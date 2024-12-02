@@ -100,8 +100,10 @@ namespace LoM.Super.Serialization
         {
             foreach (ConditionAttribute condition in m_conditions)
             {
-                if (!condition.EvaluateActive(target)) m_isActive = false;
-                if (condition.EvaluateReadOnly(target)) m_isReadOnly = true;
+                bool active = condition.EvaluateActive(target);
+                if (active != m_isActive) m_isActive = active;
+                bool readOnly = condition.EvaluateReadOnly(target);
+                if (readOnly != m_isReadOnly) m_isReadOnly = readOnly;
             }
         }
     }

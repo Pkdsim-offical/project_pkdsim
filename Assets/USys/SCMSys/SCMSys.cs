@@ -9,5 +9,9 @@ namespace project_pkdsim.Assets.USys.SCMSys
         {
             SceneManager.LoadScene(project_pkdsim);
         }
+        public void SCMSysI()
+        {
+            LoadScene("project_pkdsim");
+        }
     }
 }

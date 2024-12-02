@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: UBase
   m_GUID: 0f9e44fd5c65e624e85695301007e326
-  m_SerializeEntries:
-  - m_GUID: 19ed3fdd7040f8b41933c8ed64fb8d5a
-    m_Address: StockSys
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 628516a5ae1178847915e013d6a9640a, type: 2}
   m_SchemaSet:

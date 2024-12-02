@@ -40,5 +40,8 @@ namespace LoM.Super.Internal
         FileSmall = 156,
         Enum = 157,
         Interface = 158,
+        
+        // None
+        None = 999
     }
 }

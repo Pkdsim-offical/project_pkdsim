@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,8 +17,22 @@ namespace LoM.Super.Editor.Drawer
         
         public override void OnGUI(Rect position, SuperSerializedProperty property, GUIContent label)
         {
+            EditorGUI.showMixedValue = MixModeEnabled(property);
+            
             Bounds value = EditorGUI.BoundsField(position, label, property.boundsValue);
             if (value != property.boundsValue) property.boundsValue = value;
+            
+            EditorGUI.showMixedValue = false;
+        }
+        
+        private bool MixModeEnabled(SuperSerializedProperty property)
+        {
+            if (property.superSerializedObject.isEditingMultipleObjects)
+            {
+                Bounds[] values = property.superSerializedObject.FindAllPropertiesByPath(property.propertyPath).Select(p => p.boundsValueSingle).ToArray();
+                return values.Any(v => v != values[0]);
+            }
+            return false;
         }
     }
 }

@@ -4,7 +4,7 @@ namespace project_pkdsim.Assets.USys.HDSys
 {
     public class HDSys : HDSys_I
     {
-        protected void HDSys_Init()
+        public void HDSysI()
         {
             
         }

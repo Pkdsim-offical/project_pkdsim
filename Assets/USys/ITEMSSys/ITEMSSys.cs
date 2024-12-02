@@ -10,5 +10,9 @@ namespace project_pkdsim.Assets.USys.ITEMSSys
 			ITEM_Holiday();
 			ITEM_GIFTS(value);
 		}
+		public void ITEMSSysI() 
+		{
+
+		}
 	}
 }
