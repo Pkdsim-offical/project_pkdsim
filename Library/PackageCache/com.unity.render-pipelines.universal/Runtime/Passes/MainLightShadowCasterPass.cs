@@ -10,49 +10,66 @@ namespace UnityEngine.Rendering.Universal.Internal
     /// </summary>
     public class MainLightShadowCasterPass : ScriptableRenderPass
     {
-        private static class MainLightShadowConstantBuffer
-        {
-            public static int _WorldToShadow;
-            public static int _ShadowParams;
-            public static int _CascadeShadowSplitSpheres0;
-            public static int _CascadeShadowSplitSpheres1;
-            public static int _CascadeShadowSplitSpheres2;
-            public static int _CascadeShadowSplitSpheres3;
-            public static int _CascadeShadowSplitSphereRadii;
-            public static int _ShadowOffset0;
-            public static int _ShadowOffset1;
-            public static int _ShadowmapSize;
-        }
-
-        const int k_MaxCascades = 4;
-        const int k_ShadowmapBufferBits = 16;
-        float m_CascadeBorder;
-        float m_MaxShadowDistanceSq;
-        int m_ShadowCasterCascadesCount;
-
-        int m_MainLightShadowmapID;
+        // Internal
         internal RTHandle m_MainLightShadowmapTexture;
+
+        // Private
+        private int renderTargetWidth;
+        private int renderTargetHeight;
+        private int m_ShadowCasterCascadesCount;
+        private bool m_CreateEmptyShadowmap;
+        private bool m_EmptyShadowmapNeedsClear = false;
+        private float m_CascadeBorder;
+        private float m_MaxShadowDistanceSq;
+        private PassData m_PassData;
         private RTHandle m_EmptyMainLightShadowmapTexture;
-        private const int k_EmptyShadowMapDimensions = 1;
-        private const string k_MainLightShadowMapTextureName = "_MainLightShadowmapTexture";
-        private const string k_EmptyMainLightShadowMapTextureName = "_EmptyMainLightShadowmapTexture";
-        private static readonly Vector4 s_EmptyShadowParams = new Vector4(1, 0, 1, 0);
-        private static readonly Vector4 s_EmptyShadowmapSize = s_EmptyShadowmapSize = new Vector4(k_EmptyShadowMapDimensions, 1f / k_EmptyShadowMapDimensions, k_EmptyShadowMapDimensions, k_EmptyShadowMapDimensions);
-
-        Matrix4x4[] m_MainLightShadowMatrices;
-        ShadowSliceData[] m_CascadeSlices;
-        Vector4[] m_CascadeSplitDistances;
-
+        private Vector4[] m_CascadeSplitDistances;
+        private Matrix4x4[] m_MainLightShadowMatrices;
+        private ProfilingSampler m_ProfilingSetupSampler = new ("Setup Main Shadowmap");
+        private ShadowSliceData[] m_CascadeSlices;
         private RenderTextureDescriptor m_MainLightShadowDescriptor;
 
-        bool m_CreateEmptyShadowmap;
-        bool m_EmptyShadowmapNeedsClear = false;
+        // Constants and Statics
+        private const int k_EmptyShadowMapDimensions = 1;
+        private const int k_MaxCascades = 4;
+        private const int k_ShadowmapBufferBits = 16;
+        private const string k_MainLightShadowMapTextureName = "_MainLightShadowmapTexture";
+        private const string k_EmptyMainLightShadowMapTextureName = "_EmptyMainLightShadowmapTexture";
+        private static readonly Vector4 s_EmptyShadowParams = new (0f, 0f, 1f, 0f);
+        private static readonly Vector4 s_EmptyShadowmapSize = new (k_EmptyShadowMapDimensions, 1f / k_EmptyShadowMapDimensions, k_EmptyShadowMapDimensions, k_EmptyShadowMapDimensions);
 
-        int renderTargetWidth;
-        int renderTargetHeight;
+        // Classes
+        private static class MainLightShadowConstantBuffer
+        {
+            public static readonly int _WorldToShadow = Shader.PropertyToID("_MainLightWorldToShadow");
+            public static readonly int _ShadowParams = Shader.PropertyToID("_MainLightShadowParams");
+            public static readonly int _CascadeShadowSplitSpheres0 = Shader.PropertyToID("_CascadeShadowSplitSpheres0");
+            public static readonly int _CascadeShadowSplitSpheres1 = Shader.PropertyToID("_CascadeShadowSplitSpheres1");
+            public static readonly int _CascadeShadowSplitSpheres2 = Shader.PropertyToID("_CascadeShadowSplitSpheres2");
+            public static readonly int _CascadeShadowSplitSpheres3 = Shader.PropertyToID("_CascadeShadowSplitSpheres3");
+            public static readonly int _CascadeShadowSplitSphereRadii = Shader.PropertyToID("_CascadeShadowSplitSphereRadii");
+            public static readonly int _ShadowOffset0 = Shader.PropertyToID("_MainLightShadowOffset0");
+            public static readonly int _ShadowOffset1 = Shader.PropertyToID("_MainLightShadowOffset1");
+            public static readonly int _ShadowmapSize = Shader.PropertyToID("_MainLightShadowmapSize");
+            public static readonly int _MainLightShadowmapID = Shader.PropertyToID(k_MainLightShadowMapTextureName);
+        }
 
-        ProfilingSampler m_ProfilingSetupSampler = new ProfilingSampler("Setup Main Shadowmap");
-        private PassData m_PassData;
+        private class PassData
+        {
+            internal UniversalRenderingData renderingData;
+            internal UniversalCameraData cameraData;
+            internal UniversalLightData lightData;
+            internal UniversalShadowData shadowData;
+
+            internal MainLightShadowCasterPass pass;
+
+            internal TextureHandle shadowmapTexture;
+            internal bool emptyShadowmap;
+
+            internal RendererListHandle[] shadowRendererListsHandle = new RendererListHandle[k_MaxCascades];
+            internal RendererList[] shadowRendererLists = new RendererList[k_MaxCascades];
+        }
+
         /// <summary>
         /// Creates a new <c>MainLightShadowCasterPass</c> instance.
         /// </summary>
@@ -68,18 +85,6 @@ namespace UnityEngine.Rendering.Universal.Internal
             m_CascadeSlices = new ShadowSliceData[k_MaxCascades];
             m_CascadeSplitDistances = new Vector4[k_MaxCascades];
 
-            MainLightShadowConstantBuffer._WorldToShadow = Shader.PropertyToID("_MainLightWorldToShadow");
-            MainLightShadowConstantBuffer._ShadowParams = Shader.PropertyToID("_MainLightShadowParams");
-            MainLightShadowConstantBuffer._CascadeShadowSplitSpheres0 = Shader.PropertyToID("_CascadeShadowSplitSpheres0");
-            MainLightShadowConstantBuffer._CascadeShadowSplitSpheres1 = Shader.PropertyToID("_CascadeShadowSplitSpheres1");
-            MainLightShadowConstantBuffer._CascadeShadowSplitSpheres2 = Shader.PropertyToID("_CascadeShadowSplitSpheres2");
-            MainLightShadowConstantBuffer._CascadeShadowSplitSpheres3 = Shader.PropertyToID("_CascadeShadowSplitSpheres3");
-            MainLightShadowConstantBuffer._CascadeShadowSplitSphereRadii = Shader.PropertyToID("_CascadeShadowSplitSphereRadii");
-            MainLightShadowConstantBuffer._ShadowOffset0 = Shader.PropertyToID("_MainLightShadowOffset0");
-            MainLightShadowConstantBuffer._ShadowOffset1 = Shader.PropertyToID("_MainLightShadowOffset1");
-            MainLightShadowConstantBuffer._ShadowmapSize = Shader.PropertyToID("_MainLightShadowmapSize");
-
-            m_MainLightShadowmapID = Shader.PropertyToID(k_MainLightShadowMapTextureName);
             m_EmptyShadowmapNeedsClear = true;
         }
 
@@ -212,14 +217,7 @@ namespace UnityEngine.Rendering.Universal.Internal
                     m_EmptyShadowmapNeedsClear = true;
 
                 if (!m_EmptyShadowmapNeedsClear)
-                {
-                    // UUM-63146 - glClientWaitSync: Expected application to have kicked everything until job: 96089 (possibly by calling glFlush)" are thrown in the Android Player on some devices with PowerVR Rogue GE8320
-                    // Resetting of target would clean up the color attachment buffers and depth attachment buffers, which inturn is preventing the leak in the said platform. This is likely a symptomatic fix, but is solving the problem for now.
-                    if (Application.platform == RuntimePlatform.Android && PlatformAutoDetect.isRunningOnPowerVRGPU)
-                        ResetTarget();
-
                     return;
-                }
 
                 ConfigureTarget(m_EmptyMainLightShadowmapTexture);
                 m_EmptyShadowmapNeedsClear = false;
@@ -248,7 +246,7 @@ namespace UnityEngine.Rendering.Universal.Internal
             if (m_CreateEmptyShadowmap)
             {
                 SetEmptyMainLightCascadeShadowmap(CommandBufferHelpers.GetRasterCommandBuffer(universalRenderingData.commandBuffer));
-                universalRenderingData.commandBuffer.SetGlobalTexture(m_MainLightShadowmapID, m_EmptyMainLightShadowmapTexture.nameID);
+                universalRenderingData.commandBuffer.SetGlobalTexture(MainLightShadowConstantBuffer._MainLightShadowmapID, m_EmptyMainLightShadowmapTexture.nameID);
                 return;
             }
 
@@ -256,7 +254,7 @@ namespace UnityEngine.Rendering.Universal.Internal
             InitRendererLists(ref m_PassData, context, default(RenderGraph), false);
 
             RenderMainLightCascadeShadowmap(CommandBufferHelpers.GetRasterCommandBuffer(universalRenderingData.commandBuffer), ref m_PassData, false);
-            universalRenderingData.commandBuffer.SetGlobalTexture(m_MainLightShadowmapID, m_MainLightShadowmapTexture.nameID);
+            universalRenderingData.commandBuffer.SetGlobalTexture(MainLightShadowConstantBuffer._MainLightShadowmapID, m_MainLightShadowmapTexture.nameID);
         }
 
         void Clear()
@@ -301,7 +299,7 @@ namespace UnityEngine.Rendering.Universal.Internal
                 // For non-RG, need set the worldToCamera Matrix as that is not set for passes executed before normal rendering,
                 // otherwise shadows will behave incorrectly when Scene and Game windows are open at the same time (UUM-63267).
                 if (!isRenderGraph)
-                    ShadowUtils.SetWorldToCameraMatrix(cmd, data.cameraData.GetViewMatrix());
+                    ShadowUtils.SetWorldToCameraAndCameraToWorldMatrices(cmd, data.cameraData.GetViewMatrix());
 
                 for (int cascadeIndex = 0; cascadeIndex < m_ShadowCasterCascadesCount; ++cascadeIndex)
                 {
@@ -386,23 +384,6 @@ namespace UnityEngine.Rendering.Universal.Internal
             }
         }
 
-        private class PassData
-        {
-            internal UniversalRenderingData renderingData;
-            internal UniversalCameraData cameraData;
-            internal UniversalLightData lightData;
-            internal UniversalShadowData shadowData;
-
-            internal MainLightShadowCasterPass pass;
-
-            internal TextureHandle shadowmapTexture;
-            internal int shadowmapID;
-            internal bool emptyShadowmap;
-
-            internal RendererListHandle[] shadowRendererListsHandle = new RendererListHandle[k_MaxCascades];
-            internal RendererList[] shadowRendererLists = new RendererList[k_MaxCascades];
-        }
-
         private void InitPassData(
             ref PassData passData,
             UniversalRenderingData renderingData,
@@ -413,7 +394,6 @@ namespace UnityEngine.Rendering.Universal.Internal
             passData.pass = this;
 
             passData.emptyShadowmap = m_CreateEmptyShadowmap;
-            passData.shadowmapID = m_MainLightShadowmapID;
             passData.renderingData = renderingData;
             passData.cameraData = cameraData;
             passData.lightData = lightData;
@@ -430,7 +410,6 @@ namespace UnityEngine.Rendering.Universal.Internal
             passData.pass = this;
 
             passData.emptyShadowmap = m_CreateEmptyShadowmap;
-            passData.shadowmapID = m_MainLightShadowmapID;
             passData.renderingData = renderingData;
             passData.cameraData = cameraData;
             passData.lightData = lightData;
@@ -488,7 +467,7 @@ namespace UnityEngine.Rendering.Universal.Internal
                 builder.AllowGlobalStateModification(true);
 
                 if (shadowTexture.IsValid())
-                    builder.SetGlobalTextureAfterPass(shadowTexture, m_MainLightShadowmapID);
+                    builder.SetGlobalTextureAfterPass(shadowTexture, MainLightShadowConstantBuffer._MainLightShadowmapID);
 
                 builder.SetRenderFunc((PassData data, RasterGraphContext context) =>
                 {

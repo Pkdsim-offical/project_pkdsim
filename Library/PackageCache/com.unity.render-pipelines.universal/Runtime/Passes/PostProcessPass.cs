@@ -463,7 +463,7 @@ namespace UnityEngine.Rendering.Universal
             // disable useTemporalAA if another feature is disabled) then we need to put it in CameraData::IsTemporalAAEnabled() as opposed
             // to tweaking the value here.
             bool useTemporalAA = cameraData.IsTemporalAAEnabled();
-            if (cameraData.antialiasing == AntialiasingMode.TemporalAntiAliasing && !useTemporalAA)
+            if (cameraData.IsTemporalAARequested() && !useTemporalAA)
                 TemporalAA.ValidateAndWarn(cameraData);
 
             int amountOfPassesRemaining = (useStopNan ? 1 : 0) + (useSubPixeMorpAA ? 1 : 0) + (useDepthOfField ? 1 : 0) + (useLensFlare ? 1 : 0) + (useTemporalAA ? 1 : 0) + (useMotionBlur ? 1 : 0) + (usePaniniProjection ? 1 : 0);
@@ -1628,7 +1628,7 @@ namespace UnityEngine.Rendering.Universal
             material.SetVector(ShaderPropertyId.hdrOutputLuminanceParams, hdrOutputLuminanceParams);
 
             HDROutputUtils.ConfigureHDROutput(material, hdrDisplayColorGamut, hdrOperations);
-            CoreUtils.SetKeyword(m_Materials.uber, ShaderKeywordStrings.HDROverlay, rendersOverlayUI);
+            CoreUtils.SetKeyword(material, ShaderKeywordStrings.HDROverlay, rendersOverlayUI);
         }
 #endregion
 
@@ -1692,6 +1692,9 @@ namespace UnityEngine.Rendering.Universal
             // If FSR is enabled then FSR settings override the TAA settings and we perform RCAS only once.
             bool isTaaSharpeningEnabled = (cameraData.IsTemporalAAEnabled() && cameraData.taaSettings.contrastAdaptiveSharpening > 0.0f) && !isFsrEnabled;
 
+            // If target format has alpha and post-process needs to process/output alpha.
+            bool isAlphaOutputEnabled = cameraData.isAlphaOutputEnabled;
+
             if (cameraData.imageScalingMode != ImageScalingMode.None)
             {
                 // When FXAA is enabled in scaled renders, we execute it in a separate blit since it's not designed to be used in
@@ -1730,6 +1733,11 @@ namespace UnityEngine.Rendering.Universal
                     if (isFsrEnabled)
                     {
                         m_Materials.scalingSetup.EnableKeyword(hdrOperations.HasFlag(HDROutputUtils.Operation.ColorEncoding) ? ShaderKeywordStrings.Gamma20AndHDRInput : ShaderKeywordStrings.Gamma20);
+                    }
+
+                    if (isAlphaOutputEnabled)
+                    {
+                        m_Materials.scalingSetup.EnableKeyword(ShaderKeywordStrings._ENABLE_ALPHA_OUTPUT);
                     }
 
                     RenderingUtils.ReAllocateHandleIfNeeded(ref m_ScalingSetupTarget, tempRtDesc, FilterMode.Point, TextureWrapMode.Clamp, name: "_ScalingSetupTexture");
