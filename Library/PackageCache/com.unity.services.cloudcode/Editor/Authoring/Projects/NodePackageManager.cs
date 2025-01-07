@@ -98,7 +98,6 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects
             string stdIn = default,
             CancellationToken cancellationToken = default)
         {
-            m_NodeSettings.Load();
             var nodeJsPath = m_NodeSettings.NodeJsPath;
             var npmPath = m_NodeSettings.NpmPath;
             var joinedArgs = ProcessArguments.Join(arguments);
@@ -141,7 +140,6 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects
 
         internal Task<string> NpmRun(IEnumerable<string> arguments, string stdIn, CancellationToken cancellationToken)
         {
-            m_NodeSettings.Load();
             var nodeArguments = new List<string> { m_NodeSettings.NpmPath };
             nodeArguments.AddRange(arguments);
 
@@ -150,7 +148,6 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects
 
         void EnsurePathContainsNodeAndNpm()
         {
-            m_NodeSettings.Load();
             var nodeJsPath = m_NodeSettings.NodeJsPath;
             var npmPath = m_NodeSettings.NpmPath;
             if (!SystemEnvironmentPathUtils.DoesEnvironmentPathContain(npmPath))

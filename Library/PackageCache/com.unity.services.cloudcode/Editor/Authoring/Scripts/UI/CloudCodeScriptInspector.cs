@@ -1,6 +1,9 @@
 using System;
 using System.IO;
 using System.Linq;
+using Unity.Services.CloudCode.Authoring.Editor.Deployment;
+using Unity.Services.CloudCode.Authoring.Editor.Shared.Analytics;
+using Unity.Services.CloudCode.Authoring.Editor.Shared.UI.DeploymentConfigInspectorFooter;
 using UnityEditor;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
@@ -21,8 +24,23 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Scripts.UI
             visualTree.CloneTree(myInspector);
 
             ShowScriptBody(myInspector);
+            SetupConfigFooter(myInspector);
 
             return myInspector;
+        }
+
+        void SetupConfigFooter(VisualElement rootElement)
+        {
+            var assetPath = AssetDatabase.GetAssetPath(target);
+            var assetName = Path.GetFileNameWithoutExtension(assetPath);
+            var deploymentConfigInspectorFooter = rootElement.Q<DeploymentConfigInspectorFooter>();
+            deploymentConfigInspectorFooter.BindGUI(
+                assetPath,
+                CloudCodeAuthoringServices.Instance.GetService<ICommonAnalytics>(),
+                "cloudcode");
+            deploymentConfigInspectorFooter.DashboardLinkUrlGetter = () => CloudCodeAuthoringServices.Instance
+                .GetService<IDashboardUrlResolver>()
+                .CloudCodeScript(assetName);
         }
 
         void ShowScriptBody(VisualElement myInspector)

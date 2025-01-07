@@ -9,7 +9,7 @@ This sample shows a simple way to deploy and use an Economy item.
 In order to deploy your economy item to the Economy service, do the following:
 
 1. Link your unity project in `Project Settings > Services`.
-2. Select your desired environment in `Project Settings > Services > Environment`.
+2. Select your desired environment in `Project Settings > Services > Environments`.
 3. Deploy `MYCURRENCY.ecc` in the [Deployment window](https://docs.unity3d.com/Packages/com.unity.services.deployment@latest/manual/deployment_window.html).
 
 ### Play the Scene
@@ -41,6 +41,12 @@ A log message indicating which package is installed at which version will be dis
 The following packages are required for this sample:
 - `com.unity.services.authentication@3.2.0`
 - `com.unity.services.economy@3.3.1`
+
+### Unity UI / Text Mesh Pro
+
+This sample uses Unity UI and Text Mesh Pro. In 2022 and below, this will install the `com.unity.textmeshpro` package and prompt you to install the TMP Essential Assets.
+
+In Unity 6 and above, Text Mesh Pro has been integrated to the `com.unity.ugui` package. On this version, the TMP Essential Assets will automatically be installed.
 
 ## Troubleshooting
 

@@ -4,7 +4,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Components
 {
-    class CollapseToggle : Toggle
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class CollapseToggle : Toggle
     {
         const string k_StylePath = "Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/CollapseToggle.uss";
         const string k_CollapseUssClass = "collapse-toggle";
@@ -34,6 +37,8 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
             AddToClassList(ussClass);
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<CollapseToggle> {}
+#endif
     }
 }

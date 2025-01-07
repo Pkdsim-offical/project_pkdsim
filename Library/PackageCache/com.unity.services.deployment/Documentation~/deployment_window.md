@@ -30,7 +30,7 @@ The following table describes the Deployent window.
     </tr>
     <tr>
         <td>Environment view</td>
-        <td colspan="2">Shows the current environment where the assets will be deployed to. &lt;br/&gt;This dropdown contains a shortcut to <strong>Project Settings</strong> &gt; <strong>Services</strong> &gt; <strong>Deployment</strong> &gt; <strong>Environment Selector</strong> where you can modify the environment.</td>
+        <td colspan="2">Shows the current environment where the assets will be deployed to. This dropdown contains a shortcut to <strong>Project Settings</strong> &gt; <strong>Services</strong> &gt; <strong>Environments</strong> &gt; <strong>Environment Selector</strong> where you can modify the environment.</td>
     </tr>
     <tr>
         <td rowspan="3"><strong>More</strong> (&vellip;) menu</td>

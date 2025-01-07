@@ -9,7 +9,7 @@ This sample shows a simple way to deploy a Leaderboard configuration, as well as
 In order to deploy your configuration to the Leaderboard service, do the following:
 
 1. Link your unity project in `Project Settings > Services`.
-2. Select your desired environment in `Project Settings > Services > Environment`.
+2. Select your desired environment in `Project Settings > Services > Environments`.
 3. Deploy your [Leaderboard Configuration](./Sample_Leaderboard.lb) in the [Deployment window](https://docs.unity3d.com/Packages/com.unity.services.deployment@latest/manual/deployment_window.html).
 
 ### Play the Scene
@@ -34,6 +34,12 @@ A log message indicating which package is installed at which version will be dis
 The following packages are required for this sample:
 - `com.unity.services.authentication@3.2.0`
 - `com.unity.services.leaderboards@2.0.0`
+
+### Unity UI / Text Mesh Pro
+
+This sample uses Unity UI and Text Mesh Pro. In 2022 and below, this will install the `com.unity.textmeshpro` package and prompt you to install the TMP Essential Assets.
+
+In Unity 6 and above, Text Mesh Pro has been integrated to the `com.unity.ugui` package. On this version, the TMP Essential Assets will automatically be installed.
 
 ## Troubleshooting
 

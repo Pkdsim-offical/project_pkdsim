@@ -7,7 +7,6 @@ using Unity.Services.CloudCode.Authoring.Editor.Scripts;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.Infrastructure.Threading;
 using Unity.Services.DeploymentApi.Editor;
 using UnityEditor.AssetImporters;
-using UnityEngine;
 
 namespace Unity.Services.CloudCode.Authoring.Editor.Parameters.UI
 {
@@ -66,7 +65,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Parameters.UI
         {
             try
             {
-                List<CloudCodeParameter> inScriptParams = Sync.RunInBackgroundThread(()=>loader.GetParametersFromPath(path)).Result;
+                List<CloudCodeParameter> inScriptParams = Sync.RunInBackgroundThread(() => loader.GetParametersFromPath(path)).Result;
 
                 if (inScriptParams != null)
                 {
@@ -75,7 +74,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Parameters.UI
                     jsScript.Model.Parameters = Parameters?.ToList() ?? new List<CloudCodeParameter>();
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 AddFailedToLoadParametersState(jsScript.Model, e.InnerException?.Message);
             }

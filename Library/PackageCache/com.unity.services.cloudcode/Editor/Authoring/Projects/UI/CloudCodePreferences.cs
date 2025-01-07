@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Unity.Services.CloudCode.Authoring.Editor.Package;
@@ -6,6 +7,7 @@ using UnityEngine;
 using Unity.Services.CloudCode.Authoring.Editor.Projects.Settings;
 using Unity.Services.CloudCode.Authoring.Editor.Scripts;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.Assets;
+using Unity.Services.CloudCode.Authoring.Editor.Shared.EditorUtils;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.Infrastructure.IO;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.UI;
 using UnityEngine.UIElements;
@@ -50,18 +52,9 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.UI
         static readonly string k_ExternalEditorDefaultDirectory = string.Empty;
 #endif
 
-        protected CloudCodeProjectSettings ProjectSettings;
-        CloudCodeProjectSettings CloudCodeProjectSettings
-        {
-            get
-            {
-                if (ProjectSettings == null)
-                {
-                    ProjectSettings = new CloudCodeProjectSettings();
-                }
-                return ProjectSettings;
-            }
-        }
+        private ICloudCodeProjectSettings m_ProjectSettings;
+        ICloudCodeProjectSettings ProjectSettings => m_ProjectSettings ??= CloudCodeAuthoringServices.Instance.GetService<ICloudCodeProjectSettings>();
+
         bool m_Dirty;
 
         protected GUIStyle m_Heading1;
@@ -69,8 +62,6 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.UI
 
         void OnActivated(string searchContext, VisualElement visualElement)
         {
-            CloudCodeProjectSettings.Load();
-
             m_Heading1 = new GUIStyle(EditorStyles.boldLabel)
             {
                 fontSize = 16
@@ -93,25 +84,21 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.UI
             return new CloudCodePreferences();
         }
 
-        public static ICloudCodeProjectSettings LoadProjectSettings()
-        {
-            var settings = new CloudCodeProjectSettings();
-            settings.Load();
-            return settings;
-        }
-
         [InitializeOnLoadMethod]
-        static async Task OnValidateNodeProject()
+        static void OnValidateNodeProject()
         {
-            if (!CloudCodeProject.IsInitialized())
+            //This init might run before the services are initialized, so we delay it a bit
+            Sync.RunNextUpdateOnMain(async() =>
             {
-                return;
-            }
-
-            var packageVersionProvider = CloudCodeAuthoringServices.Instance.GetService<IPackageVersionProvider>();
-            var notifications = CloudCodeAuthoringServices.Instance.GetService<INotifications>();
-            var npm = CloudCodeAuthoringServices.Instance.GetService<NodePackageManager>();
-            await ValidateNodeProject(CloudCodeProject.OpenDefault(), packageVersionProvider, notifications, npm);
+                if (!CloudCodeProject.IsInitialized())
+                {
+                    return;
+                }
+                var packageVersionProvider = CloudCodeAuthoringServices.Instance.GetService<IPackageVersionProvider>();
+                var notifications = CloudCodeAuthoringServices.Instance.GetService<INotifications>();
+                var npm = CloudCodeAuthoringServices.Instance.GetService<NodePackageManager>();
+                await ValidateNodeProject(CloudCodeProject.OpenDefault(), packageVersionProvider, notifications, npm);
+            });
         }
 
         static async Task InitializeNpm(
@@ -313,13 +300,13 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.UI
             if (GUILayout.Button(k_Revert))
             {
                 GUI.FocusControl(null);
-                CloudCodeProjectSettings.Load();
+                ProjectSettings.LoadFromEditorPrefs();
                 m_Dirty = false;
             }
 
             if (GUILayout.Button(k_Apply))
             {
-                CloudCodeProjectSettings.Save();
+                ProjectSettings.WriteToEditorPrefs();
                 m_Dirty = false;
             }
             GUI.enabled = true;

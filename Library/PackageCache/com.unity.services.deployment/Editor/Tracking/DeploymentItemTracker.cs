@@ -94,7 +94,7 @@ namespace Unity.Services.Deployment.Editor.Tracking
 
         void AddItem(IDeploymentItem item)
         {
-            if (m_Items.Contains(item))
+            if (m_Items.Contains(item) || item == null)
             {
                 return;
             }

@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -35,14 +34,11 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects
             startInfo.RedirectStandardError = true;
             startInfo.CreateNoWindow = true;
 
-            using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
-            var stdOutBuilder = new StringBuilder();
-            var stdErrBuilder = new StringBuilder();
-
-            process.OutputDataReceived += (_, args) => stdOutBuilder.AppendLine(args.Data);
-            process.ErrorDataReceived += (_, args) => stdErrBuilder.AppendLine(args.Data);
-
+            using var process = new Process();
             var exitTask = WrapProcessInTask(process, cancellationToken);
+
+            process.StartInfo = startInfo;
+            process.EnableRaisingEvents = true;
             process.Start();
 
             if (!string.IsNullOrEmpty(stdIn))
@@ -51,40 +47,37 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects
                 process.StandardInput.Close();
             }
 
-            process.BeginOutputReadLine();
-            process.BeginErrorReadLine();
-
             await exitTask;
-
-            RemoveLastNewLineIfNecessary(stdOutBuilder);
-            RemoveLastNewLineIfNecessary(stdErrBuilder);
 
             return new ProcessOutput
             {
                 ExitCode = process.ExitCode,
-                StdOut = stdOutBuilder.ToString(),
-                StdErr = stdErrBuilder.ToString()
+                StdOut = AddLastNewLineIfNecessary(await process.StandardOutput.ReadToEndAsync()),
+                StdErr = AddLastNewLineIfNecessary(await process.StandardError.ReadToEndAsync()),
             };
         }
 
         public bool Start(ProcessStartInfo startInfo)
         {
-            using var process = new Process { StartInfo = startInfo };
+            using var process = new Process();
+            process.StartInfo = startInfo;
             return process.Start();
         }
 
-        static void RemoveLastNewLineIfNecessary(StringBuilder stringBuilder)
+        static string AddLastNewLineIfNecessary(string s)
         {
-            if (stringBuilder.Length != 0)
+            if (!s.EndsWith(Environment.NewLine))
             {
-                stringBuilder.Remove(stringBuilder.Length - Environment.NewLine.Length, Environment.NewLine.Length);
+                s += Environment.NewLine;
             }
+
+            return s;
         }
 
         static Task WrapProcessInTask(Process process, CancellationToken cancellationToken = default)
         {
             var tcs = new TaskCompletionSource<object>();
-            process.Exited += (s, e) => tcs.TrySetResult(null);
+            process.Exited += (_, _) => tcs.TrySetResult(null);
 
             if (cancellationToken != default)
                 cancellationToken.Register(() => tcs.SetCanceled());

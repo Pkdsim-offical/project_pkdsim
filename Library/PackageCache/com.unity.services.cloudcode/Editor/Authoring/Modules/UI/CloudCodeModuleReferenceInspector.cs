@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -7,7 +8,9 @@ using Unity.Services.CloudCode.Authoring.Editor.Analytics;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Model;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Modules.Bindings;
 using Unity.Services.CloudCode.Authoring.Editor.Deployment;
+using Unity.Services.CloudCode.Authoring.Editor.Shared.Analytics;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.EditorUtils;
+using Unity.Services.CloudCode.Authoring.Editor.Shared.UI.DeploymentConfigInspectorFooter;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -27,12 +30,15 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
 
         ApplyRevertChangeTracker<CloudCodeModuleReference> m_ChangeTracker;
         VisualElement m_ApplyFooter;
-        VisualElement m_GenerateSolutionContainer;
+        VisualElement m_HandleSolutionContainer;
         VisualElement m_GenerateBindingsContainer;
 
         PropertyField m_PropertyModulePath;
         Button m_ButtonBrowse;
+        Button m_SolutionHandlerButton; // Can either generate or open the solution
         HelpBox m_MessageBox;
+
+        bool m_SolutionExists;
 
         public override VisualElement CreateInspectorGUI()
         {
@@ -44,8 +50,23 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
             uxmlAsset.CloneTree(rootElement);
 
             BindControls(rootElement);
+            SetupConfigFooter(rootElement);
 
             return rootElement;
+        }
+
+        void SetupConfigFooter(VisualElement rootElement)
+        {
+            var deploymentConfigInspectorFooter = rootElement.Q<DeploymentConfigInspectorFooter>();
+            var assetPath = AssetDatabase.GetAssetPath(target);
+            var assetName = Path.GetFileNameWithoutExtension(assetPath);
+            deploymentConfigInspectorFooter.BindGUI(
+                assetPath,
+                CloudCodeAuthoringServices.Instance.GetService<ICommonAnalytics>(),
+                "cloudcode");
+            deploymentConfigInspectorFooter.DashboardLinkUrlGetter = () => CloudCodeAuthoringServices.Instance
+                .GetService<IDashboardUrlResolver>()
+                .CloudCodeModule(assetName);
         }
 
         void BindControls(VisualElement rootElement)
@@ -54,6 +75,8 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
 
             m_ButtonBrowse = rootElement.Q<Button>("button-browse-file");
             m_ButtonBrowse.clickable.clicked += OnBrowseButtonClicked;
+
+            m_SolutionHandlerButton = rootElement.Q<Button>(UxmlNames.HandleSolutionButton);
 
             BindApplyFooter(rootElement);
 
@@ -65,12 +88,39 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
             m_MessageBox = new HelpBox("help", HelpBoxMessageType.Error);
             m_MessageBox.visible = false;
             rootElement.Add(m_MessageBox);
+
+
+            UpdateSolutionExistenceStatus();
+        }
+
+        void UpdateSolutionExistenceStatus()
+        {
+            m_SolutionExists = !string.IsNullOrEmpty(ModuleReference.SolutionPath) &&
+                File.Exists(ModuleReference.SolutionPath);
+            m_SolutionHandlerButton.text = m_SolutionExists ? "Open Solution" : "Generate Solution";
+            m_GenerateBindingsContainer.SetEnabled(m_SolutionExists);
+        }
+
+        void OpenSolution()
+        {
+            try
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = ModuleReference.SolutionPath;
+                process.StartInfo.UseShellExecute = true;
+                process.Start();
+                UpdateMessageBox("Solution opened.", true, HelpBoxMessageType.Info);
+            }
+            catch (Exception e)
+            {
+                UpdateMessageBox("Solution failed to open: " + e.Message, true, HelpBoxMessageType.Error);
+            }
         }
 
         void OnBrowseButtonClicked()
         {
-            var ccmrPath = AssetDatabase.GetAssetPath(target);
-            var slnPath = EditorUtility.OpenFilePanel("Select a Cloud Code Module solution", ccmrPath, "sln");
+            var slnPath = EditorUtility.OpenFilePanel("Select a Cloud Code Module solution",
+                GetSolutionPathRelativeToProject(), "sln");
             if (!string.IsNullOrEmpty(slnPath))
             {
                 var textField = m_PropertyModulePath.Q<TextField>();
@@ -81,15 +131,24 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
             }
         }
 
+        string GetSolutionPathRelativeToProject()
+        {
+            string projectPath = Directory.GetParent(Application.dataPath) !.FullName;
+            var dir = Path.GetDirectoryName(
+                Path.GetRelativePath(projectPath, ModuleReference.SolutionPath));
+            // if the directory doesnt exist return the Assets folder
+            return Directory.Exists(dir) ? dir : Application.dataPath;
+        }
+
         void BindApplyFooter(VisualElement rootElement)
         {
             m_ApplyFooter = rootElement.Q<VisualElement>(UxmlNames.ApplyFooter);
-            m_GenerateSolutionContainer = rootElement.Q<VisualElement>(UxmlNames.GenerateSolutionContainer);
+            m_HandleSolutionContainer = rootElement.Q<VisualElement>(UxmlNames.HandleSolutionContainer);
             m_GenerateBindingsContainer = rootElement.Q<VisualElement>(UxmlNames.GenerateBindingsContainer);
 
             rootElement.Q<Button>(UxmlNames.Apply).clicked += ApplyChanges;
             rootElement.Q<Button>(UxmlNames.Revert).clicked += RevertChanges;
-            rootElement.Q<Button>(UxmlNames.GenerateSolutionButton).clicked += GenerateSolution;
+            rootElement.Q<Button>(UxmlNames.HandleSolutionButton).clicked += OnSolutionHandlerButtonClicked;
             rootElement.Q<Button>(UxmlNames.GenerateBindingsButton).clicked += GenerateModuleBindings;
         }
 
@@ -125,6 +184,19 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
             UpdateApplyRevertEnabled();
         }
 
+        void OnSolutionHandlerButtonClicked()
+        {
+            if (!m_SolutionExists)
+            {
+                GenerateSolution();
+            }
+            else
+            {
+                OpenSolution();
+            }
+            UpdateSolutionExistenceStatus();
+        }
+
         void GenerateSolution()
         {
             var task = GenerateSolutionCommand.GenerateSolution(ModuleReference);
@@ -145,7 +217,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
             {
                 var taskResult = await CloudCodeAuthoringServices.Instance
                     .GetService<ICloudCodeModuleBindingsGenerator>()
-                    .GenerateModuleBindings(new List<IModuleItem>() { ModuleReference }, CancellationToken.None);
+                        .GenerateModuleBindings(new List<IModuleItem>() { ModuleReference }, CancellationToken.None);
 
                 var generationResult = taskResult.First();
                 if (generationResult.IsSuccessful)
@@ -177,6 +249,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
         {
             m_GenerateBindingsContainer.SetEnabled(false);
             _ = GenerateModuleBindingsAsync();
+            UpdateSolutionExistenceStatus();
         }
 
         void UpdateMessageBox(string message, bool isVisible, HelpBoxMessageType messageType)
@@ -192,8 +265,9 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
         void UpdateApplyRevertEnabled()
         {
             m_ApplyFooter.SetEnabled(m_ChangeTracker.IsDirty());
-            m_GenerateSolutionContainer.SetEnabled(!m_ChangeTracker.IsDirty());
+            m_HandleSolutionContainer.SetEnabled(!m_ChangeTracker.IsDirty());
             m_GenerateBindingsContainer.SetEnabled(!m_ChangeTracker.IsDirty());
+            UpdateSolutionExistenceStatus();
         }
 
         void DisableReadonlyFlags()
@@ -223,9 +297,9 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
             public const string Apply = "Apply";
             public const string Revert = "Revert";
             public const string ApplyFooter = "Apply Footer";
-            public const string GenerateSolutionButton = "GenerateSolution";
+            public const string HandleSolutionButton = "handle-solution-button";
             public const string GenerateBindingsButton = "GenerateModuleBindings";
-            public const string GenerateSolutionContainer = "GenerateSolutionContainer";
+            public const string HandleSolutionContainer = "handle-solution-container";
             public const string GenerateBindingsContainer = "GenerateBindingsContainer";
         }
     }

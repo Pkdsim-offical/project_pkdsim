@@ -5,10 +5,10 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using Unity.Services.Deployment.Core;
-using Unity.Services.Deployment.Core.Model;
 using Unity.Services.Deployment.Editor.Shared.Infrastructure.Collections;
 using Unity.Services.DeploymentApi.Editor;
 using UnityEngine;
+using IDeploymentDefinition = Unity.Services.Deployment.Core.Model.IDeploymentDefinition;
 using Object = UnityEngine.Object;
 
 namespace Unity.Services.Deployment.Editor.DeploymentDefinitions
@@ -91,7 +91,8 @@ namespace Unity.Services.Deployment.Editor.DeploymentDefinitions
             switch (e.Action)
             {
                 case NotifyCollectionChangedAction.Add:
-                    e.NewItems.Cast<IDeploymentItem>()
+                    e.NewItems
+                        .Cast<IDeploymentItem>()
                         .ForEach(i =>
                         {
                             UnregisterItemModified(i);
@@ -120,11 +121,15 @@ namespace Unity.Services.Deployment.Editor.DeploymentDefinitions
 
         void RegisterItemModified(IDeploymentItem deploymentItem)
         {
+            if (deploymentItem == null)
+                return;
             deploymentItem.PropertyChanged += OnDeploymentItemPropertyChanged;
         }
 
         void UnregisterItemModified(IDeploymentItem deploymentItem)
         {
+            if (deploymentItem == null)
+                return;
             deploymentItem.PropertyChanged -= OnDeploymentItemPropertyChanged;
         }
 

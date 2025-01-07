@@ -4,7 +4,8 @@
     "references": [
         "Unity.Services.Authentication",
         "Unity.Services.Core",
-        "Unity.Services.Economy"
+        "Unity.Services.Economy",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -26,6 +27,11 @@
             "name": "com.unity.services.authentication",
             "expression": "3.1.0",
             "define": "AUTHENTICATION_PRESENT"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "1.0.0",
+            "define": "INPUT_SYSTEM_PRESENT"
         }
     ],
     "noEngineReferences": false

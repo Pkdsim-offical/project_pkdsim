@@ -322,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Button: {fileID: 926971327}
   m_InputField: {fileID: 203379477}
+  m_DefaultInputModule: {fileID: 488954408}
 --- !u!1 &149388471
 GameObject:
   m_ObjectHideFlags: 0

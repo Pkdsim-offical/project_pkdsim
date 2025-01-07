@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System;
 using System.Collections.Specialized;
 using System.ComponentModel;
-using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 using Unity.Services.Deployment.Editor.Interface.UI.Components;
@@ -17,7 +16,10 @@ using SeverityLevel = Unity.Services.DeploymentApi.Editor.SeverityLevel;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 {
-    class DeploymentItemView : DeploymentElementViewBase, ISerializableComponent
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class DeploymentItemView : DeploymentElementViewBase, ISerializableComponent
     {
         const string k_TemplatePath = "Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/Templates/DeploymentItemTemplate.uxml";
         const string k_WarningClassName = "warning";
@@ -35,7 +37,8 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 
 
         public IDeploymentItemViewModel Item { get; private set; }
-        public string SerializationKey => SerializationContainer.CreateKey(Item.Name, Item.Path);
+        public string SerializationKey =>
+            ISerializableComponent.CreateKey(Item.Name, Item.Path);
         public object SerializationValue =>
             new SerializationContainer(m_CheckmarkToggle.value, m_StatusClass, Item.States.ToList());
         public event Action ValueChanged;
@@ -117,11 +120,13 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 
         void OnDeploymentStateChanged(bool deploying)
         {
-            if (deploying)
+            if (!deploying)
             {
-                m_StatusClass = k_DeployStateName;
-                SetStatusClass();
+                return;
             }
+
+            m_StatusClass = k_DeployStateName;
+            SetStatusClass();
         }
 
         public void Unbind()
@@ -188,11 +193,23 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             {
                 m_CheckmarkToggle.value = sc.Checkmark;
 
-                //Need to make sure that we are not saving status across editor sessions.
-                if (!string.IsNullOrEmpty(Item.OriginalItem.Status.Message))
+                var isBeingDeployed = sc.StatusClass == k_DeployStateName || Item.IsBeingDeployed;
+                var hasCompletedThisSession = Item.Status.MessageSeverity is SeverityLevel.Success or SeverityLevel.Error;
+
+                if (isBeingDeployed && hasCompletedThisSession)
                 {
-                    m_StatusClass = sc.StatusClass;
+                    m_StatusClass = m_DeploymentSeverityLevelToClassName[Item.Status.MessageSeverity];
                     SetStatusClass();
+                }
+                else if (Item.IsBeingDeployed)
+                {
+                    m_StatusClass = k_DeployStateName;
+                    SetStatusClass();
+                }
+                // Prevent persisting status over multiple Editor sessions.
+                else if (!string.IsNullOrEmpty(Item.Status.Message))
+                {
+                    SetStatus(Item.Status);
                 }
 
                 ApplyAssetStates(sc.States);
@@ -284,7 +301,9 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             }
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<DeploymentItemView> {} //NOSONAR
+#endif
 
         internal static class VisualElementNames
         {
@@ -309,26 +328,6 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
                 Checkmark = checkmark;
                 StatusClass = statusClass;
                 States = states;
-            }
-
-            public static string CreateKey(string itemName, string itemPath)
-            {
-                return Path.Join(itemName, itemPath);
-            }
-
-            public static (string, string) DisassembleKey(string key)
-            {
-                var name = key;
-                var path = string.Empty;
-
-                if (key.Contains(Path.DirectorySeparatorChar))
-                {
-                    var indexOfSeparator = key.IndexOf(Path.DirectorySeparatorChar);
-                    name = key.Substring(0, indexOfSeparator);
-                    path = key.Substring(indexOfSeparator + 1);
-                }
-
-                return new ValueTuple<string, string>(name, path);
             }
         }
     }

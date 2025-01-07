@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Unity.Services.Deployment.Editor.Shared.Analytics;
 using Unity.Services.Deployment.Editor.Shared.EditorUtils;
+using Unity.Services.Deployment.Editor.Shared.UI.DeploymentConfigInspectorFooter;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -32,8 +34,18 @@ namespace Unity.Services.Deployment.Editor.DeploymentDefinitions.UI
             uxmlAsset.CloneTree(rootElement);
 
             BindControls(rootElement);
+            SetupConfigFooter(rootElement);
 
             return rootElement;
+        }
+
+        void SetupConfigFooter(VisualElement rootElement)
+        {
+            var deploymentConfigInspectorFooter = rootElement.Q<DeploymentConfigInspectorFooter>();
+            deploymentConfigInspectorFooter.BindGUI(
+                AssetDatabase.GetAssetPath(target),
+                DeploymentServices.Instance.GetService<ICommonAnalytics>(),
+                "deployment");
         }
 
         void BindControls(VisualElement rootElement)

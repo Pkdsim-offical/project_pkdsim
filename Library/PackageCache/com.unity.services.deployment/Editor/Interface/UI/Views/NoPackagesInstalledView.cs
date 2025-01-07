@@ -2,7 +2,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 {
-    class NoPackagesInstalledView : ViewBase
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class NoPackagesInstalledView : ViewBase
     {
         const string k_SupportedPackagesAnchor = "supported-packages";
         const string k_DocumentationButton = "DocumentationButton";
@@ -14,6 +17,8 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             documentationButton.clicked += () => DocumentationHelper.OpenHelpDocumentation(k_SupportedPackagesAnchor);
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<NoPackagesInstalledView> {}
+#endif
     }
 }

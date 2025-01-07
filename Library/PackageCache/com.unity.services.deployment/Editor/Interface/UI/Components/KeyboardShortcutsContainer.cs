@@ -2,7 +2,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Components
 {
-    class KeyboardShortcutsContainer : VisualElement
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class KeyboardShortcutsContainer : VisualElement
     {
         MultiSelect m_MultiSelect;
 
@@ -31,6 +34,8 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
             }
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<KeyboardShortcutsContainer> {}
+#endif
     }
 }

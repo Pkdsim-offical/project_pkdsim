@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using Newtonsoft.Json;
 using Unity.Services.Deployment.Editor.Analytics;
 using Unity.Services.Deployment.Editor.Commands;
 using Unity.Services.Deployment.Core.Model;
@@ -15,10 +16,14 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 {
-    class DeploymentView : ViewBase
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class DeploymentView : ViewBase, ISerializableComponent
     {
         const string k_DeployCommandName = "Deploy";
         const string k_OpenCommandName = "Open";
+        const string k_SerializationKey = "DeploymentWindow_DeploymentView";
 
         readonly CollectionBinding<IDeploymentDefinitionViewModel> m_DeploymentDefinitionBindings;
 
@@ -30,6 +35,10 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
         ISerializationManager m_SerializationManager;
         TreeViewElement m_TreeViewElement;
         StatusPanel m_StatusPanel;
+        TwoPaneSplitView m_SplitView;
+        VisualElement m_Dragline;
+
+        float m_DraglineTop = 100;
 
         public enum ItemRetrieval
         {
@@ -38,6 +47,14 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
         }
 
         protected override string UxmlName => "DeploymentWindow_Deployment";
+
+        public string SerializationKey =>
+            ISerializableComponent.CreateKey(k_SerializationKey, k_SerializationKey);
+
+        public object SerializationValue =>
+            new SerializationContainer(m_DraglineTop);
+
+        public event Action ValueChanged;
 
         public DeploymentView()
         {
@@ -72,8 +89,12 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             var statusLabel = this.Query<Label>(VisualElementNames.StatusLabel);
             m_StatusPanel = new StatusPanel(statusLabel);
 
+            m_SplitView = this.Q<TwoPaneSplitView>();
+            m_Dragline = m_SplitView.Q(VisualElementNames.DraglineAnchor);
+
             m_TreeViewElement = this.Query<TreeViewElement>().First();
             m_TreeViewElement.BindGUI(m_KeyboardShortcuts);
+            m_TreeViewElement.RegisterCallback<GeometryChangedEvent>(OnPaneGeometryChanged);
             m_TreeViewElement.OnSelectionChanged += OnDeploymentItemSelectionChanged;
             OnDeploymentItemSelectionChanged();
 
@@ -123,7 +144,7 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             m_SerializationManager.Unbind();
         }
 
-        List<DeploymentDefinitionView> GetDeploymentDefinitionViews()
+        public List<DeploymentDefinitionView> GetDeploymentDefinitionViews()
         {
             return this.Query<DeploymentDefinitionView>().ToList();
         }
@@ -139,7 +160,7 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 
             var modelSelection = GetSelection().ToList();
             var commands = m_CommandManager.GetCommandsForObjects(modelSelection);
-            bool first = true;
+            var first = true;
 
             foreach (var command in commands)
             {
@@ -329,8 +350,49 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
         internal static class VisualElementNames
         {
             public const string StatusLabel = "StatusLabel";
+            public const string DraglineAnchor = "unity-dragline-anchor";
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<DeploymentView> {}
+#endif
+
+        void OnPaneGeometryChanged(GeometryChangedEvent evt)
+        {
+            var ignoreGeometryChange = float.IsNaN(evt.newRect.height)
+                || evt.newRect.height <= 0
+                || Mathf.Approximately(evt.oldRect.height, evt.newRect.height);
+
+            if (ignoreGeometryChange)
+            {
+                return;
+            }
+
+            m_DraglineTop = m_Dragline.resolvedStyle.top;
+            ValueChanged?.Invoke();
+        }
+
+        public void ApplySerialization(object serializationValue)
+        {
+            if (serializationValue is not SerializationContainer sc
+                || m_SplitView == null)
+            {
+                return;
+            }
+
+            m_DraglineTop = sc.DragPosition;
+            m_SplitView.fixedPaneInitialDimension = sc.DragPosition;
+        }
+
+        internal class SerializationContainer
+        {
+            [JsonProperty("dragPosition")]
+            public float DragPosition;
+
+            public SerializationContainer(float dragPosition)
+            {
+                DragPosition = dragPosition;
+            }
+        }
     }
 }

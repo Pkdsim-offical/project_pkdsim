@@ -4,6 +4,28 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.8.1] - 2024-10-29
+
+### Fixed
+- Fixed compatibility wih Deployment 1.3
+
+## [2.8.0] - 2024-10-18
+
+### Added
+- View in Deployment Window button in `.ccmr` and `.js` files, dependent on Deployment package version 1.4.0.
+- View in Dashboard button in inspector for `.ccmr` and `.js` files.
+- View in Dashboard context menu in Deployment Window for `.ccmr` and `.js` files.
+- Add `Open Solution` button to `.ccmr` inspector.
+- Add Enum support for Cloud Code Bindings generation.
+
+### Fixed
+- Fixed support for various primitive types in Cloud Code Modules binding generation
+- In-script parameters analysis throws an exception in Unity 6
+- `Browse...` button in `.ccmr` inspector now opens the current solution folder properly.
+- Fixed Cloud Code Binding generation of primitive types
+- Binding Generation will attempt to run in the latest available runtime.
+  - This can be disabled with CLOUD_CODE_AUTHORING_DISABLE_VERSION_DETECT flag
+
 ## [2.7.1] - 2024-06-10
 
 ### Added

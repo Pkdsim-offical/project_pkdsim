@@ -37,15 +37,13 @@ namespace Unity.Services.Deployment.Editor
                 // until it is removed, use the new proxy
 #pragma warning disable 0612, 0618
                 Deployments.Instance.EnvironmentProvider = Instance.GetService<IEnvironmentProvider>();
+                Deployments.Instance.ProjectIdProvider = Instance.GetService<IProjectIdentifierProvider>();
+                Deployments.Instance.DeploymentWindow = new DefaultDeploymentWindowImpl();
 #pragma warning restore 0612, 0618
 #if !UNITY_2023_2_OR_NEWER
                 StaticAnalytics.RegisterEvents();
 #endif
             }
-        }
-
-        public DeploymentServices()
-        {
         }
 
         internal void RegisterInternal(ServiceCollection collection)
@@ -82,11 +80,9 @@ namespace Unity.Services.Deployment.Editor
             collection.Register(Factories.Default<INotifications, Notifications>);
             collection.Register(_ => EnvironmentsApi.Instance);
 
-            // IEnvironment provider from deployment.api is now obsolete
-            // until it is removed, use the new proxy
-            #pragma warning disable
+
             collection.Register(Factories.Default<IEnvironmentProvider, EnvironmentProxyService>);
-            #pragma warning restore
+            collection.Register(Factories.Default<IProjectIdentifierProvider, ProjectIdProvider>);
 
             collection.RegisterStartupSingleton(Factories.Default<DeploymentItemValidator>);
 
@@ -101,6 +97,7 @@ namespace Unity.Services.Deployment.Editor
 
             collection.RegisterStartupSingleton(Factories.Default<ItemStatusTracker>);
             collection.Register(Factories.Default<IFileTracker, FileTracker>);
+            collection.Register(Factories.Default<Unity.Services.Deployment.Core.Logging.ILogger, Unity.Services.Deployment.Editor.Logging.Logger>);
             collection.Register(Factories.Default<AssetPostprocessorProxy>);
 
 #if UNITY_2023_2_OR_NEWER

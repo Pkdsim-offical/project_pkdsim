@@ -5,10 +5,10 @@ using System.Linq;
 using Unity.Services.Core.Editor.Environments;
 using Unity.Services.Deployment.Editor.Shared.Analytics;
 using Unity.Services.DeploymentApi.Editor;
+using UnityEngine.Analytics;
 
 #if UNITY_2023_2_OR_NEWER
 using Unity.Services.Deployment.Editor.Analytics.Events;
-using UnityEngine.Analytics;
 #endif
 
 namespace Unity.Services.Deployment.Editor.Analytics
@@ -161,5 +161,10 @@ namespace Unity.Services.Deployment.Editor.Analytics
             }
         }
         // ReSharper restore InconsistentNaming
+
+        public AnalyticsResult Send(ICommonAnalytics.CommonEventPayload payload)
+        {
+            return m_CommonAnalytics.Send(payload);
+        }
     }
 }

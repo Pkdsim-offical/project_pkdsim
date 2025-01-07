@@ -4,7 +4,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Components
 {
-    class Collapsible : VisualElement
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class Collapsible : VisualElement
     {
         const string k_StylePath = "Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/Collapsible.uss";
         const string k_CollapsedClass = "collapsed";
@@ -12,7 +15,10 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
         Toggle m_CollapseToggle;
         VisualElement m_Container;
 
-        string ContainerClass { get; set; }
+#if UNITY_2023_3_OR_NEWER
+        [UxmlAttribute("containerClass")]
+#endif
+        internal string ContainerClass { get; set; }
         public bool IsContentVisible => m_Container?.visible ?? false;
 
         public Collapsible()
@@ -49,6 +55,7 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
             m_CollapseToggle.value = !toggle;
         }
 
+#if !UNITY_2023_3_OR_NEWER
         public class CollapsibleUxmlTraits : VisualElement.UxmlTraits
         {
             UxmlStringAttributeDescription m_ContainerName =
@@ -68,5 +75,6 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
         }
 
         new class UxmlFactory : UxmlFactory<Collapsible, CollapsibleUxmlTraits> {}
+#endif
     }
 }

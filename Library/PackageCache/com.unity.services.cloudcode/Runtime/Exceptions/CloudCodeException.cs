@@ -11,21 +11,33 @@ namespace Unity.Services.CloudCode
     /// </summary>
     public enum CloudCodeExceptionReason
     {
+        /// <summary>Unknown</summary>
         Unknown = 0,
 
+        /// <summary>No Internet Connection</summary>
         NoInternetConnection = 1,
+        /// <summary>Project ID missing</summary>
         ProjectIdMissing = 2,
+        /// <summary>Player ID missing</summary>
         PlayerIdMissing = 3,
+        /// <summary>Access Token Missing</summary>
         AccessTokenMissing = 4,
+        /// <summary>Invalid Argument</summary>
         InvalidArgument = 5,
+        /// <summary>Unauthorized</summary>
         Unauthorized = 6,
 
+        /// <summary>Not Found</summary>
         NotFound = 7,
+        /// <summary>Too Many Requests</summary>
         TooManyRequests = 8,
+        /// <summary>Service Unavailable</summary>
         ServiceUnavailable = 9,
 
+        /// <summary>Script Error</summary>
         ScriptError = 10,
 
+        /// <summary>Subscription Error</summary>
         SubscriptionError = 11
     }
 
@@ -57,6 +69,7 @@ namespace Unity.Services.CloudCode
 
         string m_Message = null;
 
+        /// <inheritdoc/>
         public override string ToString()
         {
             if (m_Message == null)
@@ -169,6 +182,7 @@ namespace Unity.Services.CloudCode
             }
         }
 
+        /// <inheritdoc/>
         public override string Message => ToString();
     }
 }

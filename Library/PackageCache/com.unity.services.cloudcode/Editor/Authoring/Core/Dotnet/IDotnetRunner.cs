@@ -10,5 +10,8 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Core.Dotnet
         Task<string> ExecuteDotnetAsync(
             IEnumerable<string> arguments = default,
             CancellationToken cancellationToken = default);
+
+        Task<List<SemVersion>> GetAvailableCoreRuntimes(
+            CancellationToken ct = default);
     }
 }

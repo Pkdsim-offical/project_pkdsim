@@ -60,10 +60,17 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules
         public string Path
         {
             get => m_Path;
-            set => SetField(ref m_Path, value);
+            set
+            {
+                SetName(value);
+                SetField(ref m_Path, value);
+            }
         }
 
-        string IDeploymentItem.Name => SystemPath.GetFileName(Path);
+        void SetName(string path)
+        {
+            Name = string.IsNullOrEmpty(path) ? string.Empty : System.IO.Path.GetFileName(path);
+        }
 
         public string SolutionPath => GetSolutionPath();
 

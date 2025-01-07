@@ -32,7 +32,7 @@ namespace Unity.Services.Deployment.Editor.PlayMode
                 if (kvp.Value is SerializationContainer container
                     && container.Checkmark)
                 {
-                    var(name, path) = SerializationContainer.DisassembleKey(kvp.Key);
+                    var(name, path) = ISerializableComponent.DisassembleKey(kvp.Key);
 
                     if (!string.IsNullOrEmpty(name)
                         && !string.IsNullOrEmpty(path))

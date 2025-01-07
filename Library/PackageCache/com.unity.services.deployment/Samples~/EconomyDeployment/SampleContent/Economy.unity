@@ -670,6 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrencyId: MYCURRENCY
+  m_DefaultInputModule: {fileID: 1758744950}
 --- !u!1 &1198845108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,6 +1179,9 @@ Light:
   m_ForceVisible: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!4 &1824405764
 Transform:
   m_ObjectHideFlags: 0

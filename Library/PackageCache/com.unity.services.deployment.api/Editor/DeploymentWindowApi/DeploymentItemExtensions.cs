@@ -35,7 +35,7 @@ namespace Unity.Services.DeploymentApi.Editor
         public static void SetStatusSeverity(this IDeploymentItem self, SeverityLevel severityLevel)
         {
             var originalStatus = self.Status;
-            self.Status = new DeploymentStatus(originalStatus.MessageDetail, originalStatus.Message, severityLevel);
+            self.Status = new DeploymentStatus(originalStatus.Message, originalStatus.MessageDetail, severityLevel);
         }
     }
 }

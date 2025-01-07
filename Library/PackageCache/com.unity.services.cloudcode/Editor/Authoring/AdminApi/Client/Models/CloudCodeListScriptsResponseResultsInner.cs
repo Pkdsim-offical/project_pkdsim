@@ -55,14 +55,14 @@ namespace Unity.Services.CloudCode.Authoring.Client.Models
         [JsonConverter(typeof(StringEnumConverter))]
         [DataMember(Name = "type", EmitDefaultValue = false)]
         public TypeOptions Type{ get; }
-        
+
         /// <summary>
         /// The name of the Script
         /// </summary>
         [Preserve]
         [DataMember(Name = "name", EmitDefaultValue = false)]
         public string Name{ get; }
-        
+
         /// <summary>
         /// The language of the Script
         /// </summary>
@@ -70,28 +70,28 @@ namespace Unity.Services.CloudCode.Authoring.Client.Models
         [JsonConverter(typeof(StringEnumConverter))]
         [DataMember(Name = "language", EmitDefaultValue = false)]
         public LanguageOptions Language{ get; }
-        
+
         /// <summary>
         /// A flag indicating if the Script is published
         /// </summary>
         [Preserve]
         [DataMember(Name = "published", EmitDefaultValue = true)]
         public bool Published{ get; }
-        
+
         /// <summary>
         /// Date time in ISO 8601 format. Null if there is no associated value.
         /// </summary>
         [Preserve]
         [DataMember(Name = "lastPublishedDate", EmitDefaultValue = false)]
         public DateTime? LastPublishedDate{ get; }
-        
+
         /// <summary>
         /// The version id of the last published version of the Script
         /// </summary>
         [Preserve]
         [DataMember(Name = "lastPublishedVersion", EmitDefaultValue = false)]
         public int? LastPublishedVersion{ get; }
-    
+
         /// <summary>
         /// The type of the Script
         /// </summary>
@@ -109,7 +109,12 @@ namespace Unity.Services.CloudCode.Authoring.Client.Models
             /// Enum MODULE for value: MODULE
             /// </summary>
             [EnumMember(Value = "MODULE")]
-            MODULE = 2
+            MODULE = 2,
+            /// <summary>
+            /// Enum MODULE for value: MODULE
+            /// </summary>
+            [EnumMember(Value = "MODERATION")]
+            MODERATION = 3
         }
 
         /// <summary>
@@ -163,31 +168,31 @@ namespace Unity.Services.CloudCode.Authoring.Client.Models
 
             var typeStringValue = Type.ToString();
             dictionary.Add("type", typeStringValue);
-            
+
             if (Name != null)
             {
                 var nameStringValue = Name.ToString();
                 dictionary.Add("name", nameStringValue);
             }
-            
+
             var languageStringValue = Language.ToString();
             dictionary.Add("language", languageStringValue);
-            
+
             var publishedStringValue = Published.ToString();
             dictionary.Add("published", publishedStringValue);
-            
+
             if (LastPublishedDate != null)
             {
                 var lastPublishedDateStringValue = LastPublishedDate.ToString();
                 dictionary.Add("lastPublishedDate", lastPublishedDateStringValue);
             }
-            
+
             if (LastPublishedVersion != null)
             {
                 var lastPublishedVersionStringValue = LastPublishedVersion.ToString();
                 dictionary.Add("lastPublishedVersion", lastPublishedVersionStringValue);
             }
-            
+
             return dictionary;
         }
     }

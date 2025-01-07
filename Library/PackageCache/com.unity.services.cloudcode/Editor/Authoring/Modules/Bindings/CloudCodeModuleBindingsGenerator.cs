@@ -8,11 +8,11 @@ using Unity.Services.CloudCode.Authoring.Editor.Core.Deployment;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.ModuleGeneration;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Dotnet;
 using Unity.Services.CloudCode.Authoring.Editor.Core.IO;
+using Unity.Services.CloudCode.Authoring.Editor.Core.Logging;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Model;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Modules.Bindings;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.Infrastructure.Collections;
 using UnityEditor;
-using UnityEngine;
 using Task = System.Threading.Tasks.Task;
 
 namespace Unity.Services.CloudCode.Authoring.Editor.Modules.Bindings
@@ -51,12 +51,12 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.Bindings
             var moduleItemsList = moduleItems.EnumerateOnce();
             if (!moduleItemsList.Any())
             {
-                m_Logger.Log($"No Cloud Code Module Reference file was found in the project." +
+                m_Logger.LogInfo($"No Cloud Code Module Reference file was found in the project." +
                     $" To create one right-click in the Project window, then select Create > Services > Cloud Code C# Module Reference.");
                 return new List<CloudCodeModuleBindingsGenerationResult>() {};
             }
 
-            m_Logger.Log($"Generating Cloud Code Module Bindings for: {GetModuleItemNames(moduleItemsList)}.");
+            m_Logger.LogInfo($"Generating Cloud Code Module Bindings for: {GetModuleItemNames(moduleItemsList)}.");
 
             // start module generations
             var generationTasks = new List<Task<CloudCodeModuleBindingsGenerationResult>>();
@@ -73,11 +73,18 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.Bindings
             }
             catch (Exception e)
             {
-                m_Logger.LogError("[Cloud Code]", $"Failed to generate code bindings. Error: {e.Message}");
+                m_Logger.LogError($"Failed to generate code bindings. Error: {e.Message}");
             }
             finally
             {
                 AssetDatabase.Refresh();
+            }
+
+            var failed = generationResults
+                .FirstOrDefault(res => !res.IsSuccessful);
+            if (failed != null)
+            {
+                m_Logger.LogError($"Failed to generate code bindings. Error: {failed.Exception}");
             }
 
             return generationResults.ToList();
@@ -95,14 +102,14 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.Bindings
             {
                 if (!result.IsSuccessful)
                 {
-                    m_Logger.LogError("[Cloud Code]", $"Failed to generate code bindings of {result.ModuleItem.Name}. Error: {result.Exception.Message}");
+                    m_Logger.LogError($"Failed to generate code bindings of {result.ModuleItem.Name}. Error: {result.Exception.Message}");
                     continue;
                 }
 
                 var outputFolder = GetModuleOutputFolder(result.ModuleItem);
                 await MoveDirectoryToNewLocation(result.OutputPath, outputFolder);
                 result.OutputPath = outputFolder;
-                m_Logger.Log($"Bindings of {result.ModuleItem.Name} generated successfully in {result.OutputPath}.");
+                m_Logger.LogInfo($"Bindings of {result.ModuleItem.Name} generated successfully in {result.OutputPath}.");
             }
         }
 
@@ -210,8 +217,10 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.Bindings
 
                 await m_FileSystem.CreateDirectory(bindingsOutputFolderPath);
 
+                var versionSelect = await GetVersionString(cancellationToken);
+
                 await m_DotnetRunner.ExecuteDotnetAsync(
-                    new[] {$"\"{GetGeneratorPath()}\"", $"\"{moduleDllPath}\"", $"\"{bindingsOutputFolderPath}\""},
+                    new[] {$"{versionSelect}", $"\"{GetGeneratorPath()}\"", $"\"{moduleDllPath}\"", $"\"{bindingsOutputFolderPath}\""},
                     cancellationToken);
             }
             catch (Exception e)
@@ -230,6 +239,22 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules.Bindings
                 var content = await m_FileSystem.ReadAllText(GetAsmdefContentPath(), cancellationToken);
                 await m_FileSystem.WriteAllText(assemblyDefPath, content, cancellationToken);
             }
+        }
+
+        async Task<string> GetVersionString(CancellationToken cancellationToken)
+        {
+            #if !CLOUD_CODE_AUTHORING_DISABLE_VERSION_DETECT
+            var versions = await m_DotnetRunner.GetAvailableCoreRuntimes(cancellationToken);
+            var last = versions.LastOrDefault(v => v != null);
+            string versionSelect = string.Empty;
+            if (last == null)
+                m_Logger.LogWarning("Failed to identify latest available SDK");
+            else
+                versionSelect = $"--fx-version {last}";
+            return versionSelect;
+            #else
+            return string.Empty;
+            #endif
         }
 
         internal static string GetGeneratorPath()

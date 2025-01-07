@@ -38,19 +38,44 @@ namespace Unity.Services.Deployment.Core
             string path,
             IDeploymentDefinition deploymentDefinition)
         {
+            var isExcluded = false;
             foreach (var excludePath in deploymentDefinition.ExcludePaths)
             {
-                var itemFullPath = Path.GetFullPath(path);
-                var unifiedExcludePath = excludePath.Replace('\\', '/');
+                var normalizedPath = GetNormalizedPath(path);
+                var normalizedItemFullPath = GetNormalizedPath(Path.GetFullPath(path));
+                var normalizedExcludePath = GetNormalizedPath(excludePath);
 
-                if (Glob.IsMatch(path, unifiedExcludePath)
-                    || Glob.IsMatch(itemFullPath, unifiedExcludePath))
+                if (Glob.IsMatch(normalizedPath, normalizedExcludePath)
+                    || Glob.IsMatch(normalizedItemFullPath, normalizedExcludePath)
+                    || Glob.IsMatch(Path.GetFileName(normalizedPath), normalizedExcludePath))
+                {
+                    isExcluded = true;
+                }
+
+                // see if relative path is a match
+                if (!isExcluded)
+                {
+                    var parentDir = Directory.GetParent(deploymentDefinition.Path);
+                    if (parentDir != null)
+                    {
+                        // transform the relative path into a full path
+                        var normalizedExcludeFullPath = GetNormalizedPath(Path.GetFullPath(Path.Combine(parentDir.FullName, excludePath)));
+                        isExcluded = Glob.IsMatch(normalizedExcludeFullPath, normalizedItemFullPath);
+                    }
+                }
+
+                if (isExcluded)
                 {
                     return true;
                 }
             }
 
             return false;
+        }
+
+        static string GetNormalizedPath(string path)
+        {
+            return path.Replace('\\', '/');
         }
     }
 }

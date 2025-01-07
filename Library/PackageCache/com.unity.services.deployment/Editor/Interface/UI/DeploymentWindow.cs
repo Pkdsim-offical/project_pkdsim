@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using Unity.Services.Core.Editor.Environments;
 using Unity.Services.Core.Editor.Environments.UI;
@@ -18,7 +17,7 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI
 {
-    class DeploymentWindow : AuthoringWindow
+    partial class DeploymentWindow : AuthoringWindow
     {
         const string k_DeploymentWindowTemplateName = "DeploymentWindow_uxml.uxml";
         const string k_HiddenClassName = "hidden";
@@ -57,11 +56,12 @@ namespace Unity.Services.Deployment.Editor.Interface.UI
         VisualElement m_CurrentView;
 
         [MenuItem(k_DeploymentMenuItemPath)]
-        public static void ShowWindow()
+        public static EditorWindow ShowWindow()
         {
             var window = GetWindow<DeploymentWindow>();
             window.minSize = new Vector2(250, 50);
             StaticAnalytics.SendOpenedEvent();
+            return window;
         }
 
         protected override void CreateGUI()
@@ -140,6 +140,12 @@ namespace Unity.Services.Deployment.Editor.Interface.UI
             m_MultipleDefinitionsView.AddToClassList(k_HiddenClassName);
             m_NoPackagesInstalledView.AddToClassList(k_HiddenClassName);
             m_EmptyListState.AddToClassList(k_HiddenClassName);
+            DeploymentApi.Editor.Deployments.Instance.DeploymentWindow = this;
+        }
+
+        void OnDestroy()
+        {
+            DeploymentApi.Editor.Deployments.Instance.DeploymentWindow = new DefaultDeploymentWindowImpl();
         }
 
         void OnGUI()

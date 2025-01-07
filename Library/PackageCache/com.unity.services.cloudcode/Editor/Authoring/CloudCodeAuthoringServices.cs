@@ -27,7 +27,6 @@ using Unity.Services.CloudCode.Authoring.Editor.Parameters;
 using Unity.Services.CloudCode.Authoring.Editor.Projects;
 using Unity.Services.CloudCode.Authoring.Editor.Projects.Dotnet;
 using Unity.Services.CloudCode.Authoring.Editor.Projects.Settings;
-using Unity.Services.CloudCode.Authoring.Editor.Projects.UI;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.DependencyInversion;
 using Unity.Services.CloudCode.Authoring.Editor.Scripts;
 using Unity.Services.CloudCode.Authoring.Editor.Scripts.Validation;
@@ -36,14 +35,21 @@ using Unity.Services.CloudCode.Authoring.Editor.Shared.Assets;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.UI;
 using Unity.Services.CloudCode.Authoring.Editor.UI;
 using Unity.Services.Core.Editor;
+using Unity.Services.Core.Editor.Environments;
+using Unity.Services.Core.Editor.OrganizationHandler;
 using Unity.Services.DeploymentApi.Editor;
 using UnityEditor;
-using UnityEngine;
 using static Unity.Services.CloudCode.Authoring.Editor.Shared.DependencyInversion.Factories;
 using IDeploymentEnvironmentProvider = Unity.Services.DeploymentApi.Editor.IEnvironmentProvider;
 using ICoreLogger = Unity.Services.CloudCode.Authoring.Editor.Core.Logging.ILogger;
 using IEnvironmentProvider = Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.IEnvironmentProvider;
 using Logger = Unity.Services.CloudCode.Authoring.Editor.Logging.Logger;
+
+#if DEPLOYMENT_API_AVAILABLE_V1_1
+using IProjectID = Unity.Services.DeploymentApi.Editor.IProjectIdentifierProvider;
+#else
+using IProjectID = Unity.Services.CloudCode.Authoring.Editor.Deployment.IProjectIdentifierProvider;
+#endif
 
 namespace Unity.Services.CloudCode.Authoring.Editor
 {
@@ -64,11 +70,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor
 
         protected override void Register(ServiceCollection collection)
         {
-            collection.Register(_ => CloudCodePreferences.LoadProjectSettings());
-            collection.Register(_ => new Func<ICloudCodeProjectSettings>(CloudCodePreferences.LoadProjectSettings));
-
-            collection.Register(_ => Debug.unityLogger);
-
+            collection.RegisterSingleton(Default<ICloudCodeProjectSettings, CloudCodeProjectSettings>);
             collection.Register(Default<IProcessRunner, ProcessRunner>);
             collection.Register(Default<INodeJsRunner, NodePackageManager>);
             collection.Register(Default<INpmScriptRunner, NodePackageManager>);
@@ -114,6 +116,8 @@ namespace Unity.Services.CloudCode.Authoring.Editor
             collection.Register(Default<OpenCommand>);
             collection.Register(Default<GenerateSolutionCommand>);
             collection.Register(Default<CloudCodeModuleDeployCommand>);
+            collection.Register(Default<OpenScriptDashboardCommand>);
+            collection.Register(Default<OpenModuleDashboardCommand>);
 
             collection.Register(Default<JsAssetHandler>);
             collection.Register(Default<IExternalCodeEditor, ExternalCodeEditor>);
@@ -132,8 +136,8 @@ namespace Unity.Services.CloudCode.Authoring.Editor
             collection.Register(Default<IFileReader, FileReader>);
 
             collection.Register(Default<IEnvironmentProvider, EnvironmentProvider>);
-            collection.Register(Default<IProjectIdProvider, ProjectIdProvider>);
             collection.Register(_ => new Lazy<IDeploymentEnvironmentProvider>(() => Deployments.Instance.EnvironmentProvider));
+            collection.Register(_ => OrganizationProvider.Organization);
 
             collection.Register(Default<IScriptBundler, EditorScriptBundler>);
             collection.RegisterSingleton(Default<AssetPostprocessorProxy>);
@@ -143,6 +147,9 @@ namespace Unity.Services.CloudCode.Authoring.Editor
             collection.Register(Default<InScriptParamsUIHandler>);
 
             collection.Register(Default<CloudCodeModuleGenerateBindingsCommand>);
+            collection.Register(Default<IDashboardUrlResolver, DashboardUrlResolver>);
+            collection.Register(_ => EnvironmentsApi.Instance);
+            collection.Register(Default<IProjectID, ProjectIdentifierProvider>);
         }
     }
 }

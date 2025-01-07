@@ -1,6 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>disable</Nullable>
         <!--
             Assuming that the package version is 0.x.y
@@ -14,7 +14,7 @@
 
           NuGet cheat-sheet: https://pages.prd.mz.internal.unity3d.com/mz-developer-handbook/docs/sdk/editor-integration/deployments-package/nuget-cheat-sheet
         -->
-        <Version>0.4.0</Version>
+        <Version>0.4.1</Version>
         <ImplicitUsings>disable</ImplicitUsings>
         <OutputType>Library</OutputType>
         <IsPackable>true</IsPackable>

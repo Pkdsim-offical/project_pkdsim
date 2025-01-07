@@ -15,7 +15,7 @@ If a sub-folder doesn't contain a Deployment Definition, any deployable assets a
 
 ## Create Deployment Definitions
 
-To create a Deployment Definition in a folder, right-click on the Project window, then select **Create** > **Deployment Defintion**.
+To create a Deployment Definition in a folder, right-click on the Project window, then select **Create** > **Services** > **Deployment Defintion**.
 
 ## Modify Deployment Definitions
 

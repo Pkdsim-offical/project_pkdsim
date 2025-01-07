@@ -9,13 +9,17 @@ using Unity.Services.CloudCode.Authoring.Client.Default;
 using Unity.Services.CloudCode.Authoring.Client.Http;
 using Unity.Services.CloudCode.Authoring.Client.Models;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Bundling;
-using Unity.Services.CloudCode.Authoring.Editor.Core.Deployment;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Model;
+#if !DEPLOYMENT_API_AVAILABLE_V1_1
+using Unity.Services.CloudCode.Authoring.Editor.Deployment;
+#endif
 using Unity.Services.CloudCode.Authoring.Editor.IO;
 using Unity.Services.CloudCode.Authoring.Editor.Scripts;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.Clients;
 using Unity.Services.Core.Editor;
+using Unity.Services.DeploymentApi.Editor;
 using CoreLanguage = Unity.Services.CloudCode.Authoring.Editor.Core.Model.Language;
+using IEnvironmentProvider = Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.IEnvironmentProvider;
 
 namespace Unity.Services.CloudCode.Authoring.Editor.AdminApi
 {
@@ -28,14 +32,14 @@ namespace Unity.Services.CloudCode.Authoring.Editor.AdminApi
         readonly IAccessTokens m_TokenProvider;
         readonly IDefaultApiClient m_Client;
         readonly IEnvironmentProvider m_EnvironmentProvider;
-        readonly IProjectIdProvider m_ProjectIdProvider;
+        readonly IProjectIdentifierProvider m_ProjectIdProvider;
         readonly IScriptBundler m_Bundler;
         readonly IFileReader m_FileReader;
 
         public CloudCodeClient(
             IAccessTokens tokenProvider,
             IEnvironmentProvider environmentProvider,
-            IProjectIdProvider projectIdProvider,
+            IProjectIdentifierProvider projectIdProvider,
             IDefaultApiClient client,
             IScriptBundler bundler,
             IFileReader fileReader)

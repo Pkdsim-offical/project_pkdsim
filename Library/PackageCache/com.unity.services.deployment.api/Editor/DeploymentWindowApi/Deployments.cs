@@ -10,12 +10,22 @@ namespace Unity.Services.DeploymentApi.Editor
         /// <summary>
         /// Instance of the deployments.
         /// </summary>
-        public static Deployments Instance { get; } = new Deployments();
+        public static Deployments Instance { get; internal set; } = new Deployments();
 
         /// <summary>
         /// Environment Provider.
         /// </summary>
         public IEnvironmentProvider EnvironmentProvider { get; set; }
+
+        /// <summary>
+        /// Project ID provider
+        /// </summary>
+        public IProjectIdentifierProvider ProjectIdProvider { get; set; }
+
+        /// <summary>
+        /// API on current deployment window
+        /// </summary>
+        public IDeploymentWindow DeploymentWindow { get; set; }
 
         /// <summary>
         /// Collection of the deployment providers present in the project.

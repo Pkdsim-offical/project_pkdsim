@@ -28,6 +28,13 @@ namespace Unity.Services.Deployment.Editor
 
         void UpdateItemStatus(IDeploymentItem item)
         {
+            if (item is ITrackableItem trackable)
+            {
+                trackable.TrackOrUpdate();
+                return;
+            }
+
+            //use file time stamp
             var fileLastWriteDate = m_FileTracker.GetLastWriteTime(item.Path);
 
             if (!m_ItemNameToTimeStamp.TryGetValue(item.Name, out var lastWriteDate))

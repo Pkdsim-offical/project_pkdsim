@@ -18,7 +18,7 @@ namespace Unity.Services.Deployment.Editor.DeploymentDefinitions.UI
             m_CommonAnalytics = DeploymentServices.Instance.GetService<ICommonAnalytics>();
         }
 
-        [MenuItem("Assets/Create/Deployment Definition", false, 81)]
+        [MenuItem("Assets/Create/Services/Deployment Definition", false, 81)]
         public static void CreateDeploymentDefinitionFile()
         {
             var filePath = k_DefaultName + DeploymentDefinitionResources.FileExtension;

@@ -8,11 +8,19 @@ using UnityEngine;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using Unity.Services.RemoteConfig;
+using UnityEngine.EventSystems;
+#if INPUT_SYSTEM_PRESENT
+using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.InputSystem.UI;
+#endif
 
 namespace Sample.Deployment.RemoteConfigSample
 {
     public class RemoteConfig : MonoBehaviour
     {
+        [SerializeField]
+        StandaloneInputModule m_DefaultInputModule;
+        
         public RuntimeConfig CashedConfig { get; private set; }
 
         public Action<RuntimeConfig> OnRemoteConfigUpdated;
@@ -32,6 +40,11 @@ namespace Sample.Deployment.RemoteConfigSample
 
         async void Awake()
         {
+#if INPUT_SYSTEM_PRESENT
+            m_DefaultInputModule.enabled = false;
+            m_DefaultInputModule.gameObject.AddComponent<InputSystemUIInputModule>();
+            TouchSimulation.Enable();
+#endif
             // Remote Config needs to be initialized and then the user must sign in.
             await InitializeServices();
             await SignInAnonymously();

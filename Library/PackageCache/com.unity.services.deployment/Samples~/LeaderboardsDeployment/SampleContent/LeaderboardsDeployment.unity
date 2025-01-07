@@ -166,6 +166,7 @@ MonoBehaviour:
   m_ButtonAdd: {fileID: 926971327}
   m_ButtonLog: {fileID: 1592963630}
   m_InputScore: {fileID: 817893673}
+  m_DefaultInputModule: {fileID: 488954408}
 --- !u!1 &149388471
 GameObject:
   m_ObjectHideFlags: 0

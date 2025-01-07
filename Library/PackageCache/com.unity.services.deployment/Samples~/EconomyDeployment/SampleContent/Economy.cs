@@ -3,24 +3,35 @@
 // See README.md for more details.
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using Unity.Services.Economy;
 using Unity.Services.Economy.Model;
+using UnityEngine.EventSystems;
+#if INPUT_SYSTEM_PRESENT
+using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.InputSystem.UI;
+#endif
 
 namespace Sample.Deployment.EconomySample
 {
     public class Economy : MonoBehaviour
     {
         public string CurrencyId = "MYCURRENCY";
-        CurrencyDefinition currency;
+        CurrencyDefinition m_Currency;
+        [SerializeField]
+        StandaloneInputModule m_DefaultInputModule;
 
-        private async void Awake()
+        async void Awake()
         {
+#if INPUT_SYSTEM_PRESENT
+            m_DefaultInputModule.enabled = false;
+            m_DefaultInputModule.gameObject.AddComponent<InputSystemUIInputModule>();
+            TouchSimulation.Enable();
+#endif
+            
             // Economy needs to be initialized and then the user must sign in.
             await InitializeServices();
             await SignInAnonymously();
@@ -51,12 +62,12 @@ namespace Sample.Deployment.EconomySample
             try
             {
                 await EconomyService.Instance.Configuration.SyncConfigurationAsync();
-                currency = EconomyService.Instance.Configuration.GetCurrency(CurrencyId);
-                Debug.Log($"Currency name: {currency.Name}");
-                Debug.Log($"Currency id: {currency.Id}");
-                Debug.Log($"Currency initial balance: {currency.Initial}");
-                Debug.Log($"Currency max balance: {currency.Max}");
-                Debug.Log($"Currency last modified: {currency.Modified.Date}");
+                m_Currency = EconomyService.Instance.Configuration.GetCurrency(CurrencyId);
+                Debug.Log($"Currency name: {m_Currency.Name}");
+                Debug.Log($"Currency id: {m_Currency.Id}");
+                Debug.Log($"Currency initial balance: {m_Currency.Initial}");
+                Debug.Log($"Currency max balance: {m_Currency.Max}");
+                Debug.Log($"Currency last modified: {m_Currency.Modified.Date}");
             }
             catch (Exception e)
             {
@@ -95,7 +106,7 @@ namespace Sample.Deployment.EconomySample
         {
             try
             {
-                PlayerBalance newBalance = await EconomyService.Instance.PlayerBalances.SetBalanceAsync(CurrencyId, currency.Initial);
+                PlayerBalance newBalance = await EconomyService.Instance.PlayerBalances.SetBalanceAsync(CurrencyId, m_Currency.Initial);
                 Debug.Log($"Balance for {newBalance.CurrencyId} was reset.");
             }
             catch (EconomyRateLimitedException e)

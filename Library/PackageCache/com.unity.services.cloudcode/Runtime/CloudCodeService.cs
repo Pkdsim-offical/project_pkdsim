@@ -73,8 +73,14 @@ namespace Unity.Services.CloudCode
         Task<ISubscriptionEvents> SubscribeToProjectMessagesAsync(SubscriptionEventCallbacks callbacks);
     }
 
+    /// <summary>
+    /// Provides access to the Cloud Code methods
+    /// </summary>
     public class CloudCodeService
     {
+        /// <summary>
+        /// The instance of the Cloud Code service
+        /// </summary>
         public static ICloudCodeService Instance { get; internal set; }
     }
 }

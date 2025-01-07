@@ -17,17 +17,19 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment
             CloudCodeModuleDeployCommand deployCommand,
             GenerateSolutionCommand generateSolutionCommand,
             CloudCodeModuleGenerateBindingsCommand generateBindingsCommand,
+            OpenModuleDashboardCommand openModuleDashboardCommand,
             CloudCodeModuleReferenceCollection scripts)
         {
             DeployCommand = deployCommand;
             Commands.Add(generateBindingsCommand);
             Commands.Add(generateSolutionCommand);
+            Commands.Add(openModuleDashboardCommand);
 
             foreach (var script in scripts)
             {
                 DeploymentItems.Add(script);
             }
-            
+
             scripts.CollectionChanged += OnCollectionChanged;
         }
 

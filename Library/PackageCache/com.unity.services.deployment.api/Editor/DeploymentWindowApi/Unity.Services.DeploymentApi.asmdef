@@ -14,5 +14,5 @@
         "UNITY_2021_3_OR_NEWER"
     ],
     "versionDefines": [],
-    "noEngineReferences": true
+    "noEngineReferences": false
 }

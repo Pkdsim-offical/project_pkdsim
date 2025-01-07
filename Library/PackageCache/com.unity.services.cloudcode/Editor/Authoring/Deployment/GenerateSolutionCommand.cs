@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using Unity.Services.CloudCode.Authoring.Editor.Core.Logging;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Solution;
 using Unity.Services.CloudCode.Authoring.Editor.Modules;
 using Unity.Services.DeploymentApi.Editor;
 using UnityEditor;
-using UnityEngine;
 
 namespace Unity.Services.CloudCode.Authoring.Editor.Deployment
 {
@@ -75,7 +75,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment
                 {
                     if (generation.IsCompletedSuccessfully)
                     {
-                        m_Logger.Log($"Solution '{solutionName}' generated successfully.");
+                        m_Logger.LogInfo($"Solution '{solutionName}' generated successfully.");
                     }
                 }, cancellationToken);
             }

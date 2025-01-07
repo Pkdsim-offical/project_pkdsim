@@ -3,7 +3,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 {
-    class NotSignedInView : ViewBase
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class NotSignedInView : ViewBase
     {
         protected override string UxmlName => "DeploymentWindow_NotSignedIn";
 
@@ -18,6 +21,8 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             SettingsService.OpenProjectSettings("Project/Services");
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<NotSignedInView> {}
+#endif
     }
 }

@@ -5,7 +5,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Components
 {
-    class CheckmarkToggle : Toggle
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class CheckmarkToggle : Toggle
     {
         const string k_StylePath = "Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/CheckmarkToggle.uss";
         internal const string UncheckedClass = "checkmark-toggle-unchecked";
@@ -15,6 +18,9 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
         VisualElement m_LastParent;
         CheckmarkToggleGroup m_ToggleGroup;
 
+#if UNITY_2023_3_OR_NEWER
+        [UxmlAttribute("isHeader")]
+#endif
         public bool isHeader { get; set; }
 
         public event Action ValueChanged;
@@ -57,6 +63,7 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
             AddToClassList(ussClass);
         }
 
+#if !UNITY_2023_3_OR_NEWER
         class CheckmarkToggleUxmlTraits : VisualElement.UxmlTraits
         {
             readonly UxmlStringAttributeDescription m_IsHeader =
@@ -77,5 +84,6 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
         }
 
         new class UxmlFactory : UxmlFactory<CheckmarkToggle, CheckmarkToggleUxmlTraits> {}
+#endif
     }
 }

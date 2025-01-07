@@ -9,6 +9,7 @@ using Unity.Services.Deployment.Editor.Shared.EditorUtils;
 using Unity.Services.Deployment.Editor.Shared.Infrastructure.Collections;
 using Unity.Services.DeploymentApi.Editor;
 using IoPath = System.IO.Path;
+using CoreLogger = Unity.Services.Deployment.Core.Logging.ILogger;
 
 namespace Unity.Services.Deployment.Editor.Interface
 {
@@ -16,6 +17,7 @@ namespace Unity.Services.Deployment.Editor.Interface
     {
         IEditorDeploymentDefinitionService m_DefinitionService;
         ObservableCollection<DeploymentProvider> m_Providers;
+        readonly CoreLogger m_Logger;
         ObservableCollection<IDeploymentItemViewModel> m_DeploymentItemViewModels;
 
         public IEditorDeploymentDefinition Model { get; }
@@ -42,11 +44,13 @@ namespace Unity.Services.Deployment.Editor.Interface
         public DeploymentDefinitionViewModel(
             IEditorDeploymentDefinition originalDefinition,
             IEditorDeploymentDefinitionService deploymentDefinitionService,
-            ObservableCollection<DeploymentProvider> providers)
+            ObservableCollection<DeploymentProvider> providers,
+            CoreLogger logger)
         {
             Model = originalDefinition;
             m_DefinitionService = deploymentDefinitionService;
             m_Providers = providers;
+            m_Logger = logger;
 
             m_DeploymentItemViewModels = new ObservableCollection<IDeploymentItemViewModel>();
             m_Providers.ForEach(AddItemsForProvider);
@@ -141,8 +145,14 @@ namespace Unity.Services.Deployment.Editor.Interface
 
         void AddItemsForProvider(DeploymentProvider provider)
         {
+            //This is the setup, the updates are handled by
             foreach (var item in provider.DeploymentItems)
             {
+                if (item == null)
+                {
+                    m_Logger.LogWarning($"Provider '{provider.Service}' added a null deployment item");
+                    continue;
+                }
                 TryAddItemViewModel(item, provider);
             }
             provider.DeploymentItems.CollectionChanged += DeploymentItemsOnCollectionChanged;
@@ -193,6 +203,11 @@ namespace Unity.Services.Deployment.Editor.Interface
             {
                 foreach (var item in provider.DeploymentItems)
                 {
+                    if (item == null)
+                    {
+                        m_Logger.LogWarning($"Provider '{provider.Service}' added a null deployment item");
+                        continue;
+                    }
                     var isOurs = m_DefinitionService.DefinitionForPath(item.Path) == Model;
                     var itemViewModel = m_DeploymentItemViewModels.FirstOrDefault(dvm => dvm.OriginalItem == item);
                     var itemViewModelIsInOurList = itemViewModel != null;

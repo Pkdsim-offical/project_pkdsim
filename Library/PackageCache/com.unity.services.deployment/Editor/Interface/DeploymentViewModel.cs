@@ -5,18 +5,17 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Threading.Tasks;
 using Unity.Services.Core.Editor.Environments;
-using Unity.Services.Deployment.Core.Model;
 using Unity.Services.Deployment.Editor.Analytics;
 using Unity.Services.Deployment.Editor.DeploymentDefinitions;
 using Unity.Services.Deployment.Editor.Environments;
 using Unity.Services.Deployment.Editor.Shared.Infrastructure.Collections;
 using Unity.Services.DeploymentApi.Editor;
-using UnityEngine;
-using Logger = Unity.Services.Deployment.Editor.Shared.Logging.Logger;
+using IDeploymentDefinition = Unity.Services.Deployment.Core.Model.IDeploymentDefinition;
+using Unity.Services.Deployment.Core.Logging;
 
 namespace Unity.Services.Deployment.Editor.Interface
 {
-    sealed class DeploymentViewModel : IDeploymentViewModel, IDisposable
+    sealed partial class DeploymentViewModel : IDeploymentViewModel, IDisposable
     {
         const string k_AnalyticsSource = "deployment window";
 
@@ -24,20 +23,26 @@ namespace Unity.Services.Deployment.Editor.Interface
 
         readonly ObservableCollection<DeploymentProvider> m_DeploymentProviders;
         readonly IDeploymentAnalytics m_Analytics;
+        readonly ILogger m_Logger;
         readonly IEnvironmentsApi m_EnvironmentsApi;
         readonly ObservableCollection<DeploymentDefinitionViewModel> m_DefinitionViewModels;
         readonly IEditorDeploymentDefinitionService m_DefinitionService;
+
+        public event Action<IReadOnlyList<IDeploymentItem>> DeploymentStarting;
+        public event Action<IReadOnlyList<IDeploymentItem>> DeploymentEnded;
 
         public DeploymentViewModel(
             IEnvironmentsApi environmentsApi,
             IEditorDeploymentDefinitionService definitionService,
             ObservableCollection<DeploymentProvider> deploymentProviders,
-            IDeploymentAnalytics analytics)
+            IDeploymentAnalytics analytics,
+            ILogger logger)
         {
             m_EnvironmentsApi = environmentsApi;
             m_DefinitionService = definitionService;
             m_DeploymentProviders = deploymentProviders;
             m_Analytics = analytics;
+            m_Logger = logger;
 
             m_DefinitionViewModels = new ObservableCollection<DeploymentDefinitionViewModel>();
             AddAllViewModelsForDefinitionService(m_DefinitionService);
@@ -64,15 +69,22 @@ namespace Unity.Services.Deployment.Editor.Interface
             await DeployItemsAsync(items);
         }
 
-        async Task DeployItemsAsync(IEnumerable<IDeploymentItemViewModel> items)
+        internal async Task DeployItemsAsync(IEnumerable<IDeploymentItemViewModel> items)
         {
             var enumeratedItems = items
                 .Where(item => !item.IsBeingDeployed)
                 .EnumerateOnce();
             enumeratedItems.ForEach(item => item.IsBeingDeployed = true);
             var analytics = m_Analytics.BeginDeploy(ItemsPerProvider(enumeratedItems), k_AnalyticsSource);
+            var deploymentItems = enumeratedItems.Select(vm => vm.OriginalItem).ToList();
             try
             {
+                ResolveDependencies(deploymentItems);
+                DeploymentStarting?.Invoke(deploymentItems);
+                m_DeploymentScope = new DeploymentScope()
+                {
+                    DeploymentList = deploymentItems
+                };
                 await ValidateEnvironment(enumeratedItems);
                 await ExecuteCommandAsync(enumeratedItems, p => p.DeployCommand);
                 analytics.SendSuccess();
@@ -80,12 +92,15 @@ namespace Unity.Services.Deployment.Editor.Interface
             catch (Exception e)
             {
                 analytics.SendFailure(e);
-                Logger.LogException(e);
+                m_Logger.LogException(e);
                 throw;
             }
             finally
             {
                 enumeratedItems.ForEach(item => item.IsBeingDeployed = false);
+                m_DeploymentScope = null;
+                DeploymentEnded?.Invoke(deploymentItems);
+                ClearDependencies(deploymentItems);
             }
         }
 
@@ -141,7 +156,7 @@ namespace Unity.Services.Deployment.Editor.Interface
 
         void AddViewModelForDefinition(IDeploymentDefinition ddef)
         {
-            m_DefinitionViewModels.Add(new DeploymentDefinitionViewModel((IEditorDeploymentDefinition)ddef, m_DefinitionService, m_DeploymentProviders));
+            m_DefinitionViewModels.Add(new DeploymentDefinitionViewModel((IEditorDeploymentDefinition)ddef, m_DefinitionService, m_DeploymentProviders, m_Logger));
         }
 
         void RemoveViewModelForDefinition(IDeploymentDefinition ddef)
@@ -153,7 +168,7 @@ namespace Unity.Services.Deployment.Editor.Interface
             }
             else
             {
-                Logger.LogError($"Could not locate {nameof(DeploymentDefinitionViewModel)} for {nameof(IDeploymentDefinition)} '{ddef.Name}'");
+                m_Logger.LogError($"Could not locate {nameof(DeploymentDefinitionViewModel)} for {nameof(IDeploymentDefinition)} '{ddef.Name}'");
             }
         }
 

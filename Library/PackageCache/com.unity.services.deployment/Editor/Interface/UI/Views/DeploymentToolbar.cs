@@ -9,7 +9,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 {
-    class DeploymentToolbar : TemplateContainer
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class DeploymentToolbar : TemplateContainer
     {
         const string k_TemplatePath = "Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentToolbar.uxml";
         internal const string deployAllButton = "DeployAllButton";
@@ -78,6 +81,8 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             return this.Q<VisualElement>(className: k_ToolbarContentClass).Children();
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<DeploymentToolbar> {}
+#endif
     }
 }

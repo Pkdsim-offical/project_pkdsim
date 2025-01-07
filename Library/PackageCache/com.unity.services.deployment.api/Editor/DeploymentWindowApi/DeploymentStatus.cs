@@ -9,29 +9,12 @@ namespace Unity.Services.DeploymentApi.Editor
     /// or other internal validations, use AssetState for that purpose.
     /// </summary>
     [Serializable]
-    public struct DeploymentStatus
+    public partial struct DeploymentStatus
     {
         //n.b.: Do not mark as readonly. Required for reload domain persistence
         string m_Message;
         string m_MessageDetail;
         SeverityLevel m_MessageSeverity;
-
-        /// <summary>
-        /// A status to represent an item that is up to date with the remote.
-        /// </summary>
-        public static readonly DeploymentStatus UpToDate = new DeploymentStatus("Up to date", string.Empty, SeverityLevel.Success);
-        /// <summary>
-        /// A status to represent an item that was modified locally.
-        /// </summary>
-        public static readonly DeploymentStatus ModifiedLocally = new DeploymentStatus("Modified locally, deploy to update", string.Empty, SeverityLevel.Warning);
-        /// <summary>
-        ///A status to represent an item that failed to deploy.
-        /// </summary>
-        public static readonly DeploymentStatus FailedToDeploy = new DeploymentStatus("Failed to deploy", string.Empty, SeverityLevel.Error);
-        /// <summary>
-        /// An empty status.
-        /// </summary>
-        public static readonly DeploymentStatus Empty = new DeploymentStatus(string.Empty, string.Empty, SeverityLevel.None);
 
         /// <summary>
         /// Message associated with a deployment result

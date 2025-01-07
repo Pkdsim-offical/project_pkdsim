@@ -12,7 +12,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 {
-    class DeploymentDefinitionView : DeploymentElementViewBase, ISerializableComponent
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class DeploymentDefinitionView : DeploymentElementViewBase, ISerializableComponent
     {
         const string k_TemplatePath = "Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/Templates/DeploymentDefinitionTemplate.uxml";
 
@@ -243,7 +246,9 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             }
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<DeploymentDefinitionView> {}
+#endif
 
         enum State
         {

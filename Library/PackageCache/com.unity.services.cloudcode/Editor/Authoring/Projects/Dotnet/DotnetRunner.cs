@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.ModuleGeneration.Exceptions;
@@ -42,7 +43,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.Dotnet
                 try
                 {
                     m_ProjectSettings.DotnetPath = k_DotnetDefaultPathFallback;
-                    m_ProjectSettings.Save();
+                    m_ProjectSettings.WriteToEditorPrefs();
 
                     await ExecuteDotnetAsync(new List<string>
                     {
@@ -60,7 +61,6 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.Dotnet
 
         public async Task<string> ExecuteDotnetAsync(IEnumerable<string> arguments = default, CancellationToken cancellationToken = default)
         {
-            m_ProjectSettings.Load();
             var startInfo = new ProcessStartInfo(m_ProjectSettings.DotnetPath, string.Join(" ", arguments))
             {
                 UseShellExecute = false,
@@ -72,6 +72,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.Dotnet
 
             try
             {
+                m_Logger.LogVerbose($"Running dotnet with '{string.Join(" ", arguments ?? Array.Empty<string>())}'");
                 var output = await m_ProcessRunner.RunAsync(startInfo, null, cancellationToken);
                 if (output.ExitCode != 0)
                 {
@@ -90,6 +91,22 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.Dotnet
                 m_Logger.LogVerbose($"Error {e}");
                 throw;
             }
+        }
+
+        public async Task<List<SemVersion>> GetAvailableCoreRuntimes(CancellationToken ct = default)
+        {
+            var executionResult = await ExecuteDotnetAsync(new[] {"--list-runtimes"}, ct);
+            var versions = executionResult
+                .Split("\n", StringSplitOptions.RemoveEmptyEntries)
+                .Where(s => s.StartsWith("Microsoft.NETCore.App"))
+                .Select(s =>
+                {
+                    s = s.Trim();
+                    return SemVersion.ParseString(s);
+                })
+                .ToList();
+
+            return versions;
         }
     }
 }

@@ -10,6 +10,8 @@ using PackageManagerClient = UnityEditor.PackageManager.Client;
 class SampleDependencyImporter
 {
     const string k_SampleDependencyFilename = "sample-dependencies.json";
+    const string k_TextMeshProPackageName = "com.unity.textmeshpro";
+    const string k_UguiPackageId = "com.unity.ugui@2.0.0";
 
     [InitializeOnLoadMethod]
     static void Initialization()
@@ -48,7 +50,7 @@ class SampleDependencyImporter
         var packageList = PackageManagerClient.List(true);
         while (!packageList.IsCompleted);
 
-        List<string> packagesToInstall = new List<string>();
+        var packagesToInstall = new List<string>();
         foreach (var packageId in sampleConfig)
         {
             if (HasHigherVersion(packageId, packageList))
@@ -62,6 +64,10 @@ class SampleDependencyImporter
 
     static void InstallMultiplePackages(List<string> packageIds)
     {
+#if UNITY_2023_3_OR_NEWER
+        FilterTextMeshProIfNecessary(packageIds);
+#endif
+
         if (packageIds.Any())
         {
             var packageAdd = PackageManagerClient.AddAndRemove(packageIds.ToArray(), null);
@@ -72,7 +78,39 @@ class SampleDependencyImporter
                 Debug.Log($"Installed package {packageId}.");
             }
         }
+
+#if UNITY_2023_3_OR_NEWER
+        if (packageIds.Contains(k_UguiPackageId))
+        {
+            var path = Path.GetFullPath("Packages/com.unity.ugui/Package Resources/TMP Essential Resources.unitypackage");
+            if (!string.IsNullOrEmpty(path))
+            {
+                AssetDatabase.ImportPackage(path, false);
+            }
+        }
+#endif
     }
+
+#if UNITY_2023_3_OR_NEWER
+    static void FilterTextMeshProIfNecessary(List<string> packageIds)
+    {
+        string packageToRemove = null;
+        foreach (var packageId in packageIds)
+        {
+            if (packageId.StartsWith(k_TextMeshProPackageName))
+            {
+                packageToRemove = packageId;
+                packageIds.Remove(k_TextMeshProPackageName);
+            }
+        }
+
+        if (!string.IsNullOrEmpty(packageToRemove))
+        {
+            packageIds.Remove(packageToRemove);
+            packageIds.Add(k_UguiPackageId);
+        }
+    }
+#endif
 
     /// <summary>
     /// we implement a very simple version comparator, we don't want to implement semver

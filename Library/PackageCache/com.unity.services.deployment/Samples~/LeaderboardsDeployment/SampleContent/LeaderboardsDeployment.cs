@@ -3,6 +3,11 @@ using System.Threading.Tasks;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Leaderboards;
+using UnityEngine.EventSystems;
+#if INPUT_SYSTEM_PRESENT
+using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.InputSystem.UI;
+#endif
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -15,7 +20,18 @@ class LeaderboardsDeployment : MonoBehaviour
     Button m_ButtonLog;
     [SerializeField]
     TMP_InputField m_InputScore;
+    [SerializeField]
+    StandaloneInputModule m_DefaultInputModule;
 
+#if INPUT_SYSTEM_PRESENT
+    void Awake()
+    {
+        m_DefaultInputModule.enabled = false;
+        m_DefaultInputModule.gameObject.AddComponent<InputSystemUIInputModule>();
+        TouchSimulation.Enable();
+    }
+#endif
+    
     async void Start()
     {
         ToggleButtons(false);

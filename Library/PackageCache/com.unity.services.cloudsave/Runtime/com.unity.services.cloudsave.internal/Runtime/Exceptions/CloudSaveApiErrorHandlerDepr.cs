@@ -117,7 +117,7 @@ namespace Unity.Services.CloudSave.Internal
                 exception.Details.Add(new CloudSaveValidationErrorDetail(error));
             }
 
-            PerformTemporaryErrorLogWorkaround("CloudSaveValidationException", message);
+            PerformTemporaryErrorLogWorkaround("CloudSaveValidationException", GetValidationMessage(exception, response.Response.StatusCode));
 
             return exception;
         }
@@ -134,7 +134,8 @@ namespace Unity.Services.CloudSave.Internal
                 exception.Details.Add(new CloudSaveValidationErrorDetail(error));
             }
 
-            PerformTemporaryErrorLogWorkaround("CloudSaveValidationException", message);
+            PerformTemporaryErrorLogWorkaround("CloudSaveValidationException", GetValidationMessage(exception, response.Response.StatusCode));
+
 
             return exception;
         }
@@ -186,6 +187,16 @@ namespace Unity.Services.CloudSave.Internal
                 default:
                     return "An unknown error occurred in the Cloud Save SDK.";
             }
+        }
+
+        static string GetValidationMessage(CloudSaveValidationException exception, long statusCode)
+        {
+            if (exception.Details.Count > 0 && exception.Details[0].Messages.Count > 0)
+            {
+                return $"Status Code {statusCode}: Field '{exception.Details[0].Field}' encountered a validation error ({exception.Details[0].Messages[0]})";;
+            }
+
+            return exception.Message;
         }
     }
 }

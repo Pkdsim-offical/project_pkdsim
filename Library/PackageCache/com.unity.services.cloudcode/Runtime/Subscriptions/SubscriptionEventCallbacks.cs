@@ -2,6 +2,9 @@ using System;
 
 namespace Unity.Services.CloudCode.Subscriptions
 {
+    /// <summary>
+    /// Provides access to different events when messages change states
+    /// </summary>
     public class SubscriptionEventCallbacks
     {
         /// <summary>

@@ -15,10 +15,12 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment
 
         public CloudCodeDeploymentProvider(DeployCommand deployCommand,
                                            OpenCommand openCommand,
+                                           OpenScriptDashboardCommand openScriptDashboardCommand,
                                            ObservableCollection<IDeploymentItem> scripts) : base(scripts)
         {
             DeployCommand = deployCommand;
             OpenCommand = openCommand;
+            Commands.Add(openScriptDashboardCommand);
         }
 
         public void ValidateDeploymentStatus()

@@ -6,6 +6,11 @@ using Unity.Services.Authentication;
 using Unity.Services.CloudCode;
 using Unity.Services.Core;
 using UnityEngine;
+using UnityEngine.EventSystems;
+#if INPUT_SYSTEM_PRESENT
+using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.InputSystem.UI;
+#endif
 using UnityEngine.UI;
 
 public class CloudCodeScriptsHello : MonoBehaviour
@@ -14,7 +19,18 @@ public class CloudCodeScriptsHello : MonoBehaviour
     Button m_Button;
     [SerializeField]
     TMP_InputField m_InputField;
+    [SerializeField]
+    StandaloneInputModule m_DefaultInputModule;
 
+#if INPUT_SYSTEM_PRESENT
+    void Awake()
+    {
+        m_DefaultInputModule.enabled = false;
+        m_DefaultInputModule.gameObject.AddComponent<InputSystemUIInputModule>();
+        TouchSimulation.Enable();
+    }
+#endif
+    
     public async void Start()
     {
         m_Button.interactable = false;

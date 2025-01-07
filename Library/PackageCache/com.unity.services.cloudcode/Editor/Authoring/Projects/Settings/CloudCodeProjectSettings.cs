@@ -9,7 +9,6 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.Settings
         const string k_ExternalEditorPath = "ExternalEditorPath";
         const string k_ExternalEditorArgsFormat = "ExternalEditorArgsFormat";
         const string k_DotnetPath = "DotnetPath";
-        object m_DataLock = new();
 
         public string ExternalEditorPath { get; set; }
         public string ExternalEditorArgsFormat { get; set; }
@@ -39,29 +38,27 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.Settings
             "/usr/local/bin/npm";
 #endif
 
-        public void Load()
+        internal CloudCodeProjectSettings()
         {
-            lock (m_DataLock)
-            {
-                NpmPath = EditorPrefs.GetString(k_NpmKey, NpmPath);
-                NodeJsPath = EditorPrefs.GetString(k_NodeJsKey, NodeJsPath);
-                DotnetPath = EditorPrefs.GetString(k_DotnetPath, DotnetPath);
-                ExternalEditorPath = EditorPrefs.GetString(k_ExternalEditorPath, ExternalEditorPath);
-                ExternalEditorArgsFormat = EditorPrefs.GetString(k_ExternalEditorArgsFormat, ExternalEditorArgsFormat);
-            }
-
+            LoadFromEditorPrefs();
         }
 
-        public void Save()
+        public void LoadFromEditorPrefs()
         {
-            lock (m_DataLock)
-            {
-                EditorPrefs.SetString(k_NpmKey, NpmPath);
-                EditorPrefs.SetString(k_NodeJsKey, NodeJsPath);
-                EditorPrefs.SetString(k_DotnetPath, DotnetPath);
-                EditorPrefs.SetString(k_ExternalEditorPath, ExternalEditorPath);
-                EditorPrefs.SetString(k_ExternalEditorArgsFormat, ExternalEditorArgsFormat);
-            }
+            NpmPath = EditorPrefs.GetString(k_NpmKey, NpmPath);
+            NodeJsPath = EditorPrefs.GetString(k_NodeJsKey, NodeJsPath);
+            DotnetPath = EditorPrefs.GetString(k_DotnetPath, DotnetPath);
+            ExternalEditorPath = EditorPrefs.GetString(k_ExternalEditorPath, ExternalEditorPath);
+            ExternalEditorArgsFormat = EditorPrefs.GetString(k_ExternalEditorArgsFormat, ExternalEditorArgsFormat);
+        }
+
+        public void WriteToEditorPrefs()
+        {
+            EditorPrefs.SetString(k_NpmKey, NpmPath);
+            EditorPrefs.SetString(k_NodeJsKey, NodeJsPath);
+            EditorPrefs.SetString(k_DotnetPath, DotnetPath);
+            EditorPrefs.SetString(k_ExternalEditorPath, ExternalEditorPath);
+            EditorPrefs.SetString(k_ExternalEditorArgsFormat, ExternalEditorArgsFormat);
         }
     }
 }

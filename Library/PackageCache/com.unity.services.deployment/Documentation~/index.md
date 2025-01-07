@@ -25,4 +25,8 @@ be saved in version control.
 - [com.unity.services.economy](https://docs.unity.com/ugs/en-us/manual/economy/manual/deploying-resources-with-unity-editor) **from 3.2.1**
 - [com.unity.services.leaderboards](https://docs.unity.com/ugs/en-us/manual/leaderboards/manual/leaderboards) **from 2.0.0**
 - [com.unity.services.multiplay](https://docs.unity.com/ugs/en-us/manual/game-server-hosting/manual/welcome) **from 1.1.0**
-
+- [com.unity.services.multiplayer](https://docs.unity3d.com/Packages/com.unity.services.multiplayer@latest)
+  - [Multiplay Hosting](https://docs.unity3d.com/Packages/com.unity.services.multiplayer@1.0/manual/Multiplay/Authoring/index.html)
+  - [Matchmaker](https://docs.unity3d.com/Packages/com.unity.services.multiplayer@1.0/manual/Matchmaker/Authoring/index.html)
+- [com.unity.services.tooling](https://docs.unity3d.com/Packages/com.unity.services.tooling@1.0/manual/index.html)
+  - [Access Control](https://docs.unity.com/ugs/en-us/manual/overview/manual/access-control)

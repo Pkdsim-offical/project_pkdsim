@@ -5,13 +5,19 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Components
 {
-    class CheckmarkToggleGroup : VisualElement
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class CheckmarkToggleGroup : VisualElement
     {
         const string k_StylePath = "Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/Collapsible.uss";
 
         CheckmarkToggle m_HeaderToggle;
         internal HashSet<CheckmarkToggle> SubToggles;
 
+#if UNITY_2023_3_OR_NEWER
+        [UxmlAttribute("labelName")]
+#endif
         string LabelName { get; set; }
 
         public CheckmarkToggleGroup()
@@ -85,6 +91,7 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
             }
         }
 
+#if !UNITY_2023_3_OR_NEWER
         class CheckmarkToggleGroupUxmlTraits : VisualElement.UxmlTraits
         {
             readonly UxmlStringAttributeDescription m_LabelName =
@@ -104,5 +111,6 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Components
         }
 
         new class UxmlFactory : UxmlFactory<CheckmarkToggleGroup, CheckmarkToggleGroupUxmlTraits> {}
+#endif
     }
 }

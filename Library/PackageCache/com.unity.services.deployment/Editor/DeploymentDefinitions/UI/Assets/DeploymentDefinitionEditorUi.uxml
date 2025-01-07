@@ -1,4 +1,9 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="True">
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xmlns="UnityEngine.UIElements"
+    xmlns:fba="Unity.Services.Deployment.Editor.Shared.UI.DeploymentConfigInspectorFooter"
+    editor-extension-mode="True">
     <Style src="project://database/Packages/com.unity.services.deployment/Editor/DeploymentDefinitions/UI/Assets/DeploymentDefinitionEditorUi.uss" />
 
     <uie:PropertyField binding-path="m_DefinitionName" label="Name" focusable="true" />
@@ -8,4 +13,5 @@
         <ui:Button name="Revert" text="Revert" class="revert-button" />
         <ui:Button name="Apply" text="Apply" class="apply-button" />
     </ui:VisualElement>
+    <fba:DeploymentConfigInspectorFooter />
 </ui:UXML>

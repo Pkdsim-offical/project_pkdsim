@@ -3,7 +3,10 @@ using UnityEngine.UIElements;
 
 namespace Unity.Services.Deployment.Editor.Interface.UI.Views
 {
-    class EnvironmentNotSetView : ViewBase
+#if UNITY_2023_3_OR_NEWER
+    [UxmlElement]
+#endif
+    partial class EnvironmentNotSetView : ViewBase
     {
         const string k_SettingsLocation = "Project/Services/Environments";
 
@@ -20,6 +23,8 @@ namespace Unity.Services.Deployment.Editor.Interface.UI.Views
             SettingsService.OpenProjectSettings(k_SettingsLocation);
         }
 
+#if !UNITY_2023_3_OR_NEWER
         new class UxmlFactory : UxmlFactory<EnvironmentNotSetView> {}
+#endif
     }
 }

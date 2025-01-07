@@ -15,6 +15,7 @@ namespace Unity.Services.DeploymentApi.Editor
         string m_Description;
         string m_Detail;
         SeverityLevel m_SeverityLevel;
+        string m_Type;
 
         /// <summary>
         /// Description of the state.
@@ -32,17 +33,32 @@ namespace Unity.Services.DeploymentApi.Editor
         /// </summary>
         public SeverityLevel Level => m_SeverityLevel;
 
-        /// <summary>
-        /// Constructor of the AssetState.
-        /// </summary>
+        /// <summary>Auxiliary field to identify an AssetState for updating </summary>
+        public string Type => m_Type;
+
+        /// <summary> Constructor of the AssetState. </summary>
         /// <param name="description">Status description.</param>
         /// <param name="detail">Detail.</param>
-        /// <param name="level">Deployment status type.</param>
+        /// <param name="level">Severity of the AssetState</param>
         public AssetState(string description, string detail, SeverityLevel level)
         {
             m_Description = description;
             m_Detail = detail;
             m_SeverityLevel = level;
+            m_Type = string.Empty;
+        }
+
+        /// <summary> Constructor of the AssetState. </summary>
+        /// <param name="description">Status description.</param>
+        /// <param name="detail">Detail.</param>
+        /// <param name="level">Severity of the AssetState</param>
+        /// <param name="type">The AssetState type</param>
+        public AssetState(string description, string detail, SeverityLevel level, string type)
+        {
+            m_Description = description;
+            m_Detail = detail;
+            m_SeverityLevel = level;
+            m_Type = type;
         }
     }
 }

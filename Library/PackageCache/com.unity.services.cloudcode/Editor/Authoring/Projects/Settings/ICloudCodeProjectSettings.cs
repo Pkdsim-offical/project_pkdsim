@@ -7,7 +7,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.Settings
         public string DotnetPath { get; set; }
         public string NodeJsPath { get; set; }
         public string NpmPath { get; set; }
-        void Load();
-        void Save();
+        void WriteToEditorPrefs();
+        void LoadFromEditorPrefs();
     }
 }
