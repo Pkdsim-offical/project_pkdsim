@@ -8,7 +8,7 @@ namespace project_pkdsim.Assets.USys.AIRoutesSys.AIRSys_NPCAniData.AB_AniData
         {
         private Ab_AniData_Transition Ab_AniData_Transitions;
         private Ab_AniData_Idle Ab_AniData_Idle;
-                public void Load_Ab_AnimationData()
+            public void Load_Ab_AnimationData()
             {
                     Load_AbAniData_Idle();
                     Load_AbAniData_Transition();
