@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/t-posed models/SCRIPTS/pkpedia/npc/file types/unity/npc/zoroark/zoroark.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0

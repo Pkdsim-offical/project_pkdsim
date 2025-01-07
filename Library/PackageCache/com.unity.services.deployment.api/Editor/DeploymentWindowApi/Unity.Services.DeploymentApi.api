@@ -1,0 +1,248 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.Services.DeploymentApi.Editor
+{
+    public struct AssetState
+    {
+        public string Description { get; }
+        public string Detail { get; }
+        public SeverityLevel Level { get; }
+        public string Type { get; }
+        public AssetState(string description, string detail, SeverityLevel level, string type = @"") {}
+    }
+
+    public abstract class Command
+    {
+        public abstract string Name { get; }
+        protected Command() {}
+        public abstract System.Threading.Tasks.Task ExecuteAsync(System.Collections.Generic.IEnumerable<IDeploymentItem> items, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        public virtual bool IsEnabled(System.Collections.Generic.IEnumerable<IDeploymentItem> items);
+        public virtual bool IsVisible(System.Collections.Generic.IEnumerable<IDeploymentItem> items);
+    }
+
+    public abstract class Command<T> : Command where T : IDeploymentItem
+    {
+        protected Command() {}
+        public abstract System.Threading.Tasks.Task ExecuteAsync(System.Collections.Generic.IEnumerable<T> items, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        public System.Threading.Tasks.Task ExecuteAsync(System.Collections.Generic.IEnumerable<IDeploymentItem> items, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        public virtual bool IsEnabled(System.Collections.Generic.IEnumerable<T> items);
+        public bool IsEnabled(System.Collections.Generic.IEnumerable<IDeploymentItem> items);
+        public virtual bool IsVisible(System.Collections.Generic.IEnumerable<T> items);
+        public bool IsVisible(System.Collections.Generic.IEnumerable<IDeploymentItem> items);
+    }
+
+    public class DeploymentItem : IDeploymentItem, ITypedItem, System.ComponentModel.INotifyPropertyChanged
+    {
+        protected string m_Name;
+        protected string m_Path;
+        protected float m_Progress;
+        protected System.Collections.ObjectModel.ObservableCollection<AssetState> m_States;
+        protected DeploymentStatus m_Status;
+        protected string m_Type;
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        public virtual string Name { get; set; }
+        public virtual string Path { get; set; }
+        public virtual float Progress { get; set; }
+        public System.Collections.ObjectModel.ObservableCollection<AssetState> States { get; }
+        public virtual DeploymentStatus Status { get; set; }
+        public string Type { get; set; }
+        public DeploymentItem() {}
+        protected void SetField<T>(ref T field, T value, System.Action<T> onFieldChanged = default(System.Action<T>), string propertyName = default(string));
+    }
+
+    public static class DeploymentItemExtensions
+    {
+        public static void SetStatusDescription(this IDeploymentItem self, string description);
+        public static void SetStatusDetail(this IDeploymentItem self, string detail);
+        public static void SetStatusSeverity(this IDeploymentItem self, SeverityLevel severityLevel);
+    }
+
+    public abstract class DeploymentProvider
+    {
+        public System.Collections.ObjectModel.ObservableCollection<Command> Commands { get; }
+        public abstract Command DeployCommand { get; }
+        public System.Collections.ObjectModel.ObservableCollection<IDeploymentItem> DeploymentItems { get; }
+        public virtual Command OpenCommand { get; }
+        public abstract string Service { get; }
+        public virtual Command SyncItemsWithRemoteCommand { get; }
+        public virtual Command ValidateCommand { get; }
+        protected DeploymentProvider() {}
+        protected DeploymentProvider(System.Collections.ObjectModel.ObservableCollection<IDeploymentItem> deploymentItems = default(System.Collections.ObjectModel.ObservableCollection<IDeploymentItem>), System.Collections.ObjectModel.ObservableCollection<Command> commands = default(System.Collections.ObjectModel.ObservableCollection<Command>)) {}
+    }
+
+    public class DeploymentResult<T> where T : IDeploymentItem
+    {
+        public System.Collections.Generic.List<T> Deployed { get; }
+        public DeploymentResult() {}
+        public DeploymentResult(System.Collections.Generic.IReadOnlyList<T> items) {}
+    }
+
+    public class Deployments
+    {
+        public System.Collections.ObjectModel.ObservableCollection<DeploymentProvider> DeploymentProviders { get; }
+        public IDeploymentWindow DeploymentWindow { get; set; }
+        public IEnvironmentProvider EnvironmentProvider { get; set; }
+        public static Deployments Instance { get; }
+        public IProjectIdentifierProvider ProjectIdProvider { get; set; }
+    }
+
+    public class DeploymentScope
+    {
+        public System.Collections.Generic.List<IDeploymentItem> DeploymentList { get; set; }
+        public bool IsDryRun { get; set; }
+        public bool IsReconcile { get; set; }
+        protected DeploymentScope() {}
+    }
+
+    public struct DeploymentStatus
+    {
+        public static readonly DeploymentStatus Empty;
+        public static readonly DeploymentStatus FailedToDeploy;
+        public static readonly DeploymentStatus ModifiedLocally;
+        public static readonly DeploymentStatus UpToDate;
+        public string Message { get; }
+        public string MessageDetail { get; }
+        public SeverityLevel MessageSeverity { get; }
+        public DeploymentStatus(string message = default(string), string messageDetail = default(string), SeverityLevel messageSeverity = SeverityLevel.None) {}
+        public static DeploymentStatus GetDeployed(string details);
+        public static DeploymentStatus GetDeploying(string details = default(string));
+        public static DeploymentStatus GetFailedToDelete(System.Exception e, string path);
+        public static DeploymentStatus GetFailedToDeploy(string details);
+        public static DeploymentStatus GetFailedToFetch(string details);
+        public static DeploymentStatus GetFailedToLoad(System.Exception e, string path);
+        public static DeploymentStatus GetFailedToRead(System.Exception e, string path);
+        public static DeploymentStatus GetFailedToSerialize(System.Exception e, string path);
+        public static DeploymentStatus GetFailedToWrite(System.Exception e, string path);
+        public static DeploymentStatus GetFetched(string detail);
+        public static DeploymentStatus GetFetching(string details);
+        public static DeploymentStatus GetPartialDeploy(string details);
+        public static DeploymentStatus GetPartialFetch(string details);
+    }
+
+    public static class DeploymentWindowExtensions
+    {
+        public static System.Threading.Tasks.Task<Unity.Services.DeploymentApi.Editor.DeploymentResult<IDeploymentItem>> Deploy(this IDeploymentWindow self, System.Collections.Generic.IReadOnlyList<string> filePaths, System.Threading.CancellationToken token = default(System.Threading.CancellationToken));
+        public static System.Collections.Generic.List<IDeploymentItem> GetAllDeploymentItems(this IDeploymentWindow self, bool includeDeploymentDefinitions = false);
+    }
+
+    public class FetchResult<T> where T : IDeploymentItem
+    {
+        public System.Collections.Generic.List<T> Fetched { get; }
+        public FetchResult() {}
+        public FetchResult(System.Collections.Generic.IReadOnlyList<T> items) {}
+    }
+
+    public interface ICompositeItem : IDeploymentItem, System.ComponentModel.INotifyPropertyChanged
+    {
+        public System.Collections.Generic.IReadOnlyList<IDeploymentItem> Children { get; }
+    }
+
+    public class IdentifiedDependency : IDependency
+    {
+        public string ResourceId { get; set; }
+        public IdentifiedDependency() {}
+        public IDeploymentItem Resolve(System.Collections.Generic.IReadOnlyList<IDeploymentItem> deployedItems);
+        public override string ToString();
+    }
+
+    public interface IDependency
+    {
+        public IDeploymentItem Resolve(System.Collections.Generic.IReadOnlyList<IDeploymentItem> deployedItems);
+        public static IDeploymentItem Resolve(System.Collections.Generic.IReadOnlyList<IDeploymentItem> deployedItems, System.Func<IDeploymentItem, bool> predicate);
+    }
+
+    public interface IDependentItem : IDeploymentItem, System.ComponentModel.INotifyPropertyChanged
+    {
+        public System.Collections.Generic.IReadOnlyList<IDependency> Dependencies { get; }
+        public System.Collections.Generic.List<IDeploymentItem> ResolvedDependencies { get; }
+    }
+
+    public interface IDeploymentDefinitionItem : ICompositeItem, IDeploymentItem, System.ComponentModel.INotifyPropertyChanged
+    {
+        public System.Collections.Generic.IReadOnlyList<string> ExcludePaths { get; }
+    }
+
+    public interface IDeploymentHandler<TIn, TOut> where TIn : IDeploymentItem where TOut : Unity.Services.DeploymentApi.Editor.DeploymentResult<TIn>
+    {
+        public System.Threading.Tasks.Task<TOut> DeployAsync(System.Collections.Generic.IReadOnlyList<TIn> localResources, bool dryRun = false, bool reconcile = false, System.Threading.CancellationToken token = default(System.Threading.CancellationToken));
+    }
+
+    public interface IDeploymentItem : System.ComponentModel.INotifyPropertyChanged
+    {
+        public string Name { get; }
+        public string Path { get; }
+        public float Progress { get; }
+        public System.Collections.ObjectModel.ObservableCollection<AssetState> States { get; }
+        public DeploymentStatus Status { get; set; }
+    }
+
+    public interface IDeploymentWindow
+    {
+        public event System.Action<System.Collections.Generic.IReadOnlyList<IDeploymentItem>> DeploymentEnded;
+        public event System.Action<System.Collections.Generic.IReadOnlyList<IDeploymentItem>> DeploymentStarting;
+        public void Check(System.Collections.Generic.IReadOnlyList<IDeploymentItem> deploymentItems);
+        public void ClearChecked();
+        public void ClearSelection();
+        public System.Threading.Tasks.Task<Unity.Services.DeploymentApi.Editor.DeploymentResult<IDeploymentItem>> Deploy(System.Collections.Generic.IReadOnlyList<IDeploymentItem> items, System.Threading.CancellationToken token = default(System.Threading.CancellationToken));
+        public System.Collections.Generic.List<IDeploymentItem> GetChecked();
+        public DeploymentScope GetCurrentDeployment();
+        public System.Collections.Generic.List<IDeploymentDefinitionItem> GetDeploymentDefinitions();
+        public System.Collections.Generic.List<IDeploymentItem> GetFromFiles(System.Collections.Generic.IReadOnlyList<string> filePaths);
+        public System.Collections.Generic.List<IDeploymentItem> GetSelected();
+        public UnityEditor.EditorWindow OpenWindow();
+        public void Select(System.Collections.Generic.IReadOnlyList<IDeploymentItem> deploymentItems);
+    }
+
+    public interface IEnvironmentProvider
+    {
+        public string Current { get; }
+    }
+
+    public interface IFetchHandler<TIn, TOut> where TIn : IDeploymentItem where TOut : Unity.Services.DeploymentApi.Editor.DeploymentResult<TIn>
+    {
+        public System.Threading.Tasks.Task<TOut> FetchAsync(string rootDirectory, System.Collections.Generic.IReadOnlyList<TIn> localResources, bool dryRun = false, bool reconcile = false, System.Threading.CancellationToken token = default(System.Threading.CancellationToken));
+    }
+
+    public interface IIdentifiable
+    {
+        public string ResourceId { get; }
+    }
+
+    public interface INamedResource
+    {
+        public string ResourceName { get; }
+    }
+
+    public interface IProjectIdentifierProvider
+    {
+        public string ProjectId { get; }
+    }
+
+    public interface ITrackableItem
+    {
+        public void TrackOrUpdate();
+    }
+
+    public interface ITypedItem
+    {
+        public string Type { get; }
+    }
+
+    public class NamedDependency : IDependency
+    {
+        public string ResourceName { get; set; }
+        public NamedDependency() {}
+        public IDeploymentItem Resolve(System.Collections.Generic.IReadOnlyList<IDeploymentItem> deployedItems);
+        public override string ToString();
+    }
+
+    public enum SeverityLevel
+    {
+        Error = 3,
+        Info = 1,
+        None = 0,
+        Success = 4,
+        Warning = 2,
+    }
+}

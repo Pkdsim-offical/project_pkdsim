@@ -1,0 +1,32 @@
+.apply-footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.generation-btn-container-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.button {
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin-left: 10px;
+    min-width: 75px;
+}
+
+#property-path {
+    flex-grow: 1;
+}
+
+#property-path Label {
+    max-width: 120px;
+}
+
+.group-path {
+    flex-direction: row;
+}

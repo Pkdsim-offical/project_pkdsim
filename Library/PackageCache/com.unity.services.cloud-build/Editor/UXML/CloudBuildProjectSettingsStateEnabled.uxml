@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:TextElement text="Please wait..." class="cloud-progress"/>
+    <ui:VisualElement class="cloud-build-container">
+        <ui:TextElement text="No build targets configured" class="target-container-title"/>
+        <ui:ScrollView class="target-container">
+            <ui:VisualElement name="NoTargetContainer" class="target-entry">
+                <ui:TextElement text="Use the Manage Targets button below to go to the dashboard to configure build targets." class="title"/>
+            </ui:VisualElement>
+        </ui:ScrollView>
+        <ui:VisualElement name="ManualUploadEntry" class="target-entry">
+            <ui:TextElement text="To upload a local build, click the Build History button below to open the dashboard and select the Upload Build option at the top of the page or click the Upload Build button below." class="title"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="ButtonFooter" class="target-footer">
+            <ui:Button name="UploadButton" text="Upload Build"/>
+            <ui:Button name="ManageTargetButton" text="Manage Build Targets"/>
+            <ui:Button name="HistoryButton" text="Build History"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="separator" />
+    <ui:VisualElement name="PollFooterSection">
+    <ui:VisualElement name="PollFooter" class="target-entry">
+        <ui:Toggle name="PollToggle" label="Build notifications" view-data-key="cloud-build-poller-toggle" />
+    </ui:VisualElement>
+    <ui:VisualElement class="separator" />
+    </ui:VisualElement>
+</ui:UXML>

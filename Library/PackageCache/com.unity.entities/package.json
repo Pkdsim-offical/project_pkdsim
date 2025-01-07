@@ -1,0 +1,42 @@
+{
+  "name": "com.unity.entities",
+  "displayName": "Entities",
+  "version": "1.3.8",
+  "unity": "2022.3",
+  "unityRelease": "11f1",
+  "dependencies": {
+    "com.unity.burst": "1.8.18",
+    "com.unity.serialization": "3.1.1",
+    "com.unity.collections": "2.5.1",
+    "com.unity.mathematics": "1.3.2",
+    "com.unity.modules.assetbundle": "1.0.0",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.unityanalytics": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.test-framework.performance": "3.0.3",
+    "com.unity.nuget.mono-cecil": "1.11.4",
+    "com.unity.scriptablebuildpipeline": "1.21.21",
+    "com.unity.profiling.core": "1.0.2",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.uielements": "1.0.0"
+  },
+  "description": "The Entities package provides a modern Entity Component System (ECS) implementation with a basic set of systems and components made for Unity.",
+  "keywords": [
+    "entities",
+    "dots",
+    "unity"
+  ],
+  "_upm": {
+    "changelog": "### Removed\n\n* removing various material assets within entities (Test.mat and TestMaterial.mat).\n\n### Fixed\n\n* Disable \"new empty subscene\" menu item on default untitled scene.\n* Fix invalid queries generated for `IJobEntity` with `[WithPresent(typeof(T))]` and `EnabledRef<T>` and/or `in T` in the same job."
+  },
+  "upmCi": {
+    "footprint": "625b7430bb260dfcd202a110b278aaabe4689c15"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.entities@1.3/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/dots.git",
+    "type": "git",
+    "revision": "3ea543f9dd8be902be20c6f04e900cb913436f36"
+  },
+  "_fingerprint": "6a355619334f7ed62ba31c1c9894af096312544d"
+}

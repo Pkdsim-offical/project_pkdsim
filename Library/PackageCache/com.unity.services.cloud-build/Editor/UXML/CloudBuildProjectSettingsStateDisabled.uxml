@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="project-settings-title-container">
+        <ui:Label text="Turn on Unity Build Automation to upload and share builds with your team." class="label-container"/>
+    </ui:VisualElement>
+    <ui:VisualElement class="project-settings-title-container">
+        <ui:Label text="Subscribe to Unity Build Automation to build in the Cloud and easily compile, deploy, and test your games automatically." class="label-container"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="StartUsingCloudBuild" class="field-block link-button">
+        <ui:TextElement text="Start Using Unity Build Automation" class="link-button"/>
+        <ui:VisualElement class="external-link-icon"/>
+    </ui:VisualElement>
+    <ui:VisualElement class="separator" />
+</ui:UXML>

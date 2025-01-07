@@ -1,0 +1,57 @@
+{
+  "name": "com.unity.services.deployment",
+  "displayName": "Deployment",
+  "version": "1.4.1",
+  "unity": "2021.3",
+  "description": "The Deployment package allows for a cohesive interface for the deployment of assets and configurations for UGS services.\n\nIt is not used on its own as UGS services will integrate with it.\nIt provides the base tooling, such as the Deployment Window, so that UGS services have shared functionality surrounding the deployment of the service's configuration files.",
+  "dependencies": {
+    "com.unity.services.deployment.api": "1.1.2",
+    "com.unity.services.core": "1.12.0"
+  },
+  "_upm": {
+    "gameService": {
+      "groupId": "devops"
+    },
+    "changelog": "### Fixed\n- Fixed inspector loading for service assets, below Unity 6"
+  },
+  "samples": [
+    {
+      "displayName": "Remote Config Deployment",
+      "description": "This is a simple sample to deploy and call a Remote Configuration.",
+      "path": "Samples~/RemoteConfigDeployment"
+    },
+    {
+      "displayName": "Leaderboards Deployment",
+      "description": "This is a simple sample to deploy and call a Leaderboard configuration.",
+      "path": "Samples~/LeaderboardsDeployment"
+    },
+    {
+      "displayName": "Economy Deployment",
+      "description": "This is a simple sample to deploy and call an Economy configuration.",
+      "path": "Samples~/EconomyDeployment"
+    },
+    {
+      "displayName": "Cloud Code Modules Deployment",
+      "description": "This is a simple sample to deploy and call a Cloud Code Module.",
+      "path": "Samples~/CloudCodeModulesDeployment"
+    },
+    {
+      "displayName": "Cloud Code Scripts Deployment",
+      "description": "This is a simple sample to deploy and call a Cloud Code Script.",
+      "path": "Samples~/CloudCodeScriptsDeployment"
+    }
+  ],
+  "relatedPackages": {
+    "com.unity.services.deployment.tests": "1.4.1"
+  },
+  "upmCi": {
+    "footprint": "4dcb63eb4d14fb620493013c6c1fc9f1a7ef1d2b"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.services.deployment@1.4/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git",
+    "type": "git",
+    "revision": "aedf830f0b4efaff7e6391d319c7ddcaa481f64e"
+  },
+  "_fingerprint": "87c909a1d72616415d25410065bf7702cc2cb4c6"
+}

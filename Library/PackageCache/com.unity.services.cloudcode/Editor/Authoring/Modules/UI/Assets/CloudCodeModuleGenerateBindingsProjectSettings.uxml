@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="module-bindings-container">
+        <ui:VisualElement class="module-bindings-title">
+            <ui:TextElement text="Modules Binding" class="module-bindings-text"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="Description Section" class="section-container">
+            <ui:Label name="Description" text="Generate the code binding for all modules found in the current project." class="label-container" />
+        </ui:VisualElement>
+        <ui:VisualElement class="generate-bindings-button-container">
+            <ui:Button name="generate-bindings-btn" text="Generate All Modules Bindings" display-tooltip-when-elided="true" class="generate-bindings-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
