@@ -1,33 +1,33 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/gumbr/project_pkdsim/Packages/manifest.json
+    m_FilePath: C:/Users/pkdsim_offical/project_pkdsim/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638652091653925397
-    m_Hash: 1602384985
+      ticks: 638718157325258243
+    m_Hash: 3462979394
   m_LockFileStatus:
-    m_FilePath: C:/Users/gumbr/project_pkdsim/Packages/packages-lock.json
+    m_FilePath: C:/Users/pkdsim_offical/project_pkdsim/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638652091654043806
-    m_Hash: 2154026999
+      ticks: 638718157325492991
+    m_Hash: 455423302
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/gumbr/project_pkdsim/Packages
-m_EditorVersion: 6000.0.23f1 (1c4764c07fb4)
+m_ProjectPath: C:/Users/pkdsim_offical/project_pkdsim/Packages
+m_EditorVersion: 6000.0.30f1 (62b05ba0686a)
 m_ResolvedPackages:
 - packageId: com.unity.adaptiveperformance@5.1.0
   testable: 0
   isDirectDependency: 1
   version: 5.1.0
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.adaptiveperformance
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.adaptiveperformance
   assetPath: Packages/com.unity.adaptiveperformance
   name: com.unity.adaptiveperformance
   displayName: Adaptive Performance
@@ -166,12 +166,12 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 5.1.0
     minimumUnityVersion: 2021.2.0a18
-- packageId: com.unity.addressables@2.2.2
+- packageId: com.unity.addressables@2.3.7
   testable: 0
   isDirectDependency: 1
-  version: 2.2.2
+  version: 2.3.7
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.addressables
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.addressables
   assetPath: Packages/com.unity.addressables
   name: com.unity.addressables
   displayName: Addressables
@@ -180,7 +180,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: 'The Addressable Asset System allows the developer to ask for an asset
     via its address. Once an asset (e.g. a prefab) is marked "addressable", it generates
     an address which can be called from anywhere. Wherever the asset resides (local
@@ -317,10 +317,12 @@ m_ResolvedPackages:
     - 2.2.2
     - 2.3.0
     - 2.3.1
+    - 2.3.7
     compatible:
     - 2.2.2
     - 2.3.0
     - 2.3.1
+    - 2.3.7
     recommended: 2.2.2
     deprecated: []
   dependencies:
@@ -335,7 +337,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.scriptablebuildpipeline
-    version: 2.1.4
+    version: 2.2.4
   - name: com.unity.modules.unitywebrequestassetbundle
     version: 1.0.0
   resolvedDependencies:
@@ -350,7 +352,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.scriptablebuildpipeline
-    version: 2.1.5
+    version: 2.2.4
   - name: com.unity.modules.unitywebrequestassetbundle
     version: 1.0.0
   keywords:
@@ -371,13 +373,13 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638556164070000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.addressables@2.2/manual/index.html
+  datePublishedTicks: 638705422788180000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.addressables@2.3/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/Addressables.git
-    revision: a5d37e7459f86f9108e521236be616077803ca7c
+    revision: e3d95345964b4d77108e55b92792b847069e2e62
     path: 
   unityLifecycle:
     version: 2.2.2
@@ -390,33 +392,32 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"- Fix KeyNotFoundException when clicking on local bundles
-    in the profiler.\n- Fix bundles incorrectly marked as released in the Profiler
-    when they are still active\n- Improved error message when trying to load a catalog
-    in an unexpected file format.\n- Fixed issue where operation that uses WaitForCompletion
-    can timeout much earlier than it should.\n- The build scripts were reworked so
-    that you can extend them or copy them outside the package without having to fork
-    the entire package.\n- A Version field was added to the Addressables object for
-    getting the package version in the Editor.\n- Fixed an issue where tearing down
-    the Addressables instance could happen before user tear down code was getting
-    called.\n- Sort collections to make serialized editor files deterministic\n-
-    Fixed issue where labels on an addressable sub-entry are incorrectly added to
-    the former parent entry.\n- Added support for calling Release() on AsyncOperationHandles
-    directly that couldn''t before.\n- Fixed sub-object loading from AssetReferences
-    for types that are not Sprites in a SpriteAtlas."}'
+  upmReserved: '{"changelog":"- The group edit window saves sort order and enabled
+    columns. Groups are not sorted but can be reordered by dragging and dropping
+    and that state is saved. This ordering has been moved to the Addressables data
+    folder into the file AddressableAssetGroupSortSettings. This file can be added
+    to .gitignore for per user sorting, or can be checked into version control for
+    team sorting.\n- Fix \"IndexOutOfRangeException\" console message when assigning
+    an addressable SpriteAtlas to an AssetReferenceSprite.\n- Make SubObjectGUID
+    an Editor only field. It would not work properly at Runtime due to the lack of
+    AssetDatabase, but this makes it explicit at compile time.\n- Switch the Runtime
+    key to never use the SubObjectGUID and always use SubObjectName for subobjects.\n-
+    CheckCatalogUpdate now returns 1 when there is an update available.\n- CanBuildPlayer
+    has been switched to using the Bee postprocessor and should return better error
+    messages on failure."}'
   assetStore:
     productId: 
-  fingerprint: 4f7e840f4cce8ffab522b6febb1b52af9e928bdb
+  fingerprint: e7c1873336b86a30da9c0b928af850d93d289ec0
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.2.2
     minimumUnityVersion: 2023.1.0a1
-- packageId: com.unity.ai.navigation@2.0.4
+- packageId: com.unity.ai.navigation@2.0.5
   testable: 0
   isDirectDependency: 1
-  version: 2.0.4
+  version: 2.0.5
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.ai.navigation
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.ai.navigation
   assetPath: Packages/com.unity.ai.navigation
   name: com.unity.ai.navigation
   displayName: AI Navigation
@@ -434,7 +435,6 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
-    - 1.0.0-exp.1
     - 1.0.0-exp.2
     - 1.0.0-exp.3
     - 1.0.0-exp.4
@@ -449,9 +449,10 @@ m_ResolvedPackages:
     - 2.0.0
     - 2.0.3
     - 2.0.4
+    - 2.0.5
     compatible:
-    - 2.0.4
-    recommended: 2.0.4
+    - 2.0.5
+    recommended: 2.0.5
     deprecated: []
   dependencies:
   - name: com.unity.modules.ai
@@ -490,16 +491,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638605675584270000
+  datePublishedTicks: 638675282916940000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ai.navigation@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ai.navigation.git
-    revision: 2c565f88d424bed980de32ead5a48791e9db9936
+    revision: 110941630e19b3574f9f81fd6fe3c28e867a9321
     path: 
   unityLifecycle:
-    version: 2.0.4
+    version: 2.0.5
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -509,21 +510,22 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n* NavMesh Modifier was not overriding the
-    area type in a NavMesh built from within an `Awake()` method ([NAVB-39](https://issuetracker.unity3d.com/issues/building-navmesh-with-navmeshsurface-does-not-bake-areas-into-navmeshtriangulation-when-buildnavmesh-is-called-in-awake))"}'
+  upmReserved: '{"changelog":"### Fixed\n* NavMesh Link would not update when switching
+    from the **Not Walkable** area type to any other area type in the inspector.
+    (NAVB-87)\n* A few documentation paragraphs and links were not accurate."}'
   assetStore:
     productId: 
-  fingerprint: 3f89ad87253dcaae2d0bb583bd5ef4c4f2c17764
+  fingerprint: 9f76b145f0a8dd734ff2a4877f7f7edb83b7f62c
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 2.0.4
+    minimumPackageVersion: 2.0.5
     minimumUnityVersion: 2023.2.0a18
 - packageId: com.unity.animation.rigging@1.3.0
   testable: 0
   isDirectDependency: 1
   version: 1.3.0
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.animation.rigging
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.animation.rigging
   assetPath: Packages/com.unity.animation.rigging
   name: com.unity.animation.rigging
   displayName: Animation Rigging
@@ -635,7 +637,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.1.2
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.cinemachine
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.cinemachine
   assetPath: Packages/com.unity.cinemachine
   name: com.unity.cinemachine
   displayName: Cinemachine
@@ -719,6 +721,8 @@ m_ResolvedPackages:
     - 2.9.7
     - 2.10.0
     - 2.10.1
+    - 2.10.2
+    - 2.10.3
     - 3.0.0-pre.3
     - 3.0.0-pre.4
     - 3.0.0-pre.5
@@ -731,7 +735,7 @@ m_ResolvedPackages:
     - 3.1.1
     - 3.1.2
     compatible:
-    - 2.10.1
+    - 2.10.3
     - 3.0.0-pre.3
     - 3.0.0-pre.4
     - 3.0.0-pre.5
@@ -805,7 +809,7 @@ m_ResolvedPackages:
     revision: 13a4bc8cd360bfd308f28f14da1f58948e9944f7
     path: 
   unityLifecycle:
-    version: 2.10.1
+    version: 2.10.3
     nextVersion: 
     recommendedVersion: 3.1.0
     isDeprecated: 0
@@ -837,14 +841,14 @@ m_ResolvedPackages:
   fingerprint: b2e7bffab7726d3b59b19bdf5d6f8e78f70b6c3b
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 2.10.1
+    minimumPackageVersion: 2.10.3
     minimumUnityVersion: 2022.3.0a1
 - packageId: com.unity.collab-proxy@2.5.2
   testable: 0
   isDirectDependency: 1
   version: 2.5.2
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.collab-proxy
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.collab-proxy
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -935,8 +939,10 @@ m_ResolvedPackages:
     - 2.4.4
     - 2.5.1
     - 2.5.2
+    - 2.6.0
     compatible:
     - 2.5.2
+    - 2.6.0
     recommended: 2.5.2
     deprecated: []
   dependencies: []
@@ -1001,7 +1007,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.5.1
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.collections
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.collections
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -1162,12 +1168,233 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.5.1
     minimumUnityVersion: 2022.3.11f1
-- packageId: com.unity.formats.fbx@5.1.1
+- packageId: com.unity.entities@1.3.8
   testable: 0
   isDirectDependency: 1
-  version: 5.1.1
+  version: 1.3.8
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.formats.fbx
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.entities
+  assetPath: Packages/com.unity.entities
+  name: com.unity.entities
+  displayName: Entities
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: The Entities package provides a modern Entity Component System (ECS)
+    implementation with a basic set of systems and components made for Unity.
+  errors: []
+  versions:
+    all:
+    - 0.0.12-preview.2
+    - 0.0.12-preview.4
+    - 0.0.12-preview.5
+    - 0.0.12-preview.6
+    - 0.0.12-preview.8
+    - 0.0.12-preview.11
+    - 0.0.12-preview.12
+    - 0.0.12-preview.13
+    - 0.0.12-preview.14
+    - 0.0.12-preview.15
+    - 0.0.12-preview.16
+    - 0.0.12-preview.17
+    - 0.0.12-preview.18
+    - 0.0.12-preview.19
+    - 0.0.12-preview.20
+    - 0.0.12-preview.21
+    - 0.0.12-preview.23
+    - 0.0.12-preview.24
+    - 0.0.12-preview.26
+    - 0.0.12-preview.27
+    - 0.0.12-preview.28
+    - 0.0.12-preview.29
+    - 0.0.12-preview.30
+    - 0.0.12-preview.31
+    - 0.0.12-preview.32
+    - 0.0.12-preview.33
+    - 0.1.0-preview
+    - 0.1.1-preview
+    - 0.2.0-preview.18
+    - 0.3.0-preview.4
+    - 0.4.0-preview.10
+    - 0.5.0-preview.17
+    - 0.5.1-preview.11
+    - 0.6.0-preview.24
+    - 0.7.0-preview.19
+    - 0.8.0-preview.8
+    - 0.9.0-preview.6
+    - 0.9.1-preview.15
+    - 0.10.0-preview.6
+    - 0.11.0-preview.7
+    - 0.11.1-preview.4
+    - 0.11.2-preview.1
+    - 0.13.0-preview.24
+    - 0.14.0-preview.18
+    - 0.14.0-preview.19
+    - 0.16.0-preview.21
+    - 0.17.0-preview.41
+    - 0.17.0-preview.42
+    - 0.50.0-preview.24
+    - 0.50.1-preview.2
+    - 0.51.0-preview.32
+    - 0.51.1-preview.21
+    - 1.0.0-exp.8
+    - 1.0.0-exp.12
+    - 1.0.0-pre.15
+    - 1.0.0-pre.44
+    - 1.0.0-pre.47
+    - 1.0.0-pre.65
+    - 1.0.8
+    - 1.0.10
+    - 1.0.11
+    - 1.0.14
+    - 1.0.16
+    - 1.1.0-exp.1
+    - 1.1.0-pre.3
+    - 1.2.0-exp.3
+    - 1.2.0-pre.4
+    - 1.2.0-pre.6
+    - 1.2.0-pre.12
+    - 1.2.0
+    - 1.2.1
+    - 1.2.3
+    - 1.2.4
+    - 1.3.0-exp.1
+    - 1.3.0-pre.4
+    - 1.3.2
+    - 1.3.5
+    - 1.3.8
+    compatible:
+    - 1.3.2
+    - 1.3.5
+    - 1.3.8
+    recommended: 1.3.8
+    deprecated: []
+  dependencies:
+  - name: com.unity.burst
+    version: 1.8.18
+  - name: com.unity.collections
+    version: 2.5.1
+  - name: com.unity.mathematics
+    version: 1.3.2
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.serialization
+    version: 3.1.1
+  - name: com.unity.profiling.core
+    version: 1.0.2
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  - name: com.unity.modules.uielements
+    version: 1.0.0
+  - name: com.unity.modules.assetbundle
+    version: 1.0.0
+  - name: com.unity.modules.unityanalytics
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.scriptablebuildpipeline
+    version: 1.21.21
+  - name: com.unity.test-framework.performance
+    version: 3.0.3
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.8.18
+  - name: com.unity.mathematics
+    version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.collections
+    version: 2.5.1
+  - name: com.unity.test-framework
+    version: 1.4.5
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  - name: com.unity.test-framework.performance
+    version: 3.0.3
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.serialization
+    version: 3.1.2
+  - name: com.unity.profiling.core
+    version: 1.0.2
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  - name: com.unity.modules.uielements
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.hierarchycore
+    version: 1.0.0
+  - name: com.unity.modules.assetbundle
+    version: 1.0.0
+  - name: com.unity.modules.unityanalytics
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.scriptablebuildpipeline
+    version: 2.2.4
+  keywords:
+  - entities
+  - dots
+  - unity
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638688169917360000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.entities@1.3/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/dots.git
+    revision: 3ea543f9dd8be902be20c6f04e900cb913436f36
+    path: 
+  unityLifecycle:
+    version: 1.3.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Removed\n\n* removing various material assets within
+    entities (Test.mat and TestMaterial.mat).\n\n### Fixed\n\n* Disable \"new empty
+    subscene\" menu item on default untitled scene.\n* Fix invalid queries generated
+    for `IJobEntity` with `[WithPresent(typeof(T))]` and `EnabledRef<T>` and/or `in
+    T` in the same job."}'
+  assetStore:
+    productId: 
+  fingerprint: 6a355619334f7ed62ba31c1c9894af096312544d
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.3.2
+    minimumUnityVersion: 2022.3.11f1
+- packageId: com.unity.formats.fbx@5.1.2
+  testable: 0
+  isDirectDependency: 1
+  version: 5.1.2
+  source: 1
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.formats.fbx
   assetPath: Packages/com.unity.formats.fbx
   name: com.unity.formats.fbx
   displayName: FBX Exporter
@@ -1176,7 +1403,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: "The FBX Exporter package enables round-trip workflows between Unity
     and 3D modeling software. Send geometry, Lights, Cameras, and animation from
     Unity to Autodesk\xAE Maya\xAE, Autodesk\xAE Maya LT\u2122, or Autodesk\xAE 3ds
@@ -1212,9 +1439,11 @@ m_ResolvedPackages:
     - 5.1.0-pre.1
     - 5.1.0
     - 5.1.1
+    - 5.1.2
     compatible:
     - 5.1.1
-    recommended: 5.1.1
+    - 5.1.2
+    recommended: 5.1.2
     deprecated: []
   dependencies:
   - name: com.autodesk.fbx
@@ -1252,13 +1481,13 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638464332410000000
+  datePublishedTicks: 638672634740070000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.formats.fbx@5.1/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/com.unity.formats.fbx.git
-    revision: 1d51556b0d41070036f2b248f6f50c7f8dfb63e4
+    revision: 05b9cd3489bce242ce82ecb1360770ad01190425
     path: 
   unityLifecycle:
     version: 5.1.1
@@ -1271,10 +1500,16 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Changed\n- Updated the FBX SDK bindings to 5.1.1."}'
+  upmReserved: '{"changelog":"### Added\n- Added destruction of Url and LastUrl FBXScene
+    properties before export.\n- Added a warning about absolute paths when exporting
+    with Texture file references, with an option in Project Settings to disable this
+    warning.\n- Added an option in Project Settings to activate verbose logging mode.\n\n###
+    Removed\n- Removed the deprecated Component Updater from FBX Export Project Settings.\n\n###
+    Fixed\n- Fixed an exception occurring during hierarchy export when an LOD contains
+    a null renderer.\n- Fixed Presets creation in Unity 2023.1+."}'
   assetStore:
     productId: 
-  fingerprint: 4ad3eb16b6169d696abf31e81f575752527d445e
+  fingerprint: d3e62720eeb145b1ac3b9c577fb356f4ee1138cf
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 5.1.1
@@ -1284,7 +1519,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.22
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.ide.visualstudio
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.ide.visualstudio
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -1390,7 +1625,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.11.2
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.inputsystem
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.inputsystem
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -1457,7 +1692,6 @@ m_ResolvedPackages:
     - 1.11.1
     - 1.11.2
     compatible:
-    - 1.11.1
     - 1.11.2
     recommended: 1.11.2
     deprecated: []
@@ -1505,7 +1739,7 @@ m_ResolvedPackages:
     revision: c8518694c7fdd2c755755e028e2ec19cdceda19b
     path: 
   unityLifecycle:
-    version: 1.11.1
+    version: 1.11.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -1535,14 +1769,14 @@ m_ResolvedPackages:
   fingerprint: 3c4a97c3950fef77960981e0fe90613de6e512ee
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.11.1
+    minimumPackageVersion: 1.11.2
     minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.multiplayer.center@1.0.0
   testable: 0
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.multiplayer.center
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.multiplayer.center
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -1622,7 +1856,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: b27203cbee4b0eb1910981fa8a1f299c8134b318
+  fingerprint: f502d8ac613fa076192423e73892fbd89eb4049b
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -1632,7 +1866,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 17.0.3
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.render-pipelines.universal
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.render-pipelines.universal
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal RP
@@ -1784,166 +2018,17 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 3790fbb7d51b3abf69e319c264be0b677c3d9ec8
+  fingerprint: ab772dad2c1bf67d1b3463f09340fcdd5ce4659b
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
     minimumUnityVersion: 6000.0.0a1
-- packageId: com.unity.scriptablebuildpipeline@2.1.5
-  testable: 0
-  isDirectDependency: 1
-  version: 2.1.5
-  source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.scriptablebuildpipeline
-  assetPath: Packages/com.unity.scriptablebuildpipeline
-  name: com.unity.scriptablebuildpipeline
-  displayName: Scriptable Build Pipeline
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: The Scriptable Build Pipeline moves the asset bundle build pipeline
-    to C#.  Use the pre-defined build flows, or create your own using the divided
-    up APIs.  This system improves build time, fixes incremental build, and provides
-    greater flexibility.
-  errors: []
-  versions:
-    all:
-    - 0.0.5-preview
-    - 0.0.6-preview
-    - 0.0.8-preview
-    - 0.0.9-preview
-    - 0.0.10-preview
-    - 0.0.14-preview
-    - 0.0.15-preview
-    - 0.1.0-preview
-    - 0.2.0-preview
-    - 1.0.1-preview
-    - 1.1.0-preview
-    - 1.1.1-preview
-    - 1.2.1-preview
-    - 1.3.5-preview
-    - 1.4.1-preview
-    - 1.5.0-preview
-    - 1.5.1
-    - 1.5.2
-    - 1.5.4
-    - 1.5.6
-    - 1.5.10
-    - 1.6.3-preview
-    - 1.6.4-preview
-    - 1.6.5-preview
-    - 1.7.2
-    - 1.7.3
-    - 1.8.2
-    - 1.8.4
-    - 1.8.6
-    - 1.9.0
-    - 1.10.0
-    - 1.11.1
-    - 1.11.2
-    - 1.12.0
-    - 1.13.1
-    - 1.14.0
-    - 1.14.1
-    - 1.15.1
-    - 1.15.2
-    - 1.16.1
-    - 1.17.0
-    - 1.18.0
-    - 1.19.0
-    - 1.19.1
-    - 1.19.2
-    - 1.19.3
-    - 1.19.4
-    - 1.19.5
-    - 1.19.6
-    - 1.20.1
-    - 1.20.2
-    - 1.21.0
-    - 1.21.1
-    - 1.21.2
-    - 1.21.3
-    - 1.21.5
-    - 1.21.7
-    - 1.21.8
-    - 1.21.9
-    - 1.21.20
-    - 1.21.21
-    - 1.21.22
-    - 1.21.23
-    - 1.21.24
-    - 1.21.25
-    - 2.0.1
-    - 2.0.2
-    - 2.1.0
-    - 2.1.2
-    - 2.1.3
-    - 2.1.4
-    - 2.1.5
-    compatible:
-    - 2.1.4
-    - 2.1.5
-    recommended: 2.1.5
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - build
-  - bundle
-  - bundles
-  - assetbundles
-  - cache
-  - server
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638628507364700000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.scriptablebuildpipeline@2.1/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/Addressables.git
-    revision: da6584e77b95eb8c8cc350ad4d95cc1a1aff1a34
-    path: 
-  unityLifecycle:
-    version: 2.1.4
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"- Fixed issue where total size of all bundles changes
-    when updating the same Addressable Groups build.\n- Fixed issue where more than
-    2 Scriptable Objects are nested and Compatability Pipeline is used to build."}'
-  assetStore:
-    productId: 
-  fingerprint: 8cf66f134cb3f8a955d489173bfd88b3df4f8bf0
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 2.1.4
-    minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.services.cloud-build@1.0.5
   testable: 0
   isDirectDependency: 1
   version: 1.0.5
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.cloud-build
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.cloud-build
   assetPath: Packages/com.unity.services.cloud-build
   name: com.unity.services.cloud-build
   displayName: Build Automation
@@ -1961,6 +2046,8 @@ m_ResolvedPackages:
     - 1.0.2
     - 1.0.4
     - 1.0.5
+    - 2.0.0-pre.2
+    - 2.0.0
     compatible:
     - 1.0.5
     recommended: 1.0.5
@@ -2027,7 +2114,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.10
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.cloud-diagnostics
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.cloud-diagnostics
   assetPath: Packages/com.unity.services.cloud-diagnostics
   name: com.unity.services.cloud-diagnostics
   displayName: Cloud Diagnostics
@@ -2106,12 +2193,12 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.10
     minimumUnityVersion: 2022.1.0a1
-- packageId: com.unity.services.cloudcode@2.7.1
+- packageId: com.unity.services.cloudcode@2.8.1
   testable: 0
   isDirectDependency: 1
-  version: 2.7.1
+  version: 2.8.1
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.cloudcode
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.cloudcode
   assetPath: Packages/com.unity.services.cloudcode
   name: com.unity.services.cloudcode
   displayName: Cloud Code
@@ -2120,7 +2207,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: "Run your game logic in the cloud as serverless functions and interact
     with other backend services.\n\nThis package allows you to call out to Cloud
     Code from within your project as a secure player.\n\nCloud Code can be used to:
@@ -2151,9 +2238,15 @@ m_ResolvedPackages:
     - 2.6.1
     - 2.6.2
     - 2.7.1
+    - 2.8.0
+    - 2.8.1
+    - 2.9.0
     compatible:
     - 2.7.1
-    recommended: 2.7.1
+    - 2.8.0
+    - 2.8.1
+    - 2.9.0
+    recommended: 2.8.1
     deprecated: []
   dependencies:
   - name: com.unity.services.core
@@ -2198,18 +2291,18 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638542134750000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.cloudcode@2.7/manual/index.html
+  datePublishedTicks: 638658250015710000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.cloudcode@2.8/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: 9d637f79269bf111f964409520051e8f1db0ada8
+    revision: 180c42d390b655dd6badd24d23fd6b66534bfdbc
     path: 
   unityLifecycle:
     version: 2.7.1
     nextVersion: 
-    recommendedVersion: 2.7.1
+    recommendedVersion: 2.8.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -2217,30 +2310,20 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- A MessageBytesReceived callback has been
-    added to the available subscription event callbacks\n- Adding service registration
-    to the core services registry\n- Adding service access through the core services
-    registry (`UnityServices.Instance.GetCloudCodeService()`)\n- Added a button to
-    browse your files when choosing a path for a Cloud Code Module\n\n### Changed\n-
-    The MessageReceived callback will no longer be fired upon receiving bytes via
-    the event subscription\n\n### Fixed\n- Bindings generation is broken when ILogger
-    dependency injection is used\n- Cloud Code modules now cleans up compilation
-    artifacts after deploying or generating bindings\n- Cloud Code runtime timeout
-    increased to 30 seconds\n- Moved create Cloud Code Asset menu items under \"Services\"","gameService":{"projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/cloud-code/about","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"},"supportedPlatforms":["Android","iOS","Linux","Mac","PC","Windows
-    8 Universal","Windows 10 Universal"]}'
+  upmReserved: '{"changelog":"### Fixed\n- Fixed compatibility wih Deployment 1.3","gameService":{"projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/cloud-code/about","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"}}'
   assetStore:
     productId: 
-  fingerprint: 8ea9fb40e88c65ec09ee99e381621a800ef427c8
+  fingerprint: 5c725aaf6cc57c226cb81da417eaa8a1fcf785a9
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.7.1
     minimumUnityVersion: 2020.3.0a1
-- packageId: com.unity.services.cloudsave@3.2.0
+- packageId: com.unity.services.cloudsave@3.2.2
   testable: 0
   isDirectDependency: 1
-  version: 3.2.0
+  version: 3.2.2
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.cloudsave
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.cloudsave
   assetPath: Packages/com.unity.services.cloudsave
   name: com.unity.services.cloudsave
   displayName: Cloud Save
@@ -2249,7 +2332,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: "Build better player experiences with seamless game data stored securely
     in the cloud.\n\nUse Cloud Save to store your players\u2019 progress and preferences,
     by doing so you can share this data between all the players\u2019 devices and
@@ -2267,13 +2350,17 @@ m_ResolvedPackages:
     - 3.1.0
     - 3.1.1
     - 3.2.0
+    - 3.2.1
+    - 3.2.2
     compatible:
     - 2.2.1
     - 3.0.0
     - 3.1.0
     - 3.1.1
     - 3.2.0
-    recommended: 3.2.0
+    - 3.2.1
+    - 3.2.2
+    recommended: 3.2.2
     deprecated: []
   dependencies:
   - name: com.unity.services.core
@@ -2310,13 +2397,13 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638497344570000000
+  datePublishedTicks: 638702126265460000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.cloudsave@3.2/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: a097e4d4e1103afb2a3469c275424091e3fd972a
+    revision: efa28869c5efe163046885ab97fd879758d24daa
     path: 
   unityLifecycle:
     version: 2.2.1
@@ -2329,22 +2416,21 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Changed\n* Updated Apple Privacy Manifest\n\n###
-    Added\n* Support for sampling in public player data and public custom data queries.","gameService":{"groupId":"game-backend","genericDashboardUrl":"https://dashboard.unity3d.com/gaming/cloud-save","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/cloud-save/about","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"},"supportedPlatforms":["Android","iOS","Linux","Mac","PC","Windows
-    8 Universal","Windows 10 Universal"]}'
+  upmReserved: '{"changelog":"### Fixed\n* Fixed bug with after value when retrieving
+    all files for a player.","gameService":{"groupId":"game-backend","genericDashboardUrl":"https://dashboard.unity3d.com/gaming/cloud-save","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/cloud-save/about","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"}}'
   assetStore:
     productId: 
-  fingerprint: 986e7e860031710334a5abe92190ddc49dc3bef6
+  fingerprint: df418cfadf10d2424efd817e9dd4b39cb62686e6
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.2.1
-    minimumUnityVersion: 2020.3.0a1
-- packageId: com.unity.services.deployment@1.3.0
+    minimumUnityVersion: 2021.3.0a1
+- packageId: com.unity.services.deployment@1.4.1
   testable: 0
   isDirectDependency: 1
-  version: 1.3.0
+  version: 1.4.1
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.deployment
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.deployment
   assetPath: Packages/com.unity.services.deployment
   name: com.unity.services.deployment
   displayName: Deployment
@@ -2353,7 +2439,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: 'The Deployment package allows for a cohesive interface for the deployment
     of assets and configurations for UGS services.
 
@@ -2376,15 +2462,19 @@ m_ResolvedPackages:
     - 1.2.0
     - 1.2.1
     - 1.3.0
+    - 1.4.0
+    - 1.4.1
     compatible:
     - 1.3.0
-    recommended: 1.3.0
+    - 1.4.0
+    - 1.4.1
+    recommended: 1.4.1
     deprecated: []
   dependencies:
   - name: com.unity.services.core
     version: 1.12.0
   - name: com.unity.services.deployment.api
-    version: 1.0.0
+    version: 1.1.2
   resolvedDependencies:
   - name: com.unity.services.core
     version: 1.13.0
@@ -2395,7 +2485,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.services.deployment.api
-    version: 1.0.0
+    version: 1.1.2
   keywords: []
   registry:
     id: main
@@ -2409,18 +2499,18 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638384898980000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.deployment@1.3/manual/index.html
+  datePublishedTicks: 638695477295960000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.deployment@1.4/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: baf0a678d3c8d1ed1941a064174bbe134374446c
+    revision: aedf830f0b4efaff7e6391d319c7ddcaa481f64e
     path: 
   unityLifecycle:
     version: 1.3.0
     nextVersion: 
-    recommendedVersion: 1.3.0
+    recommendedVersion: 1.4.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -2428,13 +2518,11 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- Added deployment samples for the following
-    services\n  - Economy\n  - Cloud Code Scripts & Modules\n  - Leaderboards\n 
-    - Remote Config\n\n### Fixed\n- Fixed a bug where DeploymentItems could be deployed
-    multiple times concurrently","gameService":{"groupId":"devops"}}'
+  upmReserved: '{"changelog":"### Fixed\n- Fixed inspector loading for service assets,
+    below Unity 6","gameService":{"groupId":"devops"}}'
   assetStore:
     productId: 
-  fingerprint: 0991a9c9ce0d545673c1c06c19242af6eca2d8ea
+  fingerprint: 87c909a1d72616415d25410065bf7702cc2cb4c6
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.3.0
@@ -2444,7 +2532,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 5.1.2
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.terrain-tools
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.terrain-tools
   assetPath: Packages/com.unity.terrain-tools
   name: com.unity.terrain-tools
   displayName: Terrain Tools
@@ -2557,7 +2645,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.4.5
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.test-framework
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.test-framework
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -2720,7 +2808,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.2.6
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.testtools.codecoverage
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.testtools.codecoverage
   assetPath: Packages/com.unity.testtools.codecoverage
   name: com.unity.testtools.codecoverage
   displayName: Code Coverage
@@ -2843,7 +2931,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.7
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.timeline
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.timeline
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -3026,7 +3114,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.accessibility
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.accessibility
   assetPath: Packages/com.unity.modules.accessibility
   name: com.unity.modules.accessibility
   displayName: Accessibility
@@ -3093,7 +3181,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.ai
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.ai
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -3160,7 +3248,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.amd
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.amd
   assetPath: Packages/com.unity.modules.amd
   name: com.unity.modules.amd
   displayName: AMD
@@ -3227,7 +3315,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.androidjni
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.androidjni
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -3293,7 +3381,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.animation
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.animation
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -3360,7 +3448,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.assetbundle
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.assetbundle
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -3427,7 +3515,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.audio
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.audio
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -3494,7 +3582,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.cloth
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.cloth
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -3565,7 +3653,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.director
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.director
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -3640,7 +3728,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.imageconversion
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.imageconversion
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -3707,7 +3795,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.imgui
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.imgui
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -3774,7 +3862,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.jsonserialize
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.jsonserialize
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -3841,7 +3929,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.particlesystem
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.particlesystem
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -3908,7 +3996,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.physics
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.physics
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -3975,7 +4063,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.physics2d
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.physics2d
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -4042,7 +4130,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.screencapture
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.screencapture
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -4113,7 +4201,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.terrain
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.terrain
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -4180,7 +4268,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.terrainphysics
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.terrainphysics
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -4255,7 +4343,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.tilemap
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.tilemap
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -4325,7 +4413,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.ui
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.ui
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -4392,7 +4480,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.uielements
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.uielements
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -4475,7 +4563,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.umbra
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.umbra
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -4542,7 +4630,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequest
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequest
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -4609,7 +4697,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -4684,7 +4772,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequestaudio
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequestaudio
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -4759,7 +4847,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequesttexture
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequesttexture
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -4834,7 +4922,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequestwww
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.unitywebrequestwww
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -4925,7 +5013,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.vehicles
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.vehicles
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -4996,7 +5084,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.video
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.video
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -5075,7 +5163,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.vr
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.vr
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -5156,7 +5244,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.wind
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.wind
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -5223,7 +5311,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.xr
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.xr
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -5302,7 +5390,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.subsystems
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.subsystems
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -5373,7 +5461,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.modules.hierarchycore
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.hierarchycore
   assetPath: Packages/com.unity.modules.hierarchycore
   name: com.unity.modules.hierarchycore
   displayName: Hierarchy Core
@@ -5440,7 +5528,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.1
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.settings-manager
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.settings-manager
   assetPath: Packages/com.unity.settings-manager
   name: com.unity.settings-manager
   displayName: Settings Manager
@@ -5514,7 +5602,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.ext.nunit
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.ext.nunit
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -5593,7 +5681,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.13.0
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.core
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.core
   assetPath: Packages/com.unity.services.core
   name: com.unity.services.core
   displayName: Services Core
@@ -5641,9 +5729,11 @@ m_ResolvedPackages:
     - 1.12.4
     - 1.12.5
     - 1.13.0
+    - 1.14.0
     compatible:
     - 1.13.0
-    recommended: 1.13.0
+    - 1.14.0
+    recommended: 1.14.0
     deprecated: []
   dependencies:
   - name: com.unity.modules.androidjni
@@ -5683,7 +5773,7 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.13.0
     nextVersion: 
-    recommendedVersion: 1.13.0
+    recommendedVersion: 1.14.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -5700,12 +5790,12 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.13.0
     minimumUnityVersion: 2019.4.0a1
-- packageId: com.unity.services.deployment.api@1.0.0
+- packageId: com.unity.services.deployment.api@1.1.2
   testable: 0
   isDirectDependency: 0
-  version: 1.0.0
+  version: 1.1.2
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.deployment.api
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.deployment.api
   assetPath: Packages/com.unity.services.deployment.api
   name: com.unity.services.deployment.api
   displayName: Deployment API
@@ -5714,7 +5804,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: This package contains the API designed to allow for implementing Deployment
     functionality.
   errors: []
@@ -5723,9 +5813,11 @@ m_ResolvedPackages:
     - 1.0.0-pre.3
     - 1.0.0-pre.5
     - 1.0.0
+    - 1.1.2
     compatible:
     - 1.0.0
-    recommended: 1.0.0
+    - 1.1.2
+    recommended: 1.1.2
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -5742,18 +5834,18 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638157741160000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.deployment.api@1.0/manual/index.html
+  datePublishedTicks: 638652128849880000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.deployment.api@1.1/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: e4df831d5e80c5d0c29785d4140e031b0bbc0264
+    revision: ec472b6062ffe736672f0f296c68afa1f9fde23e
     path: 
   unityLifecycle:
     version: 1.0.0
     nextVersion: 
-    recommendedVersion: 1.0.0
+    recommendedVersion: 1.1.2
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -5761,10 +5853,14 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- Make internal API public."}'
+  upmReserved: '{"changelog":"### Added\n- Added a DeploymentWindow API allowing
+    easy interaction with the Deployment Window and its operations\n  - This API
+    is leveraged by new UIs in the supported packages\n\n### Fixed\n- `SetStatusSeverity`
+    was flipping message and detail. \n- Made main operations of Deployment Window
+    publicly available\n- Added auxiliary interfaces and classes for CLI interoperability"}'
   assetStore:
     productId: 
-  fingerprint: e87c554599f00a0c1cac936220969bb69ffb9a53
+  fingerprint: 3c4a519a93193e78e83f6d2fb2dc3f92eb24be4e
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -5774,7 +5870,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.3.3
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.authentication
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.authentication
   assetPath: Packages/com.unity.services.authentication
   name: com.unity.services.authentication
   displayName: Authentication
@@ -5816,9 +5912,11 @@ m_ResolvedPackages:
     - 3.3.0
     - 3.3.1
     - 3.3.3
+    - 3.4.0
     compatible:
     - 3.3.3
-    recommended: 3.3.3
+    - 3.4.0
+    recommended: 3.4.0
     deprecated: []
   dependencies:
   - name: com.unity.ugui
@@ -5868,7 +5966,7 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 3.3.3
     nextVersion: 
-    recommendedVersion: 3.3.1
+    recommendedVersion: 3.4.0
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
@@ -5891,7 +5989,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.2.7
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.services.wire
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.services.wire
   assetPath: Packages/com.unity.services.wire
   name: com.unity.services.wire
   displayName: Wire
@@ -5996,7 +6094,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.2.1
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.nuget.newtonsoft-json
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.nuget.newtonsoft-json
   assetPath: Packages/com.unity.nuget.newtonsoft-json
   name: com.unity.nuget.newtonsoft-json
   displayName: Newtonsoft Json
@@ -6087,7 +6185,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.render-pipelines.core
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.render-pipelines.core
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Core RP Library
@@ -6291,7 +6389,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 28d7f949d0896383b566b044ba7ef07c3466da59
+  fingerprint: 4341c115a55737d02bfe6e55a2bb526638466bd3
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
@@ -6301,7 +6399,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.shadergraph
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.shadergraph
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -6494,7 +6592,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 6bda0de118dc458be6a05a6bd2eb217ec5cd3ded
+  fingerprint: 2fc0dc00c30e9f83f2ea34c9af678b9696924aef
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 17.0.3
@@ -6504,7 +6602,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.render-pipelines.universal-config
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.render-pipelines.universal-config
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal RP Config
@@ -6602,7 +6700,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 5.1.1
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.autodesk.fbx
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.autodesk.fbx
   assetPath: Packages/com.autodesk.fbx
   name: com.autodesk.fbx
   displayName: Autodesk FBX SDK for Unity
@@ -6699,7 +6797,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.8.18
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.burst
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.burst
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -6912,12 +7010,311 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.8.18
     minimumUnityVersion: 2020.3.0a1
+- packageId: com.unity.mathematics@1.3.2
+  testable: 0
+  isDirectDependency: 0
+  version: 1.3.2
+  source: 1
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.mathematics
+  assetPath: Packages/com.unity.mathematics
+  name: com.unity.mathematics
+  displayName: Mathematics
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: Unity's C# SIMD math library providing vector types and math functions
+    with a shader like syntax.
+  errors: []
+  versions:
+    all:
+    - 0.0.12-preview.2
+    - 0.0.12-preview.5
+    - 0.0.12-preview.8
+    - 0.0.12-preview.10
+    - 0.0.12-preview.11
+    - 0.0.12-preview.13
+    - 0.0.12-preview.17
+    - 0.0.12-preview.19
+    - 0.0.12-preview.20
+    - 1.0.0-preview.1
+    - 1.0.1
+    - 1.1.0-preview.1
+    - 1.1.0
+    - 1.2.1
+    - 1.2.4
+    - 1.2.5
+    - 1.2.6
+    - 1.3.1
+    - 1.3.2
+    compatible:
+    - 1.3.2
+    recommended: 1.3.2
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - unity
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638409134840000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.mathematics@1.3/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/Unity.Mathematics.git
+    revision: 1695a8503482a3131be78cc26308a93f82c05b04
+    path: 
+  unityLifecycle:
+    version: 1.3.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Fixed\n* Fixed `math.hash` crash when using IL2CPP
+    builds on Arm 32 bit devices.\n* Fixed obsolete method usage warnings for `MatrixDrawer.CanCacheInspectorGUI`
+    and `PrimitiveVectorDrawer.CanCacheInspectorGUI` in UNITY_2023_2_OR_NEWER.\n*
+    Updated minimum editor version to 2021.3"}'
+  assetStore:
+    productId: 
+  fingerprint: 8017b507cc74bf0a1dd14b18aa860569f807314d
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.3.2
+    minimumUnityVersion: 2021.3.0a1
+- packageId: com.unity.serialization@3.1.2
+  testable: 0
+  isDirectDependency: 0
+  version: 3.1.2
+  source: 1
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.serialization
+  assetPath: Packages/com.unity.serialization
+  name: com.unity.serialization
+  displayName: Serialization
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Use Unity's Serialization to serialize and deserialize from/to JSON
+    and Binary formats.
+  errors: []
+  versions:
+    all:
+    - 0.2.1-preview
+    - 0.3.0-preview
+    - 0.3.1-preview
+    - 0.4.0-preview
+    - 0.4.1-preview
+    - 0.5.0-preview
+    - 0.5.1-preview
+    - 0.6.0-preview
+    - 0.6.1-preview
+    - 0.6.2-preview
+    - 0.6.3-preview
+    - 0.6.4-preview
+    - 1.0.0-preview.5
+    - 1.1.0-preview
+    - 1.1.1-preview
+    - 1.2.0-preview
+    - 1.3.0-preview
+    - 1.3.1-preview
+    - 1.4.3-preview
+    - 1.5.0-preview
+    - 1.6.0-preview
+    - 1.6.1-preview
+    - 1.6.2-preview
+    - 1.7.0-preview.1
+    - 1.7.1-preview
+    - 1.7.3-preview
+    - 1.7.4-preview
+    - 1.7.5-preview
+    - 1.8.2-preview
+    - 1.8.3-preview
+    - 2.0.0-exp.11
+    - 2.0.0-exp.13
+    - 2.1.0-exp.1
+    - 2.1.1-exp.1
+    - 2.1.2-exp.1
+    - 3.0.0-pre.1
+    - 3.0.0-pre.2
+    - 3.0.0-pre.3
+    - 3.1.1
+    - 3.1.2
+    compatible:
+    - 3.1.2
+    recommended: 3.1.2
+    deprecated: []
+  dependencies:
+  - name: com.unity.burst
+    version: 1.7.2
+  - name: com.unity.collections
+    version: 2.4.2
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.8.18
+  - name: com.unity.mathematics
+    version: 1.3.2
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.collections
+    version: 2.5.1
+  - name: com.unity.test-framework
+    version: 1.4.5
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  - name: com.unity.test-framework.performance
+    version: 3.0.3
+  keywords:
+  - serialization
+  - json
+  - binary
+  - unity
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638599246800000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.serialization@3.1/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.properties.git
+    revision: cb798388e9a2cfa022a3bbd84012a9c61c61b7f4
+    path: 
+  unityLifecycle:
+    version: 3.1.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Changed\n* Updated `com.unity.collections` to version
+    `2.4.2`.\n* Updated minimum Unity version to `2022.3`.\n\n### Fixed\n* Fixed
+    the way type names are exported to ensure that they can be correctly retrieved
+    using `Type.GetType()`."}'
+  assetStore:
+    productId: 
+  fingerprint: 582cbf30bbfd3c90a738e49c2ad69eafd8803f1d
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 3.1.2
+    minimumUnityVersion: 2022.2.0a18
+- packageId: com.unity.profiling.core@1.0.2
+  testable: 0
+  isDirectDependency: 0
+  version: 1.0.2
+  source: 1
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.profiling.core
+  assetPath: Packages/com.unity.profiling.core
+  name: com.unity.profiling.core
+  displayName: Unity Profiling Core API
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: The Unity Profiling Core package provides an API for code instrumentation
+    markup, and for profiling statistic collection.
+  errors: []
+  versions:
+    all:
+    - 0.1.0-preview.1
+    - 0.2.0-preview.1
+    - 0.2.1-preview.1
+    - 1.0.0-pre.1
+    - 1.0.0
+    - 1.0.2
+    compatible:
+    - 1.0.2
+    recommended: 1.0.2
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - profiler
+  - profiling
+  - api
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637828752310000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/profiler.git
+    revision: 2189ba14439d76a4083f59fae87163b4bdfd49c2
+    path: 
+  unityLifecycle:
+    version: 1.0.2
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: aac7b93912bc5df5fe06b04ff1b758493cdc2346
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.0.2
+    minimumUnityVersion: 2020.1.0a1
 - packageId: com.unity.nuget.mono-cecil@1.11.4
   testable: 0
   isDirectDependency: 0
   version: 1.11.4
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.nuget.mono-cecil
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.nuget.mono-cecil
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -6992,12 +7389,86 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.11.4
     minimumUnityVersion: 2018.4.0a1
+- packageId: com.unity.modules.unityanalytics@1.0.0
+  testable: 0
+  isDirectDependency: 0
+  version: 1.0.0
+  source: 2
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.modules.unityanalytics
+  assetPath: Packages/com.unity.modules.unityanalytics
+  name: com.unity.modules.unityanalytics
+  displayName: Unity Analytics
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: module
+  description: 
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    recommended: 1.0.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 1.0.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
+  fingerprint: 
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 1.0.0
+    minimumUnityVersion: 
 - packageId: com.unity.test-framework.performance@3.0.3
   testable: 0
   isDirectDependency: 0
   version: 3.0.3
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.test-framework.performance
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.test-framework.performance
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
@@ -7132,7 +7603,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.6.1
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.splines
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.splines
   assetPath: Packages/com.unity.splines
   name: com.unity.splines
   displayName: Splines
@@ -7167,9 +7638,11 @@ m_ResolvedPackages:
     - 2.6.0
     - 2.6.1
     - 2.7.1
+    - 2.7.2
     compatible:
     - 2.6.1
     - 2.7.1
+    - 2.7.2
     recommended: 2.6.1
     deprecated: []
   dependencies:
@@ -7244,42 +7717,116 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.6.1
     minimumUnityVersion: 2022.3.0a1
-- packageId: com.unity.profiling.core@1.0.2
+- packageId: com.unity.scriptablebuildpipeline@2.2.4
   testable: 0
-  isDirectDependency: 0
-  version: 1.0.2
+  isDirectDependency: 1
+  version: 2.2.4
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.profiling.core
-  assetPath: Packages/com.unity.profiling.core
-  name: com.unity.profiling.core
-  displayName: Unity Profiling Core API
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.scriptablebuildpipeline
+  assetPath: Packages/com.unity.scriptablebuildpipeline
+  name: com.unity.scriptablebuildpipeline
+  displayName: Scriptable Build Pipeline
   author:
     name: 
     email: 
     url: 
   category: 
-  type: asset
-  description: The Unity Profiling Core package provides an API for code instrumentation
-    markup, and for profiling statistic collection.
+  type: 
+  description: The Scriptable Build Pipeline moves the asset bundle build pipeline
+    to C#.  Use the pre-defined build flows, or create your own using the divided
+    up APIs.  This system improves build time, fixes incremental build, and provides
+    greater flexibility.
   errors: []
   versions:
     all:
-    - 0.1.0-preview.1
-    - 0.2.0-preview.1
-    - 0.2.1-preview.1
-    - 1.0.0-pre.1
-    - 1.0.0
-    - 1.0.2
+    - 0.0.5-preview
+    - 0.0.6-preview
+    - 0.0.8-preview
+    - 0.0.9-preview
+    - 0.0.10-preview
+    - 0.0.14-preview
+    - 0.0.15-preview
+    - 0.1.0-preview
+    - 0.2.0-preview
+    - 1.0.1-preview
+    - 1.1.0-preview
+    - 1.1.1-preview
+    - 1.2.1-preview
+    - 1.3.5-preview
+    - 1.4.1-preview
+    - 1.5.0-preview
+    - 1.5.1
+    - 1.5.2
+    - 1.5.4
+    - 1.5.6
+    - 1.5.10
+    - 1.6.3-preview
+    - 1.6.4-preview
+    - 1.6.5-preview
+    - 1.7.2
+    - 1.7.3
+    - 1.8.2
+    - 1.8.4
+    - 1.8.6
+    - 1.9.0
+    - 1.10.0
+    - 1.11.1
+    - 1.11.2
+    - 1.12.0
+    - 1.13.1
+    - 1.14.0
+    - 1.14.1
+    - 1.15.1
+    - 1.15.2
+    - 1.16.1
+    - 1.17.0
+    - 1.18.0
+    - 1.19.0
+    - 1.19.1
+    - 1.19.2
+    - 1.19.3
+    - 1.19.4
+    - 1.19.5
+    - 1.19.6
+    - 1.20.1
+    - 1.20.2
+    - 1.21.0
+    - 1.21.1
+    - 1.21.2
+    - 1.21.3
+    - 1.21.5
+    - 1.21.7
+    - 1.21.8
+    - 1.21.9
+    - 1.21.20
+    - 1.21.21
+    - 1.21.22
+    - 1.21.23
+    - 1.21.24
+    - 1.21.25
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.2.4
     compatible:
-    - 1.0.2
-    recommended: 1.0.2
+    - 2.1.4
+    - 2.1.5
+    - 2.2.4
+    recommended: 2.1.5
     deprecated: []
   dependencies: []
   resolvedDependencies: []
   keywords:
-  - profiler
-  - profiling
-  - api
+  - build
+  - bundle
+  - bundles
+  - assetbundles
+  - cache
+  - server
   registry:
     id: main
     name: 
@@ -7292,16 +7839,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637828752310000000
-  documentationUrl: 
+  datePublishedTicks: 638705422771400000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.scriptablebuildpipeline@2.2/manual/index.html
   hasRepository: 1
   repository:
     type: git
-    url: https://github.cds.internal.unity3d.com/unity/profiler.git
-    revision: 2189ba14439d76a4083f59fae87163b4bdfd49c2
+    url: https://github.cds.internal.unity3d.com/unity/Addressables.git
+    revision: e3d95345964b4d77108e55b92792b847069e2e62
     path: 
   unityLifecycle:
-    version: 1.0.2
+    version: 2.1.4
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -7311,20 +7858,21 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: 
+  upmReserved: '{"changelog":"- Added a Log Asset Warnings setting that optionally
+    disables logging of asset warnings during build process."}'
   assetStore:
     productId: 
-  fingerprint: aac7b93912bc5df5fe06b04ff1b758493cdc2346
+  fingerprint: c51fb1b166e449f98a453f4adff8652258aadef7
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.0.2
-    minimumUnityVersion: 2020.1.0a1
+    minimumPackageVersion: 2.1.4
+    minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.searcher@4.9.2
   testable: 0
   isDirectDependency: 0
   version: 4.9.2
   source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.searcher
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.searcher
   assetPath: Packages/com.unity.searcher
   name: com.unity.searcher
   displayName: Searcher
@@ -7403,101 +7951,12 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 4.9.2
     minimumUnityVersion: 2019.1.0a1
-- packageId: com.unity.mathematics@1.3.2
-  testable: 0
-  isDirectDependency: 0
-  version: 1.3.2
-  source: 1
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.mathematics
-  assetPath: Packages/com.unity.mathematics
-  name: com.unity.mathematics
-  displayName: Mathematics
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: assets
-  description: Unity's C# SIMD math library providing vector types and math functions
-    with a shader like syntax.
-  errors: []
-  versions:
-    all:
-    - 0.0.12-preview.2
-    - 0.0.12-preview.5
-    - 0.0.12-preview.8
-    - 0.0.12-preview.10
-    - 0.0.12-preview.11
-    - 0.0.12-preview.13
-    - 0.0.12-preview.17
-    - 0.0.12-preview.19
-    - 0.0.12-preview.20
-    - 1.0.0-preview.1
-    - 1.0.1
-    - 1.1.0-preview.1
-    - 1.1.0
-    - 1.2.1
-    - 1.2.4
-    - 1.2.5
-    - 1.2.6
-    - 1.3.1
-    - 1.3.2
-    compatible:
-    - 1.3.2
-    recommended: 1.3.2
-    deprecated: []
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - unity
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 1
-  entitlements:
-    licensingModel: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 638409134840000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.mathematics@1.3/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.com/Unity-Technologies/Unity.Mathematics.git
-    revision: 1695a8503482a3131be78cc26308a93f82c05b04
-    path: 
-  unityLifecycle:
-    version: 1.3.2
-    nextVersion: 
-    recommendedVersion: 
-    isDeprecated: 0
-    deprecationMessage: 
-  isDeprecated: 0
-  deprecationMessage: 
-  git:
-    hash: 
-    revision: 
-  upmReserved: '{"changelog":"### Fixed\n* Fixed `math.hash` crash when using IL2CPP
-    builds on Arm 32 bit devices.\n* Fixed obsolete method usage warnings for `MatrixDrawer.CanCacheInspectorGUI`
-    and `PrimitiveVectorDrawer.CanCacheInspectorGUI` in UNITY_2023_2_OR_NEWER.\n*
-    Updated minimum editor version to 2021.3"}'
-  assetStore:
-    productId: 
-  fingerprint: 8017b507cc74bf0a1dd14b18aa860569f807314d
-  editorCompatibility:
-    compatibilityLevel: 0
-    minimumPackageVersion: 1.3.2
-    minimumUnityVersion: 2021.3.0a1
 - packageId: com.unity.ugui@2.0.0
   testable: 0
   isDirectDependency: 0
   version: 2.0.0
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.ugui
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.ugui
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -7579,7 +8038,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 8f98c6a1c75e66adfac0fb4351d51a0b4d92c018
+  fingerprint: fd5da3b4bec8d043b01c30177bd62059c5fa36d0
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.0
@@ -7589,7 +8048,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.1
   source: 2
-  resolvedPath: C:\Users\gumbr\project_pkdsim\Library\PackageCache\com.unity.rendering.light-transport
+  resolvedPath: C:\Users\pkdsim_offical\project_pkdsim\Library\PackageCache\com.unity.rendering.light-transport
   assetPath: Packages/com.unity.rendering.light-transport
   name: com.unity.rendering.light-transport
   displayName: Unity Light Transport Library
@@ -7675,9 +8134,9 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 8e780c06f5c1408ffa25004f2c90b6802481bbd8
+  fingerprint: 307bc27a498fc9cd409bbd426c85d8dc7f140bc1
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.1
     minimumUnityVersion: 2023.3.0b1
-m_BuiltInPackagesHash: 4f75c37d7db9cb7d9b9c9879cb839d8c6f4a1918
+m_BuiltInPackagesHash: f059cafdb442bef7ad05beca6deab6b7fe27fbb8
