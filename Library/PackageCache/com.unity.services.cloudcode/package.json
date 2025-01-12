@@ -1,8 +1,8 @@
 {
   "name": "com.unity.services.cloudcode",
   "displayName": "Cloud Code",
-  "version": "2.8.1",
-  "unity": "2020.3",
+  "version": "2.9.0",
+  "unity": "2021.3",
   "description": "Run your game logic in the cloud as serverless functions and interact with other backend services.\n\nThis package allows you to call out to Cloud Code from within your project as a secure player.\n\nCloud Code can be used to: \n-Change game logic for all players without re-distributing your game \n-Grant timed rewards \n-Create randomized values",
   "dependencies": {
     "com.unity.services.authentication": "3.3.3",
@@ -25,7 +25,7 @@
       "Windows 8 Universal",
       "Windows 10 Universal"
     ],
-    "changelog": "### Fixed\n- Fixed compatibility wih Deployment 1.3"
+    "changelog": "### Changed\n- Updated the minimum supported Editor version to 2021.3.\n\n### Fixed\n- Fixed Help URLs for Cloud Code Module and Cloud Code Script\n- Fixed inspector loading for service assets, below Unity 6\n- Fixed an issue that might cause the CloudCode scripts inspector to spam calls to the admin API\n- Fixed an issue that causes the progress bar to revert during Cloud Code Module deployment"
   },
   "samples": [
     {
@@ -40,16 +40,16 @@
     }
   ],
   "relatedPackages": {
-    "com.unity.services.cloudcode.tests": "2.8.1"
+    "com.unity.services.cloudcode.tests": "2.9.0"
   },
   "upmCi": {
-    "footprint": "f9d6baa79d55310b481cec4ebcfa0fe00d5e4cc2"
+    "footprint": "9549dd219f7a3cc1556477a83d2ebd0846d5dd07"
   },
-  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.services.cloudcode@2.8/manual/index.html",
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.services.cloudcode@2.9/manual/index.html",
   "repository": {
     "url": "https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git",
     "type": "git",
-    "revision": "180c42d390b655dd6badd24d23fd6b66534bfdbc"
+    "revision": "aedf830f0b4efaff7e6391d319c7ddcaa481f64e"
   },
-  "_fingerprint": "5c725aaf6cc57c226cb81da417eaa8a1fcf785a9"
+  "_fingerprint": "97ef51da5f72a5f2fcf78fa2dc0c0e564c407842"
 }

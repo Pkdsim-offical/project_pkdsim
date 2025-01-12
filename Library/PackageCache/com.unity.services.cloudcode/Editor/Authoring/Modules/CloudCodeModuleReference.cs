@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ using SystemPath = System.IO.Path;
 
 namespace Unity.Services.CloudCode.Authoring.Editor.Modules
 {
+    [HelpURL("https://docs.unity3d.com/Packages/com.unity.services.cloudcode@2.8/manual/Authoring/cloud_code_modules.html")]
     class CloudCodeModuleReference : ScriptableObject, ICopyable<CloudCodeModuleReference>, IPath, IModuleItem
     {
         static readonly JsonSerializerSettings k_JsonSerializerSettings = new JsonSerializerSettings
@@ -81,6 +83,8 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Modules
             get { return m_Progress; }
             set { SetField(ref m_Progress, value); }
         }
+
+        public List<(DateTime, DeploymentStatus)> StatusLog { get; } = new List<(DateTime, DeploymentStatus)>();
 
         public DeploymentStatus Status
         {

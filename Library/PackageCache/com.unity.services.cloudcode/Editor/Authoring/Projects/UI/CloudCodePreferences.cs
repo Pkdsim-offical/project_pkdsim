@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Unity.Services.CloudCode.Authoring.Editor.Package;
@@ -52,7 +51,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Projects.UI
         static readonly string k_ExternalEditorDefaultDirectory = string.Empty;
 #endif
 
-        private ICloudCodeProjectSettings m_ProjectSettings;
+        ICloudCodeProjectSettings m_ProjectSettings;
         ICloudCodeProjectSettings ProjectSettings => m_ProjectSettings ??= CloudCodeAuthoringServices.Instance.GetService<ICloudCodeProjectSettings>();
 
         bool m_Dirty;

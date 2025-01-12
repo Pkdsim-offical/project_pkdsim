@@ -1,5 +1,5 @@
 // WARNING: Auto generated code. Modifications will be lost!
-
+// Original source 'com.unity.services.shared' @0.0.12.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -48,9 +48,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Shared.UI.DeploymentConfigIn
 
         void SetupFooterVisual([CallerFilePath] string sourceFilePath = "")
         {
-            var basePath = Path.Combine("Packages",
-                RemovePathBeforePattern(Directory.GetParent(sourceFilePath) !.FullName, ReadPackageInfo().name),
-                "Assets");
+            var basePath = GetBasePath(sourceFilePath);
             var uxmlPath = Path.Combine(basePath, "DeploymentConfigInspectorFooter.uxml");
             var ussPath = Path.Combine(basePath, "DeploymentConfigInspectorFooter.uss");
             var ussDarkPath = Path.Combine(basePath, "DeploymentConfigInspectorFooterDark.uss");
@@ -65,14 +63,18 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Shared.UI.DeploymentConfigIn
             visualTreeAsset.CloneTree(this);
         }
 
-        static string RemovePathBeforePattern(string path, string pattern)
+        string GetBasePath(string sourceFilePath)
         {
-            int patternIndex = path.LastIndexOf(pattern);
-            if (patternIndex >= 0)
-            {
-                return path.Substring(patternIndex);
-            }
-            return path;
+            var packageInfo = ReadPackageInfo();
+            var dirFullPath = Path.GetFullPath(Path.GetDirectoryName(sourceFilePath) !);
+            var editorIx = dirFullPath.IndexOf("Editor");
+            var dirRelativePath = dirFullPath.Substring(editorIx);
+
+            var basePath = Path.Combine("Packages",
+                packageInfo.name,
+                dirRelativePath,
+                "Assets");
+            return basePath;
         }
 
         PackageInfo ReadPackageInfo()

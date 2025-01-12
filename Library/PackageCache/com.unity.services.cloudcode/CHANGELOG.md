@@ -4,6 +4,16 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.9.0] - 2024-10-29
+### Changed
+- Updated the minimum supported Editor version to 2021.3.
+
+### Fixed
+- Fixed Help URLs for Cloud Code Module and Cloud Code Script
+- Fixed inspector loading for service assets, below Unity 6
+- Fixed an issue that might cause the CloudCode scripts inspector to spam calls to the admin API
+- Fixed an issue that causes the progress bar to revert during Cloud Code Module deployment
+
 ## [2.8.1] - 2024-10-29
 
 ### Fixed

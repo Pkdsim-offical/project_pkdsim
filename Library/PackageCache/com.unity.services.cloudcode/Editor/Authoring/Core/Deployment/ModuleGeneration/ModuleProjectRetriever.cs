@@ -19,10 +19,10 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.ModuleGenera
             if (!m_FileSystem.FileExists(solutionPath))
             {
                 throw new FileNotFoundException($"No solution found at {solutionPath}. " +
-                                                "You can generate a solution for this ccmr by clicking on " +
-                                                "the ccmr asset associated with this solution path, then \"Generate Solution\" in its " +
-                                                "inspector. If a solution already exists, make sure that the " +
-                                                "reference path in the ccmr corresponds to the path of the solution.");
+                    "You can generate a solution for this ccmr by clicking on " +
+                    "the ccmr asset associated with this solution path, then \"Generate Solution\" in its " +
+                    "inspector. If a solution already exists, make sure that the " +
+                    "reference path in the ccmr corresponds to the path of the solution.");
             }
 
             try
@@ -40,21 +40,21 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.ModuleGenera
             catch (Exception e)
             {
                 throw new Exception($"Could not find main project name for solution {solutionPath}. " +
-                                     "Make sure that the solution and .csproj exist. Full exception:" +
-                                     $"{Environment.NewLine} {e}");
+                    "Make sure that the solution and .csproj exist. Full exception:" +
+                    $"{Environment.NewLine} {e}");
             }
         }
 
         string GetCsProjFilePath(string pubXmlPath, string solutionPath)
         {
-            var xml = Path.GetDirectoryName(pubXmlPath)!;
+            var xml = Path.GetDirectoryName(pubXmlPath) !;
             string[] csprojFiles = m_FileSystem.DirectoryGetFiles(xml, "*.csproj");
 
             while (m_FileSystem.DirectoryGetParent(xml) != null &&
                    csprojFiles.Length == 0 &&
                    IsChildPath(Path.GetDirectoryName(solutionPath), xml))
             {
-                xml = m_FileSystem.DirectoryGetParent(xml)!.ToString();
+                xml = m_FileSystem.DirectoryGetParent(xml) !.ToString();
                 csprojFiles = m_FileSystem.DirectoryGetFiles(xml, "*.csproj");
             }
 
@@ -91,7 +91,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.ModuleGenera
         string GetPublishProfilePath(string solutionPath)
         {
             var pubXmls = m_FileSystem.DirectoryGetFiles(
-                m_FileSystem.GetDirectoryName(solutionPath)!, "*.pubxml",
+                m_FileSystem.GetDirectoryName(solutionPath) !, "*.pubxml",
                 SearchOption.AllDirectories);
 
             if (pubXmls.Length != 1)

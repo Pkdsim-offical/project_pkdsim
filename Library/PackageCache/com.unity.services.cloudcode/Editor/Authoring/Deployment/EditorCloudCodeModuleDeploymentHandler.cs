@@ -1,9 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Services.CloudCode.Authoring.Editor.AdminApi;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Analytics;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Deployment;
-using Unity.Services.CloudCode.Authoring.Editor.Core.IO;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Logging;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Model;
 using Unity.Services.CloudCode.Authoring.Editor.Modules;
@@ -13,18 +13,15 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment
 {
     class EditorCloudCodeModuleDeploymentHandler : CloudCodeDeploymentHandler
     {
-        readonly IFileSystem m_FileSystem;
         List<CloudCodeModuleReference> m_ReferenceFiles;
 
         public EditorCloudCodeModuleDeploymentHandler(
             ICloudCodeModulesClient client,
             IDeploymentAnalytics deploymentAnalytics,
             ILogger logger,
-            IPreDeployValidator validator,
-            IFileSystem fileSystem) :
+            IPreDeployValidator validator) :
             base(client, deploymentAnalytics, logger, validator)
         {
-            m_FileSystem = fileSystem;
             m_ReferenceFiles = new List<CloudCodeModuleReference>();
         }
 
@@ -37,7 +34,8 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment
         {
             foreach (var reference in m_ReferenceFiles.Where(reference => IsSameModule(script, reference)))
             {
-                reference.Progress = progress;
+                //Modules start at 66 (compiling + zipping)
+                reference.Progress = (float)Math.Round(66.6f + progress / 3f, 0, MidpointRounding.AwayFromZero);
             }
         }
 
@@ -48,10 +46,10 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment
         {
             foreach (var reference in m_ReferenceFiles.Where(reference => IsSameModule(script, reference)))
             {
-                reference.Status = new DeploymentStatus(
+                reference.UpdateLogStatus(new DeploymentStatus(
                     message,
                     detail,
-                    ToDeploymentSeverityLevel(level));
+                    ToDeploymentSeverityLevel(level)));
             }
         }
 

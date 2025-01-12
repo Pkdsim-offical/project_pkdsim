@@ -1,5 +1,4 @@
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using Unity.Services.CloudCode.Authoring.Editor.AdminApi;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Model;
@@ -109,7 +108,11 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Parameters.UI
             {
                 m_RemoteScript = (Script)await m_Client.Get(scriptName);
             }
-            catch (UnexpectedRemoteStatusCodeException e) when (e.StatusCode == HttpStatusCode.NotFound)
+            catch (UnexpectedRemoteStatusCodeException e) when ((int)e.StatusCode >= 400 && (int)e.StatusCode < 500)
+            {
+                m_RemoteScript = null;
+            }
+            catch (ProblemJsonHttpException e) when (e.Response.StatusCode >= 400 && e.Response.StatusCode < 500)
             {
                 m_RemoteScript = null;
             }

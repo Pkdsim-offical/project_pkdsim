@@ -4,6 +4,5 @@ namespace Unity.Services.CloudCode.Authoring.Editor.AdminApi
 {
     interface ICloudCodeModulesClient : ICloudCodeClient
     {
-
     }
 }

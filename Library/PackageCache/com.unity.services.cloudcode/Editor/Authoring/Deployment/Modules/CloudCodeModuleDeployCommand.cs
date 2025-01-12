@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -40,7 +39,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment.Modules
             var cloudCodeModuleReferences = items.ToList();
             OnDeploy(cloudCodeModuleReferences);
             var compiled = await Compile(cloudCodeModuleReferences, cancellationToken);
-            m_EditorCloudCodeDeploymentHandler.SetReferenceFiles(cloudCodeModuleReferences.ToList());
+            m_EditorCloudCodeDeploymentHandler.SetReferenceFiles(cloudCodeModuleReferences);
             await m_EditorCloudCodeDeploymentHandler.DeployAsync(compiled, m_Reconcile, m_DryRun);
         }
 
@@ -49,7 +48,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment.Modules
             items.ForEach(i =>
             {
                 i.Progress = 0f;
-                i.Status = new DeploymentStatus();
+                i.ClearLogStatus();
                 i.States.Clear();
             });
         }
@@ -67,27 +66,29 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Deployment.Modules
                         continue;
                     }
 
-                    generationList.Add(GenerateModule(ccmr.ModuleName, ccmr.CcmPath));
+                    generationList.Add(GenerateModule(ccmr));
                 }
                 catch (Exception e)
                 {
-                    ccmr.Status = new DeploymentStatus("Failed to compile", e.Message, SeverityLevel.Error);
+                    ccmr.UpdateLogStatus(new DeploymentStatus("Failed to compile", e.Message, SeverityLevel.Error));
                 }
             }
 
             return generationList;
         }
 
-        static IScript GenerateModule(string moduleName, string filePath)
+        static Script GenerateModule(CloudCodeModuleReference moduleReference)
         {
-            var name = new ScriptName(moduleName);
-            return new Script(filePath)
+            var name = new ScriptName(moduleReference.ModuleName);
+            var script = new Script(moduleReference.CcmPath)
             {
                 Name = name,
                 Body = string.Empty,
                 Parameters = new List<CloudCodeParameter>(),
                 Language = Language.CS
             };
+
+            return script;
         }
     }
 }

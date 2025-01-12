@@ -82,6 +82,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.ModuleGenera
         {
             try
             {
+                deploymentItem.UpdateLogStatus(new DeploymentStatus("Compiling..."));
                 await m_SolutionPublisher.PublishSolutionLinux64(deploymentItem.SolutionPath, slnOutputPath, cancellationToken);
                 UpdateStatusAndProgress(deploymentItem, 33f, ModuleBuilderStatuses.CompiledSuccessfully);
                 return true;
@@ -103,23 +104,23 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Core.Deployment.ModuleGenera
                         tempFolderPath,
                         Path.GetFileNameWithoutExtension(deploymentItem.ModuleName),
                         cancellationToken);
-                UpdateStatusAndProgress(deploymentItem, 66f, "Zipped Successfully");
+                UpdateStatusAndProgress(deploymentItem, 66f, ModuleBuilderStatuses.ZippedSuccessfully);
             }
             catch (FailedZipCompilationException e)
             {
-                UpdateStatusFailed(deploymentItem, "Failed to zip", e.Message);
+                UpdateStatusFailed(deploymentItem, ModuleBuilderStatuses.FailedToZip, e.Message);
             }
         }
 
         static void UpdateStatusAndProgress(IModuleItem item, float progress, string statusMessage)
         {
             item.Progress = progress;
-            item.Status = new DeploymentStatus(statusMessage);
+            item.UpdateLogStatus(new DeploymentStatus(statusMessage));
         }
 
         static void UpdateStatusFailed(IModuleItem item, string statusMessage, string errorMessage)
         {
-            item.Status = new DeploymentStatus(statusMessage, errorMessage, SeverityLevel.Error);
+            item.UpdateLogStatus(new DeploymentStatus(statusMessage, errorMessage, SeverityLevel.Error));
         }
     }
 }

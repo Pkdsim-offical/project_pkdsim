@@ -7,10 +7,12 @@ using Unity.Services.CloudCode.Authoring.Editor.Scripts;
 using Unity.Services.CloudCode.Authoring.Editor.Shared.Infrastructure.Threading;
 using Unity.Services.DeploymentApi.Editor;
 using UnityEditor.AssetImporters;
+using UnityEngine;
 
 namespace Unity.Services.CloudCode.Authoring.Editor.Parameters.UI
 {
     [CloudCodeImporter]
+    [HelpURL("https://docs.unity3d.com/Packages/com.unity.services.cloudcode@2.8/manual/Authoring/cloud_code_scripts.html")]
     class CloudCodeScriptImporter : ScriptedImporter
     {
         static readonly string k_FailedToLoadParametersMsg = "Failed to load in-script parameters.";

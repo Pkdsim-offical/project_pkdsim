@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 using Unity.Services.CloudCode.Authoring.Editor.Analytics;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Modules.Bindings;
 using UnityEditor;
+using UnityEngine.UIElements;
 // Required for older unity versions.
+// ReSharper disable RedundantUsingDirective
 using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Unity.Services.CloudCode.Authoring.Editor.Modules.UI
 {

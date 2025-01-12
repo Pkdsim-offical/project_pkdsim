@@ -46,14 +46,14 @@ namespace Unity.Services.CloudCode
     /// </summary>
     public class CloudCodeException : RequestFailedException
     {
-        private readonly string m_GivenMessage;
+        readonly string m_GivenMessage;
 
         /// <summary>
         /// The reason the exception was thrown, selected from the CloudCodeExceptionReason enum.
         /// </summary>
         public CloudCodeExceptionReason Reason { get; private set; }
 
-        private CloudCodeException(CloudCodeExceptionReason reason, int errorCode, string message)
+        CloudCodeException(CloudCodeExceptionReason reason, int errorCode, string message)
             : base(errorCode, message)
         {
             Reason = reason;
@@ -112,7 +112,7 @@ namespace Unity.Services.CloudCode
             return m_Message;
         }
 
-        private static void AppendInvocationErrorExceptionDetails(StringBuilder sb, HttpException<InvocationErrorResponse> invocationErr)
+        static void AppendInvocationErrorExceptionDetails(StringBuilder sb, HttpException<InvocationErrorResponse> invocationErr)
         {
             sb.AppendLine(invocationErr.Message);
 
@@ -120,7 +120,7 @@ namespace Unity.Services.CloudCode
             {
                 sb.AppendLine(invocationErr.ActualError.Title);
 
-                if (!String.IsNullOrEmpty(invocationErr.ActualError.Detail))
+                if (!string.IsNullOrEmpty(invocationErr.ActualError.Detail))
                 {
                     sb.AppendLine(invocationErr.ActualError.Detail);
                 }
@@ -130,13 +130,13 @@ namespace Unity.Services.CloudCode
                     foreach (var errorMessage in invocationErr.ActualError.Details)
                     {
                         sb.AppendLine($"{errorMessage.Name}: {errorMessage.Message}");
-                        sb.AppendLine($"{String.Join(Environment.NewLine + "  ", errorMessage.StackTrace)}");
+                        sb.AppendLine($"{string.Join(Environment.NewLine + "  ", errorMessage.StackTrace)}");
                     }
                 }
             }
         }
 
-        private static void AppendValidationHttpExceptionDetails(StringBuilder sb, HttpException<ValidationErrorResponse> validationErr)
+        static void AppendValidationHttpExceptionDetails(StringBuilder sb, HttpException<ValidationErrorResponse> validationErr)
         {
             sb.AppendLine(validationErr.Message);
 
@@ -144,7 +144,7 @@ namespace Unity.Services.CloudCode
             {
                 sb.AppendLine(validationErr.ActualError.Title);
 
-                if (!String.IsNullOrEmpty(validationErr.ActualError.Detail))
+                if (!string.IsNullOrEmpty(validationErr.ActualError.Detail))
                 {
                     sb.AppendLine(validationErr.ActualError.Detail);
                 }
@@ -153,13 +153,13 @@ namespace Unity.Services.CloudCode
                 {
                     foreach (var errorMessage in validationErr.ActualError.Errors)
                     {
-                        sb.AppendLine($"{errorMessage.Field}: {String.Join(",", errorMessage.Messages)}");
+                        sb.AppendLine($"{errorMessage.Field}: {string.Join(",", errorMessage.Messages)}");
                     }
                 }
             }
         }
 
-        private static void AppendBasicHttpExceptionDetails(StringBuilder sb, HttpException<BasicErrorResponse> err)
+        static void AppendBasicHttpExceptionDetails(StringBuilder sb, HttpException<BasicErrorResponse> err)
         {
             sb.AppendLine(err.Message);
 
@@ -167,7 +167,7 @@ namespace Unity.Services.CloudCode
             {
                 sb.AppendLine(err.ActualError.Title);
 
-                if (!String.IsNullOrEmpty(err.ActualError.Detail))
+                if (!string.IsNullOrEmpty(err.ActualError.Detail))
                 {
                     sb.AppendLine(err.ActualError.Detail);
                 }

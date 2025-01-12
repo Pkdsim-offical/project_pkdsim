@@ -206,6 +206,7 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Core.Deployment
                     GetFileSize(script.Path),
                     GetFileType(script.Language));
 
+                UpdateScriptStatus(script, "Uploading...", string.Empty, StatusSeverityLevel.Info);
                 await m_Client.UploadFromFile(script);
 
                 //Only dispose the timer if the upload was successful
@@ -250,6 +251,10 @@ namespace Unity.Services.CloudCode.Authoring.Editor.Core.Deployment
             var script = await uploadTask;
             try
             {
+                UpdateScriptStatus(script,
+                    $"Publishing {script.Name}...",
+                    string.Empty,
+                    StatusSeverityLevel.Success);
                 m_Logger.LogVerbose($"[Publishing] Publishing {script.Name}");
                 await m_Client.Publish(script.Name);
                 m_DeploymentAnalytics.SendSuccessfulPublishEvent();

@@ -5,7 +5,6 @@ using Unity.Services.CloudCode.Authoring.Editor.Analytics;
 using Unity.Services.CloudCode.Authoring.Editor.Core.Modules.Bindings;
 using Unity.Services.CloudCode.Authoring.Editor.Modules;
 using UnityEditor;
-using UnityEngine;
 
 namespace Unity.Services.CloudCode.Authoring.Editor.UI
 {
