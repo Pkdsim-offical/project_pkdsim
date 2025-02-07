@@ -13,7 +13,7 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.converteranimat
 		
 		private JT_LFS_IdleTo Jolteon_LFS_idleto;
 
-		private void VAPOR_BaseIdleAnimatorController()
+		public void JT_LFS_IdleAnimatorController()
 		{
 			Jolteon_LFS_walkingto.JT_LFS_WalkingToController();
 

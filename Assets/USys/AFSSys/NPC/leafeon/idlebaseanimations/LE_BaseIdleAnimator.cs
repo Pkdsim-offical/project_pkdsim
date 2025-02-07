@@ -6,14 +6,15 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Leafeon.idlebaseanimati
 {
 	public class  Leafeon_LFS_AnimatorBaseIdleController  : MonoBehaviour 
 	{
-		private LE_LFS_IdleStanding LE_idlestanding;
+		private LE_LFS_IdleStanding LE_LFS_idlestanding;
 		
-		private LE_LFS_IdleSitting LE_idlesitting;
+		private LE_LFS_IdleSitting LE_LFS_idlesitting;
 
-		private void LE_BaseIdleAnimatorController()
+		public void LE_LFS_IdleAnimatorController()
 		{
-			LE_idlestanding.LE_LFS_IdleStandingController();
-			LE_idlesitting.LE_LFS_IdleSittingController();	
+			LE_LFS_idlestanding.LE_LFS_IdleStandingController();
+			
+			LE_LFS_idlesitting.LE_LFS_IdleSittingController();	
 		}
 	}
 }

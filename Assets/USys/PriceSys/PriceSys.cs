@@ -25,5 +25,9 @@ namespace project_pkdsim.Assets.USys.PriceSys
 				Load_Prices.Load_Normal_Prices();
 			}
 		}
+		public void PriceSysI()
+		{
+			LoadPriceSys();
+		}
 	}
 }

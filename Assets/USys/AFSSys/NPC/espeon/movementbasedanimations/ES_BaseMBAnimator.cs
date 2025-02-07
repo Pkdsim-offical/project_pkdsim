@@ -8,23 +8,23 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Espeon.movementbasedani
 {
 	public class Espeon_LFS_AnimatorBaseMovementController : MonoBehaviour 
 	{
-		private ES_LFS_Jumping ES_MBA_Jumping;
+		private ES_LFS_Jumping Espeon_LFS_Jumping;
 		
-		private ES_LFS_Running ES_MBA_Running;
+		private ES_LFS_Running Espeon_LFS_Running;
 
-		private ES_LFS_Turning ES_MBA_Turning;
+		private ES_LFS_Turning Espeon_LFS_Turning;
 
-		private ES_LFS_Strafing ES_MBA_Strafe;
+		private ES_LFS_Strafing Espeon_LFS_Strafe;
 
-		private void ES_BaseIdleAnimatorController()
+		public void ES_LFS_MovementAnimatorController()
 		{
-			ES_MBA_Running.ES_LFS_RunningController();
+			Espeon_LFS_Running.ES_LFS_RunningController();
 
-			ES_MBA_Jumping.ES_LFS_JumpingController();
+			Espeon_LFS_Jumping.ES_LFS_JumpingController();
 
-			ES_MBA_Turning.ES_LFS_TurningController();	
+			Espeon_LFS_Turning.ES_LFS_TurningController();	
 
-			ES_MBA_Strafe.ES_LFS_StrafingController();
+			Espeon_LFS_Strafe.ES_LFS_StrafingController();
 		}
 	}
 }

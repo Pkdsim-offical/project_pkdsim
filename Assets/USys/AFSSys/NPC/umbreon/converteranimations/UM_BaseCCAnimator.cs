@@ -7,17 +7,17 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Umbreon.converteranimat
 {
 	public class Umbreon_LFS_AnimatorCoverterController : MonoBehaviour 
 	{
-		private UM_LFS_IdleTo UM_LFS_idleTo;
+		private UM_LFS_IdleTo Umbreon_LFS_idleTo;
 		
-		private UM_LFS_WalkingTo UM_LFS_WalkingTo;
+		private UM_LFS_WalkingTo Umbreon_LFS_WalkingTo;
 
-		private UM_LFS_SittingTo UM_LFS_SittingTo;
+		private UM_LFS_SittingTo Umbreon_LFS_SittingTo;
 
-		private void UM_LFS_BaseConverterAnimatorController()
+		public void UM_LFS_ConverterToAnimatorController()
 		{
-			UM_LFS_idleTo.UM_LFS_IdleToController();
-			UM_LFS_WalkingTo.UM_LFS_WalkingToController();	
-			UM_LFS_SittingTo.UM_LFS_SittingToController();
+			Umbreon_LFS_idleTo.UM_LFS_IdleToController();
+			Umbreon_LFS_WalkingTo.UM_LFS_WalkingToController();	
+			Umbreon_LFS_SittingTo.UM_LFS_SittingToController();
 		}
 	}
 }

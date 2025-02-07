@@ -6,20 +6,20 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Sylveon.converteranimat
 {
 	public class SYL_LFS_IdleTo : MonoBehaviour 
 	{
-		private SYL_LFS_IdleToRun IdleToRun;
-		private SYL_LFS_IdleToWalk IdleToWalk;
+		private SYL_LFS_IdleToRun Sylveon_LFS_IdleToRun;
+		private SYL_LFS_IdleToWalk Sylveon_LFS_IdleToWalk;
 		public void SYL_LFS_IdleToController()
 		{
-			Load_FL_LFS_idleToRun();
-			Load_FL_LFS_idleToWalk();
+			Load_SYL_LFS_idleToRun();
+			Load_SYL_LFS_idleToWalk();
 		}
-		private void Load_FL_LFS_idleToRun()
+		private void Load_SYL_LFS_idleToRun()
 		{
-			IdleToRun.SYL_LFS_IdleToRunController();
+			Sylveon_LFS_IdleToRun.SYL_LFS_IdleToRunController();
 		}
-		private void Load_FL_LFS_idleToWalk()
+		private void Load_SYL_LFS_idleToWalk()
 		{
-			IdleToWalk.SYL_LFS_IdleToWalkController();
+			Sylveon_LFS_IdleToWalk.SYL_LFS_IdleToWalkController();
 		}
 	}
 }

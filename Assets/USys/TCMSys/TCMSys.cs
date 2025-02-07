@@ -21,5 +21,9 @@ namespace project_pkdsim.Assets.USys.TCMSys
         {
             Application.Quit();
         }
+        public void TCMSysI()
+        {
+            
+        }
     }
 }

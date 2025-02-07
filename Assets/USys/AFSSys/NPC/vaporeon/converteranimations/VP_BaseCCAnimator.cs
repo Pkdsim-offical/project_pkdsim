@@ -13,7 +13,7 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Vaporeon.converteranima
 		
 		private VP_LFS_IdleTo Vaporeon_LFS_idleto;
 
-		private void VP_BaseIdleAnimatorController()
+		public void VP_BaseIdleAnimatorController()
 		{
 			Vaporeon_LFS_walkingto.VP_LFS_WalkingToController();
 			Vaporeon_LFS_idleto.VP_LFS_IdleToController();	

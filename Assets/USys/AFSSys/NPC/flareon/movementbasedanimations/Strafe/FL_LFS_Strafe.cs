@@ -1,5 +1,5 @@
-using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.espeon.movementbasedanimations.Strafe.StrafeLeft;
-using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.espeon.movementbasedanimations.Strafe.StrafeRight;
+using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Flareon.movementbasedanimations.Strafe.StrafeLeft;
+using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Flareon.movementbasedanimations.Strafe.StrafeRight;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Flareon.movementbasedanimations.Strafe

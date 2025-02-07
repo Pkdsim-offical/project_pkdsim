@@ -8,23 +8,23 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Glaceon.movementbasedan
 {
 	public class GLaceon_LFS_MovementBasedAnimatorController : MonoBehaviour 
 	{
-		private GL_LFS_Jumping GL_MBA_Jumping;
+		private GL_LFS_Jumping Glaceon_MBA_Jumping;
 		
-		private GL_LFS_Running GL_MBA_Running;
+		private GL_LFS_Running Glaceon_MBA_Running;
 
-		private GL_LFS_Turning GL_MBA_Turning;
+		private GL_LFS_Turning Glaceon_MBA_Turning;
 
-		private GL_LFS_Strafing GL_MBA_Strafe;
+		private GL_LFS_Strafing Glaceon_MBA_Strafe;
 
 		public void GL_LFS_MovementAnimatorController()
 		{
-			GL_MBA_Running.GL_LFS_RunningController();
+			Glaceon_MBA_Running.GL_LFS_RunningController();
 
-			GL_MBA_Jumping.GL_LFS_JumpingController();
+			Glaceon_MBA_Jumping.GL_LFS_JumpingController();
 
-			GL_MBA_Turning.GL_LFS_TurningController();	
+			Glaceon_MBA_Turning.GL_LFS_TurningController();	
 
-			GL_MBA_Strafe.GL_LFS_StrafingController();
+			Glaceon_MBA_Strafe.GL_LFS_StrafingController();
 		}
 	}
 }

@@ -6,20 +6,20 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.converteranimat
 {
 	public class JT_LFS_IdleTo : MonoBehaviour 
 	{
-		private JT_LFS_IdleToRun IdleToRun;
-		private JT_LFS_IdleToWalk IdleToWalk;
+		private JT_LFS_IdleToRun Jolteon_LFS_IdleToRun;
+		private JT_LFS_IdleToWalk Jolteon_LFS_IdleToWalk;
 		public void JT_LFS_IdleToController()
 		{
-			// Load_JT_LFS_idleToRun();
-			// Load_JT_LFS_idleToWalk();
+			Load_JT_LFS_idleToRun();
+			Load_JT_LFS_idleToWalk();
 		}
 		private void Load_JT_LFS_idleToRun()
 		{
-			
+			Jolteon_LFS_IdleToRun.JT_LFS_IdleToRunController();
 		}
 		private void Load_JT_LFS_idleToWalk()
 		{
-			
+			Jolteon_LFS_IdleToWalk.JT_LFS_IdleToWalkController();
 		}
 	}
 }

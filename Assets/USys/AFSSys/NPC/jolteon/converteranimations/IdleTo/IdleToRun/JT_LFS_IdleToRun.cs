@@ -4,6 +4,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.converteranimat
 {
 	public class JT_LFS_IdleToRun : MonoBehaviour 
 	{
-		
+		public void JT_LFS_IdleToRunController() 
+		{
+			
+		}
 	}
 }

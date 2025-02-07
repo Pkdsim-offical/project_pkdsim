@@ -6,14 +6,22 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Vaporeon.converteranima
 {
 	public class VP_LFS_IdleTo : MonoBehaviour 
 	{
-		private VP_LFS_IdleToWalk VAPOR_idletowalk;
+		private VP_LFS_IdleToWalk Vaporeon_IdleToWalk;
 		
-		private VP_LFS_IdleToRun VAPOR_idletorun;
+		private VP_LFS_IdleToRun Vaporeon_IdleToRun;
 		
 		public void VP_LFS_IdleToController()
 		{
-			VAPOR_idletowalk.VP_LFS_IdleToWalkController();
-			VAPOR_idletorun.VP_LFS_IdleToRunController();
+			Load_VP_LFS_IdleToWalkController();
+			Load_VP_LFS_IdleToRunController();
+		}
+		private void Load_VP_LFS_IdleToWalkController() 
+		{
+			Vaporeon_IdleToWalk.VP_LFS_IdleToWalkController();
+		}
+		private void Load_VP_LFS_IdleToRunController() 
+		{
+			Vaporeon_IdleToRun.VP_LFS_IdleToRunController();
 		}
 	}
 }

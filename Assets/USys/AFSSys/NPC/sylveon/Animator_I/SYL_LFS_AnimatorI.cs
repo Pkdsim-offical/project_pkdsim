@@ -10,26 +10,28 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Sylveon.Animator_I
 		public Animator Sylveon_Animator;
 		public RuntimeAnimatorController someController;
 
-		private Sylveon_LFS_CoverterAnimatorController Sylveon_AnimatorCCA;
-		private Sylveon_LFS_AnimatorBaseMovementController Sylveon_AnimatorCMA;
-		private Sylveon_LFS_IdleAnimatorController Sylveon_AnimatorICA;
+		private Sylveon_LFS_CoverterAnimatorController LFSSylveon_AnimatorCCA;
+		private Sylveon_LFS_AnimatorBaseMovementController LFSSylveon_AnimatorCMA;
+		private Sylveon_LFS_IdleAnimatorController LFSSylveon_AnimatorICA;
+
 
 		public void LoadFailSafeSylveon_AnimatorController()
 		{
-			Sylveon_Animator = gameObject.GetComponent<Animator>();
-			Sylveon_Animator.runtimeAnimatorController = someController;
+			LoadFailSafeSylveon_ConvertToAnimatorController();
+			LoadFailSafeSylveon_MovementAnimatorController();
+			LoadFailSafeSylveon_IdleAnimatorController();
 		}
-		private void ConvertToAnimatorController()
+		private void LoadFailSafeSylveon_ConvertToAnimatorController()
 		{
-
+			LFSSylveon_AnimatorCCA.SYL_LFS_CoverterToAnimatorController();
 		}
-		private void MovementAnimatorController()
+		private void LoadFailSafeSylveon_MovementAnimatorController()
 		{
-			
+			LFSSylveon_AnimatorCMA.SYL_LFS_MovementAnimatorController();
 		}
-		private void IdleAnimatorController()
+		private void LoadFailSafeSylveon_IdleAnimatorController()
 		{
-			
+			LFSSylveon_AnimatorICA.SYL_LFS_IdleAnimatorController();
 		}
 	}
 }

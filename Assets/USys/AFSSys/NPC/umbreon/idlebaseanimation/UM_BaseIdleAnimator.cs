@@ -9,7 +9,7 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Umbreon.idlebaseanimati
 		private UM_IdleStanding UM_idlestanding;
 		
 		private UM_IdleSitting UM_idlesitting;
-		private void UM_BaseIdleAnimatorController()
+		public void UM_LFS_IdleAnimatorController()
 		{
 			UM_idlestanding.UM_IdleStandingController();
 			UM_idlesitting.UM_IdleSittingController();	

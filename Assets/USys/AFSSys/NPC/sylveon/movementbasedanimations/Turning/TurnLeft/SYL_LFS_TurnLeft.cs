@@ -4,6 +4,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Sylveon.movementbasedan
 {
 	public class SYL_LFS_TurnLeft : MonoBehaviour 
 	{
-
+		public void SYL_LFS_TurnLeftController() 
+		{
+	
+		}
 	}
 }

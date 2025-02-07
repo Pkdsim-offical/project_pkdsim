@@ -16,7 +16,7 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Vaporeon.movementbaseda
 
 		private VP_LFS_Strafing VP_MBA_Strafe;
 
-		private void VP_BaseIdleAnimatorController()
+		public void VP_BaseIdleAnimatorController()
 		{
 			VP_MBA_Running.VP_LFS_RunningController();
 

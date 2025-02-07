@@ -4,23 +4,27 @@ using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.UPSSys
 {
-	public class UPSSys : MonoBehaviour
+	[System.Serializable]
+	public class UPSSys
 	{
-		[System.Serializable]
-		public class PlayerData
+		private InventorySystem  inventory;
+
+		private NPC_LOVESys NPC_LoveSys;
+
+		public int Build_Version;
+
+		public UnityEngine.Object pkphone;
+
+		public void PlayerDataBuilder(string value)
 		{
-			private InventorySystem  inventory;
-			private NPC_LOVESys NPC_LoveSys;
-
-			public int Build_Version;
-			public UnityEngine.Object pkphone;
-
-			public PlayerData(string value)
-			{
-				Build_Version = 1;
-				NPC_LoveSys.NPC_LoveSys();         // Call the method        // Initialize inventory
-				inventory.Get_Inventory(value);         // Call the method
-			}
+			Build_Version = 1;
+			NPC_LoveSys.NPC_LoveSys();         // Call the method        // Initialize inventory
+			inventory.Get_Inventory(value);         // Call the method
+		}
+		public void UPSSysI() 
+		{
+			PlayerDataBuilder("value");
 		}
 	}
 }
+

@@ -1,9 +1,12 @@
 using UnityEngine;
 
-namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.espeon.converteranimations.SittingTo.SittingToStartWalking
+namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Espeon.converteranimations.SittingTo.SittingToStartWalking
 {
-	public class ES_SittingToStartWalking : MonoBehaviour 
+	public class ES_LFS_SittingToStartWalking : MonoBehaviour 
 	{
-		
+		public void ES_LFS_SittingToStartWalkingController() 
+		{
+			
+		}
 	}
 }

@@ -6,9 +6,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Glaceon.idlebaseanimati
 {
 	public class Glaceon_LFS_IdleAnimatorController : MonoBehaviour 
 	{
-		private GL_LFS_IdleStanding GL_LFS_idlestanding;
+		private GL_LFS_IdleStanding Glaceon_LFS_idlestanding;
 		
-		private GL_LFS_IdleSitting GL_LFS_idlesitting;
+		private GL_LFS_IdleSitting Glaceon_LFS_idlesitting;
 		
 		public void GL_LFS_IdleAnimatorController()
 		{
@@ -17,11 +17,11 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Glaceon.idlebaseanimati
 		}
 		private void GL_LFS_IdleStandingAnimatorController()
 		{
-			GL_LFS_idlestanding.GL_LFS_IdleStandingController();
+			Glaceon_LFS_idlestanding.GL_LFS_IdleStandingController();
 		}
 		private void GL_LFS_IdleSittingAnimatorController()
 		{
-			GL_LFS_idlesitting.GL_LFS_IdleSittingController();
+			Glaceon_LFS_idlesitting.GL_LFS_IdleSittingController();
 		}
 	}
 }

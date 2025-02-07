@@ -6,14 +6,14 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.idlebaseanimati
 {
 	public class Jolteon_LFS_AnimatorIdleController : MonoBehaviour 
 	{
-		private JT_LFS_IdleStanding JT_idlestanding;
+		private JT_LFS_IdleStanding Jolteon_idlestanding;
 		
-		private JT_LFS_IdleSitting JT_idlesitting;
+		private JT_LFS_IdleSitting Jolteon_idlesitting;
 
-		private void JT_BaseIdleAnimatorController()
+		public void JT_LFS_BaseIdleAnimatorController()
 		{
-			JT_idlestanding.JT_IdleStandingController();
-			JT_idlesitting.JT_IdleSittingController();	
+			Jolteon_idlestanding.JT_IdleStandingController();
+			Jolteon_idlesitting.JT_IdleSittingController();	
 		}
 	}
 }

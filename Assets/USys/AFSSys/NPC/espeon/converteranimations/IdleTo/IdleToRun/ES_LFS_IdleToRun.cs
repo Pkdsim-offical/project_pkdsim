@@ -1,9 +1,12 @@
 using UnityEngine;
 
-namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.Espeon.converteranimations.IdleTo.IdleToRun
+namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Espeon.converteranimations.IdleTo.IdleToRun
 {
-	public class ES_IdleToRun : MonoBehaviour 
+	public class ES_LFS_IdleToRun : MonoBehaviour 
 	{
-		
+		public void ES_LFS_IdleToRunController() 
+		{
+			
+		}
 	}
 }

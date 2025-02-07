@@ -6,9 +6,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Flareon.idlebaseanimati
 {
 	public class Flareon_LFS_IdleAnimatorController : MonoBehaviour 
 	{
-		private FL_LFS_IdleStanding FL_LFS_idlestanding;
+		private FL_LFS_IdleStanding Flareon_LFS_idlestanding;
 		
-		private FL_LFS_IdleSitting FL_LFS_idlesitting;
+		private FL_LFS_IdleSitting Flareon_LFS_idlesitting;
 		
 		public void	FL_LFS_IdleAnimatorController()
 		{
@@ -17,11 +17,11 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Flareon.idlebaseanimati
 		}
 		private void FL_LFS_IdleStandingAnimatorController()
 		{
-			FL_LFS_idlestanding.FL_LFS_IdleStandingController();
+			Flareon_LFS_idlestanding.FL_LFS_IdleStandingController();
 		}
 		private void FL_LFS_IdleSittingAnimatorController()
 		{
-			FL_LFS_idlesitting.FL_LFS_IdleSittingController();
+			Flareon_LFS_idlesitting.FL_LFS_IdleSittingController();
 		}
 	}
 }

@@ -8,19 +8,21 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Flareon.converteranimat
 	{
 		private FL_LFS_SittingToStartWalking Flareon_LFS_sittingToStartWalking;
 		private FL_LFS_SittingToStanding Flareon_LFS_sittingToStanding;
+
 		public void FL_LFS_SittingToController()
 		{
-			FL_LFS_SittingToStartWalking();
-			FL_LFS_SittingToStanding();
+			Load_FL_LFS_SittingToStartWalking();
+			Load_FL_LFS_SittingToStanding();
 		}
-		private void FL_LFS_SittingToStartWalking()
+
+		private void Load_FL_LFS_SittingToStartWalking()
 		{
 			Flareon_LFS_sittingToStartWalking.FL_LFS_SittingToStartWalkingController();
 		}
-		private void FL_LFS_SittingToStanding()
+
+		private void Load_FL_LFS_SittingToStanding()
 		{
 			Flareon_LFS_sittingToStanding.FL_LFS_SittingToStandingController();
 		}
-
 	}
 }

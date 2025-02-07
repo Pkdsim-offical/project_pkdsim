@@ -9,7 +9,7 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Vaporeon.idlebaseanimat
 		private VP_LFS_IdleStanding VP_LFS_idlestanding;
 		
 		private VP_LFS_IdleSitting VP_LFS_idlesitting;
-		private void VP_LFS_BaseIdleAnimatorController()
+		public void VP_LFS_BaseIdleAnimatorController()
 		{
 			VP_LFS_idlestanding.VP_LFS_IdleStandingController();
 			VP_LFS_idlesitting.VP_LFS_IdleSittingController();	

@@ -4,6 +4,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.espeon.converteranimati
 {
 	public class JT_LFS_WalkingToSitting : MonoBehaviour
 	{
-
+		public void JT_LFS_WalkingToSittingController() 
+		{
+			
+		}
 	}
 }

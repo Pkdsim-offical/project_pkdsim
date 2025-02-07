@@ -22,15 +22,15 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Leafeon.Animator_I
 		}
 		private void LoadFailSafeLeafeon_ConvertToAnimatorController()
 		{
-
+			LFSLeafeon_AnimatorCCA.LE_LFS_ConverterAnimatorController();
 		}
 		private void LoadFailSafeLeafeon_MovementAnimatorController()
 		{
-			
+			LFSLeafeon_AnimatorCMA.LE_LFS_MovementAnimatorController();
 		}
 		private void LoadFailSafeLeafeon_IdleAnimatorController()
 		{
-			
+			LFSLeafeon_AnimatorICA.LE_LFS_IdleAnimatorController();
 		}
 	}
 }

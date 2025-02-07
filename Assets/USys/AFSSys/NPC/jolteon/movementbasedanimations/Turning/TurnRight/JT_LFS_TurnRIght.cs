@@ -4,6 +4,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.movementbasedan
 {
     public class JT_LFS_TurnRIght : MonoBehaviour 
     {
-
+        public void JT_LFS_TurnRightController()
+        {
+            
+        }
     }
 }

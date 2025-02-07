@@ -20,15 +20,15 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Vaporeon.Animator_I
 		}
 		private void LoadFailSafeVaporeon_ConvertToAnimatorController()
 		{
-
+			LFSVaporeon_AnimatorCCA.VP_BaseIdleAnimatorController();
 		}
 		private void LoadFailSafeVaporeon_MovementAnimatorController()
 		{
-			
+			LFSVaporeon_AnimatorCMA.VP_BaseIdleAnimatorController();
 		}
 		private void LoadFailSafeVaporeon_IdleAnimatorController()
 		{
-			
+			LFSVaporeon_AnimatorICA.VP_LFS_BaseIdleAnimatorController();
 		}
 	}
 }

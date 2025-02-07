@@ -4,6 +4,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Umbreon.movementbasedan
 {
     public class UM_LFS_TurnRIght : MonoBehaviour 
     {
-
+        public void UM_LFS_TurnRightController()
+        {
+            
+        }
     }
 }

@@ -4,6 +4,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Flareon.converteranimat
 {
 	public class FL_LFS_WalkingToStanding : MonoBehaviour 
 	{
-
+		public void FL_LFS_WalkingToStandingController () 
+		{
+			
+		}
 	}
 }

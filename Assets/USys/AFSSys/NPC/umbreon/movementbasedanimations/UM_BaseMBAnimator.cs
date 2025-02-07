@@ -9,27 +9,27 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Umbreon.movementbasedan
 {
 	public class Umbreon_LFS_AnimatorBaseMovementController : MonoBehaviour 
 	{
-		private UM_LFS_Jumping UM_MBA_Jumping;
+		private UM_LFS_Jumping Umbreon_MBA_Jumping;
 		
-		private UM_LFS_Running UM_MBA_Running;
+		private UM_LFS_Running Umbreon_MBA_Running;
 
-		private UM_LFS_Walking UM_MBA_Walking;
+		private UM_LFS_Walking Umbreon_MBA_Walking;
 
-		private UM_LFS_Turning UM_MBA_Turning;
+		private UM_LFS_Turning Umbreon_MBA_Turning;
 
-		private UM_LFS_Strafing UM_MBA_Strafe;
+		private UM_LFS_Strafing Umbreon_MBA_Strafe;
 
-		private void UM_BaseIdleAnimatorController()
+		public void UM_LFS_MovementAnimatorController()
 		{
-			UM_MBA_Running.UM_LFS_RunningController();
+			Umbreon_MBA_Running.UM_LFS_RunningController();
 
-			UM_MBA_Jumping.UM_LFS_JumpingController();
+			Umbreon_MBA_Jumping.UM_LFS_JumpingController();
 
-			UM_MBA_Walking.UM_LFS_WalkingController();
+			Umbreon_MBA_Walking.UM_LFS_WalkingController();
 
-			UM_MBA_Turning.UM_LFS_TurningController();	
+			Umbreon_MBA_Turning.UM_LFS_TurningController();	
 
-			UM_MBA_Strafe.UM_LFS_StrafingController();
+			Umbreon_MBA_Strafe.UM_LFS_StrafingController();
 		}	
 	}
 }

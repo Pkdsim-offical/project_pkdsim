@@ -8,23 +8,23 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Leafeon.movementbasedan
 {
 	public class Leafeon_LFS_AnimatorBaseMovementController : MonoBehaviour 
 	{
-		private LE_LFS_Jumping LE_MBA_Jumping;
+		private LE_LFS_Jumping Leafeon_MBA_Jumping;
 		
-		private LE_LFS_Running LE_MBA_Running;
+		private LE_LFS_Running Leafeon_MBA_Running;
 
-		private LE_LFS_Turning LE_MBA_Turning;
+		private LE_LFS_Turning Leafeon_MBA_Turning;
 
-		private LE_LFS_Strafing LE_MBA_Strafe;
+		private LE_LFS_Strafing Leafeon_MBA_Strafe;
 
-		private void LE_BaseIdleAnimatorController()
+		public void LE_LFS_MovementAnimatorController()
 		{
-			LE_MBA_Running.LE_LFS_RunningController();
+			Leafeon_MBA_Running.LE_LFS_RunningController();
 
-			LE_MBA_Jumping.LE_LFS_JumpingController();
+			Leafeon_MBA_Jumping.LE_LFS_JumpingController();
 
-			LE_MBA_Turning.LE_LFS_TurningController();	
+			Leafeon_MBA_Turning.LE_LFS_TurningController();	
 
-			LE_MBA_Strafe.LE_LFS_StrafingController();
+			Leafeon_MBA_Strafe.LE_LFS_StrafingController();
 		}
 	}
 }

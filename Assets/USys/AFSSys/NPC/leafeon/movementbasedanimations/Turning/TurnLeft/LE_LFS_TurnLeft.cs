@@ -4,6 +4,9 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Leafeon.movementbasedan
 {
 	public class LE_LFS_TurnLeft : MonoBehaviour 
 	{
-
+		public void LEAF_LFS_TurnLeftController()
+		{
+			
+		}
 	}
 }

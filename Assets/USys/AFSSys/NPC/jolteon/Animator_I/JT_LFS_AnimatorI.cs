@@ -1,4 +1,4 @@
-using project_pkdsim.Assets.Models.ANIMATOR.NPC.Jolteon.movementbasedanimations;
+using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.movementbasedanimations;
 using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.converteranimations;
 using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.idlebaseanimation;
 using UnityEngine;
@@ -22,15 +22,15 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Jolteon.Animator_I
 		}
 		private void LoadFailSafeJolteon_ConvertToAnimatorController()
 		{
-
+			LFSJolteon_AnimatorCCA.JT_LFS_IdleAnimatorController();
 		}
 		private void LoadFailSafeJolteon_MovementAnimatorController()
 		{
-			
+			LFSJolteon_AnimatorCMA.JT_LFS_BaseIdleAnimatorController();
 		}
 		private void LoadFailSafeJolteon_IdleAnimatorController()
 		{
-			
+			LFSJolteon_AnimatorICA.JT_LFS_BaseIdleAnimatorController();
 		}
 	}
 }

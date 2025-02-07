@@ -7,16 +7,18 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Leafeon.converteranimat
 {
 	public class Leafeon_LFS_AnimatorBaseConverterController : MonoBehaviour 
 	{
-		private LE_LFS_IdleTo LE_LFS_idleTo;
+		private LE_LFS_IdleTo Leafeon_LFS_idleTo;
 		
-		private LE_LFS_WalkingTo LE_LFS_WalkingTo;
+		private LE_LFS_WalkingTo Leafeon_LFS_WalkingTo;
 
-		private LE_LFS_SittingTo LE_LFS_SittingTo;
-		private void LE_LFS_BaseConverterAnimatorController()
+		private LE_LFS_SittingTo Leafeon_LFS_SittingTo;
+		public void LE_LFS_ConverterAnimatorController()
 		{
-			LE_LFS_idleTo.LE_LFS_IdleToController();
-			LE_LFS_WalkingTo.LE_LFS_WalkingToController();	
-			LE_LFS_SittingTo.LE_LFS_SittingToController();
+			Leafeon_LFS_idleTo.LE_LFS_IdleToController();
+			
+			Leafeon_LFS_WalkingTo.LE_LFS_WalkingToController();
+			
+			Leafeon_LFS_SittingTo.LE_LFS_SittingToController();
 		}
 	}
 }

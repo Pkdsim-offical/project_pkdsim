@@ -13,19 +13,21 @@ namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Espeon.Animator_I
 
 		public void LoadFailSafeEspeon_AnimatorController()
 		{
-			
+			LoadFailSafeEspeon_ConvertToAnimatorController();
+			LoadFailSafeEspeon_IdleAnimatorController();
+			LoadFailSafeEspeon_MovementAnimatorController();
 		}
 		private void LoadFailSafeEspeon_ConvertToAnimatorController()
 		{
-
+			LFSEspeon_AnimatorCCA.ES_LFS_CoverterToAnimatorController();
 		}
 		private void LoadFailSafeEspeon_MovementAnimatorController()
 		{
-			
+			LFSEspeon_AnimatorCMA.ES_LFS_MovementAnimatorController();
 		}
 		private void LoadFailSafeEspeon_IdleAnimatorController()
 		{
-			
+			LFSEspeon_AnimatorICA.ES_LFS_IdleAnimatorController();
 		}
 	}
 }

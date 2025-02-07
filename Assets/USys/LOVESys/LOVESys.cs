@@ -6,5 +6,9 @@ namespace project_pkdsim.Assets.USys.LOVESys
         {
             Run();
         }
+        public void LoveSysI()
+        {
+            LoveSys();
+        }
     }
 }
