@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.espeon.converteranimations.WalkingTo.WalkingToStanding
+namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.Leafeon.converteranimations.WalkingTo.WalkingToStanding
 {
-	public class ES_WalkingToStanding : MonoBehaviour 
+	public class LE_WalkingToStanding : MonoBehaviour 
 	{
 
 	}
