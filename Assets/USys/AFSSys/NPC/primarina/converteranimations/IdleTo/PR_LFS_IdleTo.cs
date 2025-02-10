@@ -1,5 +1,5 @@
-using project_pkdsim.Assets.Primarina.ANIMATOR.NPC.Primarina.converteranimations.IdleTo.IdleToRun;
-using project_pkdsim.Assets.USys.ANIMATOR.NPC.Primarina.converteranimations.IdleTo.IdleToWalk;
+using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Primarina.converteranimations.IdleTo.IdleToRun;
+using project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Primarina.converteranimations.IdleTo.IdleToWalk;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.AFSSys.ANIMATOR.NPC.Primarina.converteranimations.IdleTo

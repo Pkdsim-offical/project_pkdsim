@@ -1,13 +1,20 @@
-
+using project_pkdsim.Assets.USys.MoneySys.PriceSys.ChangePrices.I;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.HDSys.ULoader.Holidays.AssetsSorter.Halloween
 {
-	public class Halloween_IAssets : MonoBehaviour
+	public class Halloween_IAssetLoader : MonoBehaviour
 	{
-		public static void LoadHalloweenHAssets()
+		// private ChangePricesI ChangePrices;
+		public void LoadHalloweenHAssetLoader()
 		{
-			//Load Halloween
+
+		}
+		public void LoadHalloweenSales()
+		{
+			//Load Halloween Sales
+
+			// ChangePrices.LoadHalloweenPrices();
 		}
 	}
 }

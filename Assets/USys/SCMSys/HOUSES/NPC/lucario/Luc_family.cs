@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Luca_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Lucario
 {
-    public void Load_Luca_FamilyScene()
+    public class Luca_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Luc_Family");
+        public void Load_Luca_FamilyScene()
+        {
+            SceneManager.LoadScene("Luc_Family");
+        }
     }
 }

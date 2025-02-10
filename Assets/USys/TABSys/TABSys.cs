@@ -5,10 +5,10 @@ namespace project_pkdsim.Assets.USys.TABSys
 {
     public class TABSys : MonoBehaviour
     {
-        private TABSysI TabSysI;
+        private TABSysI TabSys;
         public void TABSysI()
         {
-            TabSysI.TABSys_PkPhoneApps();
+            TabSys.TABSys_PkPhoneAppsI();
         }
     }
 }

@@ -1,8 +1,9 @@
-using System;
+
 using project_pkdsim.Assets.USys.HDSys.HDataSys.HolidayDatabase;
 using project_pkdsim.Assets.USys.HDSys.ULoader.Assets.I;
 using project_pkdsim.Assets.USys.HDSys.ULoader.Assets.I.AssetsSorterI;
 using project_pkdsim.Assets.USys.HSys.Base;
+using System;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.HDSys.Toggler.Asset
@@ -17,7 +18,7 @@ namespace project_pkdsim.Assets.USys.HDSys.Toggler.Asset
 		
 		private Holiday_Base holidayBase; // Reference to holiday base
 
-#pragma warning disable IDE0052 // Remove unread private members
+		#pragma warning disable IDE0052 // Remove unread private members
         private bool hasError = false; // Flag to indicate if any component is missing
 		#pragma warning restore IDE0052 // Remove unread private members
 

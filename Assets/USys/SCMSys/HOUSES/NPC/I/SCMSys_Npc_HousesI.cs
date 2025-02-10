@@ -1,3 +1,29 @@
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Absol;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Beedrill;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Blaziken;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Braixen;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Cinderace;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Delphox;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Dragapult;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.FlareonAVaporeonAJolteon;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Frostlass;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Garchomp;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Gardevoir;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Hatterene;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.LeafeonAGlaceon;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Lopunny;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Lucario;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Lunala;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Meowscarada;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Noivern;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Pheromosa;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Primarina;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Salazzle;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Sylveon;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Tsareena;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.UmbreonAEspeon;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Vespiquen;
+using project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Zoroark;
 namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.I{
     public class SCMSys_NPC_HousesI
         {

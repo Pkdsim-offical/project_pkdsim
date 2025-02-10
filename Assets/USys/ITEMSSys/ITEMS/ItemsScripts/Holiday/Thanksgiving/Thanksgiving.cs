@@ -6,7 +6,7 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsS
 	public class Thanksgiving_ITAssets : MonoBehaviour
 	{
 		private HDA_ULoader holidayLoader;
-		public static void loadThanksgivingITHAssets()
+		public void loadThanksgivingITHAssets()
 		{
 			//Load Thanksgiving Item Assets
 			HDA_ULoader.InitializeHolidayAsset("ThanksgivingAssetKey"); // Load the holiday asset.

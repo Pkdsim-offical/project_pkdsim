@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys
@@ -9,8 +10,7 @@ namespace project_pkdsim.Assets.USys
         private HDSys.HDSys HolidaySys;
 
         private ITEMSSys.ITEMSSys Itemssys;
-
-        private StockSys.StockSys StockSys;
+        
         private LOVESys.LOVESys LoveSys;
 
         private UPSSys.UPSSys UPSSys;
@@ -21,21 +21,10 @@ namespace project_pkdsim.Assets.USys
 
         private SCMSys.SCMSys SCMSys;
 
-        private PriceSys.PriceSys PriceSys;
+        private HTPSys.HTPSys HTPSys;
 
-        protected USys()
-        {
-            AIRSys = new AIRoutesSys.AIRSys();
-            HolidaySys = new HDSys.HDSys();
-            Itemssys = new ITEMSSys.ITEMSSys();
-            LoveSys = new LOVESys.LOVESys();
-            UPSSys = new UPSSys.UPSSys();
-            TCMSys = new TCMSys.TCMSys();
-            TABSys = new TABSys.TABSys();
-            SCMSys = new SCMSys.SCMSys();
-            StockSys = new StockSys.StockSys();
-            PriceSys = new PriceSys.PriceSys();
-        }
+        private MoneySys.MoneySys MoneySys;
+
         private void LoadUSys()
         {
             LoadAIRSys();
@@ -46,8 +35,8 @@ namespace project_pkdsim.Assets.USys
             LoadTCMSys();
             LoadTABSys();
             LoadSCMSys();
-            LoadStockSys();
-            LoadPriceSys();
+            LoadMoneySys();
+            LoadHTPSys();
         }
         private void LoadAIRSys()
         {
@@ -81,13 +70,13 @@ namespace project_pkdsim.Assets.USys
         {
             SCMSys.SCMSysI();
         }
-        private void LoadStockSys()
+        private void LoadHTPSys() 
         {
-            StockSys.StockSysI();
+            HTPSys.HTPSysI();
         }
-        private void LoadPriceSys()
+        private void LoadMoneySys()
         {
-            PriceSys.PriceSysI();
+            MoneySys.MoneySysI();
         }
     }
 }

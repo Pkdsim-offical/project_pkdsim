@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Ph_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Pheromosa
 {
-    public void Load_Ph_FamilyScene()
+    public class Ph_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Ph_Family");
+        public void Load_Ph_FamilyScene()
+        {
+            SceneManager.LoadScene("Ph_Family");
+        }
     }
 }

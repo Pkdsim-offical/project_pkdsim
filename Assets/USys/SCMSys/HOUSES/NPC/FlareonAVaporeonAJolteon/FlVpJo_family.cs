@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class FlVpJo_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.FlareonAVaporeonAJolteon
 {
-    public void Load_FlVpJo_familyScene()
+    public class FlVpJo_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("FlVpJo_Family");
+        public void Load_FlVpJo_familyScene()
+        {
+            SceneManager.LoadScene("FlVpJo_Family");
+        }
     }
 }

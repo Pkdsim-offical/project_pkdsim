@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Dr_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Dragapult
 {
-    public void Load_Dr_familyScene()
+    public class Dr_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Dr_Family");
+        public void Load_Dr_familyScene()
+        {
+            SceneManager.LoadScene("Dr_Family");
+        }
     }
 }

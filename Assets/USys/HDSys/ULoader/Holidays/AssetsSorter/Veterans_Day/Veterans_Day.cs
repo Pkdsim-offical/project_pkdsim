@@ -1,12 +1,21 @@
+using project_pkdsim.Assets.USys.MoneySys.PriceSys.ChangePrices.I;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.HDSys.ULoader.Holidays.AssetsSorter.Veterans_Day
 {
-	public class Veterans_Day_IAssets : MonoBehaviour
+	public class Veterans_Day_IAssetsLoader : MonoBehaviour
 	{
-		public static void LoadVeterans_DayHAssets()
+		private ChangePricesI ChangePrices;
+		public void loadVeterans_DayHAssets()
 		{
-			//Load Veterans Day
+			//Load Veterans Day Assets
+		}
+
+		public void LoadVeterans_DaySales()
+		{
+			//Load Veterans Day Sales
+
+			// ChangePrices.LoadVeterans_DayPrice();
 		}
 	}
 }

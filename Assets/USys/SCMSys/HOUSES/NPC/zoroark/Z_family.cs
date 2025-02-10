@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Z_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Zoroark
 {
-    public void Load_Z_FamilyScene()
+    public class Z_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Z_Family");
+        public void Load_Z_FamilyScene()
+        {
+            SceneManager.LoadScene("Z_Family");
+        }
     }
 }

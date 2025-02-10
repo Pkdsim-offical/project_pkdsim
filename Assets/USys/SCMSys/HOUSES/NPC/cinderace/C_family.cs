@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class C_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Cinderace
 {
-    public void Load_C_familyScene()
+    public class C_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("C_Family");
+        public void Load_C_familyScene()
+        {
+            SceneManager.LoadScene("C_Family");
+        }
     }
 }

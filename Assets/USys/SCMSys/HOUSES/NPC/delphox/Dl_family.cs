@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Dl_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Delphox
 {
-    public void Load_Dl_familyScene()
+    public class Dl_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Dl_Family");
+        public void Load_Dl_familyScene()
+        {
+            SceneManager.LoadScene("Dl_Family");
+        }
     }
 }

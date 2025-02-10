@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class UE_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.UmbreonAEspeon
 {
-    public void Load_UE_FamilyScene()
+    public class UE_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("UE_Family");
+        public void Load_UE_FamilyScene()
+        {
+            SceneManager.LoadScene("UE_Family");
+        }
     }
 }

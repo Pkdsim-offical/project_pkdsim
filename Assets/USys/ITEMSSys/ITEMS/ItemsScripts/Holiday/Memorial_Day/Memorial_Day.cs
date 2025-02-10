@@ -6,7 +6,7 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsS
 	public class Memorial_Day_ITAssets : MonoBehaviour
 	{
 		private HDA_ULoader holidayLoader;
-		public static void LoadMemorial_DayITHAssets()
+		public void LoadMemorial_DayITHAssets()
 		{
 			//Load Memorial Day Item Assets
 			HDA_ULoader.InitializeHolidayAsset("MemorialDayAssetKey"); // Load the holiday asset.

@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Gard_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Gardevoir
 {
-    public void Load_Gard_familyScene()
+    public class Gard_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Gard_Family");
+        public void Load_Gard_familyScene()
+        {
+            SceneManager.LoadScene("Gard_Family");
+        }
     }
 }

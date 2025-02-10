@@ -1,12 +1,21 @@
+using project_pkdsim.Assets.USys.MoneySys.PriceSys.ChangePrices.I;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.HDSys.ULoader.Holidays.AssetsSorter.Thanksgiving
 {
-	public class Thanksgiving_IAssets : MonoBehaviour
+	public class Thanksgiving_IAssetsLoader : MonoBehaviour
 	{
-		public static void LoadThanksgivingHAssets()
+		// private ChangePricesI ChangePrices;
+		public void loadThanksgivingHAssetsLoader()
 		{
+			// Load Thanksgiving Assets
+		}
 
+		public void LoadThanksgivingSales()
+		{
+			// Load Thanksgiving Sales
+
+			// ChangePrices.LoadThanksgivingPrices();
 		}
 	}
 }

@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class H_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Hatterene
 {
-    public void Load_H_FamilyScene()
+    public class H_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("H_Family");
+        public void Load_H_FamilyScene()
+        {
+            SceneManager.LoadScene("H_Family");
+        }
     }
 }
-

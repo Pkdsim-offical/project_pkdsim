@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Ve_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Vespiquen
 {
-    public void Load_Ve_FamilyScene()
+    public class Ve_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Ve_Family");
+        public void Load_Ve_FamilyScene()
+        {
+            SceneManager.LoadScene("Ve_Family");
+        }
     }
 }

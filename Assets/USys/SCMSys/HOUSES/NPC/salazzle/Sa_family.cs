@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Sa_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Salazzle
 {
-    public void Load_Sa_FamilyScene()
+    public class Sa_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Sa_Family");
+        public void Load_Sa_FamilyScene()
+        {
+            SceneManager.LoadScene("Sa_Family");
+        }
     }
 }

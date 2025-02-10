@@ -6,9 +6,10 @@ namespace project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts.Holiday.AssetsS
 	public class Presidents_Day_ITAssets : MonoBehaviour
 	{
 		private HDA_ULoader holidayLoader;
-		public static void LoadPresidents_DayITHAssets()
+		public void LoadPresidents_DayITHAssets()
 		{
-
+			//Load Presidents Day Item Assets
+			HDA_ULoader.InitializeHolidayAsset("Presidents_Day_AssetKey");
 		}
 	}
 }

@@ -1,12 +1,21 @@
+using project_pkdsim.Assets.USys.MoneySys.PriceSys.ChangePrices.I;
 using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.HDSys.ULoader.Holidays.AssetsSorter.MartinLutherKing_Day
 {
-	public class MartinLutherKing_Day_IAssets : MonoBehaviour
+	public class MartinLutherKing_Day_IAssetsLoader : MonoBehaviour
 	{
-		public static void LoadMartinLutherKingDayHAssets()
+		// private ChangePricesI ChangePrices;
+		public void LoadMartinLutherKingDayHAssets()
 		{
+			// Load Martin Luther King Day
+		}
 
+		public void LoadMartinLutherKing_DaySales()
+		{
+			//Load Martin Luther King Day Sales
+
+			// ChangePrices.LoadMartinLutherKingDayPrices();
 		}
 	}
 }

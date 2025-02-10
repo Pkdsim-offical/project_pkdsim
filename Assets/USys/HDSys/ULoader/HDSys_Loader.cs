@@ -8,13 +8,20 @@ namespace project_pkdsim.Assets.USys.HDSys.ULoader
 	{
 		private HDA_ULoader HDAssetsSys_loader;
 		private HDH_ULoader HDHolidaysSys_loader;
-
-		protected void HDA_Loader()
+		public void HDSys_LoaderI()
 		{
+			HDA_Loader();
+			HDH_Loader();
+		}
+
+		private void HDA_Loader()
+		{
+			var HDA_ULoader = new HDA_ULoader();
 			HDA_ULoader.InitializeHolidayAsset();
 		}
-		protected void HDH_Loader()
+		private void HDH_Loader()
 		{
+			var HDH_ULoader = new HDH_ULoader();
 			HDH_ULoader.InitializeHolidaysDatabase();
 		}
 	}

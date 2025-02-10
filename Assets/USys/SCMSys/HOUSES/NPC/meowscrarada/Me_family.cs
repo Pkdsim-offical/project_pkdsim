@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Me_Family : MonoBehaviour
+namespace project_pkdsim.Assets.USys.SCMSys.HOUSES.NPC.Meowscarada
 {
-    public void Load_Me_FamilyScene()
+    public class Me_Family : MonoBehaviour
     {
-        SceneManager.LoadScene("Me_Family");
+        public void Load_Me_FamilyScene()
+        {
+            SceneManager.LoadScene("Me_Family");
+        }
     }
 }

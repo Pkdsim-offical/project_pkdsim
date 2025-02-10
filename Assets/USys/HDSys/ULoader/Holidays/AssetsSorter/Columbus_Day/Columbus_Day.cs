@@ -1,13 +1,21 @@
-
-using project_pkdsim.Assets.USys.HDSys.ULoader.Holidays.I.AssetsSorterI;
+using project_pkdsim.Assets.USys.MoneySys.PriceSys.ChangePrices.I;
+using UnityEngine;
 
 namespace project_pkdsim.Assets.USys.HDSys.ULoader.Holidays.AssetsSorter.Columbus_Day
 {
-	public class Columbus_Day_IAssets : IAssetSorter
+	public class Columbus_Day_IAssetsLoader : MonoBehaviour
 	{
-		public static void LoadColumbusHAssets()
+		// private ChangePricesI ChangePrices;
+		public void loadColumbusHAssets()
 		{
-
+			// Load Columbus Day Assets
 		}
+
+		public void LoadColumbus_DaySales()
+		{
+			// Load Columbus Day Sales
+			
+			// ChangePrices.LoadColumbus_DayPrices();
+		}		
 	}
 }
