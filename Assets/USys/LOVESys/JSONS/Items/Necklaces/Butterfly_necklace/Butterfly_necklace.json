@@ -1,0 +1,95 @@
+{
+    "name": "Butterfly_necklace",
+    "description": "Butterfly_necklace: a necklace that is beloved by Bug types especially by ",
+    "type": "Item",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties": 
+    [
+        {
+            "name": "Butterfly_necklace",
+            "description": "Butterfly_necklace",
+            "value": "0",
+            "SYS_properties":
+            {
+                "Love_Effect_base":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_Foe":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_enemy":
+                {
+                    "positive": "+2",
+                    "negative": "-2",
+                    "neutral": "0"
+                },
+                "Love_Effect_stranger":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_acquaintance":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_Fiend":
+                {
+                    "positive": "+2",
+                    "negative": "-2",
+                    "neutral": "0"
+                },
+                "Love_Effect_BestFriend":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_Lover":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_Partner":
+                {
+                    "positive": "+5",
+                    "negative": "-5",
+                    "neutral": "0"
+                },
+                "Love_Elemental_Effect":
+                {
+                    "SuperEffective":
+                    {
+                        "Bug":"+3"
+                    },
+                    "Effective":
+                    {
+                        "Dark": "0"
+                    },
+                    "Not_Very_Effective":
+                    {
+                        "Dragon":"-3"
+                    },
+                    "Love_Immunity_Effect":
+                    {
+                        "None":"0"
+                    },
+                    "Love_Special_Effect":
+                    {
+                        "unregistered": "+5"
+                    }
+                }
+            }
+        }
+    ]
+}

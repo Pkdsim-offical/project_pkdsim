@@ -1,0 +1,108 @@
+{
+    "name": "bolt_necklace",
+    "description": "bolt_necklace: a necklace that is beloved by Electric types especially by Jolteon",
+    "type": "Item",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    [
+        {
+            "name": "bolt_necklace",
+            "description": "bolt_necklace",
+            "value": "0",
+            "SYS_properties":
+            {
+                "Love_Effect_base":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_Foe":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_enemy":
+                {
+                    "positive": "+2",
+                    "negative": "-2",
+                    "neutral": "0"
+                },
+                "Love_Effect_stranger":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_acquaintance":
+                {
+                    "positive": "+1",
+                    "negative": "-1",
+                    "neutral": "0"
+                },
+                "Love_Effect_Fiend":
+                {
+                    "positive": "+2",
+                    "negative": "-2",
+                    "neutral": "0"
+                },
+                "Love_Effect_BestFriend":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_Lover":
+                {
+                    "positive": "+3",
+                    "negative": "-3",
+                    "neutral": "0"
+                },
+                "Love_Effect_Partner":
+                {
+                    "positive": "+5",
+                    "negative": "-5",
+                    "neutral": "0"
+                },
+                "Love_Elemental_Effect":
+                {
+                    "SuperEffective":
+                    {
+                        "Water":"+3",
+                        "Flying":"+3"
+                    },
+                    "Effective":
+                    {
+                        "Rock": "0",
+                        "Ice": "0",
+                        "Fire": "0",
+                        "Dark": "0",
+                        "Electric": "0",
+                        "Fairy": "0",
+                        "Fighting": "0",
+                        "Bug": "0",
+                        "Ghost": "0",
+                        "Normal": "0",
+                        "Poison": "0",
+                        "Psychic":  "0"
+                    },
+                    "Not_Very_Effective":
+                    {
+                        "Dragon":"-3",
+                        "Grass":"-3"
+                    },
+                    "Love_Immunity_Effect":
+                    {
+                        "Ground":"-5"
+                    },
+                    "Love_Special_Effect":
+                    {
+                        "Jolteon": "+5"
+                    }
+                }
+            }
+        }
+    ]
+}

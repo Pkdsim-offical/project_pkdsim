@@ -1,0 +1,59 @@
+{
+    "name": "Beedrill_Sys",
+    "description": "Beedrill_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Beedrill_Love":
+        {
+            "base":
+            {
+                "base": "Beedrill_Love_base",
+                "description": "Beedrill_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Beedrill_Love_Foe",
+                "description": "Beedrill_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Beedrill_Love_Enemy",
+                "description": "Beedrill_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Beedrill_Love_Stranger",
+                "description": "Beedrill_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Beedrill_Love_Aqaintance",
+                "description": "Beedrill_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Beedrill_Love_Friend",
+                "description": "Beedrill_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Beedrill_Love_BestFriend",
+                "description": "Beedrill_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Beedrill_Love_Lover",
+                "description": "Beedrill_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Beedrill_Love_Partner",
+                "description": "Beedrill_Love_Partner"
+            }
+        }
+    }
+}

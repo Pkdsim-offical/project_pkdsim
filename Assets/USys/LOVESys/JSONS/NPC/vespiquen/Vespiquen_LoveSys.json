@@ -1,0 +1,58 @@
+{
+    "name": "Vespiquen_Sys",
+    "description": "Vespiquen_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Vespiquen_Love":
+        {
+            "base":
+            {
+                "base": "Vespiquen_Love_base",
+                "description": "Vespiquen_Love_base"
+            },
+            "Foe":
+            {
+                "name": "Vespiquen_Love_Foe",
+                "description": "Vespiquen_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Vespiquen_Love_Enemy",
+                "description": "Vespiquen_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Vespiquen_Love_Stranger",
+                "description": "Vespiquen_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Vespiquen_Love_Aqaintance",
+                "description": "Vespiquen_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Vespiquen_Love_Friend",
+                "description": "Vespiquen_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Vespiquen_Love_BestFriend",
+                "description": "Vespiquen_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Vespiquen_Love_Lover",
+                "description": "Vespiquen_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Vespiquen_Love_Partner",
+                "description": "Vespiquen_Love_Partner"
+            }
+        }
+    }
+}

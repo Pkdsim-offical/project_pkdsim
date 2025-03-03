@@ -1,0 +1,59 @@
+{
+    "name": "Espeon_LoveSys",
+    "description": "Espeon_LoveSys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Espeon_Love":
+        {
+            "base":
+            {
+                "base": "Espeon_Love_base",
+                "description": "Espeon_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Espeon_Love_Foe",
+                "description": "Espeon_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Espeon_Love_Enemy",
+                "description": "Espeon_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Espeon_Love_Stranger",
+                "description": "Espeon_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Espeon_Love_Aqaintance",
+                "description": "Espeon_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Espeon_Love_Friend",
+                "description": "Espeon_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Espeon_Love_BestFriend",
+                "description": "Espeon_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Espeon_Love_Lover",
+                "description": "Espeon_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Espeon_Love_Partner",
+                "description": "Espeon_Love_Partner"
+            }
+        }
+    }
+}

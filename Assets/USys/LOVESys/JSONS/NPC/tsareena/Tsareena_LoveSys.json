@@ -1,0 +1,58 @@
+{
+    "name": "Tsareena_Sys",
+    "description": "Tsareena_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Tsareena_Love":
+        {
+            "base":
+            {
+                "base": "Tsareena_Love_base",
+                "description": "Tsareena_Love_base"
+            },
+            "Foe":
+            {
+                "name": "Tsareena_Love_Foe",
+                "description": "Tsareena_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Tsareena_Love_Enemy",
+                "description": "Tsareena_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Tsareena_Love_Stranger",
+                "description": "Tsareena_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Tsareena_Love_Aqaintance",
+                "description": "Tsareena_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Tsareena_Love_Friend",
+                "description": "Tsareena_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Tsareena_Love_BestFriend",
+                "description": "Tsareena_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Tsareena_Love_Lover",
+                "description": "Tsareena_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Tsareena_Love_Partner",
+                "description": "Tsareena_Love_Partner"
+            }
+        }
+    }
+}

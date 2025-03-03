@@ -1,0 +1,59 @@
+{
+    "name": "Leafeon_Sys",
+    "description": "Leafeon_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Leafeon_Love":
+        {
+            "base":
+            {
+                "base": "Leafeon_Love_base",
+                "description": "Leafeon_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Leafeon_Love_Foe",
+                "description": "Leafeon_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Leafeon_Love_Enemy",
+                "description": "Leafeon_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Leafeon_Love_Stranger",
+                "description": "Leafeon_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Leafeon_Love_Aqaintance",
+                "description": "Leafeon_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Leafeon_Love_Friend",
+                "description": "Leafeon_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Leafeon_Love_BestFriend",
+                "description": "Leafeon_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Leafeon_Love_Lover",
+                "description": "Leafeon_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Leafeon_Love_Partner",
+                "description": "Leafeon_Love_Partner"
+            }
+        }
+    }
+}
