@@ -1,14 +1,16 @@
-using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
-
-public class beedrill : Pkpedia_database
+using project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database;
+namespace project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database.I_Data.Beedrill
 {
-    // Update is called once per frame
-    private void Update()
+    public class beedrill : Pkpedia_database
     {
-        Pkpedia_link();
-    }
-    protected void Pkpedia_link()
-    {
-        Beedrill();
+        // Update is called once per frame
+        private void Update()
+        {
+            Pkpedia_link();
+        }
+        protected void Pkpedia_link()
+        {
+            Beedrill();
+        }
     }
 }

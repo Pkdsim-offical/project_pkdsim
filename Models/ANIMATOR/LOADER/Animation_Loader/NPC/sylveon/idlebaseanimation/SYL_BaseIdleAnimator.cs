@@ -1,10 +1,10 @@
-using project_pkdsim.Assets.Models.ANIMATOR.NPC.Sylveon.idlebaseanimation.IdleSitting;
-using project_pkdsim.Assets.Models.ANIMATOR.NPC.Sylveon.idlebaseanimation.IdleStanding;
+using project_pkdsim.Assets.Models.ANIMATOR.Loader.Animation_Loader.NPC.Sylveon.idlebaseanimation.IdleSitting;
+using project_pkdsim.Assets.Models.ANIMATOR.Loader.Animation_Loader.NPC.Sylveon.idlebaseanimation.IdleStanding;
 using UnityEngine;
 
-namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.Sylveon.idlebaseanimation
+namespace project_pkdsim.Assets.Models.ANIMATOR.Loader.Animation_Loader.NPC.Sylveon.idlebaseanimation
 {
-	public class SYL_BaseIdleAnimator : MonoBehaviour 
+	public class Sylveon_IdleAnimatorController : MonoBehaviour 
 	{
 		private SYL_IdleStanding SYL_idlestanding;
 		

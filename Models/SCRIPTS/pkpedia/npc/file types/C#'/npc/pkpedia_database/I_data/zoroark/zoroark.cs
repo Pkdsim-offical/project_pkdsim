@@ -1,15 +1,17 @@
-using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
+using project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database;
 
-public class zoroark : Pkpedia_database
+namespace project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database.I_Data.Zoroark
 {
-    // Update is called once per frame
-    private void Update()
+    public class zoroark : Pkpedia_database
     {
-        Pkpedia_link();
-    }
-    protected void Pkpedia_link()
-    {
-        Zoroark();
+        // Update is called once per frame
+        private void Update()
+        {
+            Pkpedia_link();
+        }
+        protected void Pkpedia_link()
+        {
+            Zoroark();
+        }
     }
 }
-

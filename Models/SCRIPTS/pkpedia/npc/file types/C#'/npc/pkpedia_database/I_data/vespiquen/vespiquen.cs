@@ -1,13 +1,16 @@
-using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
+using project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database;
 
-public class vespiquen : Pkpedia_database
+namespace project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database.I_Data.Vespiquen
 {
-    private void Update()
+    public class vespiquen : Pkpedia_database
     {
-        Pkpedia_link();
-    }
-    protected void Pkpedia_link()
-    {
-        Vespiquen();
+        private void Update()
+        {
+            Pkpedia_link();
+        }
+        protected void Pkpedia_link()
+        {
+            Vespiquen();
+        }
     }
 }

@@ -1,14 +1,17 @@
-using project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database;
+using project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database;
 
-public class espeon : Pkpedia_database
+namespace project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database.I_Data.Absol
 {
-    // Update is called once per frame
-    private void Update()
+    public class espeon : Pkpedia_database
     {
-        Pkpedia_link();
-    }
-    protected void Pkpedia_link()
-    {
-        Espeon();
+        // Update is called once per frame
+        private void Update()
+        {
+            Pkpedia_link();
+        }
+        protected void Pkpedia_link()
+        {
+            Espeon();
+        }
     }
 }

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace project_pkdsim.Assets.Models.pkpedia.npc.pkpedia_database
+namespace project_pkdsim.Assets.Models.pkpedia.Npc.pkpedia_database
 {
     public class Pkpedia_database : MonoBehaviour
     {
