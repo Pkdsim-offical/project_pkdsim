@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace project_pkdsim.Assets.USys.TPSys.UHousesTeleporterSys.TeleportBase
+namespace project_pkdsim.Assets.USys.UTPSys.UHousesTeleporterSys.TeleportBase
 {
     public class TeleportSystem : MonoBehaviour
     {

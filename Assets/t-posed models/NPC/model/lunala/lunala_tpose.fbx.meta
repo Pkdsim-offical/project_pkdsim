@@ -3,7 +3,42 @@ guid: 09837fa2a4421a44f9d959f060d084af
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0874_00_BodyA1
+    second: {fileID: 2100000, guid: 43a03676b560ece4d92df9ec408bcbec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0874_00_BodyA2
+    second: {fileID: 2100000, guid: 0f95cbdfc23525b4bb392dab7ff68871, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0874_00_BodyB00
+    second: {fileID: 2100000, guid: d7c5f276d0190cd49987c17fa0be1e1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0874_00_BodyD00
+    second: {fileID: 2100000, guid: b962ac94cd3c64c4a9f9e0c69e692e86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0874_00_BodyD01
+    second: {fileID: 2100000, guid: b46d499bafd07714f93081a205dfeb8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0874_00_Eye1
+    second: {fileID: 2100000, guid: a9ecc2a4ce1384e4db68bb1f3f1a6b15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0874_00_Mouth1
+    second: {fileID: 2100000, guid: b49bbdd48bdd9b64cb7ba2ff44de4749, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

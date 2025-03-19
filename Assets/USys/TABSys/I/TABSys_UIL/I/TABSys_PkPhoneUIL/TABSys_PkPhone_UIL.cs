@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace project_pkdsim.Assets.USys.TABSys.TABSys_UIL.I.PkPhone
+namespace project_pkdsim.Assets.USys.TabSys.TABSys_UIL.I.PkPhone
 {
     // PkPhone UI Listener 
     public class TABSys_PkphoneUIL : MonoBehaviour
