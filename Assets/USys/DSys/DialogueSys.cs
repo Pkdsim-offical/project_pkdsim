@@ -1,8 +1,8 @@
-using project_pkdsim.Assets.USys.DSys.I;
+using project_pkdsim.Assets.USys.DialogueSys.I;
 
-namespace project_pkdsim.Assets.USys.DSys
+namespace project_pkdsim.Assets.USys.DialogueSys
 {
-	public class DialogueSys : DialogueSysI
+	public class DialSys : DialogueSysI
 	{
 		public void DialogueSysI() 
 		{

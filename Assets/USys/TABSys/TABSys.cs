@@ -1,9 +1,9 @@
 using UnityEngine;
-using project_pkdsim.Assets.USys.TABSys.I;
+using project_pkdsim.Assets.USys.TabSys.I;
 
-namespace project_pkdsim.Assets.USys.TABSys
+namespace project_pkdsim.Assets.USys.TabSys
 {
-    public class TABLoaderSys : MonoBehaviour
+    public class TABSys : MonoBehaviour
     {
         private TABSysI TabSys;
         public void TABSysI()

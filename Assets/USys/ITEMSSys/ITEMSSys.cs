@@ -1,18 +1,9 @@
-using project_pkdsim.Assets.USys.ITEMSSys.ITEMS.ItemsScripts;
+using project_pkdsim.Assets.USys.USystemsSys.I;
 
-namespace project_pkdsim.Assets.USys.ITEMSSys
+namespace project_pkdsim.Assets.USys.USystemsSys
 {
-	public class ITEMSDatabaseSys : ITEMS_Main
+	public class ITEMSys : ITEMSDatabaseSys
 	{
-		protected void Get_Items(string value)
-		{
-			ITEM_Inventory();
-			ITEM_Holiday();
-			ITEM_GIFTS(value);
-		}
-		public void ITEMSSysI() 
-		{
 
-		}
 	}
 }
