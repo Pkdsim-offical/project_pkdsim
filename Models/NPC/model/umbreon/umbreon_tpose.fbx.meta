@@ -3,7 +3,22 @@ guid: 6eff0d21a58331d4e923f70186d353cd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyeball_r
+    second: {fileID: 2100000, guid: ca487fc83c546a948a5347d7652fa343, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0197_00_00_body_a_alb
+    second: {fileID: 2100000, guid: e74d0ecd681360544ab2a6677aa07a4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pm0197_00_00_body_b_alb
+    second: {fileID: 2100000, guid: c69d8b4b2bae5064488c9ee90e6cdb23, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
