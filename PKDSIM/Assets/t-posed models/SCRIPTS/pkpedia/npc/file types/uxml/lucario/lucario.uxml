@@ -1,0 +1,3 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement template="umbreon" name="lucario" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uss/npc/lucario/lucario.uss?fileID=7433441132597879392&amp;guid=15102bd8a684998479f89b4be1a1331c&amp;type=3#lucario" />
+</engine:UXML>

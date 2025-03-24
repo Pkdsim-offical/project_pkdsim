@@ -1,0 +1,58 @@
+{
+    "name": "Vaporeon_Sys",
+    "description": "Vaporeon_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Vaporeon_Love":
+        {
+            "base":
+            {
+                "base": "Vaporeon_Love_base",
+                "description": "Vaporeon_Love_base"
+            },
+            "Foe":
+            {
+                "name": "Vaporeon_Love_Foe",
+                "description": "Vaporeon_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Vaporeon_Love_Enemy",
+                "description": "Vaporeon_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Vaporeon_Love_Stranger",
+                "description": "Vaporeon_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Vaporeon_Love_Aqaintance",
+                "description": "Vaporeon_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Vaporeon_Love_Friend",
+                "description": "Vaporeon_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Vaporeon_Love_BestFriend",
+                "description": "Vaporeon_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Vaporeon_Love_Lover",
+                "description": "Vaporeon_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Vaporeon_Love_Partner",
+                "description": "Vaporeon_Love_Partner"
+            }
+        }
+    }
+}

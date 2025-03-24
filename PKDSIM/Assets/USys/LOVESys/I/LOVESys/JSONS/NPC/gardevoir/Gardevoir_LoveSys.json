@@ -1,0 +1,59 @@
+{
+    "name": "Gardevoir_Sys",
+    "description": "Gardevoir_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Gardevoir_Love":
+        {
+            "base":
+            {
+                "base": "Gardevoir_Love_base",
+                "description": "Gardevoir_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Gardevoir_Love_Foe",
+                "description": "Gardevoir_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Gardevoir_Love_Enemy",
+                "description": "Gardevoir_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Gardevoir_Love_Stranger",
+                "description": "Gardevoir_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Gardevoir_Love_Aqaintance",
+                "description": "Gardevoir_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Gardevoir_Love_Friend",
+                "description": "Gardevoir_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Gardevoir_Love_BestFriend",
+                "description": "Gardevoir_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Gardevoir_Love_Lover",
+                "description": "Gardevoir_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Gardevoir_Love_Partner",
+                "description": "Gardevoir_Love_Partner"
+            }
+        }
+    }
+}

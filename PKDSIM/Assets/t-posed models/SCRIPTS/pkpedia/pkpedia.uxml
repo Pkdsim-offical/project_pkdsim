@@ -1,0 +1,64 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="zoroark" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/zoroark/zoroark.uxml?fileID=9197481963319205126&amp;guid=76a46fe3e3455164daf64eba2d9c0abe&amp;type=3#zoroark" />
+    <ui:Template name="vespiquen" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/vespiquen/vespiquen.uxml?fileID=9197481963319205126&amp;guid=df571614fff4b6947924bae16f634373&amp;type=3#vespiquen" />
+    <ui:Template name="vaporeon" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/vaporeon/vaporeon.uxml?fileID=9197481963319205126&amp;guid=6877cc9352cc6424eab3a92ba1953f9c&amp;type=3#vaporeon" />
+    <ui:Template name="umbreon" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/umbreon/umbreon.uxml?fileID=9197481963319205126&amp;guid=04d3296f76539af4aaeffad145451d3d&amp;type=3#umbreon" />
+    <ui:Template name="tsareena" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/tsareena/tsareena.uxml?fileID=9197481963319205126&amp;guid=e409b63858afd62418a80dbad721693e&amp;type=3#tsareena" />
+    <ui:Template name="sylveon" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/sylveon/sylveon.uxml?fileID=9197481963319205126&amp;guid=a3bdd6ef15975cc49b837a35cb180a62&amp;type=3#sylveon" />
+    <ui:Template name="salazzle" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/salazzle/salazzle.uxml?fileID=9197481963319205126&amp;guid=a4aeffe9a1133b047801384fd8f9e70c&amp;type=3#salazzle" />
+    <ui:Template name="primarina" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/primarina/primarina.uxml?fileID=9197481963319205126&amp;guid=b76f642204d560e4098893049056f74f&amp;type=3#primarina" />
+    <ui:Template name="pheromosa" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/pheromosa/pheromosa.uxml?fileID=9197481963319205126&amp;guid=73912594b8cfd4847822acb123344937&amp;type=3#pheromosa" />
+    <ui:Template name="noivern" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/noivern/noivern.uxml?fileID=9197481963319205126&amp;guid=a5e157f3bdd2d834e8bac726e65224d6&amp;type=3#noivern" />
+    <ui:Template name="meowscarada" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/meowscrarada/meowscarada.uxml?fileID=9197481963319205126&amp;guid=bfbf2c2e0aa671e438c5cbebe0f688ad&amp;type=3#meowscarada" />
+    <ui:Template name="lunala" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/lunala/lunala.uxml?fileID=9197481963319205126&amp;guid=bc616f4721bdd7e4dacf971d52aa0e8d&amp;type=3#lunala" />
+    <ui:Template name="lucario" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/lucario/lucario.uxml?fileID=9197481963319205126&amp;guid=7ac2d16c042729947b4932afcd90ff9d&amp;type=3#lucario" />
+    <ui:Template name="lopunny" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/lopunny/lopunny.uxml?fileID=9197481963319205126&amp;guid=12dd9f83ab316d0409e54986078c9ad6&amp;type=3#lopunny" />
+    <ui:Template name="leafeon" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/leafeon/leafeon.uxml?fileID=9197481963319205126&amp;guid=6f389cf3051694641bb51cbd61598a30&amp;type=3#leafeon" />
+    <ui:Template name="jolteon" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/jolteon/jolteon.uxml?fileID=9197481963319205126&amp;guid=53a60407a9d06c54e8fe4767cbd2cc07&amp;type=3#jolteon" />
+    <ui:Template name="hatterene" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/hatterene/hatterene.uxml?fileID=9197481963319205126&amp;guid=9a477d123a4eec94d9c3881dd4ff9d76&amp;type=3#hatterene" />
+    <ui:Template name="glaceon" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/glaceon/glaceon.uxml?fileID=9197481963319205126&amp;guid=55b1b50c253c6be41acf5d7778892c07&amp;type=3#glaceon" />
+    <ui:Template name="gardevoir" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/gardevoir/gardevoir.uxml?fileID=9197481963319205126&amp;guid=955ae3ea201e67e4c824ac3f1c895037&amp;type=3#gardevoir" />
+    <ui:Template name="garchomp" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/garchomp/garchomp.uxml?fileID=9197481963319205126&amp;guid=105e44cbe1c8fe645ae8d89d426c3876&amp;type=3#garchomp" />
+    <ui:Template name="frostlass" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/frostlass/frostlass.uxml?fileID=9197481963319205126&amp;guid=85750e801cb3248468168bbe5826a31c&amp;type=3#frostlass" />
+    <ui:Template name="flareon" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/flareon/flareon.uxml?fileID=9197481963319205126&amp;guid=640cd16f4bcf83c43b774a4703676d84&amp;type=3#flareon" />
+    <ui:Template name="espeon" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/espeon/espeon.uxml?fileID=9197481963319205126&amp;guid=6b308333a7b4a674c8982ffeb02bce46&amp;type=3#espeon" />
+    <ui:Template name="dragapult" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/dragapult/dragapult.uxml?fileID=9197481963319205126&amp;guid=56a4abaa27817054b91f676bef57e52c&amp;type=3#dragapult" />
+    <ui:Template name="delphox" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/delphox/delphox.uxml?fileID=9197481963319205126&amp;guid=ffa96288341405649892eea089d707ef&amp;type=3#delphox" />
+    <ui:Template name="cinderace" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/cinderace/cinderace.uxml?fileID=9197481963319205126&amp;guid=52b8b531cb7f6ea47b81706e7121bdb8&amp;type=3#cinderace" />
+    <ui:Template name="braixen" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/braixen/braixen.uxml?fileID=9197481963319205126&amp;guid=98a7eae9b21d2f745a60945b4dec88bd&amp;type=3#braixen" />
+    <ui:Template name="blaziken" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/blaziken/blaziken.uxml?fileID=9197481963319205126&amp;guid=ddea5b6bb6dfb674293258cb629e7311&amp;type=3#blaziken" />
+    <ui:Template name="beedrilll" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/beedrill/beedrilll.uxml?fileID=9197481963319205126&amp;guid=dfe4f3a1de2e36d40a710c8710281c9b&amp;type=3#beedrilll" />
+    <ui:Template name="absol" src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/absol/absol.uxml?fileID=9197481963319205126&amp;guid=045d7928ee4e3154dbd07d58b8704939&amp;type=3#absol" />
+    <Style src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uss/npc/absol/absol.uss?fileID=7433441132597879392&amp;guid=40148c53100c65a4698805588afab7ac&amp;type=3#absol" />
+    <Style src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uss/npc/beedrill/beedrill.uss?fileID=7433441132597879392&amp;guid=9f42ef71d282cd94684b06f2d0376f16&amp;type=3#beedrill" />
+    <ui:Instance template="zoroark" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/zoroark/zoroark.uxml?fileID=9197481963319205126&amp;guid=76a46fe3e3455164daf64eba2d9c0abe&amp;type=3#zoroark" />
+    <ui:Instance template="vespiquen" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/vespiquen/vespiquen.uxml?fileID=9197481963319205126&amp;guid=df571614fff4b6947924bae16f634373&amp;type=3#vespiquen" />
+    <ui:Instance template="vaporeon" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/vaporeon/vaporeon.uxml?fileID=9197481963319205126&amp;guid=6877cc9352cc6424eab3a92ba1953f9c&amp;type=3#vaporeon" />
+    <ui:Instance template="umbreon" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/umbreon/umbreon.uxml?fileID=9197481963319205126&amp;guid=04d3296f76539af4aaeffad145451d3d&amp;type=3#umbreon" />
+    <ui:Instance template="tsareena" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/tsareena/tsareena.uxml?fileID=9197481963319205126&amp;guid=e409b63858afd62418a80dbad721693e&amp;type=3#tsareena" />
+    <ui:Instance template="sylveon" />
+    <ui:Instance template="salazzle" />
+    <ui:Instance template="primarina" />
+    <ui:Instance template="pheromosa" />
+    <ui:Instance template="noivern" />
+    <ui:Instance template="meowscarada" />
+    <ui:Instance template="lunala" />
+    <ui:Instance template="lucario" />
+    <ui:Instance template="lopunny" />
+    <ui:Instance template="leafeon" />
+    <ui:Instance template="jolteon" />
+    <ui:Instance template="hatterene" />
+    <ui:Instance template="glaceon" />
+    <ui:Instance template="gardevoir" />
+    <ui:Instance template="garchomp" />
+    <ui:Instance template="frostlass" />
+    <ui:Instance template="flareon" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/flareon/flareon.uxml?fileID=9197481963319205126&amp;guid=640cd16f4bcf83c43b774a4703676d84&amp;type=3#flareon" />
+    <ui:Instance template="espeon" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/espeon/espeon.uxml?fileID=9197481963319205126&amp;guid=6b308333a7b4a674c8982ffeb02bce46&amp;type=3#espeon" />
+    <ui:Instance template="dragapult" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/dragapult/dragapult.uxml?fileID=9197481963319205126&amp;guid=56a4abaa27817054b91f676bef57e52c&amp;type=3#dragapult" />
+    <ui:Instance template="delphox" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/delphox/delphox.uxml?fileID=9197481963319205126&amp;guid=ffa96288341405649892eea089d707ef&amp;type=3#delphox" />
+    <ui:Instance template="cinderace" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/cinderace/cinderace.uxml?fileID=9197481963319205126&amp;guid=52b8b531cb7f6ea47b81706e7121bdb8&amp;type=3#cinderace" />
+    <ui:Instance template="braixen" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/braixen/braixen.uxml?fileID=9197481963319205126&amp;guid=98a7eae9b21d2f745a60945b4dec88bd&amp;type=3#braixen" />
+    <ui:Instance template="blaziken" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/blaziken/blaziken.uxml?fileID=9197481963319205126&amp;guid=ddea5b6bb6dfb674293258cb629e7311&amp;type=3#blaziken" />
+    <ui:Instance template="beedrilll" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/beedrill/beedrilll.uxml?fileID=9197481963319205126&amp;guid=dfe4f3a1de2e36d40a710c8710281c9b&amp;type=3#beedrilll" />
+    <ui:Instance template="absol" data-source="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/npc/file%20types/uxml/absol/absol.uxml?fileID=9197481963319205126&amp;guid=045d7928ee4e3154dbd07d58b8704939&amp;type=3#absol" />
+</ui:UXML>

@@ -1,0 +1,59 @@
+{
+    "name": "Flareon_LoveSys",
+    "description": "Flareon_LoveSys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Flareon_Love":
+        {
+            "base":
+            {
+                "base": "Flareon_Love_base",
+                "description": "Flareon_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Flareon_Love_Foe",
+                "description": "Flareon_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Flareon_Love_Enemy",
+                "description": "Flareon_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Flareon_Love_Stranger",
+                "description": "Flareon_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Flareon_Love_Aqaintance",
+                "description": "Flareon_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Flareon_Love_Friend",
+                "description": "Flareon_Love_Friend"
+            },
+            "EnemyFriend":
+            {
+                "name": "Flareon_Love_EnemyFriend",
+                "description": "Flareon_Love_EnemyFriend"
+            },
+            "Lover":
+            {
+                "name": "Flareon_Love_Lover",
+                "description": "Flareon_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Flareon_Love_Partner",
+                "description": "Flareon_Love_Partner"
+            }
+        }
+    }
+}

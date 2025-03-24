@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pkpedia_open
+  m_Controller: {fileID: 9100000, guid: b1abb062e6151734b9adceef359587c7, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -623603649343465320, guid: 8f89cd4ec8594c342a846217ea787d56, type: 3}
+    m_OverrideClip: {fileID: 5862543501114407046, guid: 5dfdf30cdb2632f4e9f5ed8fc5cdcef2, type: 3}
+  - m_OriginalClip: {fileID: -623603649343465320, guid: 3b7bda4dc6e2276478e9e3bca550595a, type: 3}
+    m_OverrideClip: {fileID: 5862543501114407046, guid: abd84dd726b9ea74dbd1f4a800068e00, type: 3}

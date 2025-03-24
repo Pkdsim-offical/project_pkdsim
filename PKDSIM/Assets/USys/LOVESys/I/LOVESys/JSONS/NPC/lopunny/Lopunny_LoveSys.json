@@ -1,0 +1,59 @@
+{
+    "name": "Lopunny_Sys",
+    "description": "Lopunny_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Lopunny_Love":
+        {
+            "base":
+            {
+                "base": "Lopunny_Love_base",
+                "description": "Lopunny_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Lopunny_Love_Foe",
+                "description": "Lopunny_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Lopunny_Love_Enemy",
+                "description": "Lopunny_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Lopunny_Love_Stranger",
+                "description": "Lopunny_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Lopunny_Love_Aqaintance",
+                "description": "Lopunny_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Lopunny_Love_Friend",
+                "description": "Lopunny_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Lopunny_Love_BestFriend",
+                "description": "Lopunny_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Lopunny_Love_Lover",
+                "description": "Lopunny_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Lopunny_Love_Partner",
+                "description": "Lopunny_Love_Partner"
+            }
+        }
+    }
+}

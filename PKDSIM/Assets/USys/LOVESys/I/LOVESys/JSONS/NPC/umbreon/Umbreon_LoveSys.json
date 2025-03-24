@@ -1,0 +1,58 @@
+{
+    "name": "Umbreon_Sys",
+    "description": "Umbreon_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Umbreon_Love":
+        {
+            "base":
+            {
+                "base": "Umbreon_Love_base",
+                "description": "Umbreon_Love_base"
+            },
+            "Foe":
+            {
+                "name": "Umbreon_Love_Foe",
+                "description": "Umbreon_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Umbreon_Love_Enemy",
+                "description": "Umbreon_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Umbreon_Love_Stranger",
+                "description": "Umbreon_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Umbreon_Love_Aqaintance",
+                "description": "Umbreon_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Umbreon_Love_Friend",
+                "description": "Umbreon_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Umbreon_Love_BestFriend",
+                "description": "Umbreon_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Umbreon_Love_Lover",
+                "description": "Umbreon_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Umbreon_Love_Partner",
+                "description": "Umbreon_Love_Partner"
+            }
+        }
+    }
+}

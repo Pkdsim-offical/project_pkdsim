@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/t-posed%20models/SCRIPTS/pkpedia/file%20types/uss/background.uss?fileID=7433441132597879392&amp;guid=26a7ea18b10f12843ad50021c3fb2de9&amp;type=3#background" />
+    <engine:VisualElement name="background" style="flex-grow: 1; top: auto; width: 100%; height: 100%; max-width: 1242%; max-height: -371px; min-width: -2417%; min-height: 96%; -unity-background-image-tint-color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill; background-color: rgb(255, 255, 255);">
+        <engine:VisualElement name="background-canvasD" style="flex-grow: 1; top: auto; width: 100%; height: 100%; max-width: 1242%; max-height: -371px; min-width: -2417%; min-height: 96%; -unity-background-image-tint-color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill; background-color: rgb(255, 255, 255);" />
+    </engine:VisualElement>
+</engine:UXML>

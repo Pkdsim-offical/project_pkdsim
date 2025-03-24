@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Universal Windows Platform
+  m_EditorClassIdentifier: 
+  m_BuildTarget: 21
+  m_Subtarget: 0
+  m_PlatformId: 32e92b6f4db44fadb869cafb8184d021
+  m_PlatformBuildProfile:
+    rid: 3540462940404318210
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/project pkdsimU/project_pkdsim.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/SCHOOL/unity/school.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/player/player.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Be_family/Be_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Bl_family/Bi_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/C_family/C_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Dr_family/Dr_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Fr_family/Fr_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Garc_family/Garc_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Gard_family/Gard_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/H_family/H_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Lo_family/Lo_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Luc_family/Luc_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Luna_family/Luna_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Me_family/Me_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/No_family/No_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Ph_family/Ph_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Pr_family/Pr_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Sa_family/Sa_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Sy_family/Sy_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/T_family/T_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/UE_family/UE_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Ve_family/Ve_family.unity
+  - m_enabled: 1
+    m_path: Assets/t-posed models/HOMES/unity/npc/Z_family/Z_family.unity
+  m_ScriptingDefines: []
+  m_PlayerSettingsYaml:
+    m_Settings: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 3540462940404318210
+      type: {class: UWPPlatformSettings, ns: UnityEditor.UWP, asm: UnityEditor.UWP.Extensions}
+      data:
+        m_Development: 1
+        m_ConnectProfiler: 1
+        m_BuildWithDeepProfilingSupport: 1
+        m_AllowDebugging: 1
+        m_WaitForManagedDebugger: 1
+        m_ManagedDebuggerFixedPort: 0
+        m_ExplicitNullChecks: 0
+        m_ExplicitDivideByZeroChecks: 0
+        m_ExplicitArrayBoundsChecks: 0
+        m_CompressionType: 0
+        m_InstallInBuildFolder: 0
+        m_CopyRefences: 1
+        m_CopyPDBFiles: 1
+        m_BuildConfiguration: 1
+        m_WsaArchitecture: 
+        m_WsaUWPVisualStudioVersion: 16.11.34931.43
+        m_WsaUWPSDK: 
+        m_WsaMinUWPSDK: 
+        m_WsaUWPBuildType: 1
+        m_WsaBuildAndRunDeployTarget: 0
+        m_WindowsDevicePortalAddress: 
+        m_WindowsDevicePortalUsername: 

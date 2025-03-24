@@ -1,0 +1,59 @@
+{
+    "name": "Frostlass_Sys",
+    "description": "Frostlass_Sys",
+    "type": "LoveSys",
+    "version": "1.0.0",
+    "author": "pkdsim_official",
+    "SYS_properties":
+    {
+        "Frostlass_Love":
+        {
+            "base":
+            {
+                "base": "Frostlass_Love_base",
+                "description": "Frostlass_Love_base",
+                "value": "1"
+            },
+            "Foe":
+            {
+                "name": "Frostlass_Love_Foe",
+                "description": "Frostlass_Love_Foe"
+            },
+            "Enemy":
+            {
+                "name": "Frostlass_Love_Enemy",
+                "description": "Frostlass_Love_Enemy"
+            },
+            "Stranger":
+            {
+                "name": "Frostlass_Love_Stranger",
+                "description": "Frostlass_Love_Stranger"
+            },
+            "authoqainstance": 
+            {
+                "name": "Frostlass_Love_Aqaintance",
+                "description": "Frostlass_Love_Aqaintance"
+            },
+            "Friend":
+            {
+                "name": "Frostlass_Love_Friend",
+                "description": "Frostlass_Love_Friend"
+            },
+            "BestFriend":
+            {
+                "name": "Frostlass_Love_BestFriend",
+                "description": "Frostlass_Love_BestFriend"
+            },
+            "Lover":
+            {
+                "name": "Frostlass_Love_Lover",
+                "description": "Frostlass_Love_Lover"
+            },
+            "Partner":
+            {
+                "name": "Frostlass_Love_Partner",
+                "description": "Frostlass_Love_Partner"
+            }
+        }
+    }
+}
