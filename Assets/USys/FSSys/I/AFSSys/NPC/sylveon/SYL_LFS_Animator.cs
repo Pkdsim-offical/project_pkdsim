@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace project_pkdsim.Assets.Models.ANIMATOR.NPC.Sylveon
+namespace project_pkdsim.Assets.USys.FSSys.AnimatorFailSafeSys.ANIMATOR.NPC.Sylveon
 {
-	public class SYL_Animator : MonoBehaviour 
+	public class SYL_LFS_Animator : MonoBehaviour 
 	{
 		
 	}
