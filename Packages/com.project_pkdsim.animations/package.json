@@ -1,7 +1,7 @@
 { 
-    "name": "com.project_pkdsim.animator", 
+    "name": "com.project_pkdsim.animations", 
     "version": "0.1.0",
-    "displayName": "Animator", 
+    "displayName": "Animations", 
     "description": "A package for handling animation logic.",
     "unity": "2020.3", 
     "author": 

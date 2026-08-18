@@ -13,6 +13,36 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.project_pkdsim.adusys": {
+      "version": "file:com.project_pkdsim.adusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.aiusys": {
+      "version": "file:com.project_pkdsim.aiusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.animations": {
+      "version": "file:com.project_pkdsim.animations",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.abstractor": "0.1.0"
+      }
+    },
     "com.project_pkdsim.animator": {
       "version": "file:com.project_pkdsim.animator",
       "depth": 0,
@@ -21,11 +51,44 @@
         "com.project_pkdsim.abstractor": "0.1.0"
       }
     },
+    "com.project_pkdsim.atusys": {
+      "version": "file:com.project_pkdsim.atusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.auusys": {
+      "version": "file:com.project_pkdsim.auusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
     "com.project_pkdsim.core": {
       "version": "file:com.project_pkdsim.core",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
+    },
+    "com.project_pkdsim.dusys": {
+      "version": "file:com.project_pkdsim.dusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
     },
     "com.project_pkdsim.editor": {
       "version": "file:com.project_pkdsim.editor",
@@ -33,11 +96,57 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.project_pkdsim.fsusys": {
+      "version": "file:com.project_pkdsim.fsusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
     "com.project_pkdsim.generics": {
       "version": "file:com.project_pkdsim.generics",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
+    },
+    "com.project_pkdsim.hdusys": {
+      "version": "file:com.project_pkdsim.hdusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.itusys": {
+      "version": "file:com.project_pkdsim.itusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.project_pkdsim.lousys": "0.1.0",
+        "com.project_pkdsim.hdusys": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.lousys": {
+      "version": "file:com.project_pkdsim.lousys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
     },
     "com.project_pkdsim.materials": {
       "version": "file:com.project_pkdsim.materials",
@@ -57,11 +166,33 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.project_pkdsim.mousys": {
+      "version": "file:com.project_pkdsim.mousys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
     "com.project_pkdsim.pkpedia": {
       "version": "file:com.project_pkdsim.pkpedia",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
+    },
+    "com.project_pkdsim.sbusys": {
+      "version": "file:com.project_pkdsim.sbusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
     },
     "com.project_pkdsim.scenes": {
       "version": "file:com.project_pkdsim.scenes",
@@ -69,8 +200,70 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.project_pkdsim.scmusys": {
+      "version": "file:com.project_pkdsim.scmusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.tabusys": {
+      "version": "file:com.project_pkdsim.tabusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.tcmusys": {
+      "version": "file:com.project_pkdsim.tcmusys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.ui": {
+      "version": "file:com.project_pkdsim.ui",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.project_pkdsim.upssys": {
+      "version": "file:com.project_pkdsim.upssys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.project_pkdsim.lousys": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
     "com.project_pkdsim.usys": {
       "version": "file:com.project_pkdsim.usys",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+      }
+    },
+    "com.project_pkdsim.utsys": {
+      "version": "file:com.project_pkdsim.utsys",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
@@ -105,7 +298,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ai.navigation": {
-      "version": "2.0.13",
+      "version": "2.0.14",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -137,7 +330,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.29",
+      "version": "1.8.30",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -157,36 +350,37 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.12.4",
+      "version": "2.13.5",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.collections": "2.6.8"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.collections": {
-      "version": "6.4.0",
+      "version": "6.5.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.burst": "1.8.23",
-        "com.unity.mathematics": "1.3.2",
-        "com.unity.nuget.mono-cecil": "1.11.5",
+        "com.unity.burst": "1.8.25",
+        "com.unity.nuget.mono-cecil": "1.11.6",
         "com.unity.test-framework": "1.4.6",
-        "com.unity.test-framework.performance": "3.0.3"
+        "com.unity.test-framework.performance": "3.2.0"
       }
     },
     "com.unity.ext.nunit": {
-      "version": "2.0.5",
+      "version": "2.1.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
     "com.unity.formats.fbx": {
-      "version": "5.1.5",
+      "version": "5.1.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.autodesk.fbx": "5.1.1",
+        "com.autodesk.fbx": "5.1.3",
         "com.unity.timeline": "1.7.1"
       },
       "url": "https://packages.unity.com"
@@ -201,7 +395,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.19.0",
+      "version": "1.20.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -210,11 +404,10 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
-      "version": "1.3.3",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
+      "version": "1.4.0",
+      "depth": 2,
+      "source": "builtin",
+      "dependencies": {}
     },
     "com.unity.multiplayer.center": {
       "version": "1.0.1",
@@ -246,34 +439,32 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "17.4.0",
+      "version": "17.5.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.burst": "1.8.14",
-        "com.unity.mathematics": "1.3.2",
-        "com.unity.ugui": "2.0.0",
         "com.unity.collections": "2.4.3",
         "com.unity.modules.terrain": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       }
     },
     "com.unity.render-pipelines.universal": {
-      "version": "17.4.0",
+      "version": "17.5.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "17.4.0",
-        "com.unity.shadergraph": "17.4.0",
-        "com.unity.render-pipelines.universal-config": "17.4.0"
+        "com.unity.render-pipelines.core": "17.5.0",
+        "com.unity.shadergraph": "17.5.0",
+        "com.unity.render-pipelines.universal-config": "17.5.0"
       }
     },
     "com.unity.render-pipelines.universal-config": {
-      "version": "17.4.0",
+      "version": "17.5.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "17.4.0"
+        "com.unity.render-pipelines.core": "17.5.0"
       }
     },
     "com.unity.scriptablebuildpipeline": {
@@ -287,20 +478,20 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.searcher": {
-      "version": "4.9.4",
+      "version": "4.9.5",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.services.authentication": {
-      "version": "3.6.1",
+      "version": "3.7.3",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
-        "com.unity.services.core": "1.15.1",
-        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.unity.services.core": "1.18.0",
+        "com.unity.nuget.newtonsoft-json": "3.2.2",
         "com.unity.modules.unitywebrequest": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -317,7 +508,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.cloudcode": {
-      "version": "2.10.2",
+      "version": "2.10.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -386,16 +577,16 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "17.4.0",
+      "version": "17.5.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "17.4.0",
+        "com.unity.render-pipelines.core": "17.5.0",
         "com.unity.searcher": "4.9.3"
       }
     },
     "com.unity.splines": {
-      "version": "2.8.4",
+      "version": "2.9.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -416,11 +607,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.6.0",
+      "version": "1.7.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.ext.nunit": "2.0.3",
+        "com.unity.ext.nunit": "2.1.0",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       }
@@ -458,12 +649,15 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ugui": {
-      "version": "2.0.0",
+      "version": "2.5.0",
       "depth": 2,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.ui": "1.0.0",
-        "com.unity.modules.imgui": "1.0.0"
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.physics2d": "1.0.0",
+        "com.unity.modules.physics": "1.0.0"
       }
     },
     "com.unity.modules.accessibility": {
@@ -496,7 +690,9 @@
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {}
+      "dependencies": {
+        "com.unity.modules.jsonserialize": "1.0.0"
+      }
     },
     "com.unity.modules.animation": {
       "version": "1.0.0",
@@ -573,6 +769,14 @@
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physicscore2d": "1.0.0"
+      }
+    },
+    "com.unity.modules.physicscore2d": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
       "dependencies": {}
     },
     "com.unity.modules.screencapture": {
@@ -629,7 +833,8 @@
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.hierarchycore": "1.0.0",
-        "com.unity.modules.physics": "1.0.0"
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.animation": "1.0.0"
       }
     },
     "com.unity.modules.umbra": {
@@ -700,16 +905,6 @@
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
-      }
-    },
-    "com.unity.modules.vr": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.physics": "1.0.0",
-        "com.unity.modules.xr": "1.0.0"
       }
     },
     "com.unity.modules.wind": {

@@ -1,0 +1,8 @@
+{ 
+  "name": "project_pkdsim.Pkpedia", 
+  "rootNamespace": "project_pkdsim.Pkpedia", 
+  "references": 
+  [
+    "project_pkdsim.Pkpedia.NPC"
+  ]
+} 

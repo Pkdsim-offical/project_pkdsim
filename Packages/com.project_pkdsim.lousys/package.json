@@ -1,0 +1,19 @@
+{ 
+    "name": "com.project_pkdsim.lousys", 
+    "version": "0.1.0",
+    "displayName": "Love Unity System", 
+    "description": "A package for handling Unity-specific logic.", 
+    "unity": "2020.3", 
+    "author": 
+    { 
+        "name": "Pkdsim Official", 
+        "email": "Pkdsimofficial@gmail.com"
+    },
+    "dependencies": 
+    {
+        "com.project_pkdsim.generics": "0.1.0",
+        "com.project_pkdsim.pkpedia": "0.1.0",
+        "com.project_pkdsim.animator": "0.1.0",
+        "com.unity.addressables": "1.18.19"
+    }
+}

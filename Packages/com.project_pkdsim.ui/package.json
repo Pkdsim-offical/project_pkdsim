@@ -1,5 +1,5 @@
 { 
-    "name": "com.project_pkdsim.UI", 
+    "name": "com.project_pkdsim.ui", 
     "version": "0.1.0",
     "displayName": "UI", 
     "description": "A package for handling UI input logic.", 

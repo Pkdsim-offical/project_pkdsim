@@ -1,8 +1,0 @@
-{
-  "name": "project_pkdsim.USys",
-  "rootNamespace": "project_pkdsim.USys",
-  "references": 
-  [
-    "project_pkdsim.USys.ImportSys"
-  ]
-}
