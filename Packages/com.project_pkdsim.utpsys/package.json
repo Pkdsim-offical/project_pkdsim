@@ -1,5 +1,5 @@
 { 
-    "name": "com.project_pkdsim.utsys", 
+    "name": "com.project_pkdsim.utpsys", 
     "version": "0.1.0",
     "displayName": "Unity Teleport System", 
     "description": "A package for handling Unity-specific logic.", 
@@ -8,12 +8,5 @@
     { 
         "name": "Pkdsim Official", 
         "email": "Pkdsimofficial@gmail.com"
-    },
-    "dependencies": 
-    {
-        "com.project_pkdsim.generics": "0.1.0",
-        "com.project_pkdsim.pkpedia": "0.1.0",
-        "com.project_pkdsim.animator": "0.1.0",
-        "com.unity.addressables": "1.18.19"
     }
 }

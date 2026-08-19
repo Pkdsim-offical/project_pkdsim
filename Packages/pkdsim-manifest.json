@@ -1,0 +1,33 @@
+{
+	"dependencies": {
+		"com.project_pkdsim.abstractor": "file:com.project_pkdsim.abstractor",
+		"com.project_pkdsim.adusys": "file:com.project_pkdsim.adusys",
+		"com.project_pkdsim.aiusys": "file:com.project_pkdsim.aiusys",
+		"com.project_pkdsim.animations": "file:com.project_pkdsim.animations",
+		"com.project_pkdsim.animator": "file:com.project_pkdsim.animator",
+		"com.project_pkdsim.atusys": "file:com.project_pkdsim.atusys",
+		"com.project_pkdsim.auusys": "file:com.project_pkdsim.auusys",
+		"com.project_pkdsim.core": "file:com.project_pkdsim.core",
+		"com.project_pkdsim.dusys": "file:com.project_pkdsim.dusys",
+		"com.project_pkdsim.editor": "file:com.project_pkdsim.editor",
+		"com.project_pkdsim.fsusys": "file:com.project_pkdsim.fsusys",
+		"com.project_pkdsim.generics": "file:com.project_pkdsim.generics",
+		"com.project_pkdsim.hdusys": "file:com.project_pkdsim.hdusys",
+		"com.project_pkdsim.itusys": "file:com.project_pkdsim.itusys",
+		"com.project_pkdsim.lousys": "file:com.project_pkdsim.lousys",
+		"com.project_pkdsim.materials": "file:com.project_pkdsim.materials",
+		"com.project_pkdsim.models": "file:com.project_pkdsim.models",
+		"com.project_pkdsim.mouse": "file:com.project_pkdsim.mouse",
+		"com.project_pkdsim.mousys": "file:com.project_pkdsim.mousys",
+		"com.project_pkdsim.pkpedia": "file:com.project_pkdsim.pkpedia",
+		"com.project_pkdsim.sbusys": "file:com.project_pkdsim.sbusys",
+		"com.project_pkdsim.scenes": "file:com.project_pkdsim.scenes",
+		"com.project_pkdsim.scmusys": "file:com.project_pkdsim.scmusys",
+		"com.project_pkdsim.tabusys": "file:com.project_pkdsim.tabusys",
+		"com.project_pkdsim.tcmusys": "file:com.project_pkdsim.tcmusys",
+		"com.project_pkdsim.ui": "file:com.project_pkdsim.ui",
+		"com.project_pkdsim.upssys": "file:com.project_pkdsim.upssys",
+		"com.project_pkdsim.usys": "file:com.project_pkdsim.usys",
+		"com.project_pkdsim.utpsys": "file:com.project_pkdsim.utpsys"
+	}
+}

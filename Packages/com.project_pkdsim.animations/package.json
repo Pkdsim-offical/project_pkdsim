@@ -8,9 +8,5 @@
     { 
         "name": "Pkdsim Official", 
         "email": "Pkdsimofficial@gmail.com"
-    },
-    "dependencies": 
-    {
-        "com.project_pkdsim.abstractor": "0.1.0"
     }
 }
